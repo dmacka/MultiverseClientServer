@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<Imageset Name="ItemTextFrame" Imagefile="ItemTextFrame.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="ItemText-Bronze-BotLeft" XPos="0" YPos="0" Width="256" Height="128" />
+    <Image Name="ItemText-Bronze-BotRight" XPos="256" YPos="0" Width="64" Height="128" />
+    <Image Name="ItemText-Bronze-TopLeft" XPos="320" YPos="0" Width="256" Height="256" />
+    <Image Name="ItemText-Bronze-TopRight" XPos="576" YPos="0" Width="64" Height="256" />
+    <Image Name="ItemText-Marble-BotLeft" XPos="640" YPos="0" Width="256" Height="128" />
+    <Image Name="ItemText-Marble-BotRight" XPos="896" YPos="0" Width="64" Height="128" />
+    <Image Name="ItemText-Marble-TopLeft" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="ItemText-Marble-TopRight" XPos="256" YPos="256" Width="64" Height="256" />
+    <Image Name="ItemText-Silver-BotLeft" XPos="320" YPos="256" Width="256" Height="128" />
+    <Image Name="ItemText-Silver-BotRight" XPos="576" YPos="256" Width="64" Height="128" />
+    <Image Name="ItemText-Silver-TopLeft" XPos="640" YPos="256" Width="256" Height="256" />
+    <Image Name="ItemText-Silver-TopRight" XPos="896" YPos="256" Width="64" Height="256" />
+    <Image Name="ItemText-Stone-BotLeft" XPos="0" YPos="512" Width="256" Height="128" />
+    <Image Name="ItemText-Stone-BotRight" XPos="256" YPos="512" Width="64" Height="128" />
+    <Image Name="ItemText-Stone-TopLeft" XPos="320" YPos="512" Width="256" Height="256" />
+    <Image Name="ItemText-Stone-TopRight" XPos="576" YPos="512" Width="64" Height="256" />
+    <Image Name="UI-ItemText-BotLeft" XPos="640" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-ItemText-TopLeft" XPos="0" YPos="768" Width="256" Height="256" />
+</Imageset>

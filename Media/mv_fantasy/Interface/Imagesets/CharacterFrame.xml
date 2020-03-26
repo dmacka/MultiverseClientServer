@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset Name="CharacterFrame" Imagefile="CharacterFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="BarFill" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="BarHighlight" XPos="0" YPos="64" Width="512" Height="64" />
+    <Image Name="UI-BarFill-Simple" XPos="0" YPos="128" Width="512" Height="64" />
+    <Image Name="UI-Player-Portrait" XPos="0" YPos="192" Width="256" Height="128" />
+</Imageset>

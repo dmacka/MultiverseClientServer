@@ -1,0 +1,86 @@
+material littleHut.rack_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture leathertarp.dds
+                tex_coord_set 0
+               alpha_rejection greater 225 
+            }
+        }
+    }
+}
+material littleHut.littleHut_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture littleHut.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material littleHut.Hut_Steps_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture littleHut.dds
+                tex_coord_set 0
+               alpha_rejection greater 225 
+            }
+        }
+    }
+}
+material littleHut.Shield_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture ShieldemblemA.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

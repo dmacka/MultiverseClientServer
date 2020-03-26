@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>MarsDecals_FrameXML</Name>
+  <Description>Code and textures for footprints and targetting decals</Description>
+  <Type>Frame XML</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MarsDecals.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MarsDecals.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\footprint-right-50.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\footprint-left-25.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\footprint-left-50.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\footprint-right-25.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\compass-rose.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\green-circle-gradient.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\yellow-circle-gradient.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\red-circle-gradient.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blue-circle-gradient.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

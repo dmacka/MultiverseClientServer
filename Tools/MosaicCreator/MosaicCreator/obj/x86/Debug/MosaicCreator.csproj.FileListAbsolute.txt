@@ -1,0 +1,10 @@
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\bin\x86\Debug\MosaicCreator.exe
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\bin\x86\Debug\MosaicCreator.pdb
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\bin\x86\Debug\Tao.DevIl.dll
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\bin\x86\Debug\Tao.DevIl.dll.config
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\obj\x86\Debug\MosaicCreator.csprojResolveAssemblyReference.cache
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\obj\x86\Debug\Multiverse.Tools.MosaicCreator.MosaicCreator.resources
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\obj\x86\Debug\MosaicCreator.Properties.Resources.resources
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\obj\x86\Debug\MosaicCreator.csproj.GenerateResource.Cache
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\obj\x86\Debug\MosaicCreator.exe
+D:\Multiverse\src-v1\Tools\MosaicCreator\MosaicCreator\obj\x86\Debug\MosaicCreator.pdb

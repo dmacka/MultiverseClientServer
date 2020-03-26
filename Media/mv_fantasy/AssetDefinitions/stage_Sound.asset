@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>stage_Sound</Name>
+  <Description>stage</Description>
+  <Type>Sound</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Sounds\stage.ogg</TargetFile>
+      <FileType>Sound</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

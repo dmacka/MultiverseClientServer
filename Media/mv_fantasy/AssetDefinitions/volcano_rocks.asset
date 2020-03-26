@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>volcano_rocks</Name>
+  <Type>Other</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Textures\volcano_rock_grey.jpg</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\volcano_rock.jpg</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

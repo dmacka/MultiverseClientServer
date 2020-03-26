@@ -1,0 +1,58 @@
+<physics_model>
+  <rigid_body sid="st_f_sword_lt-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1 0 0 39.99471</rotate>
+        <translate>-0.125479 2.278575 -0.2399715</translate>
+        <box>
+          <half_extents>0.03865805 0.08492289 0.6214943</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0 1 7.471404</rotate>
+        <translate>-0.04715635 1.05656 0.003482003</translate>
+        <box>
+          <half_extents>0.2184807 0.9443281 0.135501</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="stb_f_sword_lt-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0.006372498 0.0484569 -0.0556445</translate>
+        <box>
+          <half_extents>0.3617205 0.07089609 0.3617205</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.49998</rotate>
+        <translate>0.006371995 0.2241085 -0.0556445</translate>
+        <box>
+          <half_extents>0.3271698 0.1142165 0.1369322</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.49998</rotate>
+        <translate>0.006371995 0.2241085 -0.0556445</translate>
+        <box>
+          <half_extents>0.3271698 0.1142165 0.1369322</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -0.9999999 0 22.50005</rotate>
+        <translate>0.006372145 0.2241085 -0.05564501</translate>
+        <box>
+          <half_extents>0.1369321 0.1142165 0.3271692</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.50005</rotate>
+        <translate>0.006372145 0.2241085 -0.05564501</translate>
+        <box>
+          <half_extents>0.1369319 0.1142165 0.3271693</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

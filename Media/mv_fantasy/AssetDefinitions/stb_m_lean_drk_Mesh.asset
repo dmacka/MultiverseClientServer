@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>stb_m_lean_drk_Mesh</Name>
+  <Description>stb_m_lean_drk</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Statue Bases</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\stb_m_lean_drk.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\stb_m_lean_drk_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\stb_m_lean_drk.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

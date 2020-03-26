@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>CurlyPalmCluster_RT_SpeedTree</Name>
+  <Description>Curly Palm - Cluster</Description>
+  <Type>SpeedTree</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>SpeedTree\CurlyPalmCluster_RT.tre</TargetFile>
+      <FileType>SpeedTree</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\CurlyPalmCluster_Composite.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\CurlyPalmBark.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\CurlyPalmBarkNormals.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\CurlyPalm_SelfShadow.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

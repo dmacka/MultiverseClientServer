@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>human_house_open_Mesh</Name>
+  <Description>Human Open House</Description>
+  <Type>Mesh</Type>
+  <Category>Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\human_house_open.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\human_house_open_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\human_house_open.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

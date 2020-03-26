@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>sphere_Mesh</Name>
+  <Description>sphere</Description>
+  <Type>Mesh</Type>
+  <Category>Test Shapes</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\sphere.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

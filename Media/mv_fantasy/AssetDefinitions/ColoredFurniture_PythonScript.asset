@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>ColoredFurniture_PythonScript</Name>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts\ColoredFurniture.py</TargetFile>
+      <NewFileName />
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

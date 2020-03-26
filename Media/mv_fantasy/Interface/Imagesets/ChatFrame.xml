@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<Imageset Name="ChatFrame" Imagefile="ChatFrame.tga" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+    <Image Name="ChatFrameBackground" XPos="0" YPos="0" Width="16" Height="16" />
+    <Image Name="ChatFrameBorder" XPos="16" YPos="0" Width="64" Height="128" />
+    <Image Name="ChatFrameInnerBorder" XPos="80" YPos="0" Width="64" Height="128" />
+    <Image Name="ChatFrameTab" XPos="144" YPos="0" Width="64" Height="32" />
+    <Image Name="UI-ChatIcon-BlinkHilight" XPos="208" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-Chat-Disabled" XPos="240" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-Chat-Down" XPos="272" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-Chat-Up" XPos="304" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollDown-Disabled" XPos="336" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollDown-Down" XPos="368" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollDown-Up" XPos="400" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollEnd-Disabled" XPos="432" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollEnd-Down" XPos="464" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollEnd-Up" XPos="0" YPos="128" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollUp-Disabled" XPos="32" YPos="128" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollUp-Down" XPos="64" YPos="128" Width="32" Height="32" />
+    <Image Name="UI-ChatIcon-ScrollUp-Up" XPos="96" YPos="128" Width="32" Height="32" />
+    <Image Name="UI-ChatInputBorder-Left" XPos="128" YPos="128" Width="256" Height="32" />
+    <Image Name="UI-ChatInputBorder-Right" XPos="0" YPos="160" Width="256" Height="32" />
+    <Image Name="UI-ChatInputBorder" XPos="256" YPos="160" Width="256" Height="32" />
+</Imageset>

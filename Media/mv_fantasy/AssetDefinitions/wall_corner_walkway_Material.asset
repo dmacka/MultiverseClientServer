@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>wall_corner_walkway_Material</Name>
+  <Description>wall_corner_walkway</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\wall_corner_walkway.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+	
+    <AssetFile>
+      <TargetFile>Textures\wall.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetConfig>
+
+  <!-- Asset paths for sampleworld assets -->
+
+  <AssetPath type="Folder" resource="Font"      src="..\Worlds\sampleworld\Fonts"/>
+  <AssetPath type="Folder" resource="Imageset"  src="..\Worlds\sampleworld\Interface\Imagesets"/>
+  <AssetPath type="Folder" resource="Interface" src="..\Worlds\sampleworld\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\sampleworld\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\sampleworld\Scripts"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\GpuPrograms"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Textures"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Imagefiles"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Icons"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Meshes"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Skeletons"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Materials"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\SpeedTree"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Sounds"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Particles"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Physics"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\Misc"/>
+
+  <!-- Asset paths for custom assets -->
+
+  <AssetPath type="Folder" resource="Font"      src="..\Worlds\sampleworld\AddOns\Fonts"/>
+  <AssetPath type="Folder" resource="Imageset"  src="..\Worlds\sampleworld\AddOns\Interface\Imagesets"/>
+  <AssetPath type="Folder" resource="Interface" src="..\Worlds\sampleworld\AddOns\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\sampleworld\AddOns\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\sampleworld\AddOns\Scripts"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\GpuPrograms"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Textures"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Imagefiles"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Icons"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Meshes"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Skeletons"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Materials"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\SpeedTree"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Sounds"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Particles"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Physics"/>
+  <AssetPath type="Folder" src="..\Worlds\sampleworld\AddOns\Misc"/>
+</AssetConfig>

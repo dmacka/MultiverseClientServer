@@ -1,0 +1,27 @@
+vertex_program MVSMShadowCasterVP hlsl
+{
+	source MVSMShadows.cg
+	entry_point ShadowCasterVP
+	target vs_1_1
+}
+
+fragment_program MVSMShadowCasterFP hlsl
+{
+	source MVSMShadows.cg
+	entry_point ShadowCasterFP
+	target ps_2_0
+}
+
+vertex_program MVSMShadowReceiverVP cg
+{
+	source MVSMShadows.cg
+	entry_point ShadowReceiverVP
+	profiles vs_1_1
+}
+
+fragment_program MVSMShadowReceiverFP hlsl
+{
+	source MVSMShadows.cg
+	entry_point ShadowReceiverFP
+	target ps_2_0
+}

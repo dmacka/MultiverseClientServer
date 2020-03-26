@@ -1,0 +1,240 @@
+﻿<Ui>
+  <Script file="MvTrainingSelection.py"/>
+
+  <CheckButton name="MvTrainingOption" checked="false" text="" enableMouse="true" id="1" virtual="true">
+    <Size>
+      <AbsDimension x="50" y="20"/>
+    </Size>
+    <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+      <Color r="1.0" g="1.0" b="1.0"/>
+    </NormalText>
+    <!--<HitRectInsets>
+      <AbsInset left="-10" right="10" top="0" bottom="0"/>
+    </HitRectInsets>-->
+    <Scripts language="python">
+      <OnClick>
+        MvTrainingOption_OnClick(this)
+      </OnClick>
+    </Scripts>
+  </CheckButton>
+
+
+  <ScrollFrame name="MvTrainingSelectionScrollFrame"  enableMouse="true" hidden="true">
+    <Size>
+      <AbsDimension x="375" y="400"/>
+    </Size>
+
+    <Anchors>
+      <Anchor point="CENTER">
+        <Offset>
+          <AbsDimension x="-200" y="100" />
+        </Offset>
+      </Anchor>
+    </Anchors>
+
+    <ScrollChild>
+      <Frame name="MvTrainingSelectionFrame" inherits="MvBasicFrame" frameStrata="HIGH" toplevel="true">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="-10" y="-10" />
+            </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="-10" y="10" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+
+        <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+          <EdgeSize>
+            <AbsValue val="8"/>
+          </EdgeSize>
+          <TileSize>
+            <AbsValue val="8"/>
+          </TileSize>
+          <BackgroundInsets>
+            <AbsInset left="1" right="1" top="1" bottom="1"/>
+          </BackgroundInsets>
+        </Backdrop>
+
+        <Frames>
+          <FontString name="GreetingMessage" hidden="false" nonspacewrap="false" inherits="NormalFont" text="Greeting!" justifyV="MIDDLE" justifyH="LEFT">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="340" y="120"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativePoint="TOP">
+                <Offset>
+                  <AbsDimension x="5" y="-15"/>
+                </Offset>
+              </Anchor>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <FontHeight>
+              <AbsValue val="15"/>
+            </FontHeight>
+          </FontString>
+          <Frame name="MvTrainingOptionsFrame">
+            <Size>
+              <AbsDimension x="340" y="170"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="GreetingMessage" relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="0" y="-15" />
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+              <EdgeSize>
+                <AbsValue val="8"/>
+              </EdgeSize>
+              <TileSize>
+                <AbsValue val="8"/>
+              </TileSize>
+              <BackgroundInsets>
+                <AbsInset left="1" right="1" top="1" bottom="1"/>
+              </BackgroundInsets>
+            </Backdrop>
+            <Frames>
+              <CheckButton name="TrainingOption0" checked="false" text="Sword" enableMouse="true" id="1" hidden="false" inherits="MvTrainingOption">
+                <Anchors>
+                  <Anchor point="LEFT" relativePoint="LEFT">
+                    <Offset>
+                      <AbsDimension x="10" y="70"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </CheckButton>
+              <CheckButton name="TrainingOption1" checked="false" text="" enableMouse="true" id="2" hidden="true" inherits="MvTrainingOption">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="TrainingOption0"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </CheckButton>
+              <CheckButton name="TrainingOption2" checked="false" text="" enableMouse="true" id="3" hidden="true" inherits="MvTrainingOption">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="TrainingOption1"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </CheckButton>
+              <CheckButton name="TrainingOption3" checked="false" text="" enableMouse="true" id="4" hidden="true" inherits="MvTrainingOption">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="TrainingOption2"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </CheckButton>
+              <CheckButton name="TrainingOption4" checked="false" text="" enableMouse="true" id="5" hidden="true" inherits="MvTrainingOption">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="TrainingOption3"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </CheckButton>
+              <CheckButton name="TrainingOption5" checked="false" text="" enableMouse="true" id="6" hidden="true" inherits="MvTrainingOption">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="TrainingOption4"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </CheckButton>
+            </Frames>
+          </Frame>
+          <Button name="MvTrainingSelectionFrameCloseButton" text="Close" hidden="false">
+            <Size>
+              <AbsDimension x="50" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOM" relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="-25" y="10"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <NormalTexture file="Interface\Tooltips\UI-Tooltip-Background"/>
+            <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+              <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+              <FontHeight>
+                <AbsValue val="15"/>
+              </FontHeight>
+            </NormalText>
+            <HitRectInsets>
+              <AbsInset left="-10" right="10" top="0" bottom="0"/>
+            </HitRectInsets>
+            <Scripts language="python">
+              <OnClick>MvTrainingSelectionFrameCloseButton_OnClick(this)</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="MvTrainSkillButton" text="Train" hidden="false">
+            <Size>
+              <AbsDimension x="50" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvTrainingSelectionFrameCloseButton" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="4" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <NormalTexture file="Interface\Tooltips\UI-Tooltip-Background"/>
+            <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+              <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+              <FontHeight>
+                <AbsValue val="15"/>
+              </FontHeight>
+            </NormalText>
+            <HitRectInsets>
+              <AbsInset left="-10" right="10" top="0" bottom="0"/>
+            </HitRectInsets>
+            <Scripts language="python">
+              <OnClick>MvTrainSkillButton_OnClick(this)</OnClick>
+              <OnEnter>MvTrainSkillButton_OnEnter(this)</OnEnter>
+              <OnLeave>MvTrainSkillButton_OnLeave(this)</OnLeave>
+            </Scripts>
+          </Button>
+          <FontString name="MvAbilityUpdateMsg" hidden="false" nonspacewrap="false" inherits="NormalFont" text="" justifyV="MIDDLE" justifyH="LEFT">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="300" y="30"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOM" relativeTo="MvTrainSkillButton"  relativePoint="TOP">
+                <Offset>
+                  <AbsDimension x="10" y="5"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <FontHeight>
+              <AbsValue val="15"/>
+            </FontHeight>
+          </FontString>
+        </Frames>
+      </Frame>
+    </ScrollChild>
+    <Scripts language="python">
+      <OnLoad>MvTrainingSelectionFrame_OnLoad(this)</OnLoad>
+      <OnShow>MvTrainingSelectionFrame_OnShow(this)</OnShow>
+      <OnEvent>MvTrainingSelectionFrame_OnEvent(this, args)</OnEvent>
+    </Scripts>
+  </ScrollFrame>
+</Ui>

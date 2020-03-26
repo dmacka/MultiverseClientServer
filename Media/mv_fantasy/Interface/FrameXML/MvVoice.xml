@@ -1,0 +1,20 @@
+<Ui>
+  <Script file="MvVoice.py"/>
+
+  <Frame name="MvVoice_fMain" toplevel="true" movable="false" resizable="false" frameStrata="HIGH" parent="UIParent" enableMouse="false" enableKeyboard="false" alpha="1.0" inherits="MvOneOptionDialogTemplate" hidden="false">
+    <Size>
+      <AbsDimension x="120" y="60"/>
+    </Size>
+    <Anchors>
+      <Anchor point="BOTTOMRIGHT">
+	<Offset>
+	  <AbsDimension x="0" y="100"/>
+	</Offset>
+      </Anchor>
+    </Anchors>
+    <Scripts language="python">
+      <OnLoad>MvVoice_fMain_OnLoad(this)</OnLoad>
+    </Scripts>
+  </Frame>
+
+</Ui>

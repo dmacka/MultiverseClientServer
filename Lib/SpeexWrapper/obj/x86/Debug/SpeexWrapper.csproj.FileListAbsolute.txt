@@ -1,0 +1,5 @@
+D:\Multiverse\src-v1\Lib\SpeexWrapper\bin\x86\Debug\SpeexWrapper.dll
+D:\Multiverse\src-v1\Lib\SpeexWrapper\bin\x86\Debug\SpeexWrapper.pdb
+D:\Multiverse\src-v1\Lib\SpeexWrapper\obj\x86\Debug\SpeexWrapper.csprojResolveAssemblyReference.cache
+D:\Multiverse\src-v1\Lib\SpeexWrapper\obj\x86\Debug\SpeexWrapper.dll
+D:\Multiverse\src-v1\Lib\SpeexWrapper\obj\x86\Debug\SpeexWrapper.pdb

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>bench_01_Mesh</Name>
+  <Description>bench_01</Description>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\bench_01.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

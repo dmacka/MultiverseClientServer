@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>st_m_throw_drk_full_Material</Name>
+  <Description>st_m_throw_drk_full</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\st_m_throw_drk_full.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\female_marble_blue_grey.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\male_marble_blue_grey.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\MVSimpleLighting_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

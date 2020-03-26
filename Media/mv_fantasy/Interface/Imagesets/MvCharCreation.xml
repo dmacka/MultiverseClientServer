@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvCharCreation" Imagefile="MvCharCreation.tga" NativeHorzRes="1024" NativeVertRes="256" AutoScaled="false">
+    <Image Name="basic_frame_edge" XPos="0" YPos="0" Width="32" Height="4" />
+    <Image Name="female_button" XPos="34" YPos="0" Width="52" Height="51" />
+    <Image Name="female_button_selected" XPos="88" YPos="0" Width="52" Height="51" />
+    <Image Name="left_arrow" XPos="142" YPos="0" Width="24" Height="16" />
+    <Image Name="left_arrow_down" XPos="168" YPos="0" Width="24" Height="16" />
+    <Image Name="male_button" XPos="194" YPos="0" Width="52" Height="51" />
+    <Image Name="male_button_selected" XPos="248" YPos="0" Width="52" Height="51" />
+    <Image Name="right_arrow" XPos="302" YPos="0" Width="24" Height="16" />
+    <Image Name="right_arrow_down" XPos="328" YPos="0" Width="24" Height="16" />
+    <Image Name="screen_edge" XPos="354" YPos="0" Width="640" Height="80" />
+    <Image Name="screen_edge_top" XPos="0" YPos="82" Width="268" Height="87" />
+</Imageset>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>compass-rose_Texture</Name>
+  <Type>Texture</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Textures\compass-rose.png</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="TerrainDecal" value="true" />
+  </Properties>
+</AssetDefinition>

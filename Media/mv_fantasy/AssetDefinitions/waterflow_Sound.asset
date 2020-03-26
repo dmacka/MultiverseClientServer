@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>waterflow_Sound</Name>
+  <Description>waterflow</Description>
+  <Type>Sound</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Sounds\waterflow.wav</TargetFile>
+      <FileType>Sound</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

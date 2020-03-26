@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvMinimap" Imagefile="MvMinimap.tga" NativeHorzRes="512" NativeVertRes="64" AutoScaled="false">
+    <Image Name="avatar" XPos="0" YPos="0" Width="30" Height="30" />
+    <Image Name="blue_dot" XPos="32" YPos="0" Width="7" Height="7" />
+    <Image Name="blue_square" XPos="41" YPos="0" Width="7" Height="7" />
+    <Image Name="dark_blue_dot" XPos="50" YPos="0" Width="8" Height="8" />
+    <Image Name="dark_blue_square" XPos="60" YPos="0" Width="7" Height="7" />
+    <Image Name="down_arrow" XPos="69" YPos="0" Width="24" Height="24" />
+    <Image Name="down_arrow_small" XPos="95" YPos="0" Width="16" Height="16" />
+    <Image Name="gold_dot" XPos="113" YPos="0" Width="7" Height="7" />
+    <Image Name="gold_square" XPos="122" YPos="0" Width="7" Height="7" />
+    <Image Name="gray_dot" XPos="131" YPos="0" Width="7" Height="7" />
+    <Image Name="gray_square" XPos="140" YPos="0" Width="7" Height="7" />
+    <Image Name="green_dot" XPos="149" YPos="0" Width="7" Height="7" />
+    <Image Name="green_square" XPos="158" YPos="0" Width="7" Height="7" />
+    <Image Name="left_arrow" XPos="167" YPos="0" Width="24" Height="24" />
+    <Image Name="left_arrow_small" XPos="193" YPos="0" Width="16" Height="16" />
+    <Image Name="map_edge" XPos="211" YPos="0" Width="192" Height="24" />
+    <Image Name="map_edge_small" XPos="0" YPos="32" Width="128" Height="16" />
+    <Image Name="map_text_edge" XPos="130" YPos="32" Width="128" Height="16" />
+    <Image Name="minus" XPos="260" YPos="32" Width="29" Height="29" />
+    <Image Name="plus" XPos="291" YPos="32" Width="29" Height="29" />
+    <Image Name="purple_dot" XPos="322" YPos="32" Width="7" Height="7" />
+    <Image Name="purple_square" XPos="331" YPos="32" Width="7" Height="7" />
+    <Image Name="red_dot" XPos="340" YPos="32" Width="7" Height="7" />
+    <Image Name="red_square" XPos="349" YPos="32" Width="7" Height="7" />
+    <Image Name="right_arrow" XPos="358" YPos="32" Width="24" Height="24" />
+    <Image Name="right_arrow_small" XPos="384" YPos="32" Width="16" Height="16" />
+    <Image Name="up_arrow" XPos="402" YPos="32" Width="24" Height="24" />
+    <Image Name="up_arrow_small" XPos="428" YPos="32" Width="16" Height="16" />
+    <Image Name="yellow_dot" XPos="446" YPos="32" Width="7" Height="7" />
+    <Image Name="yellow_square" XPos="455" YPos="32" Width="7" Height="7" />
+</Imageset>

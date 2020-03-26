@@ -1,0 +1,34 @@
+downpour
+{
+    material        droplet
+    particle_width  200
+    particle_height 500
+    cull_each       true
+    quota           10000
+    // Make common direction straight down (faster than self oriented)
+    billboard_type  oriented_common
+    common_direction 0 -1 0
+    
+    // Area emitter
+    emitter Box
+    {
+        angle           0
+        emission_rate   1000
+        time_to_live    2
+        direction       0 -1 0
+        velocity    	4500
+        colour_range_start  0.3 1 0.3
+        colour_range_end    0.7 1 0.5
+        width           10000
+        height          10000
+        depth           0
+    }
+
+    // Gravity
+    affector LinearForce
+    {
+        force_vector      0 -200 0
+        force_application add
+    }
+
+}

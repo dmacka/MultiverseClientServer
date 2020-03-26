@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>fog_Sound</Name>
+  <Description>fog</Description>
+  <Type>Sound</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Sounds\fog.ogg</TargetFile>
+      <FileType>Sound</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

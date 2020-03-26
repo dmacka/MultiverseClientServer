@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nude01_f_lowpoly_Material</Name>
+  <Description>nude01_f_lowpoly</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nude01_f_lowpoly.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nude01_f_20.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\Compound_Basic_Skinned.cg</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\Multiverse.program</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

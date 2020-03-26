@@ -1,0 +1,176 @@
+<physics_model>
+  <rigid_body sid="LtOuterDoor-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>22.22735 10.65623 -1.244576</translate>
+        <box>
+          <half_extents>2.186234 10.85072 1.125532</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>14.22023 30.59223 -1.244576</translate>
+        <box>
+          <half_extents>9.820502 9.318309 1.125532</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>5.95211 10.65623 -1.244576</translate>
+        <box>
+          <half_extents>1.711822 10.85072 1.125532</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="InnerDoor-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>0 1 0 18.56105</rotate>
+        <translate>16.99799 10.65623 -7.725952</translate>
+        <box>
+          <half_extents>0.7010014 10.85072 6.076315</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="gate-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>0.9309494 0.05620657 -0.3607965 19.00002</rotate>
+        <translate>48.32571 4.151705 -7.853043</translate>
+        <box>
+          <half_extents>1.302066 15.99626 0.9950767</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1 0 0 5.14521</rotate>
+        <translate>43.70547 10.33651 -0.2524054</translate>
+        <box>
+          <half_extents>11.68636 22.43301 1.824422</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.9367115 -0.05389184 0.3459294 18.88526</rotate>
+        <translate>-40.58045 4.151703 -7.889598</translate>
+        <box>
+          <half_extents>1.302064 15.99626 0.9950784</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1 0 0 5.14521</rotate>
+        <translate>-35.80527 10.33651 -0.2524054</translate>
+        <box>
+          <half_extents>11.68636 22.43301 1.824422</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 18.63148</rotate>
+        <translate>4.266072 -6.685935 19.14152</translate>
+        <box>
+          <half_extents>32.38903 1.203627 18.23756</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>34.45974 40.58161 -0.9629168</translate>
+        <box>
+          <half_extents>2.96609 1.772945 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-26.26178 40.58161 -0.9629168</translate>
+        <box>
+          <half_extents>2.96609 1.772945 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0 0.9999999 23.66626</rotate>
+        <translate>-6.749261 40.71819 -0.9629168</translate>
+        <box>
+          <half_extents>10.80784 2.208571 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0 -1 44.99995</rotate>
+        <translate>4.017971 49.33305 1.655924</translate>
+        <box>
+          <half_extents>4.725589 4.400192 0.9381009</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0 -1 22.55963</rotate>
+        <translate>15.91995 39.89701 -0.9629168</translate>
+        <box>
+          <half_extents>10.80784 2.208568 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>3.67604 41.54774 -0.9629169</translate>
+        <box>
+          <half_extents>8.779823 1.772941 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.4250641 -0.1409316 -0.8941246 34.67911</rotate>
+        <translate>44.31618 -10.64785 -18.69787</translate>
+        <box>
+          <half_extents>9.719312 1.192095 19.28201</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>3.535285 -1.162664 -0.9629168</translate>
+        <box>
+          <half_extents>27.48725 1.428903 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1 0 0 16.51708</rotate>
+        <translate>3.877315 -6.003297 -20.93423</translate>
+        <box>
+          <half_extents>32.70079 1.192094 18.38676</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>30.10654 19.28775 -0.9629168</translate>
+        <box>
+          <half_extents>5.712668 19.53713 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-22.29191 19.28775 -0.9629168</translate>
+        <box>
+          <half_extents>5.712667 19.53713 3.162569</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.4215013 0.13778 0.8962998 35.91063</rotate>
+        <translate>-36.41356 -10.70254 -18.82326</translate>
+        <box>
+          <half_extents>9.719326 1.192091 19.26392</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.5282432 -0.1426034 0.8370324 33.24904</rotate>
+        <translate>-37.02485 -11.02519 17.67892</translate>
+        <box>
+          <half_extents>10.43365 1.203627 18.23757</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.5405285 0.1395247 -0.8296757 33.00978</rotate>
+        <translate>43.78306 -10.43673 17.87614</translate>
+        <box>
+          <half_extents>8.679125 1.203628 18.23757</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="RtOuterDoor-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>-6.119585 19.28775 -1.244576</translate>
+        <box>
+          <half_extents>10.23957 19.53713 1.125532</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

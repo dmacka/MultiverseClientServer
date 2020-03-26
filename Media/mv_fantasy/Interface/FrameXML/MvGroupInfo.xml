@@ -1,0 +1,947 @@
+<Ui>
+  <Script file="MvGroupInfo.py"/>
+  
+  <!--Templates-->
+  <CheckButton name="MvGroupMember" checked="false" text="" enableMouse="true" id="1" virtual="true">
+    <Size>
+      <AbsDimension x="75" y="20"/>
+    </Size>
+    <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+      <Color r="1.0" g="1.0" b="1.0"/>
+      <Size>
+        <AbsDimension x="75" y="20"/>
+      </Size>
+    </NormalText>
+    <Scripts language="python">
+      <OnClick>
+        MvGroupMember_OnClick(this)
+      </OnClick>
+    </Scripts>
+  </CheckButton>
+
+  <Texture name="GroupBGTexture" file="Interface\MvBasicTextures\Patch6x6W10A10" hidden="false" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativeTo="$parent">
+        <Offset>
+          <AbsDimension x="5" y="-5"/>
+        </Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+        <Offset>
+          <AbsDimension x="-5" y="5"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Color r="0.3" g="0.3" b="0.3" a="1.0"/>
+  </Texture>
+  
+  <Frame name="GroupActionButtonsFrame" virtual="true">
+    <Size>
+      <AbsDimension x="245" y="100"/>
+    </Size>
+    <Anchors>
+      <Anchor point="BOTTOM" relativePoint="BOTTOM">
+        <Offset>
+          <AbsDimension x="0" y="0" />
+        </Offset>
+      </Anchor>
+    </Anchors>
+  </Frame>
+
+  <CheckButton name="GroupCheckButtonTemplate" virtual="true">
+    <CheckedTexture name="$parentCheckedTexture" file="Interface\MvButtons\Mv-CheckBox-Check">
+      <Color r="0.4" g="1.0" b="0.4" a="1.0"/>
+      <Size>
+        <AbsDimension x="16" y="16"/>
+      </Size>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="2" y="2"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </CheckedTexture>
+    <NormalTexture name="$parentTexture" file="Interface\MvButtons\Mv-CheckBox-Up">
+      <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+      <Size>
+        <AbsDimension x="12" y="12"/>
+      </Size>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="2" y="-2"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </NormalTexture>
+    <HighlightTexture name="$parentHighlightTexture" file="Interface\MvButtons\Mv-CheckBox-Up">
+      <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+      <Size>
+        <AbsDimension x="16" y="16"/>
+      </Size>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="0" y="0"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </HighlightTexture>
+    <NormalText name="$parentNormalText" inherits="MvBodyFont" justifyH="LEFT">
+      <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+      <Anchors>
+        <Anchor point="LEFT">
+          <Offset>
+            <AbsDimension x="20" y="0"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </NormalText>
+  </CheckButton>
+  
+  <Button name="MvGroupActionButton" virtual="true">
+    <Size>
+      <AbsDimension x="100" y="20"/>
+    </Size>
+    <NormalTexture name="$parentActionTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+      <Color r="0.4" g="0.4" b="0.4" a="1.0"/>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="0" y="0"/>
+          </Offset>
+        </Anchor>
+        <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="0" y="0"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </NormalTexture>
+    <HighlightTexture name="$parentActionHighlightTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+      <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="0" y="0"/>
+          </Offset>
+        </Anchor>
+        <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="0" y="0"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </HighlightTexture>
+    <PushedTexture name="$parentActionPushedTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+      <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="2" y="-2"/>
+          </Offset>
+        </Anchor>
+        <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+          <Offset>
+            <AbsDimension x="2" y="-2"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </PushedTexture>
+    <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+      <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+      <FontHeight>
+        <AbsValue val="15"/>
+      </FontHeight>
+    </NormalText>
+    <Scripts language="python">
+      <OnEnter> this.LockHighlight() </OnEnter>
+      <OnLeave> this.UnlockHighlight() </OnLeave>
+      <OnMouseDown> this.SetButtonState("PUSHED") </OnMouseDown>
+      <OnMouseUp> this.SetButtonState("NORMAL") </OnMouseUp>
+    </Scripts>
+  </Button>
+
+  <Slider name="GroupVoiceSliderTemplate" orientation="HORIZONTAL" virtual="true">
+    <Size>
+      <AbsDimension x="128" y="16"/>
+    </Size>
+    <Backdrop edgeFile="Interface\MvBasicTextures\Edge8x8Wa" tile="true">
+      <EdgeSize>
+        <AbsValue val="8"/>
+      </EdgeSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentText" inherits="NormalFont">
+          <Size>
+            <AbsDimension x="100" y="16"/>
+          </Size>
+          <Anchors>
+            <Anchor point="BOTTOM" relativePoint="CENTER">
+              <Offset>
+                <AbsDimension x="0" y="5"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentValue" inherits="SmallFont" text="100%">
+          <Size>
+            <AbsDimension x="31" y="16"/>
+          </Size>
+          <Anchors>
+            <Anchor point="LEFT" relativePoint="RIGHT"/>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <ThumbTexture name="$parentThumbTexture" file="Interface\MvBasicTextures\SBCircleThumbW">
+      <Size>
+        <AbsDimension x="10" y="17"/>
+      </Size>
+    </ThumbTexture>
+  </Slider>
+
+  <Button name="RemovePlayerButton" text="Remove Player" inherits="MvGroupActionButton" virtual="true">
+    <Scripts language="python">
+      <OnClick>
+        MvRemovePlayerButton_OnClick(this)
+      </OnClick>
+    </Scripts>
+  </Button>
+  
+  <Button name="InvitePlayerButton" text="Invite Player" inherits="MvGroupActionButton" virtual="true">
+    <Scripts language="python">
+      <OnClick>
+        MvInvitePlayerButton_OnClick(this)
+      </OnClick>
+    </Scripts>
+  </Button>
+  
+  <Button name="LeaveGroupButton" text="Leave Group" inherits="MvGroupActionButton" virtual="true">
+    <Scripts language="python">
+      <OnClick>
+        MvLeaveGroupButton_OnClick(this)
+      </OnClick>
+    </Scripts>
+  </Button>
+  
+  <Button name="MuteSelectedButton" text="Mute Player" inherits="MvGroupActionButton" virtual="true">
+    <Scripts language="python">
+      <OnClick>
+        MvMuteSelectedButton_OnClick(this)
+      </OnClick>
+    </Scripts>
+  </Button>
+
+  <Button name="MuteAllButton" text="Mute Group" inherits="MvGroupActionButton" virtual="true">
+    <Scripts language="python">
+      <OnClick>
+        MvMuteAllButton_OnClick(this)
+      </OnClick>
+    </Scripts>
+  </Button>
+
+  <Frame name="VoiceStatusIndicator" virtual="true">
+    <Size>
+      <AbsDimension x="16" y="16"/>
+    </Size>
+    <Frames>
+      <Texture name="$parentEnabled" file="Interface\VoiceIcons\speaker_not_talking" hidden="true">
+    <Size>
+          <AbsDimension x="16" y="16"/>
+    </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="LEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Texture>
+      <Texture name="$parentTalking" file="Interface\VoiceIcons\green_speaker" hidden="true">
+        <Size>
+          <AbsDimension x="16" y="16"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="LEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Texture>
+      <Texture name="$parentDisabled" file="Interface\VoiceIcons\grey_speaker" hidden="true">
+        <Size>
+          <AbsDimension x="16" y="16"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="LEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Texture>
+      <Texture name="$parentMuted" file="Interface\VoiceIcons\red_speaker" hidden="true">
+        <Size>
+          <AbsDimension x="16" y="16"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="LEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Texture>
+    </Frames>
+  </Frame>
+
+  <Frame name="GroupFrameTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <Texture name="$parentTexture" inherits="GroupBGTexture"/>
+      </Layer>
+    </Layers>
+    <Scripts language="python">
+      <OnLoad>
+        getglobal(this.GetName()+"Texture").SetVertexColor(0.20, 0.19, 0.17, 0.97)
+      </OnLoad>
+    </Scripts>
+  </Frame>
+    
+  <Frame name="VoiceConfigTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="245" y="60"/>
+    </Size>
+    <Frames>
+      <FontString name="$parentPartyVoiceConfigTitle" hidden="false" nonspacewrap="false" inherits="NormalFont" text="Party Voice Chat Config" justifyV="MIDDLE" justifyH="CENTER">
+        <Color r="1.0" g="1.0" b="1.0"/>
+        <Size>
+          <AbsDimension x="245" y="15"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="TOP">
+            <Offset>
+              <AbsDimension x="5" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <FontHeight>
+          <AbsValue val="12"/>
+        </FontHeight>
+      </FontString>
+      <CheckButton name="$parentJoinVoiceChatButton" inherits="GroupCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="60" y="16"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentPartyVoiceConfigTitle" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-5"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnLoad>
+            getglobal(this.GetName()).SetText("Enabled")
+            slotId = MarsGroup.GetGroupMemberSlotIndex(ClientAPI.GetPlayerObject().OID)
+            this.SetChecked(MarsGroup.GetGroupMemberVoiceEnabled(slotId))
+          </OnLoad>
+          <OnClick>
+            this.SetChecked(not this.GetChecked())
+            MvJoinVoiceChatButton_OnClick(this)
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentMuteSelfButton" inherits="GroupCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="60" y="16"/>
+        </Size>
+    <Anchors>
+          <Anchor point="TOP" relativeTo="$parentJoinVoiceChatButton" relativePoint="BOTTOM">
+        <Offset>
+              <AbsDimension x="0" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+        <Scripts language="python">
+          <OnLoad>
+            getglobal(this.GetName()).SetText("Mute")
+          </OnLoad>
+          <OnClick>
+            this.SetChecked(not this.GetChecked())
+            MvMuteSelfButton_OnClick(this)
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <Slider name="$parentVoiceOutputLevel" inherits="GroupVoiceSliderTemplate">
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="$parentJoinVoiceChatButton" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="5" y="-10"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnLoad>
+            getglobal(this.GetName()+"Text").SetText("Volume")
+            getglobal(this.GetName()+"Value").SetText("%d%%" % (MarsVoice.GetOutputLevel() * 200))
+            getglobal(this.GetName()).SetValue(MarsVoice.GetOutputLevel())
+          </OnLoad>
+          <OnValueChanged>
+            vol=this.GetValue()
+            getglobal(this.GetName()+"Value").SetText("%0.0f%%" % (vol * 200))
+            MarsVoice.SetOutputLevel(vol)
+          </OnValueChanged>
+        </Scripts>
+      </Slider>
+    </Frames>
+  </Frame>
+
+  <!--Group Info Frame-->
+  <Frame name="MvGroupInfoFrame" frameStrata="HIGH" toplevel="true" hidden="true" inherits="GroupFrameTemplate">
+    <Size>
+      <AbsDimension x="250" y="395"/>
+    </Size>  
+    <Anchors>
+      <Anchor point="LEFT" relativePoint="LEFT">
+        <Offset>
+          <AbsDimension x="10" y="100" />
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <!--<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="8"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="8"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="1" right="1" top="1" bottom="1"/>
+      </BackgroundInsets>
+    </Backdrop>-->
+    <Frames>
+      <FontString name="GroupInfoTitle" hidden="false" nonspacewrap="false" inherits="NormalFont" text="Group Member Info" justifyV="MIDDLE" justifyH="CENTER">
+        <Color r="1.0" g="1.0" b="1.0"/>
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="TOP">
+            <Offset>
+              <AbsDimension x="5" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <FontHeight>
+          <AbsValue val="15"/>
+        </FontHeight>
+      </FontString>
+      <Frame name="GroupMember1Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="GroupInfoTitle" relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="5" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember1" checked="false" text="Player Name Here" enableMouse="true" id="1" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember1HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember1" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator1" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember1HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <Frame name="GroupMember2Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="GroupMember1" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember2" checked="false" text="Player Name 2eHere" enableMouse="true" id="2" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember2HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember2" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator2" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember2HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <Frame name="GroupMember3Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="GroupMember2" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember3" checked="false" text="Player Name Here" enableMouse="true" id="3" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember3HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember3" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator3" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember3HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <Frame name="GroupMember4Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="GroupMember3" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember4" checked="false" text="Player Name Here" enableMouse="true" id="4" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember4HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember4" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator4" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember4HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <Frame name="GroupMember5Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="GroupMember4" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember5" checked="false" text="Player Name Here" enableMouse="true" id="5" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember5HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember5" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator5" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember5HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <Frame name="GroupMember6Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="GroupMember5" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember6" checked="false" text="Player Name Here" enableMouse="true" id="6" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember6HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember6" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator6" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember6HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <Frame name="GroupMember7Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="GroupMember6" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember7" checked="false" text="Player Name Here" enableMouse="true" id="7" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember7HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember7" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator7" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember7HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <Frame name="GroupMember8Frame" hidden="true">
+        <Size>
+          <AbsDimension x="245" y="30"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="GroupMember7" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <CheckButton name="GroupMember8" checked="false" text="Player Name Here" enableMouse="true" id="8" hidden="false" inherits="MvGroupMember">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </CheckButton>
+          <StatusBar name="GroupMember8HealthBar">
+            <Size>
+              <AbsDimension x="135" y="14"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember8" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="6" y="-3"></AbsDimension>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+            <BarColor r="0.91" g="0.42" b="0.29"/>            
+          </StatusBar>
+          <Frame name="GroupMemberVoiceIndicator8" inherits="VoiceStatusIndicator">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="GroupMember8HealthBar" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+        </Frames>
+      </Frame>
+      <!--Determines available buttons/actions when the player is the group leader-->
+      <Frame name="MvGroupLeaderFrame" hidden="true" inherits="GroupActionButtonsFrame">
+        <Size>
+          <AbsDimension x="255" y="125"/>
+        </Size>
+        <Frames>
+          <Frame name="$parentPartyVoiceConfig" inherits="VoiceConfigTemplate" hidden="false">
+        <Anchors>
+              <Anchor point="TOP" relativePoint="TOP">
+            <Offset>
+                  <AbsDimension x="7" y="-5"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Button name="$parentInvitePlayerButton" text="Invite"  inherits="InvitePlayerButton" hidden="false">
+            <Size>
+              <AbsDimension x="75" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="$parentPartyVoiceConfig" relativePoint="BOTTOMLEFT">
+                <Offset>
+                  <AbsDimension x="0" y="-5"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Button>
+          <Button name="$parentRemovePlayerButton" text="Remove"  inherits="RemovePlayerButton" hidden="false">
+            <Size>
+              <AbsDimension x="75" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="$parentInvitePlayerButton" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="3" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+          <Button name="$parentLeaveGroupButton" text="Leave"  inherits="LeaveGroupButton" hidden="false">
+            <Size>
+              <AbsDimension x="75" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="$parentRemovePlayerButton" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="3" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+          <Button name="$parentMuteSelectedButton" inherits="MuteSelectedButton" hidden="false">
+            <Size>
+              <AbsDimension x="114" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="$parentInvitePlayerButton" relativePoint="BOTTOMLEFT">
+                <Offset>
+                  <AbsDimension x="0" y="-5"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+          <Button name="$parentMuteAllButton" inherits="MuteAllButton" hidden="false">
+            <Size>
+              <AbsDimension x="114" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="$parentMuteSelectedButton" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="3" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+        </Frames>
+      </Frame>
+      <!--Determines available buttons/actions when the player is in a group but not the leader-->
+      <Frame name="MvGroupMemberFrame" hidden="true" inherits="GroupActionButtonsFrame">
+        <Frames>
+          <Frame name="$parentPartyVoiceConfig" inherits="VoiceConfigTemplate" hidden="false">
+            <Anchors>
+              <Anchor point="TOP" relativePoint="TOP">
+                <Offset>
+                  <AbsDimension x="10" y="-5"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Frame>
+          <Button name="$parentLeaveGroupButton" text="Leave"  inherits="LeaveGroupButton" hidden="false">
+            <Size>
+              <AbsDimension x="75" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="10" y="10"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+        </Frames>
+      </Frame>
+      <!--Determines available buttons/actions when player is not grouped-->
+      <Frame name="MvUnGroupedFrame" hidden="true" inherits="GroupActionButtonsFrame">
+        <Frames>
+          <Button name="$parentInvitePlayerButton" text="Invite" inherits="InvitePlayerButton" hidden="false">
+        <Size>
+          <AbsDimension x="100" y="20"/>
+        </Size>
+        <Anchors>
+              <Anchor point="BOTTOM" relativePoint="BOTTOM">
+            <Offset>
+                  <AbsDimension x="0" y="10"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Button>
+        </Frames>
+      </Frame>
+    </Frames>
+    <Scripts language="python">
+      <OnLoad>MvGroupInfoFrame_OnLoad(this)</OnLoad>
+      <OnShow>MvGroupInfoFrame_OnShow(this)</OnShow>
+      <OnEvent>MvGroupInfoFrame_OnEvent(this, args)</OnEvent>
+    </Scripts>
+  </Frame>
+</Ui>

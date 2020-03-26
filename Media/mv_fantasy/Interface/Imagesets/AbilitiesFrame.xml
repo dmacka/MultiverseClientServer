@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset Name="AbilitiesFrame" Imagefile="AbilitiesFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-AbilityPanel-BotLeft" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-AbilityPanel-BotRight" XPos="256" YPos="0" Width="32" Height="256" />
+    <Image Name="UI-AbilityPanel-TopLeft" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-AbilityPanel-TopRight" XPos="256" YPos="256" Width="32" Height="256" />
+</Imageset>

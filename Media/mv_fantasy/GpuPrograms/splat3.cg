@@ -1,0 +1,113 @@
+// Vertex program for automatic terrain texture generation
+void main_vp
+(
+    float4             iPosition           : POSITION,
+	float4             iNormal             : NORMAL,
+	float2             iTexcoord           : TEXCOORD0,
+
+	out float4         oPosition           : POSITION,
+	out float4         oTexcoord           : TEXCOORD0,
+	out float4         oCoverage           : TEXCOORD1,
+	out float4         oScaled             : TEXCOORD2,
+
+	uniform float4x4   worldViewProj,
+
+	uniform float2     sandToGrass,
+	uniform float2     grassToRock,
+	uniform float2     rockToSnow,
+	uniform float2     rockSlope,
+	uniform float4     fogColour
+)
+{
+
+	// steep slopes get rock instead of the other texture
+	// float no_rock_factor = clamp (iNormal.y, 0.0, 1.0);
+
+    // For some reason, this isn't working right now, so just set no_rock_factor to 1.0
+	float portion = 0;
+	float rock_factor = 0;
+	if (iNormal.y < rockSlope[0]) {
+		rock_factor = 1.0;
+	} else if (iNormal.y < rockSlope[1]) {
+		portion = smoothstep(rockSlope[0], rockSlope[1], iNormal.y);
+		rock_factor = clamp(1 - portion, 0.0, 1.0);
+	} else {
+		rock_factor = 0.0;
+	}
+	float no_rock_factor = 1.0 - rock_factor;
+
+    //  0 < SAND  < configSettings[0]
+	if (iPosition.y < sandToGrass[0]) {
+	  // All sand
+	  oCoverage.x = no_rock_factor;
+	  oCoverage.y = 0.0;
+	  oCoverage.z = 0.0;
+	  oCoverage.w = 0.0;
+	} else if (iPosition.y < sandToGrass[1]) {
+	  // Blend of sand and grass
+	  portion = smoothstep(sandToGrass[0], sandToGrass[1], iPosition.y);
+	  oCoverage.x = saturate((1 - portion) * no_rock_factor);
+	  oCoverage.y = saturate(portion * no_rock_factor);
+	  oCoverage.z = 0.0;
+	  oCoverage.w = 0.0;
+	} else if (iPosition.y < grassToRock[0]) {
+	  // All grass
+	  oCoverage.x = 0.0;
+	  oCoverage.y = no_rock_factor;
+	  oCoverage.z = 0.0;
+	  oCoverage.w = 0.0;
+	} else if (iPosition.y < grassToRock[1]) {
+	  // Blend of grass and rock
+	  portion = smoothstep(grassToRock[0], grassToRock[1], iPosition.y);
+	  oCoverage.x = 0.0;
+	  oCoverage.y = saturate((1 - portion) * no_rock_factor);
+	  oCoverage.z = saturate(portion * no_rock_factor);
+	  oCoverage.w = 0.0;
+	} else if (iPosition.y < rockToSnow[0]) {
+	  // All rock
+	  oCoverage.x = 0.0;
+	  oCoverage.y = 0.0;
+	  oCoverage.z = no_rock_factor;
+	  oCoverage.w = 0.0;
+	} else if (iPosition.y < rockToSnow[1]) {
+	  // Blend of rock and snow
+	  portion = smoothstep(rockToSnow[0], rockToSnow[1], iPosition.y);
+	  oCoverage.x = 0.0;
+	  oCoverage.y = 0.0;
+	  oCoverage.z = saturate((1 - portion) * no_rock_factor);
+	  oCoverage.w = saturate(portion * no_rock_factor);
+	} else {
+	  // All snow
+	  oCoverage.x = 0.0;
+	  oCoverage.y = 0.0;
+	  oCoverage.z = 0.0;
+	  oCoverage.w = no_rock_factor;
+	}
+
+    oCoverage.z = clamp (oCoverage.z + rock_factor, 0.0, 1.0);
+
+    // Calculate the output position and texture coordinates
+	oPosition  = mul(worldViewProj,iPosition);
+	oTexcoord = float4(iTexcoord.x, iTexcoord.y, 0.0, 0.0);
+    oScaled = oTexcoord * 20.0f;
+}
+
+// Fragment program for automatic terrain texture generation
+void main_fp
+(
+    float4              iTexcoord	: TEXCOORD0,
+    float4              iCoverage	: TEXCOORD1,
+    float4              iScaled	    : TEXCOORD2,
+
+	out float4          oColor		: COLOR,
+
+    uniform sampler2D   textureUnit0,
+    uniform sampler2D   textureUnit1,
+    uniform sampler2D   textureUnit2,
+    uniform sampler2D   textureUnit3
+)
+{
+	oColor = (tex2D(textureUnit0, iScaled.xy) * iCoverage.x) + (tex2D(textureUnit1, iScaled.xy) * iCoverage.y) + (tex2D(textureUnit2, iScaled.xy) *  iCoverage.z) + (tex2D(textureUnit3, iScaled.xy) *  iCoverage.w);
+
+}
+

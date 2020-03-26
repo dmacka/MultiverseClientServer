@@ -1,0 +1,514 @@
+<Ui>
+  <Script file="MvVoiceConfig.py"/>
+
+  <Texture name="VoiceConfigBGTexture" file="Interface\MvBasicTextures\Patch6x6W10A10" hidden="false" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativeTo="$parent">
+        <Offset> <AbsDimension x="5" y="-5"/> </Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+        <Offset> <AbsDimension x="-5" y="5"/> </Offset>
+      </Anchor>
+    </Anchors>
+    <Color r="0.3" g="0.3" b="0.3" a="1.0"/>
+  </Texture>
+
+  <Frame name="MvThickFrameTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <Texture name="$parentTexture" inherits="VoiceConfigBGTexture"/>
+      </Layer>
+    </Layers>
+    <Scripts language="python">
+      <OnLoad>
+        getglobal(this.GetName()+"Texture").SetVertexColor(0.20, 0.19, 0.17, 0.97)
+      </OnLoad>
+    </Scripts>
+  </Frame>
+
+  <Slider name="VoiceSliderTemplate" orientation="HORIZONTAL" virtual="true">
+    <Size> <AbsDimension x="128" y="16"/> </Size>
+    <Backdrop edgeFile="Interface\MvBasicTextures\Edge8x8Wa" tile="true">
+      <EdgeSize> <AbsValue val="8"/> </EdgeSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentText" inherits="NormalFont">
+          <Size> <AbsDimension x="100" y="16"/> </Size>
+          <Anchors>
+            <Anchor point="BOTTOM" relativePoint="CENTER">
+              <Offset> <AbsDimension x="0" y="5"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentValue" inherits="SmallFont" text="100%">
+          <Size> <AbsDimension x="31" y="16"/> </Size>
+          <Anchors>
+            <Anchor point="LEFT" relativePoint="RIGHT"/>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <ThumbTexture name="$parentThumbTexture" file="Interface\MvBasicTextures\SBCircleThumbW">
+      <Size> <AbsDimension x="10" y="17"/> </Size>
+   </ThumbTexture>
+  </Slider>
+
+  <Button name="VoiceConfigButtonTemplate" virtual="true">
+    <Size> <AbsDimension x="120" y="16"/> </Size>
+    <NormalTexture name="$parentTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+       <Color r="0.4" g="0.4" b="0.4" a="1.0"/>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </NormalTexture>
+    <HighlightTexture name="$parentHighlightTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+       <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </HighlightTexture>
+    <PushedTexture name="$parentPushedTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+       <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="2" y="-2"/> </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+             <Offset> <AbsDimension x="2" y="-2"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </PushedTexture>
+    <NormalText name="$parentNormalText" inherits="MvBodyFont" justifyH="CENTER"/>
+    <Scripts language="python">
+      <OnEnter> this.LockHighlight() </OnEnter>
+      <OnLeave> this.UnlockHighlight() </OnLeave>
+      <OnMouseDown> this.SetButtonState("PUSHED") </OnMouseDown>
+      <OnMouseUp> this.SetButtonState("NORMAL") </OnMouseUp>
+    </Scripts>
+  </Button>
+
+  <CheckButton name="VoiceConfigCheckCommonTemplate" virtual="true">
+    <Size> <AbsDimension x="80" y="16"/> </Size>
+    <NormalTexture name="$parentTexture" file="Interface\MvButtons\Mv-CheckBox-Up">
+       <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+       <Size> <AbsDimension x="12" y="12"/> </Size>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="2" y="-2"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </NormalTexture>
+    <HighlightTexture name="$parentHighlightTexture" file="Interface\MvButtons\Mv-CheckBox-Up">
+       <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+       <Size> <AbsDimension x="16" y="16"/> </Size>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </HighlightTexture>
+    <NormalText name="$parentNormalText" inherits="MvBodyFont" justifyH="LEFT">
+       <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+       <Anchors>
+         <Anchor point="LEFT">
+           <Offset> <AbsDimension x="20" y="0"/> </Offset>
+         </Anchor>
+       </Anchors>
+    </NormalText>
+  </CheckButton>
+
+  <CheckButton name="VoiceConfigCheckButtonTemplate" inherits="VoiceConfigCheckCommonTemplate" virtual="true">
+    <CheckedTexture name="$parentCheckedTexture" file="Interface\MvButtons\Mv-CheckBox-Check">
+       <Color r="0.4" g="1.0" b="0.4" a="1.0"/>
+       <Size> <AbsDimension x="16" y="16"/> </Size>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="2" y="2"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </CheckedTexture>
+    <Scripts language="python">
+<!--
+      <OnEnter> this.LockHighlight() </OnEnter>
+      <OnLeave> this.UnlockHighlight() </OnLeave>
+-->
+      <OnClick> this.SetChecked(not this.GetChecked()) </OnClick>
+    </Scripts>
+  </CheckButton>
+
+  <CheckButton name="VoiceConfigRadioButtonTemplate" inherits="VoiceConfigCheckCommonTemplate" virtual="true">
+    <CheckedTexture name="$parentCheckedTexture" file="Interface\MvButtons\Mv-SliderBar-Button-Horizontal">
+       <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+       <Size> <AbsDimension x="15" y="15"/> </Size>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </CheckedTexture>
+<!--
+    <Scripts language="python">
+      <OnEnter> this.LockHighlight() </OnEnter>
+      <OnLeave> this.UnlockHighlight() </OnLeave>
+    </Scripts>
+-->
+  </CheckButton>
+
+  <Button name="VoiceConfigPopupItemTemplate" inherits="VoiceConfigButtonTemplate" virtual="true">
+    <Size> <AbsDimension x="248" y="16"/> </Size>
+    <Scripts language="python">
+      <OnClick> VCPopupClick(this.GetID()) </OnClick>
+    </Scripts>
+  </Button>
+
+  <Button name="VoiceConfigPopupTop" frameStrata="FULLSCREEN_DIALOG" hidden="true">
+    <Anchors>
+      <Anchor point="TOPLEFT"/>
+      <Anchor point="BOTTOMRIGHT"/>
+    </Anchors>
+    <Frames>
+    <Frame name="VoiceConfigPopup" frameStrata="FULLSCREEN_DIALOG" hidden="false">
+      <Size> <AbsDimension x="256" y="143"/> </Size>
+      <Layers>
+        <Layer level="BACKGROUND">
+          <Texture name="$parentTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+            <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="$parent">
+                <Offset> <AbsDimension x="0" y="0"/> </Offset>
+              </Anchor>
+              <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+                <Offset> <AbsDimension x="0" y="0"/> </Offset>
+              </Anchor>
+            </Anchors>
+          </Texture>
+        </Layer>
+      </Layers>
+      <Frames>
+        <Button name="$parentItem0" inherits="VoiceConfigPopupItemTemplate" id="0">
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset> <AbsDimension x="0" y="-4"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+        <Button name="$parentItem1" inherits="VoiceConfigPopupItemTemplate" id="1">
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentItem0">
+              <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+        <Button name="$parentItem2" inherits="VoiceConfigPopupItemTemplate" id="2">
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentItem1">
+              <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+        <Button name="$parentItem3" inherits="VoiceConfigPopupItemTemplate" id="3">
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentItem2">
+              <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+        <Button name="$parentItem4" inherits="VoiceConfigPopupItemTemplate" id="4">
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentItem3">
+              <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+        <Button name="$parentItem5" inherits="VoiceConfigPopupItemTemplate" id="5">
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentItem4">
+              <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+        <Button name="$parentItem6" inherits="VoiceConfigPopupItemTemplate" id="6">
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentItem5">
+              <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+        <Button name="$parentItem7" inherits="VoiceConfigPopupItemTemplate" id="7">
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentItem6">
+              <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+            </Anchor>
+          </Anchors>
+        </Button>
+      </Frames>
+    </Frame>
+    </Frames>
+    <Scripts language="python">
+      <OnClick>this.Hide()</OnClick>
+    </Scripts>
+  </Button>
+
+  <Frame name="VoiceConfigFrame" inherits="GadgetThinFrameTemplate" parent="UIParent" frameStrata="DIALOG" hidden="true">
+    <Size> <AbsDimension x="390" y="235"/> </Size>
+    <Anchors>
+      <Anchor point="CENTER">
+        <Offset> <AbsDimension x="0" y="100"/> </Offset>
+      </Anchor>
+    </Anchors>
+    <Frames>
+      <CheckButton name="$parentEnableVoice" inherits="VoiceConfigCheckButtonTemplate" text="Enable Voice">
+        <Size> <AbsDimension x="116" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOP">
+            <Offset> <AbsDimension x="0" y="-14"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick>
+            this.SetChecked(not this.GetChecked())
+            MarsVoice.SetVoiceEnabled(this.GetChecked())
+            VCInit()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <Frame name="$parentServerIndicator">
+        <Size> <AbsDimension x="16" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="$parent">
+            <Offset> <AbsDimension x="-8" y="-8"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer>
+            <Texture name="$parentTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+              <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+              <Anchors>
+                <Anchor point="TOPLEFT" relativeTo="$parent">
+                  <Offset> <AbsDimension x="0" y="0"/> </Offset>
+                </Anchor>
+                <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+                  <Offset> <AbsDimension x="0" y="0"/> </Offset>
+                </Anchor>
+              </Anchors>
+            </Texture>
+          </Layer>
+        </Layers>
+        <Scripts language="python">
+          <OnLoad>
+            this.RegisterEvent("VOICE_CONNECT")
+          </OnLoad>
+          <OnEvent>
+            UpdateServerIndicator()
+          </OnEvent>
+        </Scripts>
+      </Frame>
+      <!-- Configure Input -->
+      <CheckButton name="$parentEnableInput" inherits="VoiceConfigCheckButtonTemplate" text="Enable Microphone">
+        <Size> <AbsDimension x="150" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset> <AbsDimension x="22" y="-45"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick>
+            VCClickInputEnable()
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <Button name="$parentInputDevice" inherits="VoiceConfigButtonTemplate" text="foobar">
+        <Size> <AbsDimension x="176" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentEnableInput">
+            <Offset> <AbsDimension x="0" y="-10"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> VCPopup(MarsVoice.GetAllInputDevices(), VCInputCallback) </OnClick>
+        </Scripts>
+      </Button>
+      <Slider name="$parentInputLevel" inherits="VoiceSliderTemplate">
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentInputDevice">
+            <Offset> <AbsDimension x="-15" y="-20"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnLoad>
+            getglobal(this.GetName()+"Text").SetText("Input Level")
+            getglobal(this.GetName()+"Value").SetText("%0.0f%%" % (this.GetValue() * 200))
+          </OnLoad>
+          <OnValueChanged>
+            level=this.GetValue()
+            getglobal(this.GetName()+"Value").SetText("%0.0f%%" % (level * 200))
+            MarsVoice.SetInputLevel(level)
+          </OnValueChanged>
+        </Scripts>
+      </Slider>
+      <FontString name="$parentVoiceMode" inherits="NormalFont" text="Voice Mode">
+        <Size> <AbsDimension x="116" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentInputLevel">
+            <Offset> <AbsDimension x="0" y="-10"/> </Offset>
+          </Anchor>
+        </Anchors>
+      </FontString>
+      <CheckButton name="$parentEnablePPT" inherits="VoiceConfigRadioButtonTemplate" text="Push to Talk">
+        <Size> <AbsDimension x="116" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentVoiceMode">
+            <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> VCClickPPT() </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentEnableVA" inherits="VoiceConfigRadioButtonTemplate" text="Voice Activated" checked="true">
+        <Size> <AbsDimension x="116" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentEnablePPT">
+            <Offset> <AbsDimension x="0" y="-4"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> VCClickVA() </OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="$parentEnableTest" inherits="VoiceConfigCheckButtonTemplate" text="Test Mode">
+        <Size> <AbsDimension x="116" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentEnableVA">
+            <Offset> <AbsDimension x="0" y="-14"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick>
+            testMode = not this.GetChecked()
+            this.SetChecked(testMode)
+            MarsVoice.SetTestMode(testMode)
+          </OnClick>
+        </Scripts>
+      </CheckButton>
+      <FontString name="$parentTestRecord" inherits="NormalFont" text="Record and Play Back">
+        <Size>
+          <AbsDimension x="160" y="16"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parent">
+            <Offset>
+              <AbsDimension x="-20" y="40"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </FontString>
+      <Button name="$parentRecordButton" inherits="VoiceConfigButtonTemplate" text="Start Record">
+        <Size> <AbsDimension x="80" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parent">
+            <Offset> <AbsDimension x="-110" y="15"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick>
+            VCTestRecording()
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Button name="$parentPlaybackButton" inherits="VoiceConfigButtonTemplate" text="Start Playback">
+        <Size> <AbsDimension x="90" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parent">
+            <Offset> <AbsDimension x="-15" y="15"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick>
+            VCTestPlayback()
+          </OnClick>
+        </Scripts>
+      </Button>
+      <!-- Configure Output -->
+      <Button name="$parentOutputDevice" inherits="VoiceConfigButtonTemplate" text="foobar">
+        <Size> <AbsDimension x="176" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentInputDevice">
+            <Offset> <AbsDimension x="20" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> VCPopup(MarsVoice.GetAllOutputDevices(), VCOutputCallback) </OnClick>
+        </Scripts>
+      </Button>
+      <Slider name="$parentOutputLevel" inherits="VoiceSliderTemplate">
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentOutputDevice">
+            <Offset> <AbsDimension x="-15" y="-20"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnLoad>
+            getglobal(this.GetName()+"Text").SetText("Volume")
+            getglobal(this.GetName()+"Value").SetText("%d%%" % int(this.GetValue() * 200))
+          </OnLoad>
+          <OnValueChanged>
+            vol=this.GetValue()
+            getglobal(this.GetName()+"Value").SetText("%0.0f%%" % (vol * 200))
+            MarsVoice.SetOutputLevel(vol)
+          </OnValueChanged>
+        </Scripts>
+      </Slider>
+      <!-- Configure Voice Channel -->
+      <FontString name="$parentActiveChannel" inherits="NormalFont" text="Voice Groups">
+        <Size>
+          <AbsDimension x="116" y="16"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentOutputLevel">
+            <Offset>
+              <AbsDimension x="0" y="-10"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </FontString>
+      <CheckButton name="$parentPartyVoice" inherits="VoiceConfigCheckButtonTemplate" text="Auto Join Party Chat">
+        <Size>
+          <AbsDimension x="116" y="16"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="$parentActiveChannel">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> VCSetAutoJoinPartyChat(this) </OnClick>
+        </Scripts>
+      </CheckButton>
+    </Frames>
+    <Scripts language="python">
+      <OnShow> VCInit() </OnShow>
+    </Scripts>
+  </Frame>
+</Ui>

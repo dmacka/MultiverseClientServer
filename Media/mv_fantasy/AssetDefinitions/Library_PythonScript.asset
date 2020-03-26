@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>Library_PythonScript</Name>
+  <Description>Library of client commands</Description>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\Library.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

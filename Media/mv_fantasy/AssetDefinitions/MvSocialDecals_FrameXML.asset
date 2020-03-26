@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>MvSocialDecals_FrameXML</Name>
+  <Type>Frame XML</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MvSocialDecals.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MvSocialDecals.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\compass-rose.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

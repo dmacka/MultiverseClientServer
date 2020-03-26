@@ -1,0 +1,13 @@
+<physics_model>
+  <rigid_body sid="human_female_body-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>3.67355e-005 0.799132 0.0333212</translate>
+        <capsule>
+          <height>1.28</height>
+          <radius>0.16 0.16</radius>
+        </capsule>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

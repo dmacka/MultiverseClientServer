@@ -1,0 +1,39 @@
+smoke2
+{
+	quota	1000
+	material	smoke2
+	particle_width	1000
+	particle_height	1000
+	cull_each	false
+
+	emitter Box
+	{
+		angle	20
+		colour	1 1 1 1
+		direction	0 1 0
+		emission_rate	7
+		position	0 0 0
+		velocity_min	600
+		velocity_max	960
+		time_to_live_min	12
+		time_to_live_max	20
+		duration	0
+		repeat_delay	0
+		width	20
+		height	20
+		depth	20
+	}
+
+	affector ColourFader
+	{
+		red	-0.1
+		green	-0.1
+		blue	-0.1
+		alpha	-0.1
+	}
+
+	affector Scaler
+	{
+		rate	400
+	}
+}

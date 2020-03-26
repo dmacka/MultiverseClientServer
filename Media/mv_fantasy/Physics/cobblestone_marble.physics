@@ -1,0 +1,56 @@
+<physics_model>
+  <rigid_body sid="mvcv_obb_cobblestone_1Shape-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0.736307 -0.035686 0</translate>
+        <box>
+          <half_extents>1.236587 0.3929939 1.3115</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_cobblestone_2Shape-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 1 0 17.83643</rotate>
+        <translate>0.3182483 -0.03568599 0.4662405</translate>
+        <box>
+          <half_extents>1.314848 0.3929939 1.3115</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_cobblestone_3Shape-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 1 0 35.90804</rotate>
+        <translate>-0.2462219 -0.03179215 0.274157</translate>
+        <box>
+          <half_extents>1.31485 0.3929954 1.311498</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_cobblestone_4Shape-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 35.90957</rotate>
+        <translate>-0.2308025 -0.03568599 -0.3004491</translate>
+        <box>
+          <half_extents>1.311501 0.3929939 1.31485</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_cobblestone_5Shape-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 17.96983</rotate>
+        <translate>0.3119819 -0.03568599 -0.4814827</translate>
+        <box>
+          <half_extents>1.314849 0.3929939 1.3115</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

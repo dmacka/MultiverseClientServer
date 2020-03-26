@@ -1,0 +1,658 @@
+
+material AlphaSplatTerrain
+{
+    technique
+	{
+		pass
+		{
+			vertex_program_ref AlphaSplatTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+               	param_named textureTileSize float 5
+               	param_named alpha0TextureCoordAdjust float4 0, 1, 0, 1
+               	param_named alpha1TextureCoordAdjust float4 0, 1, 0, 1
+			}
+
+
+			fragment_program_ref AlphaSplatTerrain/FP
+			{
+				param_named alpha0Mask float4 1, 1, 1, 1
+				param_named alpha1Mask float4 1, 1, 1, 1
+			}
+			texture_unit
+			{
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				texture l3dt-grass1-dry.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture l3dt-grass1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				texture l3dt-yellowsand1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				texture l3dt-rock1b.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				texture l3dt-rock1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				texture l3dt-grass1-lush.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				texture l3dt-rocks1-grey.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				texture l3dt-dirt1.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{
+				texture l3dt-detailmap.jpg
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material AlphaSplatTerrainColorizedHighlight
+{
+    technique
+	{
+		pass
+		{
+			vertex_program_ref AlphaSplatTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+               	param_named textureTileSize float 5
+               	param_named alpha0TextureCoordAdjust float4 0, 1, 0, 1
+               	param_named alpha1TextureCoordAdjust float4 0, 1, 0, 1
+			}
+
+
+			fragment_program_ref AlphaSplatTerrainColorizedHighlight/FP
+			{
+				param_named alpha0Mask float4 1, 1, 1, 1
+				param_named alpha1Mask float4 1, 1, 1, 1
+				param_named highlightColor float4 1.0 0.0 0.0 1.0
+			}
+			texture_unit
+			{
+				// alphaMap0
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// alphaMap1
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// layer 0
+				texture l3dt-grass1-dry.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				// layer 1
+				texture l3dt-grass1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 2
+				texture l3dt-yellowsand1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 3
+				texture l3dt-rock1b.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 4
+				texture l3dt-rock1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 5
+				texture l3dt-grass1-lush.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 6
+				texture l3dt-rocks1-grey.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 7
+				texture l3dt-dirt1.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{
+				// detail map
+				texture l3dt-detailmap.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture crosshatch-thin.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material AlphaSplatTerrainEdgeBlendHighlight
+{
+    technique
+	{
+		pass
+		{
+			vertex_program_ref AlphaSplatTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+               	param_named textureTileSize float 5
+               	param_named alpha0TextureCoordAdjust float4 0, 1, 0, 1
+               	param_named alpha1TextureCoordAdjust float4 0, 1, 0, 1
+			}
+
+
+			fragment_program_ref AlphaSplatTerrainEdgeBlendHighlight/FP
+			{
+				param_named alpha0Mask float4 1, 1, 1, 1
+				param_named alpha1Mask float4 1, 1, 1, 1
+			}
+			texture_unit
+			{
+				// alphaMap0
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// alphaMap1
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// layer 0
+				texture l3dt-grass1-dry.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				// layer 1
+				texture l3dt-grass1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 2
+				texture l3dt-yellowsand1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 3
+				texture l3dt-rock1b.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 4
+				texture l3dt-rock1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 5
+				texture l3dt-grass1-lush.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 6
+				texture l3dt-rocks1-grey.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 7
+				texture l3dt-dirt1.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{
+				// detail map
+				texture l3dt-detailmap.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture sandy_path.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material AlphaSplatTerrainEdgeSharpHighlight
+{
+    technique
+	{
+		pass
+		{
+			vertex_program_ref AlphaSplatTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+               	param_named textureTileSize float 5
+               	param_named alpha0TextureCoordAdjust float4 0, 1, 0, 1
+               	param_named alpha1TextureCoordAdjust float4 0, 1, 0, 1
+			}
+
+
+			fragment_program_ref AlphaSplatTerrainEdgeSharpHighlight/FP
+			{
+				param_named alpha0Mask float4 1, 1, 1, 1
+				param_named alpha1Mask float4 1, 1, 1, 1
+			}
+			texture_unit
+			{
+				// alphaMap0
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// alphaMap1
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// layer 0
+				texture l3dt-grass1-dry.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				// layer 1
+				texture l3dt-grass1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 2
+				texture l3dt-yellowsand1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 3
+				texture l3dt-rock1b.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 4
+				texture l3dt-rock1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 5
+				texture l3dt-grass1-lush.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 6
+				texture l3dt-rocks1-grey.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 7
+				texture l3dt-dirt1.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{
+				// detail map
+				texture l3dt-detailmap.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture sandy_path.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material AlphaSplatTerrainEdgeSharpBlendHighlight
+{
+    technique
+	{
+		pass
+		{
+			vertex_program_ref AlphaSplatTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+               	param_named textureTileSize float 5
+               	param_named alpha0TextureCoordAdjust float4 0, 1, 0, 1
+               	param_named alpha1TextureCoordAdjust float4 0, 1, 0, 1
+			}
+
+
+			fragment_program_ref AlphaSplatTerrainEdgeSharpBlendHighlight/FP
+			{
+				param_named alpha0Mask float4 1, 1, 1, 1
+				param_named alpha1Mask float4 1, 1, 1, 1
+			}
+			texture_unit
+			{
+				// alphaMap0
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// alphaMap1
+				texture black.png
+				tex_address_mode clamp
+			}
+			texture_unit
+			{
+				// layer 0
+				texture l3dt-grass1-dry.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				// layer 1
+				texture l3dt-grass1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 2
+				texture l3dt-yellowsand1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 3
+				texture l3dt-rock1b.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 4
+				texture l3dt-rock1.jpg
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// layer 5
+				texture l3dt-grass1-lush.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 6
+				texture l3dt-rocks1-grey.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{	
+				// layer 7
+				texture l3dt-dirt1.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{
+				// detail map
+				texture l3dt-detailmap.jpg
+				tex_address_mode wrap
+			}
+			
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture sandy_path.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				texture splatting_grass.dds
+			}
+		}
+	}
+}

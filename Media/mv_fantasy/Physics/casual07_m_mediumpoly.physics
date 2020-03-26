@@ -1,0 +1,13 @@
+<physics_model>
+  <rigid_body sid="casual07_m_mediumpoly-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>0.0 0.861871 0.00190721</translate>
+        <capsule>
+          <height>1.33</height>
+          <radius>0.2 0.2</radius>
+        </capsule>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

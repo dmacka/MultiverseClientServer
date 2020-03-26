@@ -1,0 +1,44 @@
+material UFO.Ufo_Mat
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NSE
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+		tex_coord_set 0
+	        texture NMBumpsOut.png
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+		tex_coord_set 1
+	        texture black.png
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+		tex_coord_set 2
+	        texture ufo_GlowTest.jpg
+	    }
+	    // Emissive map
+	    texture_unit
+	    {
+		tex_coord_set 3
+	        texture ufo_GlowTest.jpg
+	    }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+material foohero_model_FINAL_blinn3
+{
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			ambient 0.00000 0.00000 0.00000 1.00000
+			diffuse 0.40000 0.40000 0.40000 0.80000
+			specular 0.50000 0.50000 0.50000 1.00000 0.70000
+			emissive 0.00000 0.00000 0.00000 1.00000
+
+		}
+	}
+}
+
+material fooblinn1
+{
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			ambient 0.00000 0.00000 0.00000 1.00000
+			diffuse 0.16000 0.16000 0.16000 0.80000
+			specular 0.50000 0.50000 0.50000 1.00000 0.00000
+			emissive 0.00000 0.00000 0.00000 1.00000
+
+		}
+	}
+}
+

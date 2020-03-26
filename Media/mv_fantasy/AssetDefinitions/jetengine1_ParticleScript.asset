@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>jetengine1_ParticleScript</Name>
+  <Description>jetengine1</Description>
+  <Type>Particle Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Particles\jetengine1.particle</TargetFile>
+      <FileType>ParticleScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\flare_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="AssetName" value="jetengine1" />
+  </Properties>
+</AssetDefinition>

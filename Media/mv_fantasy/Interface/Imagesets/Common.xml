@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="Common" Imagefile="Common.tga" NativeHorzRes="512" NativeVertRes="32" AutoScaled="false">
+    <Image Name="Common-Input-Border" XPos="0" YPos="0" Width="128" Height="32" />
+</Imageset>

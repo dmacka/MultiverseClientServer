@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>wolf_Mesh</Name>
+  <Description>Wolf</Description>
+  <Type>Mesh</Type>
+  <Category>Creatures</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\wolf.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\wolf_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\wolf.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\wolf.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

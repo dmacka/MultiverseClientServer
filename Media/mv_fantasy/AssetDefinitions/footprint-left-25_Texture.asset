@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>footprint-left-25_Texture</Name>
+  <Type>Texture</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Textures\footprint-left-25.png</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="TerrainDecal" value="true" />
+  </Properties>
+</AssetDefinition>

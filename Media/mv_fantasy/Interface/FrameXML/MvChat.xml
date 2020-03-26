@@ -1,0 +1,330 @@
+<Ui>
+
+  <Script file="MvChat.py"/>
+
+  <Button name="MvChatButton" virtual="true">
+    <Size>
+      <AbsDimension x="88" y="24"/>
+    </Size>
+    <NormalText inherits="ChatFont" justifyH="CENTER" justifyV="MIDDLE"/>
+    <DisabledText inherits="DisabledFont" justifyH="CENTER" justifyV="MIDDLE"/>
+    <Layers>
+      <Layer>
+        <Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior">
+          <Anchors>
+            <Anchor point="BOTTOMLEFT">
+              <Offset>
+                <AbsDimension x="6" y="2"/>
+              </Offset>
+            </Anchor>
+            <Anchor point="TOPRIGHT">
+              <Offset>
+                <AbsDimension x="-6" y="-2"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+    </Layers>
+    <Scripts language="python">
+      <OnClick>MvChatOutputSelectButton_OnClick(this)</OnClick>
+    </Scripts>
+  </Button>
+
+  <Frame name="MvChatFrame" toplevel="true" parent="UIParent" frameStrata="MEDIUM" hidden="false">
+
+    <Size>
+      <AbsDimension x="472" y="220"/>
+    </Size>
+    <Anchors>
+      <Anchor point="BOTTOMLEFT">
+        <Offset>
+          <AbsDimension x="0" y="50"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+
+    <Frames>
+
+      <Frame name="$parentOutputSelectFrame" hidden="true">
+        <Size>
+          <AbsDimension x="472" y="24"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT"  relativeTo="MvChatFrame">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+          <Anchor point="TOPRIGHT" relativeTo="MvChatFrame">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+
+        <Frames>
+          <Button name="$parentButton0" text="Chat" hidden="true" id="0" inherits="MvChatButton">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="$parent">
+                <Offset>
+                  <AbsDimension x="0" y="2"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+
+          <Button name="$parentButton1" text="Local" hidden="true" id="1" inherits="MvChatButton">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentButton0">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+
+          <Button name="$parentButton2" text="Party" hidden="true" id="2" inherits="MvChatButton">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentButton1">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+
+          <Button name="$parentButton3" text="Combat" hidden="true" id="3" inherits="MvChatButton">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentButton2">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+
+          <Button name="$parentButton4" text="System" hidden="true" id="4" inherits="MvChatButton">
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentButton3">
+                <Offset><AbsDimension x="0" y="0"/></Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+        </Frames>
+      </Frame>
+
+
+      <Frame name="$parentInputFrame" inherits="MvBasicFrame">
+        <Size> <AbsDimension x="472" y="32"/> </Size>
+        <Anchors>
+          <Anchor point="BOTTOMLEFT"  relativeTo="$parent"> <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent"> <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor>
+        </Anchors>
+
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior">
+              <Anchors>
+                <Anchor point="TOPLEFT">     <Offset><AbsDimension x="5" y="-5"/></Offset> </Anchor>
+                <Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="-5" y="5"/></Offset> </Anchor>
+              </Anchors>
+              <Color r="0.1" g="0.1" b="0.1" a="0.7"/>
+            </Texture>
+          </Layer>
+        </Layers>
+
+        <Frames>
+          <Button name="$parentChatButton">
+            <Size> <AbsDimension x="32" y="32"/> </Size>
+            <Anchors>
+              <Anchor point="BOTTOMLEFT" relativeTo="$parent"> <Offset><AbsDimension x="1" y="0"/></Offset> </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer>
+                <Texture file="Interface\MvChat\Mv-ChatFrame-Chat-Up">
+                  <Size><AbsDimension x="32" y="32"/></Size>
+                  <Anchors><Anchor point="TOPRIGHT">    <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor></Anchors>
+                </Texture>
+              </Layer>
+            </Layers>
+          </Button>
+
+          <EditBox name="$parentEditBox" historyLines="16" letters="255" hidden="true">
+            <Size><AbsDimension x="408" y="24"/></Size>
+            <Anchors>
+              <Anchor point="BOTTOMLEFT"  relativePoint="BOTTOMRIGHT" relativeTo="$parentChatButton">
+                <Offset><AbsDimension x="2"   y="12"/></Offset>
+              </Anchor>
+              <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parent">
+                <Offset><AbsDimension x="-32" y="12"/></Offset>
+              </Anchor>
+            </Anchors>
+            <TextInsets>
+                  <AbsInset left="15" right="13" top="13" bottom="0"/>
+            </TextInsets>
+            <FontString inherits="ChatFont">
+              <FontHeight>
+                <AbsValue val="12"/>
+              </FontHeight>
+            </FontString>
+            <Scripts language="python">
+              <OnEnterPressed>MvChatFrameInputFrameEditBox_OnEnterPressed(this)</OnEnterPressed>
+              <OnEscapePressed>MvChatFrameInputFrameEditBox_OnEscapePressed(this)</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+        </Frames>
+        <Scripts language="python">
+          <OnMouseDown>MvChatFrameInputFrame_OnMouseDown(this)</OnMouseDown>
+        </Scripts>
+      </Frame>
+
+      <Frame name="$parentOutput" inherits="MvBasicFrame" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT"     relativePoint="BOTTOMLEFT" relativeTo="$parentOutputSelectFrame">
+            <Offset><AbsDimension x="0" y="5" /></Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT"   relativeTo="$parentInputFrame">
+            <Offset><AbsDimension x="0" y="-5"/></Offset>
+          </Anchor>
+        </Anchors>
+
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior">
+              <Anchors>
+                <Anchor point="TOPLEFT">     <Offset><AbsDimension x="3" y="-3"/></Offset> </Anchor>
+                <Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="-2" y="0"/></Offset> </Anchor>
+              </Anchors>
+              <Color r="0.1" g="0.1" b="0.1" a="0.0"/>
+            </Texture>
+          </Layer>
+        </Layers>
+
+        <Frames>
+          <ScrollingMessageFrame name="$parentScrollingMessageFrame0" displayDuration="120.0" maxLines="128" hidden="false" id="0">
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset><AbsDimension x="6" y="-5" /></Offset>
+              </Anchor>
+              <Anchor point="BOTTOMRIGHT">
+                <Offset><AbsDimension x="-30" y="5"/></Offset>
+              </Anchor>
+            </Anchors>
+
+            <FontString inherits="ChatFont" justifyH="LEFT">
+              <FontHeight>
+                <AbsValue val="12"/>
+              </FontHeight>
+            </FontString>
+            <Scripts language="python">
+              <OnLoad>
+                MvChatFrameOutputScrollingMessageFrame_OnLoad(this)
+              </OnLoad>
+              <OnEvent>
+                MvChatFrameOutputScrollingMessageFrame_OnEvent(this, args)
+              </OnEvent>
+            </Scripts>
+          </ScrollingMessageFrame>
+          <ScrollingMessageFrame name="$parentScrollingMessageFrame1" displayDuration="120.0" maxLines="128" hidden="true" id="1">
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="6" y="-5" />
+                </Offset>
+              </Anchor>
+              <Anchor point="BOTTOMRIGHT">
+                <Offset>
+                  <AbsDimension x="-30" y="5"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+
+            <FontString inherits="ChatFont" justifyH="LEFT">
+              <FontHeight>
+                <AbsValue val="12"/>
+              </FontHeight>
+            </FontString>
+            <Scripts language="python">
+              <OnLoad>MvChatFrameOutputScrollingMessageFrame_OnLoad(this)</OnLoad>
+              <OnEvent>MvChatFrameOutputScrollingMessageFrame_OnEvent(this, args)</OnEvent>
+            </Scripts>
+          </ScrollingMessageFrame>
+          <ScrollingMessageFrame name="$parentScrollingMessageFrame2" displayDuration="120.0" maxLines="128" hidden="true" id="2">
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="6" y="-5" />
+                </Offset>
+              </Anchor>
+              <Anchor point="BOTTOMRIGHT">
+                <Offset>
+                  <AbsDimension x="-30" y="5"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+
+            <FontString inherits="ChatFont" justifyH="LEFT">
+              <FontHeight>
+                <AbsValue val="12"/>
+              </FontHeight>
+            </FontString>
+            <Scripts language="python">
+              <OnLoad>MvChatFrameOutputScrollingMessageFrame_OnLoad(this)</OnLoad>
+              <OnEvent>MvChatFrameOutputScrollingMessageFrame_OnEvent(this, args)</OnEvent>
+            </Scripts>
+          </ScrollingMessageFrame>
+        </Frames>        
+      </Frame>
+
+      <Frame name="$parentOutputScrollbarFrame">
+        <Size> <AbsDimension x="32" y="220"/> </Size>
+        <Anchors>
+          <Anchor point="TOPRIGHT"    relativeTo="$parentOutput"> <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parentOutput"> <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor>
+        </Anchors>
+
+        <Frames>
+          <Button name="$parentUpButton">
+            <Size> <AbsDimension x="32" y="32"/> </Size>
+            <Anchors>
+              <Anchor point="TOPRIGHT" relativeTo="$parent"> <Offset><AbsDimension x="2" y="2"/></Offset> </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer layer="BACKGROUND">
+                <Texture file="Interface\MvChat\Mv-ChatFrame-ScrollUp-Up"/>
+              </Layer>
+            </Layers>
+            <Scripts language="python">
+              <OnClick>MvChatFrameOutputScrollingMessageFrame_ScrollUp()</OnClick>
+            </Scripts>
+          </Button>
+
+          <Button name="$parentDownButton">
+            <Size> <AbsDimension x="32" y="32"/> </Size>
+            <Anchors>
+              <Anchor point="BOTTOMRIGHT" relativeTo="$parent"> <Offset><AbsDimension x="2" y="-2"/></Offset> </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer>
+                <Texture file="Interface\MvChat\Mv-ChatFrame-ScrollDown-Up"/>
+              </Layer>
+            </Layers>
+            <Scripts language="python">
+              <OnClick>MvChatFrameOutputScrollingMessageFrame_ScrollDown()</OnClick>
+            </Scripts>
+          </Button>
+        </Frames>
+      </Frame>
+
+    </Frames>
+
+    <Scripts language="python">
+      <OnLoad>MvChatFrame_OnLoad(this)</OnLoad>
+      <OnEnter>MvChatFrame_OnEnter(this)</OnEnter>
+      <OnLeave>MvChatFrame_OnLeave(this)</OnLeave>
+    </Scripts>
+
+  </Frame>
+
+</Ui>

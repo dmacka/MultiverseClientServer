@@ -1,0 +1,1 @@
+The loose files are the same as in the zip. Use either method to put them on the server. Copying the zip is much faster and perserves permissions. If you copy the loose files you will have to change permissions on all executables.

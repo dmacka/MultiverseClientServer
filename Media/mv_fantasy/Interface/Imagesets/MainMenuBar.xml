@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Imageset Name="MainMenuBar" Imagefile="MainMenuBar.tga" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-ExhaustionTickHighlight" XPos="0" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-ExhaustionTickNormal" XPos="32" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Disabled-Old" XPos="64" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Disabled" XPos="96" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Down-Old" XPos="128" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Down" XPos="160" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Highlight-Old" XPos="192" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Highlight" XPos="224" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Up-Old" XPos="256" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollDownButton-Up" XPos="288" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Disabled-Old" XPos="320" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Disabled" XPos="352" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Down-Old" XPos="384" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Down" XPos="416" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Highlight-Old" XPos="448" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Highlight" XPos="480" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Up-Old" XPos="512" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenu-ScrollUpButton-Up" XPos="544" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-MainMenuBar-Dwarf" XPos="576" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-MainMenuBar-EndCap-Dwarf" XPos="832" YPos="0" Width="128" Height="128" />
+    <Image Name="UI-MainMenuBar-EndCap-Human" XPos="0" YPos="256" Width="128" Height="128" />
+    <Image Name="UI-MainMenuBar-Human" XPos="128" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-MainMenuBar-NightElf" XPos="384" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-MainMenuBar-PerformanceBar" XPos="640" YPos="256" Width="16" Height="64" />
+</Imageset>

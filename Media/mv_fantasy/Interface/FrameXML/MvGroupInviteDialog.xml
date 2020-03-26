@@ -1,0 +1,106 @@
+﻿<Ui>
+  <Script file="MvGroupInviteDialog.py"/>
+
+  <Button name="MvGroupInviteButton" enableKeyboard="false" enableMouse="false" virtual="true">
+    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="5" right="5" top="5" bottom="5"/>
+      </BackgroundInsets>
+    </Backdrop>
+
+    <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+      <Color r="1.0" g="1.0" b="1.0"/>
+      <Size>
+        <AbsDimension x="75" y="32"/>
+      </Size>
+    </NormalText>
+  </Button>
+  
+  <Frame name="MvGroupInviteDialogFrame" toplevel="true" movable="true" resizable="true" frameStrata="HIGH" parent="UIParent" enableMouse="true" enableKeyboard="true" alpha="1.0" hidden="true" inherits="MvBasicFrame">
+    <Size>
+      <AbsDimension x="250" y="125"/>
+    </Size>
+
+    <Anchors>
+      <Anchor point="BOTTOM" relativePoint="CENTER">
+        <Offset>
+          <AbsDimension x="0" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+
+    <Frames>
+      <FontString name="MvGroupInviteMessage" hidden="false" nonspacewrap="false" inherits="NormalFont" text="Group Member Info" justifyV="MIDDLE" justifyH="CENTER">
+        <Color r="1.0" g="1.0" b="1.0"/>
+        <Size>
+          <AbsDimension x="225" y="35"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="TOP">
+            <Offset>
+              <AbsDimension x="5" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <FontHeight>
+          <AbsValue val="15"/>
+        </FontHeight>
+      </FontString>
+      <Button name="MvGroupInviteAcceptButton" text="Accept" enableMouse="true" hidden="false" inherits="MvGroupInviteButton">
+        <Size>
+          <AbsDimension x="75" y="32"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOM" relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick>
+            MvGroupInviteAcceptButton_OnClick(this)
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Button name="MvGroupInviteDeclineButton" text="Decline" enableMouse="true" hidden="false" inherits="MvGroupInviteButton">
+        <Size>
+          <AbsDimension x="75" y="32"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOM" relativeTo="MvGroupInviteAcceptButton"  relativePoint="TOP">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick>
+            MvGroupInviteDeclineButton_OnClick(this)
+          </OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+
+    <Scripts language="python">
+      <OnLoad>
+        MvGroupInviteDialog_OnLoad(this)
+      </OnLoad>
+      <OnEvent>
+        MvGroupInviteDialog_OnEvent(this, args)
+      </OnEvent>
+    </Scripts>
+    
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture file="Interface\Tooltips\UI-Tooltip-Background" name="GroupInviteFrameBackgroundTexture"></Texture>
+      </Layer>
+    </Layers>
+  </Frame>
+</Ui>

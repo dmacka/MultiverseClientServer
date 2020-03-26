@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>00LayeredAvatar_Material</Name>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\00LayeredAvatar.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_tattoo.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_clothes.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_emissive.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_normal.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_specular.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\LayeredAvatar.cg</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\LayeredAvatar.program</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

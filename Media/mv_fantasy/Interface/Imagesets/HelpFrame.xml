@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Imageset Name="HelpFrame" Imagefile="HelpFrame.tga" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+    <Image Name="HelpFrame-BotLeft" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="HelpFrame-BotRight" XPos="256" YPos="0" Width="128" Height="256" />
+    <Image Name="HelpFrame-Top" XPos="384" YPos="0" Width="256" Height="256" />
+    <Image Name="HelpFrame-TopLeft" XPos="640" YPos="0" Width="256" Height="256" />
+    <Image Name="HelpFrame-TopRight" XPos="896" YPos="0" Width="128" Height="256" />
+    <Image Name="HelpFrameButton-Highlight" XPos="0" YPos="256" Width="256" Height="64" />
+    <Image Name="HelpFrameTab-Active" XPos="256" YPos="256" Width="64" Height="32" />
+    <Image Name="HelpFrameTab-Inactive" XPos="320" YPos="256" Width="64" Height="32" />
+    <Image Name="OpenTicketIcon" XPos="384" YPos="256" Width="32" Height="32" />
+</Imageset>

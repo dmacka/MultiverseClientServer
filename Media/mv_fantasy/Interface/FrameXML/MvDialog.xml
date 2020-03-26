@@ -1,0 +1,566 @@
+<Ui>
+
+  <Script file="MvDialog.py"/>
+
+
+
+
+
+  <FontString name="MvHeaderFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="16"/>
+    </FontHeight>
+    <Color r="0" g="0" b="0"/>
+    <Shadow>
+      <Offset>
+        <AbsDimension x="1" y="-1"/>
+      </Offset>
+      <Color r="0.5" g="0.5" b="0.5"/>
+    </Shadow>
+  </FontString>
+
+
+
+
+  <FontString name="MvBodyFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="12"/>
+    </FontHeight>
+    <Color r="0" g="0" b="0"/>
+<!--
+    <Shadow>
+      <Offset>
+        <AbsDimension x="1" y="-1"/>
+      </Offset>
+      <Color r="0" g="0" b="0"/>
+    </Shadow>
+-->
+  </FontString>
+
+
+
+
+
+  <Button name="MvActionTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="0" y="16"/>
+    </Size>
+
+    <Layers>
+      <Layer level="BACKGROUND">
+	<Texture name="$parentBulletTexture" file="Interface\MvQuestFrame\Mv-BulletPoint">
+	  <Color r="0" g="1" b="0" a="1"/>
+	  <Size>
+	    <AbsDimension x="16" y="16"/>
+	  </Size>
+	  <Anchors>
+	    <Anchor point="LEFT">
+	      <Offset>
+	        <AbsDimension x="0" y="0"/>
+	      </Offset>
+	    </Anchor>
+	  </Anchors>
+	</Texture>
+
+	<!--
+	<Texture file="Interface\MvButtons\Mv-White6x6">
+	  <Color r="0" g="1" b="0" a="1"/>
+	  <Anchors>
+	    <Anchor point="LEFT">
+	      <Offset>
+	        <AbsDimension x="16" y="0"/>
+	      </Offset>
+	    </Anchor>
+	    <Anchor point="RIGHT">
+	      <AbsDimension x="0" y="0"/>
+	    </Anchor>
+	  </Anchors>
+	</Texture>
+	-->
+      </Layer>
+    </Layers>
+
+    <NormalText name="$parentNormalText" inherits="MvBodyFont" justifyH="LEFT">
+      <Anchors>
+        <Anchor point="LEFT">
+          <Offset>
+	    <AbsDimension x="20" y="0"/>
+	  </Offset>
+        </Anchor>
+      </Anchors>
+    </NormalText>
+
+    <Scripts language="python">
+      <OnClick>MvAction_OnClick(this)</OnClick>
+      <OnEnter>MvAction_OnEnter(this)</OnEnter>
+      <OnLeave>MvAction_OnLeave(this)</OnLeave>
+    </Scripts>
+  </Button>
+
+
+
+
+  <Texture name="MvScrollBarButtonTextureTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="16" y="16"/>
+    </Size>
+<!--    <TexCoords left="0.25" right="0.75" top="0.25" bottom="0.75"/> -->
+  </Texture>
+
+
+
+  
+  <Button name="MvScrollButtonTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="16" y="16"/>
+    </Size>
+  </Button>
+
+
+
+
+  <Slider name="MvScrollBarTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="16" y="0"/>
+    </Size>
+    <Frames>
+      <Button name="$parentUpButton" inherits="MvScrollButtonTemplate">
+        <Anchors>
+	  <Anchor point="BOTTOM" relativePoint="TOP"/>
+	</Anchors>
+	<NormalTexture    name="$parentNT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBUpWMedium"/>
+	<HighlightTexture name="$parentHT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBUpWMedium"/>
+	<PushedTexture    name="$parentPT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBUpWMedium"/>
+	<DisabledTexture  name="$parentDT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBUpWMedium"/>
+	<Scripts language="python">
+	  <OnEnter>this.LockHighlight()</OnEnter>
+	  <OnLeave>this.UnlockHighlight()</OnLeave>
+	  <OnClick>
+            parent = this.GetParent()
+            parent.SetValue(parent.GetValue() - (parent.GetHeight() / 2))
+	  </OnClick>
+	</Scripts>
+      </Button>
+      <Button name="$parentDownButton" inherits="MvScrollButtonTemplate">
+        <Anchors>
+	  <Anchor point="TOP" relativePoint="BOTTOM"/>
+	</Anchors>
+	<NormalTexture    name="$parentNT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBDnWMedium"/>
+	<HighlightTexture name="$parentHT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBDnWMedium"/>
+	<PushedTexture    name="$parentPT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBDnWMedium"/>
+	<DisabledTexture  name="$parentDT" inherits="MvScrollBarButtonTextureTemplate" file="Interface/MvBasicTextures/SBDnWMedium"/>
+	<Scripts language="python">
+	  <OnEnter>this.LockHighlight()</OnEnter>
+	  <OnLeave>this.UnlockHighlight()</OnLeave>
+	  <OnClick>
+            parent = this.GetParent()
+            parent.SetValue(parent.GetValue() + (parent.GetHeight() / 2))
+	  </OnClick>
+	</Scripts>
+      </Button>
+    </Frames>
+    <Scripts language="python">
+      <OnValueChanged>
+        this.GetParent().SetVerticalScroll(args.data)
+      </OnValueChanged>
+    </Scripts>
+    <ThumbTexture name="$parentThumbTexture" file="Interface\MvButtons\Mv-ScrollBar-Knob">
+      <Size>
+	<AbsDimension x="16" y="16"/>
+      </Size>
+   </ThumbTexture>
+  </Slider>
+
+  <ScrollFrame name="MvScrollFrameTemplate" virtual="true">
+    <Frames>
+      <Slider name="$parentScrollBar" inherits="MvScrollBarTemplate">
+        <Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+	    <Offset>
+	      <AbsDimension x="0" y="-16"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+	    <Offset>
+	      <AbsDimension x="0" y="16"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Slider>
+    </Frames>
+    <Scripts language="python">
+      <OnLoad>
+      </OnLoad>
+      <OnScrollRangeChanged>
+          MvScrollFrame_OnScrollRangeChanged(this, args)
+      </OnScrollRangeChanged>
+      <OnVerticalScroll>
+          scrollbar = getglobal(this.GetName() + "ScrollBar")
+          scrollbar.SetValue(args.data)
+      </OnVerticalScroll>
+      <OnMouseWheel>
+          MvScrollFrame_OnMouseWheel(this, args)
+      </OnMouseWheel>
+    </Scripts>
+  </ScrollFrame>
+
+
+
+
+
+  <Frame name="MvDialogFrame" toplevel="true" movable="true" resizable="true" frameStrata="HIGH" parent="UIParent" enableMouse="true" enableKeyboard="true" alpha="1.0" hidden="true">
+    <Size>
+      <AbsDimension x="440" y="280"/>
+    </Size>
+
+    <Anchors>
+      <Anchor point="TOPLEFT">
+        <Offset>
+          <AbsDimension x="3" y="-100"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+
+    <Backdrop edgeFile="Interface/MvBasicTextures/Edge8x8Wb" tile="true">
+      <EdgeSize>
+	<AbsValue val="8"/>
+      </EdgeSize>
+      <TileSize>
+	<AbsValue val="32"/>
+      </TileSize>
+    </Backdrop>
+
+    <Layers>
+      <Layer>
+	<Texture name="$parent_txBackground" file="Interface/MvBasicTextures/Patch6x6W08A10">
+	  <Anchors>
+	    <Anchor point="TOPLEFT">
+	      <Offset>
+		<AbsDimension x="3" y="-3"/>
+	      </Offset>
+	    </Anchor>
+	    <Anchor point="BOTTOMRIGHT">
+	      <Offset>
+		<AbsDimension x="-3" y="3"/>
+	      </Offset>
+	    </Anchor>
+	  </Anchors>
+	</Texture>
+      </Layer>
+    </Layers>
+
+
+
+    <Frames>
+
+      <ScrollFrame name="MvDialogScrollFrame" inherits="MvScrollFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="MvDialogFrame">
+	    <Offset>
+	      <AbsDimension x="20" y="-2" />
+	    </Offset>
+	  </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="MvDialogFrame">
+	    <Offset>
+	      <AbsDimension x="-25" y="2" />
+	    </Offset>
+	  </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnShow>
+            this.UpdateScrollChildRect()
+          </OnShow>
+        </Scripts>
+
+        <ScrollChild>
+          <Frame name="MvDialogScrollChildFrame">
+	    <Anchors>
+	      <Anchor point="TOPLEFT" relativeTop="MvDialogScrollFrame">
+	        <Offset>
+		  <AbsDimension x="2" y="-2" />
+		</Offset>
+	      </Anchor>
+	      <Anchor point="BOTTOMRIGHT" relativeTop="MvDialogScrollFrame">
+	        <Offset>
+		  <AbsDimension x="-2" y="2" />
+		</Offset>
+	      </Anchor>
+	    </Anchors>
+
+            <Layers>
+              <Layer>
+                <FontString name="MvHeader1" inherits="MvHeaderFont" justifyH="LEFT" text="" hidden="true">
+		  <Size>
+		    <AbsDimension x="0" y="32"/>
+		  </Size>
+                </FontString>
+                <FontString name="MvHeader2" inherits="MvHeaderFont" justifyH="LEFT" text="" hidden="true">
+		  <Size>
+		    <AbsDimension x="0" y="32"/>
+		  </Size>
+                </FontString>
+                <FontString name="MvHeader3" inherits="MvHeaderFont" justifyH="LEFT" text="" hidden="true">
+		  <Size>
+		    <AbsDimension x="0" y="32"/>
+		  </Size>
+                </FontString>
+                <FontString name="MvHeader4" inherits="MvHeaderFont" justifyH="LEFT" text="" hidden="true">
+		  <Size>
+		    <AbsDimension x="0" y="32"/>
+		  </Size>
+                </FontString>
+                <FontString name="MvHeader5" inherits="MvHeaderFont" justifyH="LEFT" text="" hidden="true">
+		  <Size>
+		    <AbsDimension x="0" y="32"/>
+		  </Size>
+                </FontString>
+
+		<FontString name="MvBody1" inherits="MvBodyFont" justifyH="LEFT" justifyV="TOP" text="" hidden="true"/>
+		<FontString name="MvBody2" inherits="MvBodyFont" justifyH="LEFT" justifyV="TOP" text="" hidden="true"/>
+		<FontString name="MvBody3" inherits="MvBodyFont" justifyH="LEFT" justifyV="TOP" text="" hidden="true"/>
+		<FontString name="MvBody4" inherits="MvBodyFont" justifyH="LEFT" justifyV="TOP" text="" hidden="true"/>
+		<FontString name="MvBody5" inherits="MvBodyFont" justifyH="LEFT" justifyV="TOP" text="" hidden="true"/>
+	      </Layer>
+	    </Layers>
+
+            <Frames>
+
+              <Button name="MvAction1" inherits="MvActionTemplate" text="" id="1" hidden="true">
+	      </Button>
+
+              <Button name="MvAction2" inherits="MvActionTemplate" text="" id="2" hidden="true">
+	      </Button>
+
+              <Button name="MvAction3" inherits="MvActionTemplate" text="" id="3" hidden="true">
+	      </Button>
+
+              <Button name="MvAction4" inherits="MvActionTemplate" text="" id="4" hidden="true">
+	      </Button>
+
+              <Button name="MvAction5" inherits="MvActionTemplate" text="" id="5" hidden="true">
+              </Button>
+
+              <Button name="MvAction6" inherits="MvActionTemplate" text="" id="6" hidden="true">
+              </Button>
+
+              <Button name="MvAction7" inherits="MvActionTemplate" text="" id="7" hidden="true">
+              </Button>
+
+              <Button name="MvAction8" inherits="MvActionTemplate" text="" id="8" hidden="true">
+              </Button>
+
+              <Button name="MvAction9" inherits="MvActionTemplate" text="" id="9" hidden="true">
+              </Button>
+
+              <Button name="MvAction10" inherits="MvActionTemplate" text="" id="10" hidden="true">
+              </Button>
+
+            </Frames>
+          </Frame>
+        </ScrollChild>
+      </ScrollFrame>
+
+    </Frames>
+
+    <Scripts language="python">
+      <OnLoad>
+        MvDialog_OnLoad(this)
+      </OnLoad>
+      <OnEvent>
+        MvDialog_OnEvent(this, args)
+      </OnEvent>
+      <OnShow>
+        MvDialog_OnShow()
+      </OnShow>
+      <OnHide>
+        MvDialog_OnHide()
+      </OnHide>
+    </Scripts>
+
+  </Frame>
+
+
+
+
+  <Frame name="MvInfoFrame" toplevel="true" movable="true" resizable="true" frameStrata="HIGH" parent="UIParent" enableMouse="true" enableKeyboard="true" alpha="1.0" hidden="true">
+
+    <Size>
+      <AbsDimension x="256" y="196"/>
+    </Size>
+
+    <Anchors>
+      <Anchor point="TOPLEFT">
+        <Offset>
+          <AbsDimension x="3" y="-400"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+
+    <Layers>
+      <Layer level="BACKGROUND">
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-TopLeft">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors>
+	</Texture>
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-TopRight">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors><Anchor point="TOPRIGHT"><Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors>
+	</Texture>
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-TopBorder">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors>
+	    <Anchor point="TOPLEFT">  <Offset><AbsDimension x="64"  y="0"/></Offset> </Anchor>
+	    <Anchor point="TOPRIGHT"> <Offset><AbsDimension x="-64" y="0"/></Offset> </Anchor>
+	  </Anchors>
+	</Texture>
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-BotLeft">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors><Anchor point="BOTTOMLEFT"><Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors>
+	</Texture>
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-BotRight">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors><Anchor point="BOTTOMRIGHT"><Offset><AbsDimension x="0" y="0"/></Offset></Anchor></Anchors>
+	</Texture>
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-BotBorder">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors>
+	    <Anchor point="BOTTOMLEFT">  <Offset><AbsDimension x="64"  y="0"/></Offset> </Anchor>
+	    <Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="-64" y="0"/></Offset> </Anchor>
+	  </Anchors>
+	</Texture>
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-LeftBorder">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors>
+	    <Anchor point="TOPLEFT">    <Offset><AbsDimension x="0" y="-64"/></Offset> </Anchor>
+	    <Anchor point="BOTTOMLEFT"> <Offset><AbsDimension x="0" y="64"/></Offset>  </Anchor>
+	  </Anchors>
+	</Texture>
+
+        <Texture file="Interface\MvQuestFrame\Mv-DialogFrame-RightBorder">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors>
+	    <Anchor point="TOPRIGHT">    <Offset><AbsDimension x="0" y="-64"/></Offset> </Anchor>
+	    <Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="0" y="64"/></Offset>  </Anchor>
+	  </Anchors>
+	</Texture>
+
+	<Texture file="Interface\MvQuestFrame\Mv-DialogFrame-Interior">
+	  <Size><AbsDimension x="64" y="64"/></Size>
+	  <Anchors>
+	    <Anchor point="TOPLEFT">     <Offset><AbsDimension x="64" y="-64"/></Offset> </Anchor>
+	    <Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="-64" y="64"/></Offset> </Anchor>
+	  </Anchors>
+	</Texture>
+
+      </Layer>
+    </Layers>
+
+    <Frames>
+
+      <Frame name="MvInfoIconFrame" hidden="false">
+	<Size>
+	  <AbsDimension x="32" y="32"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="MvInfoFrame">
+	    <Offset>
+	      <AbsDimension x="20" y="-12"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+        <Layers>
+          <Layer level="BACKGROUND">
+	    <Texture name="MvInfoIconTexture" file="">
+	      <Anchors>
+	        <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="MvInfoIconFrame">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	        <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvInfoIconFrame">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	    </Texture>
+	  </Layer>
+        </Layers>
+      </Frame>
+
+      <FontString name="MvInfoCaption" inherits="MvHeaderFont" justifyH="LEFT" text="" hidden="false">
+        <Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="MvInfoIconFrame">
+	    <Offset>
+	      <AbsDimension x="5" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT" relativeTo="MvInfoIconFrame">
+	    <Offset>
+	      <AbsDimension x="5" y="0"/>
+	    </Offset>
+	  </Anchor>
+          <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="MvInfoFrame">
+	    <Offset>
+	      <AbsDimension x="-25" y="-12"/>
+	    </Offset>
+	  </Anchor>
+        </Anchors>
+      </FontString>
+
+      <FontString name="MvInfoDescription" inherits="MvBodyFont" justifyH="LEFT" text="" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvInfoIconFrame">
+	    <Offset>
+	      <AbsDimension x="5" y="-5"/>
+	    </Offset>
+	  </Anchor>
+          <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvInfoCaption">
+	    <Offset>
+	      <AbsDimension x="-5" y="-5"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="MvInfoCloseButton">
+	    <Offset>
+	      <AbsDimension x="5" y="5"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" relativeTo="MvInfoCloseButton">
+	    <Offset>
+	      <AbsDimension x="-5" y="5"/>
+	    </Offset>
+	  </Anchor>
+        </Anchors>
+      </FontString>
+
+      <Button name="MvInfoCloseButton" inherits="MvActionTemplate" text="Close" hidden="false">
+        <Anchors>
+          <Anchor point="BOTTOMLEFT"  relativePoint="BOTTOMLEFT"  relativeTo="MvInfoFrame">
+            <Offset>
+              <AbsDimension x="20" y="2"/>
+            </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvInfoFrame">
+            <Offset>
+              <AbsDimension x="-25" y="2"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+	<Scripts language="python">
+	  <OnClick>
+	    MvInfoCloseButton_OnClick()
+          </OnClick>
+	</Scripts>
+      </Button>
+
+    </Frames>
+
+  </Frame>
+</Ui>

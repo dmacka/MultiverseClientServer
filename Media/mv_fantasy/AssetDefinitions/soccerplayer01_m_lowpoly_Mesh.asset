@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>soccerplayer01_m_lowpoly_Mesh</Name>
+  <Description>soccerplayer01_m_lowpoly</Description>
+  <Type>Mesh</Type>
+  <Category>Rocketbox - Soccer Player</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\soccerplayer01_m_lowpoly.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\soccerplayer01_m_lowpoly_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>mv_skybox01_Material</Name>
+  <Description>Multiverse Skybox 1</Description>
+  <Type>Material</Type>
+  <Category>Skybox</Category>
+  <Properties>
+    <Property name="AssetName" value="Multiverse/SceneSkyBox" />
+  </Properties>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\mv_skybox01.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_skybox0001.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_skybox0002.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_skybox0003.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_skybox0004.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_skybox0005.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_skybox0006.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

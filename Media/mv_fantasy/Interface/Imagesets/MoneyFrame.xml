@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Imageset Name="MoneyFrame" Imagefile="MoneyFrame.tga" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+    <Image Name="Arrow-Left-Disabled" XPos="0" YPos="0" Width="16" Height="16" />
+    <Image Name="Arrow-Left-Up" XPos="16" YPos="0" Width="16" Height="16" />
+    <Image Name="Arrow-Right-Disabled" XPos="32" YPos="0" Width="16" Height="16" />
+    <Image Name="Arrow-Right-Down" XPos="48" YPos="0" Width="16" Height="16" />
+    <Image Name="Arrow-Right-Up" XPos="64" YPos="0" Width="16" Height="16" />
+    <Image Name="UI-MoneyButton-Down" XPos="80" YPos="0" Width="128" Height="32" />
+    <Image Name="UI-MoneyButton-Hilight" XPos="208" YPos="0" Width="128" Height="32" />
+    <Image Name="UI-MoneyButton-Up" XPos="336" YPos="0" Width="128" Height="32" />
+    <Image Name="UI-MoneyFrame" XPos="0" YPos="32" Width="256" Height="128" />
+    <Image Name="UI-MoneyFrame2" XPos="256" YPos="32" Width="256" Height="128" />
+    <Image Name="UI-MoneyIcons" XPos="0" YPos="160" Width="64" Height="16" />
+</Imageset>

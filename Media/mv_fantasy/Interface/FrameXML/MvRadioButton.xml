@@ -1,0 +1,42 @@
+<Ui>
+  <Script file="MvRadioButton.py"/>
+
+  <CheckButton name="RadioButtonCommonTemplate" virtual="true">
+    <Size> <AbsDimension x="100" y="16"/> </Size>
+    <NormalTexture name="$parentTexture" file="Interface\MvButtons\Mv-CheckBox-Up">
+       <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+       <Size> <AbsDimension x="12" y="12"/> </Size>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="2" y="-2"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </NormalTexture>
+    <HighlightTexture name="$parentHighlightTexture" file="Interface\MvButtons\Mv-CheckBox-Up">
+       <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+       <Size> <AbsDimension x="16" y="16"/> </Size>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </HighlightTexture>
+    <CheckedTexture name="$parentCheckedTexture" file="Interface\MvButtons\Mv-SliderBar-Button-Horizontal">
+      <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+      <Size> <AbsDimension x="15" y="15"/> </Size>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset> <AbsDimension x="0" y="-1"/> </Offset>
+        </Anchor>
+      </Anchors>
+    </CheckedTexture>
+    <NormalText name="$parentNormalText" inherits="MvBodyFont" justifyH="LEFT">
+       <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+       <Anchors>
+         <Anchor point="LEFT">
+           <Offset> <AbsDimension x="20" y="0"/> </Offset>
+         </Anchor>
+       </Anchors>
+    </NormalText>
+  </CheckButton>
+</Ui>

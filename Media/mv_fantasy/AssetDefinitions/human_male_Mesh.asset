@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>human_male_Mesh</Name>
+  <Description>Human Male</Description>
+  <Category>Characters</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\human_male.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\human_male_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\human_male.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\human_male.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

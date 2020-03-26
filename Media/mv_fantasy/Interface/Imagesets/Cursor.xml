@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<Imageset Name="Cursor" Imagefile="Cursor.tga" NativeHorzRes="512" NativeVertRes="32" AutoScaled="false">
+    <Image Name="Attack" XPos="0" YPos="0" Width="32" Height="32" />
+    <Image Name="Pickup" XPos="32" YPos="0" Width="32" Height="32" />
+    <Image Name="Point" XPos="64" YPos="0" Width="32" Height="32" />
+    <Image Name="Speak" XPos="96" YPos="0" Width="32" Height="32" />
+    <Image Name="UnableAttack" XPos="128" YPos="0" Width="32" Height="32" />
+    <Image Name="UnablePickup" XPos="160" YPos="0" Width="32" Height="32" />
+    <Image Name="UnablePoint" XPos="192" YPos="0" Width="32" Height="32" />
+    <Image Name="UnableSpeak" XPos="224" YPos="0" Width="32" Height="32" />
+</Imageset>

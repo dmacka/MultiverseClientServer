@@ -1,0 +1,21 @@
+material house_tall.house_tall_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture house_tall.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>MvChat_FrameXML</Name>
+  <Type>Frame XML</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MvChat.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface/FrameXML\MvChat.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\Imagesets\MvChat.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>ImageFiles\MvChatFrame.tga</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

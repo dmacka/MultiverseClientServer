@@ -1,0 +1,20 @@
+material waterfountain
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			
+            diffuse  1.00000 1.00000 1.00000 1.00000
+
+			texture_unit
+			{
+				texture Flare.dds
+				colour_op_ex modulate src_diffuse src_texture
+			}
+		}
+	}
+}

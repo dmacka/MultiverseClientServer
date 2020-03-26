@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>smoke_ParticleScript</Name>
+  <Description>smoke</Description>
+  <Type>Particle Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Particles\smoke.particle</TargetFile>
+      <FileType>ParticleScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\smoke_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="AssetName" value="smoke" />
+  </Properties>
+</AssetDefinition>

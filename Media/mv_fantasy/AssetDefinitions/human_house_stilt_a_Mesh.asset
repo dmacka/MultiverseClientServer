@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>human_house_stilt_a_Mesh</Name>
+  <Description>Human Stilt House A</Description>
+  <Type>Mesh</Type>
+  <Category>Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\human_house_stilt_a.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\human_house_stilt_a_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,192 @@
+<Ui>
+  <Script file="MvMinimap.py"/>
+
+  <Frame name="MvMinimapAvatarIconFrameTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="20" y="20"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER"/>
+    </Anchors>
+    <Layers>
+      <Layer name="$parentLayer" level="BACKGROUND">
+	<Texture name="$parentLayerTextureAvatarIcon" file="Interface\MvMinimap\avatar">
+	  <Anchors>
+	    <Anchor point="TOPLEFT"     relativePoint="TOPLEFT"/>
+	    <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+	  </Anchors>
+	</Texture>
+      </Layer>
+    </Layers>
+  </Frame>
+
+  <Frame name="MvMinimapMapOverlayFrameTemplate" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+        <Offset><AbsDimension x="8" y="-8"/></Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+        <Offset><AbsDimension x="-8" y="8"/></Offset>
+      </Anchor>
+    </Anchors>
+    <Layers>
+      <Layer name="$parentLayer" level="BACKGROUND">
+	<Texture name="$parentLayerTextureMap" file="Interface\MvMapImage\MinimapMapTexture">
+	  <TexCoords left="0.5000" right="0.5625" top="0.5000" bottom="0.6250"/>
+	</Texture>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Frame name="$parentFrameAvatarIcon" hidden="false" inherits="MvMinimapAvatarIconFrameTemplate"/>
+    </Frames>
+  </Frame>
+
+  <Frame name="MvMinimapBorderFrameTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\MvMinimap\map_edge">
+      <EdgeSize>
+	<AbsValue val="24"/>
+      </EdgeSize>
+      <TileSize>
+	<AbsValue val="24"/>
+      </TileSize>
+    </Backdrop>
+    <Anchors>
+      <Anchor point="TOPLEFT"     relativePoint="TOPLEFT"/>
+      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+    </Anchors>
+  </Frame>
+
+  <Frame name="MvMinimapCompassFrameTemplate" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT"     relativePoint="TOPLEFT"/>
+      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+    </Anchors>
+    <Layers>
+      <Layer name="$parentLayer" level="BACKGROUND">
+	<Texture name="$parentLayerTextureNorth" file="Interface\MvMinimap\up_arrow">
+	  <Size>
+	    <AbsDimension x="24" y="24"/>
+	  </Size>
+	  <Anchors>
+	    <Anchor point="TOP"/>
+	  </Anchors>
+	</Texture>
+	<Texture name="$parentLayerTextureSouth" file="Interface\MvMinimap\down_arrow">
+	  <Size>
+	    <AbsDimension x="24" y="24"/>
+	  </Size>
+	  <Anchors>
+	    <Anchor point="BOTTOM"/>
+	  </Anchors>
+	</Texture>
+	<Texture name="$parentLayerTextureEast" file="Interface\MvMinimap\right_arrow">
+	  <Size>
+	    <AbsDimension x="24" y="24"/>
+	  </Size>
+	  <Anchors>
+	    <Anchor point="RIGHT"/>
+	  </Anchors>
+	</Texture>
+	<Texture name="$parentLayerTextureWest" file="Interface\MvMinimap\left_arrow">
+	  <Size>
+	    <AbsDimension x="24" y="24"/>
+	  </Size>
+	  <Anchors>
+	    <Anchor point="LEFT"/>
+	  </Anchors>
+	</Texture>
+      </Layer>
+    </Layers>
+  </Frame>
+
+  <Frame name="MvMinimapCommandFrameTemplate" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT"     relativePoint="TOPLEFT"/>
+      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+    </Anchors>
+  </Frame>
+
+
+
+
+
+
+  <Frame name="MvMinimapFrame" toplevel="true" movable="false" resizable="true" frameStrata="HIGH" parent="UIParent" enableMouse="true" enableKeyboard="false" alpha="1" hidden="false">
+
+    <Size>
+      <AbsDimension x="128" y="128"/>
+    </Size>
+
+    <Anchors>
+      <Anchor point="TOPRIGHT"/>
+    </Anchors>
+
+    <Frames>
+      <Frame name="MvMinimapBorderFrame" inherits="MvMinimapBorderFrameTemplate" hidden="false">
+	<Frames>
+	  <Frame name="MvMinimapCompassFrame" inherits="MvMinimapCompassFrameTemplate" hidden="false">
+	    <Frames>
+
+              <Button name="MvMinimapZoomOutButton" id="0">
+		<Size>
+		  <AbsDimension x="24" y="24"/>
+		</Size>
+		<Anchors>
+		  <Anchor point="BOTTOMLEFT"/>
+		</Anchors>
+		<Layers>
+		  <Layer level="BACKGROUND">
+		    <Texture name="MvMinimapZoomOutButtonTexture" file="Interface\MvMinimap\minus">
+		      <Anchors>
+		        <Anchor point="TOPLEFT"/>
+		        <Anchor point="BOTTOMRIGHT"/>
+		      </Anchors>
+		    </Texture>
+		  </Layer>
+		</Layers>
+		<Scripts language="python">
+		  <OnClick>
+  MvMinimap_ZoomOut()
+		  </OnClick>
+		</Scripts>
+	      </Button>
+
+	      <Button name="MvMinimapZoomInButton" id="1">
+	        <Size><AbsDimension x="24" y="24"/></Size>
+		<Anchors>
+	          <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="MvMinimapZoomOutButton">
+                    <Offset><AbsDimension x="-2" y="0"/></Offset>
+                  </Anchor>
+		</Anchors>
+		<Layers>
+		  <Layer level="BACKGROUND">
+		    <Texture name="MvMinimapZoomInButtonTexture" file="Interface\MvMinimap\plus">
+	              <Anchors>
+		        <Anchor point="TOPLEFT"/>
+		        <Anchor point="BOTTOMRIGHT"/>
+		      </Anchors>
+		    </Texture>
+		  </Layer>
+		</Layers>
+		<Scripts language="python">
+		  <OnClick>
+  MvMinimap_ZoomIn()
+		  </OnClick>
+		</Scripts>
+              </Button>
+
+            </Frames>
+	  </Frame>
+	</Frames>
+      </Frame>
+      <Frame name="MvMinimapMapOverlayFrame" inherits="MvMinimapMapOverlayFrameTemplate" hidden="false"/>
+    </Frames>
+
+    <Scripts language="python">
+      <OnLoad>
+  MvMinimap_OnLoad()
+      </OnLoad>
+    </Scripts>
+
+  </Frame>
+</Ui>

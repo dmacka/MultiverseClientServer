@@ -1,0 +1,38 @@
+material MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+   
+            // Make this pass use the vertex shader define above
+            vertex_program_ref MVSimpleLighting_VS
+            {
+            }
+            
+            fragment_program_ref MVSimpleLighting_PS
+            {
+            }
+
+            texture_unit DiffuseTex
+            {
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material MVRed 
+{
+    technique fixed_function
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 0.00000 0.00000 1.00000
+            diffuse  1.00000 0.00000 0.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+        }
+    }
+}

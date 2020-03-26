@@ -1,0 +1,38 @@
+## Title: BetaWorld UI Elements
+## DefaultState: enabled
+## Author: Robin McCollum
+## eMail: mccollum@multiverse.net
+## URL: http://www.multiverse.net/
+## Interface: 0
+## Version: 0.8
+## Notes: This is the prototype UI
+## RequiredDeps:
+## OptionalDeps:
+## SavedVariables:
+Fonts.xml
+BasicControls.xml
+TextStatusBar.xml
+UIMenu.xml
+UIDropDownMenu.xml
+UIPanelTemplates.xml
+UnitFrame.xml
+MoneyFrame.xml
+ItemButtonTemplate.xml
+Cooldown.xml
+CharacterFrame.xml
+PaperDollFrame.xml
+MainMenuBar.xml
+MainMenuBarMicroButtons.xml
+MainMenuBarBagButtons.xml
+PlayerFrame.xml
+TargetFrame.xml
+ChatFrame.xml
+FloatingChatFrame.xml
+QuestFrame.xml
+QuestLogFrame.xml
+ContainerFrame.xml
+ActionButtonTemplate.xml
+ActionBarFrame.xml
+# Minimap.XML
+PartyFrame.xml
+MvMinimap.xml

@@ -1,0 +1,8 @@
+material human_house_wishbone._01_-_Default : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex human_wishbone_house.dds
+}
+
+material human_house_wishbone.initialShadingGroup : MVSimpleLighting
+{
+}

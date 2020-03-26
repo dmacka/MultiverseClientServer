@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Imageset Name="CastingBar" Imagefile="CastingBar.tga" NativeHorzRes="512" NativeVertRes="128" AutoScaled="false">
+    <Image Name="UI-CastingBar-Border" XPos="0" YPos="0" Width="256" Height="64" />
+    <Image Name="UI-CastingBar-Flash" XPos="256" YPos="0" Width="256" Height="64" />
+    <Image Name="UI-CastingBar-Spark" XPos="0" YPos="64" Width="32" Height="32" />
+</Imageset>

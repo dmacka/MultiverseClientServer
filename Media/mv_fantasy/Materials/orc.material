@@ -1,0 +1,217 @@
+material orc.BODY
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+				param_named_auto AmbientLightColor ambient_light_colour
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto EyePosition camera_position_object_space
+                param_named_auto TextureViewProjection texture_viewproj_matrix
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named spec_level float 0.1
+                param_named shininess float 1
+            }
+
+            texture_unit
+            {
+                texture bodyUV_DI_RED_1024.dds
+                tex_coord_set 0
+            }
+
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading gouraud
+
+            texture_unit
+            {
+                texture bodyUV_DI_RED_1024.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material orc.FACE
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+				param_named_auto AmbientLightColor ambient_light_colour
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto EyePosition camera_position_object_space
+                param_named_auto TextureViewProjection texture_viewproj_matrix
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named spec_level float 0.1
+                param_named shininess float 1
+            }
+
+            texture_unit
+            {
+                texture faceUV_DI_RED_1024.dds
+                tex_coord_set 0
+            }
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading gouraud
+
+            texture_unit
+            {
+                texture faceUV_DI_RED_1024.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material orc.SWORD
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+				param_named_auto AmbientLightColor ambient_light_colour
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto EyePosition camera_position_object_space
+                param_named_auto TextureViewProjection texture_viewproj_matrix
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named spec_level float 0.5
+                param_named shininess float 10
+            }
+
+            texture_unit
+            {
+                texture faceUV_DI_RED_1024.dds
+                tex_coord_set 0
+            }
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading gouraud
+
+            texture_unit
+            {
+                texture faceUV_DI_RED_1024.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+

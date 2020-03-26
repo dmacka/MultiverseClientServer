@@ -1,0 +1,97 @@
+pentagram
+{
+	quota	1000
+	material	ringflare
+	particle_width	100
+	particle_height	100
+	cull_each	false
+
+	emitter Point
+	{
+		angle	0
+		colour_range_start	1 0.300109 0.0964639 1
+		colour_range_end	1 0.849946 0.163987 1
+		direction	0.382451 0.923976 0
+		emission_rate	8
+		position	-282.5 -282.5 0
+		velocity	200
+		time_to_live	3.7
+		duration	10
+		repeat_delay	4
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour_range_start	1 0.300109 0.0964639 1
+		colour_range_end	1 0.849946 0.163987 1
+		direction	0.382451 -0.923976 0
+		emission_rate	8
+		position	0 400 0
+		velocity	200
+		time_to_live	3.7
+		duration	10
+		repeat_delay	4
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour_range_start	1 0.300109 0.0964639 1
+		colour_range_end	1 0.849946 0.163987 1
+		direction	-0.809135 0.587623 0
+		emission_rate	8
+		position	282.5 -282.5 0
+		velocity	200
+		time_to_live	4
+		duration	10
+		repeat_delay	4
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour_range_start	1 0.300109 0.0964639 1
+		colour_range_end	1 0.849946 0.163987 1
+		direction	1 0 0
+		emission_rate	8
+		position	-375 195 0
+		velocity	200
+		time_to_live	3.7
+		duration	10
+		repeat_delay	4
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour_range_start	1 0.300109 0.0964639 1
+		colour_range_end	1 0.849946 0.163987 1
+		direction	-0.809135 -0.587623 0
+		emission_rate	8
+		position	375 195 0
+		velocity	200
+		time_to_live	4
+		duration	10
+		repeat_delay	4
+	}
+
+	emitter Ring
+	{
+		angle	99
+		colour_range_start	0 1 0.2 1
+		colour_range_end	0 1 0.8 1
+		direction	0 0 1
+		emission_rate	60
+		position	0 0 0
+		velocity	10
+		time_to_live	4
+		duration	0
+		repeat_delay	0
+		width	950
+		height	950
+		depth	20
+		inner_width	0.8
+		inner_height	0.8
+	}
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>orc_Mesh</Name>
+  <Description>Orc</Description>
+  <Type>Mesh</Type>
+  <Category>Creatures</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\orc.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\orc_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\orc.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

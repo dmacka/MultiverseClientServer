@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>manswordhit_Sound</Name>
+  <Description>manswordhit</Description>
+  <Type>Sound</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Sounds\manswordhit.wav</TargetFile>
+      <FileType>Sound</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

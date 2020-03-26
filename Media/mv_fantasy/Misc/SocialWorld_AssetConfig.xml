@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetConfig>
+
+  <!-- Asset paths for mv_social assets -->
+
+  <AssetPath type="Folder" resource="Font"      src="..\Worlds\mv_social\Fonts"/>
+  <AssetPath type="Folder" resource="Imageset"  src="..\Worlds\mv_social\Interface\Imagesets"/>
+  <AssetPath type="Folder" resource="Interface" src="..\Worlds\mv_social\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\mv_social\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\mv_social\Scripts"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\GpuPrograms"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Textures"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Imagefiles"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Icons"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Meshes"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Skeletons"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Materials"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\SpeedTree"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Sounds"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Particles"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Physics"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\Misc"/>
+
+  <!-- Asset paths for custom assets -->
+
+  <AssetPath type="Folder" resource="Font"      src="..\Worlds\mv_social\AddOns\Fonts"/>
+  <AssetPath type="Folder" resource="Imageset"  src="..\Worlds\mv_social\AddOns\Interface\Imagesets"/>
+  <AssetPath type="Folder" resource="Interface" src="..\Worlds\mv_social\AddOns\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\mv_social\AddOns\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\Worlds\mv_social\AddOns\Scripts"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\GpuPrograms"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Textures"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Imagefiles"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Icons"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Meshes"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Skeletons"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Materials"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\SpeedTree"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Sounds"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Particles"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Physics"/>
+  <AssetPath type="Folder" src="..\Worlds\mv_social\AddOns\Misc"/>
+</AssetConfig>

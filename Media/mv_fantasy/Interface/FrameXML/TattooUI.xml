@@ -1,0 +1,289 @@
+<Ui>
+	<Script file="TattooUI.py"/>
+	<Frame name="TattooFrame" inherits="MvBasicFrame" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentTitle" file="Interface\MvChat\Mv-ChatFrame-Interior">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset><AbsDimension x="4" y="-4"/></Offset></Anchor>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" relativeTo="$parent"><Offset><AbsDimension x="-4" y="-28"/></Offset></Anchor>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentTitle">
+							<Offset><AbsDimension x="0" y="0"/></Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset><AbsDimension x="-4" y="4"/></Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<FontString name="$parentName" inherits="FrameNameFont" text="Tattoo Interface">
+				<Size>
+					<AbsDimension x="200" y="12"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP"><Offset><AbsDimension x="0" y="-12"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<Frame name="$parentInnerFrame">
+				<Size>
+					<AbsDimension x="231" y="292"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT"><Offset><AbsDimension x="28" y="-52"/></Offset></Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Frames>
+					<FontString name="$parentText" inherits="FrameNameFont" text="Tattoo Asset Needed">
+						<Anchors>
+							<Anchor point="TOPLEFT"><Offset><AbsDimension x="24" y="-24"/></Offset></Anchor>
+							<Anchor point="BOTTOMRIGHT"><Offset><AbsDimension x="-24" y="24"/></Offset></Anchor>
+						</Anchors>
+					</FontString>
+					<Frame name="$parentPictureFrame">
+						<Anchors>
+							<Anchor point="TOPLEFT"><Offset><AbsDimension x="24" y="-24"/></Offset></Anchor>
+							<Anchor point="BOTTOMRIGHT"><Offset><AbsDimension x="-24" y="24"/></Offset></Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+							</Layer>
+						</Layers>
+					</Frame>
+					<Frame name="$parentTattooFrame">
+						<Anchors>
+							<Anchor point="TOPLEFT"><Offset><AbsDimension x="24" y="-24"/></Offset></Anchor>
+							<Anchor point="BOTTOMRIGHT"><Offset><AbsDimension x="-24" y="24"/></Offset></Anchor>
+						</Anchors>
+						<Layers>
+							<Layer level="ARTWORK">
+								<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+							</Layer>
+						</Layers>
+					</Frame>
+				</Frames>
+			</Frame>
+			<Button name="$parentShoulderButton" inherits="FrameNameFont" text="Shoulder">
+				<Size>
+					<AbsDimension x="122" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentInnerFrame" relativePoint="TOPRIGHT">
+						<Offset><AbsDimension x="24" y="0"/></Offset>
+					</Anchor>
+				</Anchors>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Scripts language="python">
+					<OnClick>
+	TattooUIShoulderButton_OnClick(this, args)
+			</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentBackButton" inherits="FrameNameFont" text="Back">
+				<Size>
+					<AbsDimension x="122" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentShoulderButton" relativePoint="RIGHT">
+						<Offset><AbsDimension x="12" y="0"/></Offset>
+					</Anchor>
+				</Anchors>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Scripts language="python">
+					<OnClick>
+	TattooUIBackButton_OnClick(this, args)
+			</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentTattoo1Button" inherits="FrameNameFont" text="Dragon">
+				<Size>
+					<AbsDimension x="256" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentShoulderButton" relativePoint="BOTTOMLEFT">
+						<Offset><AbsDimension x="0" y="-12"/></Offset>
+					</Anchor>
+				</Anchors>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Scripts language="python">
+					<OnClick>
+	TattooUITattoo1Button_OnClick(this, args)
+			</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentTattoo2Button" inherits="FrameNameFont" text="Frog">
+				<Size>
+					<AbsDimension x="256" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentTattoo1Button" relativePoint="BOTTOM">
+						<Offset><AbsDimension x="0" y="-12"/></Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Scripts language="python">
+					<OnClick>
+	TattooUITattoo2Button_OnClick(this, args)
+			</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentTattoo3Button" inherits="FrameNameFont" text="Squid">
+				<Size>
+					<AbsDimension x="256" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOP" relativeTo="$parentTattoo2Button" relativePoint="BOTTOM">
+						<Offset><AbsDimension x="0" y="-12"/></Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Scripts language="python">
+					<OnClick>
+	TattooUITattoo3Button_OnClick(this, args)
+			</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentBuyButton" inherits="FrameNameFont" text="Buy">
+				<Size>
+					<AbsDimension x="55" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentTattoo3Button" relativePoint="BOTTOMLEFT">
+						<Offset><AbsDimension x="0" y="-12"/></Offset>
+					</Anchor>
+				</Anchors>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Layers>
+					<Layer>
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Scripts language="python">
+					<OnClick>
+ 	TattooUIBuyButton_OnClick(this, args)
+			</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentPreviewButton" inherits="FrameNameFont" text="Preview">
+				<Size>
+					<AbsDimension x="55" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentBuyButton" relativePoint="RIGHT">
+						<Offset><AbsDimension x="12" y="0"/></Offset>
+					</Anchor>
+				</Anchors>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Layers>
+					<Layer>
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Scripts language="python">
+					<OnClick>
+ 	TattooUIPreviewButton_OnClick(this, args)
+		    </OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentRemoveButton" inherits="FrameNameFont" text="Remove">
+				<Size>
+					<AbsDimension x="55" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentPreviewButton" relativePoint="RIGHT">
+						<Offset><AbsDimension x="12" y="0"/></Offset>
+					</Anchor>
+				</Anchors>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Layers>
+					<Layer>
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Scripts language="python">
+					<OnClick>
+ 	TattooUIRemoveButton_OnClick(this, args)
+		    </OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parentExitButton" inherits="FrameNameFont" text="Exit">
+				<Size>
+					<AbsDimension x="55" y="49"/>
+				</Size>
+				<Anchors>
+					<Anchor point="LEFT" relativeTo="$parentRemoveButton" relativePoint="RIGHT">
+						<Offset><AbsDimension x="12" y="0"/></Offset>
+					</Anchor>
+				</Anchors>
+				<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+				<Layers>
+					<Layer>
+						<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+					</Layer>
+				</Layers>
+				<Scripts language="python">
+					<OnClick>
+ 	TattooUIExitButton_OnClick(this, args)
+		    </OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts language="python">
+			<OnShow>
+   	 TattooFrame_OnShow()
+	    </OnShow>
+			<OnLoad>
+	TattooFrame_OnLoad(this)
+	    </OnLoad>
+	    <OnEvent>
+	TattooFrame_OnEvent(this, args)    
+	    </OnEvent>
+		</Scripts>
+	</Frame>
+	<Frame name="LESTattooFrame" inherits="TattooFrame" parent="UIParent" id="200" hidden="false">
+		<Anchors>
+			<Anchor point="BOTTOMRIGHT" relativePoint="RIGHT">
+				<Offset><AbsDimension x="-12" y="0"/></Offset>
+			</Anchor>
+			<Anchor point="TOPLEFT" relativePoint="TOP">
+				<Offset><AbsDimension x="-67" y="-12"/></Offset>
+			</Anchor>
+		</Anchors>
+	</Frame>
+</Ui>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<Imageset Name="MvJukebox" Imagefile="MvJukebox.dds" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+	<Image Name="Play" XPos="16" YPos="16" Width="99" Height="99"/>
+</Imageset>

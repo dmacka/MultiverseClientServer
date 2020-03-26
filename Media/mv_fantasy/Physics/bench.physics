@@ -1,0 +1,66 @@
+<physics_model>
+  <rigid_body sid="bench-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0.4229265 -0.0486877 -0.9048551 14.50088</rotate>
+        <translate>-0.09823839 0.1749875 -1.329664</translate>
+        <box>
+          <half_extents>0.05693968 0.3028534 0.07836548</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0.0363855 0.4862292 0</translate>
+        <box>
+          <half_extents>0.2516786 0.04105048 1.479481</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1 0 0 31.29587</rotate>
+        <translate>0.03638551 0.5473751 1.562682</translate>
+        <box>
+          <half_extents>0.2516786 0.04104947 0.1203081</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 29.85467</rotate>
+        <translate>0.03638551 0.5473735 -1.559494</translate>
+        <box>
+          <half_extents>0.2516786 0.04105156 0.1203083</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0.02478665 0.3495447 -1.316364</translate>
+        <box>
+          <half_extents>0.181573 0.04105048 0.1359408</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0.02478665 0.3495447 1.316697</translate>
+        <box>
+          <half_extents>0.181573 0.04105048 0.1359408</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1 0 0 6.160392</rotate>
+        <translate>0.02478679 0.1749875 1.32806</translate>
+        <box>
+          <half_extents>0.1515352 0.2845146 0.07808944</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 6.159883</rotate>
+        <translate>0.02478679 0.1749872 -1.329932</translate>
+        <box>
+          <half_extents>0.1515351 0.2845138 0.0780895</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.4229448 0.04868451 -0.9048467 14.50126</rotate>
+        <translate>-0.09823842 0.1749871 1.32806</translate>
+        <box>
+          <half_extents>0.05693965 0.3028521 0.07808959</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset Name="TutorialFrame" Imagefile="TutorialFrame.tga" NativeHorzRes="512" NativeVertRes="64" AutoScaled="false">
+    <Image Name="TutorialFrame-QuestionMark" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="TutorialFrameAlert" XPos="64" YPos="0" Width="64" Height="64" />
+    <Image Name="TutorialFrameBackground" XPos="128" YPos="0" Width="32" Height="32" />
+    <Image Name="TutorialFrameBorder" XPos="160" YPos="0" Width="256" Height="32" />
+</Imageset>

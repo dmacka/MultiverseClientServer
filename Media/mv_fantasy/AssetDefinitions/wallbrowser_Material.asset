@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>wallbrowser_Material</Name>
+  <Description>wallbrowser</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\wallbrowser.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+	
+  </Files>
+</AssetDefinition>

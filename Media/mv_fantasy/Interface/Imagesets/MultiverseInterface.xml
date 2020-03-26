@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<!-- This imageset contains some fundamental textures for display of fonts and clear items in the UI -->
+<Imageset Name="MultiverseInterface" Imagefile="MultiverseInterface.dds" NativeHorzRes="16" NativeVertRes="16" AutoScaled="false">
+    <Image Name="white" XPos="2" YPos="2" Width="4" Height="4" />
+    <Image Name="caret" XPos="2" YPos="2" Width="2" Height="4" />
+    <Image Name="default" XPos="10" YPos="2" Width="4" Height="4" />
+</Imageset>
+
+

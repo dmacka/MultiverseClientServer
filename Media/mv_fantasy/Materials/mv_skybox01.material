@@ -1,0 +1,19 @@
+material Multiverse/SceneSkyBox
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			
+			fog_override true
+
+			texture_unit
+			{
+				cubic_texture mv_skybox0001.dds mv_skybox0002.dds mv_skybox0003.dds mv_skybox0004.dds mv_skybox0005.dds mv_skybox0006.dds separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}

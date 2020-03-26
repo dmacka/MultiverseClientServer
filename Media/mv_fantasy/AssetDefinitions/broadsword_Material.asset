@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>broadsword_Material</Name>
+  <Description>broadsword</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\broadsword.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

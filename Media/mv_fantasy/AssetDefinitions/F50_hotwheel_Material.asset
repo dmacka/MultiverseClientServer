@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>F50_hotwheel_Material</Name>
+  <Description>FarrariF50</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\F50_hotwheel.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+	
+    <AssetFile>
+      <TargetFile>Textures\F50_texture_01_diffuse.tga</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+
+    <AssetFile>
+      <TargetFile>Textures\F50_texture_01_normals.tga</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+
+    <AssetFile>
+      <TargetFile>Textures\F50_texture_01_specular.tga</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>AmericanBoxwoodCluster_RT_SpeedTree</Name>
+  <Description>American Boxwood - Cluster</Description>
+  <Type>SpeedTree</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>SpeedTree\AmericanBoxwoodCluster_RT.tre</TargetFile>
+      <FileType>SpeedTree</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\AmericanBoxwoodCluster_Composite.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

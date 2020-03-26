@@ -1,0 +1,368 @@
+<Ui>
+  <Script file="MvObjCustomizer.py"/>
+
+  <Texture name="ObjCustomBGTexture" file="Interface\MvBasicTextures\Patch6x6W10A10" hidden="false" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativeTo="$parent">
+        <Offset> <AbsDimension x="1" y="-1"/> </Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+        <Offset> <AbsDimension x="-1" y="1"/> </Offset>
+      </Anchor>
+    </Anchors>
+    <Color r="0.3" g="0.3" b="0.3" a="1.0"/>
+  </Texture>
+
+  <Slider name="ObjCustomSliderTemplate" orientation="HORIZONTAL" virtual="true">
+    <Size> <AbsDimension x="128" y="16"/> </Size>
+    <Backdrop edgeFile="Interface\MvBasicTextures\Edge8x8Wa" tile="true">
+      <EdgeSize> <AbsValue val="8"/> </EdgeSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentValue" inherits="SmallFont">
+          <Size> <AbsDimension x="40" y="16"/> </Size>
+          <Anchors>
+            <Anchor point="LEFT" relativePoint="RIGHT"/>
+          </Anchors>
+        </FontString>
+        <FontString name="$parentLabel" inherits="SmallFont" text="label">
+          <Size> <AbsDimension x="50" y="16"/> </Size>
+          <Anchors>
+            <Anchor point="RIGHT" relativePoint="LEFT"/>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <ThumbTexture name="$parentThumbTexture" file="Interface\MvBasicTextures\SBCircleThumbW">
+      <Size> <AbsDimension x="10" y="17"/> </Size>
+   </ThumbTexture>
+  </Slider>
+
+  <Button name="ObjCustomButtonTemplate" virtual="true">
+    <Size> <AbsDimension x="120" y="16"/> </Size>
+    <NormalTexture name="$parentTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+       <Color r="0.4" g="0.4" b="0.4" a="1.0"/>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </NormalTexture>
+    <HighlightTexture name="$parentHighlightTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+       <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+             <Offset> <AbsDimension x="0" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </HighlightTexture>
+    <PushedTexture name="$parentPushedTexture" file="Interface\MvBasicTextures\Patch6x6W10A10">
+       <Color r="0.0" g="0.0" b="0.0" a="1.0"/>
+       <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent">
+             <Offset> <AbsDimension x="2" y="-2"/> </Offset>
+          </Anchor>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+             <Offset> <AbsDimension x="2" y="-2"/> </Offset>
+          </Anchor>
+        </Anchors>
+    </PushedTexture>
+    <NormalText name="$parentNormalText" inherits="MvBodyFont" justifyH="CENTER"/>
+    <Scripts language="python">
+      <OnEnter> this.LockHighlight() </OnEnter>
+      <OnLeave> this.UnlockHighlight() </OnLeave>
+      <OnMouseDown> this.SetButtonState("PUSHED") </OnMouseDown>
+      <OnMouseUp> this.SetButtonState("NORMAL") </OnMouseUp>
+    </Scripts>
+  </Button>
+
+  <CheckButton name="ObjCustomSubsurfaceSelectTemplate" inherits="RadioButtonCommonTemplate" virtual="true">
+    <Scripts language="python">
+      <OnLoad> RadioButton_RegisterButton(this, "subsurface") </OnLoad>
+      <OnClick> RadioButton_OnClickHandler(this, "subsurface") </OnClick>
+    </Scripts>
+  </CheckButton>
+
+  <Frame name="ObjCustomSubsurfaceFrameTemplate" virtual="true">
+    <Size> <AbsDimension x="128" y="144"/> </Size>
+    <Layers>
+      <Layer level="ARTWORK">
+      <Texture name="$parentBGTexture" inherits="ObjCustomBGTexture"/>
+      </Layer>
+    </Layers>
+    <Frames>
+      <CheckButton name="$parentSubsurface0" inherits="ObjCustomSubsurfaceSelectTemplate" id="0" text="subsurface 0">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentSubsurface1" inherits="ObjCustomSubsurfaceSelectTemplate" id="1" text="subsurface 1">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSubsurface0" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentSubsurface2" inherits="ObjCustomSubsurfaceSelectTemplate" id="2" text="subsurface 2">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSubsurface1" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentSubsurface3" inherits="ObjCustomSubsurfaceSelectTemplate" id="3" text="subsurface 3">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSubsurface2" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentSubsurface4" inherits="ObjCustomSubsurfaceSelectTemplate" id="4" text="subsurface 4">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSubsurface3" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentSubsurface5" inherits="ObjCustomSubsurfaceSelectTemplate" id="5" text="subsurface 5">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSubsurface4" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentSubsurface6" inherits="ObjCustomSubsurfaceSelectTemplate" id="6" text="subsurface 6">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSubsurface5" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentSubsurface7" inherits="ObjCustomSubsurfaceSelectTemplate" id="7" text="subsurface 7">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSubsurface6" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+    </Frames>
+  </Frame>
+
+  <CheckButton name="ObjCustomColorSelectTemplate" inherits="RadioButtonCommonTemplate" virtual="true">
+    <Scripts language="python">
+      <OnLoad> RadioButton_RegisterButton(this, "color") </OnLoad>
+      <OnClick> RadioButton_OnClickHandler(this, "color") </OnClick>
+    </Scripts>
+  </CheckButton>
+
+  <Frame name="ObjCustomColorSelectFrameTemplate" virtual="true">
+    <Size> <AbsDimension x="128" y="64"/> </Size>
+    <Layers>
+      <Layer level="ARTWORK">
+      <Texture name="$parentBGTexture" inherits="ObjCustomBGTexture"/>
+      </Layer>
+    </Layers>
+    <Frames>
+      <CheckButton name="$parentColor0" inherits="ObjCustomColorSelectTemplate" id="0" text="color 0">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentColor1" inherits="ObjCustomColorSelectTemplate" id="1" text="color 1">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentColor0" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentColor2" inherits="ObjCustomColorSelectTemplate" id="2" text="color 2">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentColor1" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+      <CheckButton name="$parentColor3" inherits="ObjCustomColorSelectTemplate" id="3" text="color 3">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentColor2" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </CheckButton>
+    </Frames>
+  </Frame>
+
+  <Frame name="ObjCustomPatternSelectFrameTemplate" virtual="true">
+    <Size> <AbsDimension x="216" y="80"/> </Size>
+    <Layers>
+      <Layer level="ARTWORK">
+      <Texture name="$parentBGTexture" inherits="ObjCustomBGTexture"/>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Button name="$parentPrev" inherits="ObjCustomButtonTemplate" text="&lt;">
+        <Size> <AbsDimension x="16" y="80"/> </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="$parent"/>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> ObjCustom_PrevPattern() </OnClick>
+        </Scripts>
+      </Button>
+      <Frame name="$parentPattern">
+        <Size> <AbsDimension x="64" y="64"/> </Size>
+        <Anchors>
+          <Anchor point="CENTER" relativeTo="$parent"/>
+        </Anchors>
+        <Layers>
+          <Layer>
+            <Texture name="$parentTexture"/>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Button name="$parentNext" inherits="ObjCustomButtonTemplate" text="&gt;">
+        <Size> <AbsDimension x="16" y="80"/> </Size>
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="$parent"/>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> ObjCustom_NextPattern() </OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+  </Frame>
+
+  <Slider name="ObjCustomParamSliderTemplate" inherits="ObjCustomSliderTemplate" virtual="true">
+    <Scripts language="python">
+      <OnValueChanged> ObjCustom_UpdateParams() </OnValueChanged>
+    </Scripts>
+  </Slider>
+
+  <Frame name="ObjCustomParamFrameTemplate" virtual="true">
+    <Size> <AbsDimension x="216" y="48"/> </Size>
+    <Layers>
+      <Layer level="ARTWORK">
+      <Texture name="$parentBGTexture" inherits="ObjCustomBGTexture"/>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Slider name="$parentScale" inherits="ObjCustomParamSliderTemplate">
+        <Anchors>
+          <Anchor point="TOP">
+            <Offset> <AbsDimension x="10" y="-2"/> </Offset>
+          </Anchor>
+        </Anchors>
+      </Slider>
+      <Slider name="$parentShiny" inherits="ObjCustomParamSliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentScale" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Slider>
+    </Frames>
+  </Frame>
+
+  <Slider name="ObjCustomColorSliderTemplate" inherits="ObjCustomSliderTemplate" virtual="true">
+    <Scripts language="python">
+      <OnValueChanged> ObjCustom_UpdateColor() </OnValueChanged>
+    </Scripts>
+  </Slider>
+
+  <Frame name="ObjCustomColorFrameTemplate" virtual="true">
+    <Size> <AbsDimension x="216" y="80"/> </Size>
+    <Layers>
+      <Layer level="ARTWORK">
+        <Texture name="$parentBGTexture" inherits="ObjCustomBGTexture"/>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Slider name="$parentRed" inherits="ObjCustomColorSliderTemplate">
+        <Anchors>
+          <Anchor point="TOP">
+            <Offset> <AbsDimension x="10" y="-2"/> </Offset>
+          </Anchor>
+        </Anchors>
+      </Slider>
+      <Slider name="$parentGreen" inherits="ObjCustomColorSliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentRed" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Slider>
+      <Slider name="$parentBlue" inherits="ObjCustomColorSliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentGreen" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Slider>
+      <Frame name="$parentSample">
+        <Size> <AbsDimension x="16" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentBlue" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+        <Layers>
+          <Layer level="ARTWORK">
+            <Texture name="$parentTexture" inherits="ObjCustomBGTexture"/>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Slider name="$parentSpecular" inherits="ObjCustomColorSliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentSample" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Slider>
+    </Frames>
+  </Frame>
+
+  <Frame name="ObjCustomFrame" hidden="true">
+    <Size> <AbsDimension x="362" y="248"/> </Size>
+    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <Texture name="$parentTexture" inherits="ObjCustomBGTexture"/>
+      </Layer>
+    </Layers>
+    <Anchors>
+      <Anchor point="TOPLEFT"> <Offset> <AbsDimension x="100" y="-100"/> </Offset> </Anchor>
+    </Anchors>
+    <Frames>
+      <Frame name="ObjCustomSubsurfaceFrame" inherits="ObjCustomSubsurfaceFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset> <AbsDimension x="8" y="-8"/> </Offset>
+          </Anchor>
+        </Anchors>
+      </Frame>
+      <Frame name="ObjCustomColorSelectFrame" inherits="ObjCustomColorSelectFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="ObjCustomSubsurfaceFrame" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Frame>
+      <Frame name="ObjCustomPatternSelectFrame" inherits="ObjCustomPatternSelectFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="ObjCustomSubsurfaceFrame" relativePoint="TOPRIGHT"/>
+        </Anchors>
+      </Frame>
+      <Frame name="ObjCustomParamFrame" inherits="ObjCustomParamFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="ObjCustomPatternSelectFrame" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Frame>
+      <Frame name="ObjCustomColorFrame" inherits="ObjCustomColorFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="ObjCustomParamFrame" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Frame>
+      <Button name="ObjCustomClose" inherits="ObjCustomButtonTemplate" text="Close">
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT">
+            <Offset> <AbsDimension x="-6" y="6"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts language="python">
+          <OnClick> ObjCustomFrame.Hide() </OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+    <Scripts language="python">
+      <OnLoad> ObjCustom_OnLoad(this) </OnLoad>
+      <OnEvent> ObjCustomFrame.Show() </OnEvent>
+      <OnShow>
+        ObjCustom_InitParams()
+        ObjCustom_InitColor()
+        ObjCustom_InitPattern()
+      </OnShow>
+    </Scripts>
+  </Frame>
+</Ui>

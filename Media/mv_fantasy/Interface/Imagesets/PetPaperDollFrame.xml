@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Imageset Name="PetPaperDollFrame" Imagefile="PetPaperDollFrame.tga" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+    <Image Name="UI-PetHappiness" XPos="0" YPos="0" Width="128" Height="64" />
+    <Image Name="UI-PetPaperDollFrame-BotLeft" XPos="128" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-PetPaperDollFrame-BotRight" XPos="384" YPos="0" Width="128" Height="256" />
+</Imageset>

@@ -1,0 +1,13 @@
+<Ui>
+    <Script file="MvClickExample.py"/>
+    <Frame hidden="true">
+        <Scripts language="python">
+             <OnLoad>
+                 MvClickExample_OnLoad(this)
+             </OnLoad>
+             <OnEvent>
+                 MvClickExample_OnEvent(this, args)
+             </OnEvent>
+        </Scripts>
+    </Frame>
+</Ui>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>MvFrame_FrameXML</Name>
+  <Type>Frame XML</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MvFrame.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\Imagesets\MvChat.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\Imagesets\MvButtons.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>ImageFiles\MvChatFrame.tga</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>ImageFiles\MvButtons.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

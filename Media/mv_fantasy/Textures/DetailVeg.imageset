@@ -1,0 +1,13 @@
+<MVImageSet>
+  <width>4096</width>
+	<height>256</height>
+	<ImageRect name="grass1" left="0" right="511"/>
+	<ImageRect name="grass2" left="512" right="1023"/>
+	<ImageRect name="birdofparadise" left="1024" right="1279"/>
+	<ImageRect name="cattail" left="1278" right="1535"/>
+	<ImageRect name="marigold" left="1536" right="1791"/>
+	<ImageRect name="pampas" left="1792" right="2047"/>
+	<ImageRect name="rose" left="2048" right="2303"/>
+	<ImageRect name="sunflower" left="2304" right="2559"/>
+	<ImageRect name="thickgrass" left="2560" right="2815"/>
+</MVImageSet>

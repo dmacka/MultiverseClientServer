@@ -1,0 +1,10 @@
+<Ui>
+  <Script file="MvSocialDecals.py"/>
+  <Frame name="hiddenDecalFrame" hidden="true">
+    <Scripts language="python">
+      <OnUpdate>
+        UpdateCompassPosition()
+      </OnUpdate>
+    </Scripts>
+  </Frame>
+</Ui>

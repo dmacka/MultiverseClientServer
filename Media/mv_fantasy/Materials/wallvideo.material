@@ -1,0 +1,27 @@
+material wallvideo.wall
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+               texture_source mvMovie
+               {
+                       name DShow Movie
+                       codec DirectShow
+                       path RafAndCorey.wmv
+                       looping true
+               }
+                tex_coord_set 0
+            }
+        }
+    }
+}

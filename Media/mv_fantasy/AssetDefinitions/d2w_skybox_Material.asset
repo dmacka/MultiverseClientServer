@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>d2w_skybox_Material</Name>
+  <Description>sky box for demo 2 world</Description>
+  <Type>Material</Type>
+  <Category>Skybox</Category>
+  <Properties>
+    <Property name="AssetName" value="Multiverse/d2w_skyBox" />
+  </Properties>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\d2w_skybox.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_night_east.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_night_north.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_night_south.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_night_top.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\mv_night_west.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

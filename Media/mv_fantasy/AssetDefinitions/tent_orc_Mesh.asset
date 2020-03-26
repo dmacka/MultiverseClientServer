@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>tent_orc_Mesh</Name>
+  <Description>Orc Tent</Description>
+  <Type>Mesh</Type>
+  <Category>Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\tent_orc.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\tent_orc_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

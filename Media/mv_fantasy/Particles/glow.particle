@@ -1,0 +1,49 @@
+glow
+{
+	material	lensflare
+	particle_width	500
+	particle_height	500
+	cull_each	false
+	quota	5
+	renderer	billboard
+	local_space true
+	billboard_type  point
+
+	emitter Point
+	{
+		angle	0
+		colour		1 1 1 0.3
+		direction	0 1 0
+		emission_rate	4
+		position	0 0 0
+		velocity	0
+		time_to_live	100
+		duration	0.5
+		repeat_delay	99.5
+	}
+}
+
+red-glow
+{
+	material	lensflare
+	particle_width	500
+	particle_height	500
+	cull_each	false
+	quota	5
+	renderer	billboard
+	local_space true
+	billboard_type  point
+
+	emitter Point
+	{
+		angle	0
+		colour		1 0 0 0.2
+		direction	0 1 0
+		emission_rate	4
+		position	0 0 0
+		velocity	0
+		time_to_live	100
+		duration	0.5
+		repeat_delay	99.5
+	}
+}

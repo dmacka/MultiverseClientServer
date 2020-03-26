@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>unit_box_Material</Name>
+  <Description>unit_box</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\unit_box.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

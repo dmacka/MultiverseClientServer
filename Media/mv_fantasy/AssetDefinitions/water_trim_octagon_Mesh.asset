@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>water_trim_octagon_Mesh</Name>
+  <Description>water_trim_octagon</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\water_trim_octagon.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\water_trim_octagon_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\water_trim_octagon.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

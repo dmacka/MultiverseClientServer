@@ -1,0 +1,33 @@
+<physics_model>
+  <rigid_body sid="st_f_dance_drk-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0 0.9912886 0.07020935</translate>
+        <box>
+          <half_extents>0.275716 0.7738216 0.1435056</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.1355073 -0.683871 0.7169089 30.9003</rotate>
+        <translate>0.3775135 1.564745 0.2185723</translate>
+        <box>
+          <half_extents>0.275716 0.07692692 0.07091926</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0 1 36.33524</rotate>
+        <translate>-0.313838 1.774805 0.003152401</translate>
+        <box>
+          <half_extents>0.07692371 0.2757137 0.0709191</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.9760944 -0.09287324 0.1965054 39.57977</rotate>
+        <translate>0.1161854 0.4678435 -0.1799887</translate>
+        <box>
+          <half_extents>0.07091931 0.2757155 0.07692366</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

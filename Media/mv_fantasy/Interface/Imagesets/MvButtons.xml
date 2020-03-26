@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvButtons" Imagefile="MvButtons.tga" NativeHorzRes="512" NativeVertRes="128" AutoScaled="false">
+    <Image Name="Mv-White6x6"                    XPos="201" YPos="97"  Width="6"   Height="6" />
+    <Image Name="Mv-CloseButton-Disabled"        XPos="256" YPos="32"  Width="32"  Height="32" />
+    <Image Name="Mv-CloseButton-Down"            XPos="288" YPos="32"  Width="32"  Height="32" />
+    <Image Name="Mv-CloseButton-Up"              XPos="320" YPos="32"  Width="32"  Height="32" />
+    <Image Name="Mv-ScrollBar-Down-Disabled"     XPos="432" YPos="32"  Width="32"  Height="32" />
+    <Image Name="Mv-ScrollBar-Down-Pushed"       XPos="464" YPos="32"  Width="32"  Height="32" />
+    <Image Name="Mv-ScrollBar-Down-Normal"       XPos="0"   YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-ScrollBar-Up-Disabled"       XPos="32"  YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-ScrollBar-Up-Pushed"         XPos="64"  YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-ScrollBar-Up-Normal"         XPos="96"  YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-ScrollBar-Knob"              XPos="264" YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-Listbox-Highlight"           XPos="0"   YPos="0"   Width="128" Height="16" />
+    <Image Name="Mv-Listbox-Highlight2"          XPos="128" YPos="0"   Width="128" Height="16" />
+    <Image Name="Mv-CheckBox-Check"              XPos="216" YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-CheckBox-Check-Disabled"     XPos="216" YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-CheckBox-Up"                 XPos="264" YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-Panel-Button-Down"           XPos="256" YPos="0"   Width="76"  Height="19" />
+    <Image Name="Mv-Panel-Button-Highlight"      XPos="384" YPos="0"   Width="76"  Height="19" />
+    <Image Name="Mv-Panel-Button-Highlight2"     XPos="0"   YPos="32"  Width="76"  Height="19" />
+    <Image Name="Mv-Panel-Button-Up"             XPos="128" YPos="32"  Width="76"  Height="19" />
+    <Image Name="Mv-SliderBar-Button-Horizontal" XPos="312" YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-SliderBar-Button-Vertical"   XPos="312" YPos="96"  Width="32"  Height="32" />
+    <Image Name="Mv-Thin-Frame-Edges"            XPos="375" YPos="125" Width="16"  Height="2"/>
+    <Image Name="Mv-No-Frame-Edges"              XPos="393" YPos="125" Width="16"  Height="2"/>
+</Imageset>

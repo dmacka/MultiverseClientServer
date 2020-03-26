@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>st_m_lean_lt_Mesh</Name>
+  <Description>st_m_lean_lt</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Statues</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\st_m_lean_lt.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\st_m_lean_lt_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\st_m_lean_lt.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

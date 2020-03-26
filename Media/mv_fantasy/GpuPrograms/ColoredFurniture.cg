@@ -1,0 +1,238 @@
+
+struct VSOutput
+{
+    // transformed vertex coordinate
+    float4  position                : POSITION;
+    
+    // lighting intensity color multiplier
+    float4  lightingDiffuse         : COLOR0;
+    float4  lightingSpecular        : COLOR1;
+    
+    // texture coordinate from vertex
+    float2  texCoord                : TEXCOORD0;
+    float2  scaledTexCoord          : TEXCOORD1;
+    
+    // fog factor
+    float  fog                      : FOG;
+    
+    // offsets in the colormap for the 4 colors for the current tile
+    float2   color0Coord            : TEXCOORD2;
+    float2   color1Coord            : TEXCOORD3;
+    float2   color2Coord            : TEXCOORD4;
+    float2   color3Coord            : TEXCOORD5;
+    
+    // offset and size of the tile in the atlas
+    float4  tileOffsetAndSize       : TEXCOORD6;
+    float2  unscaledTexCoord        : TEXCOORD7;
+};
+
+// Vertex program for colored furniture
+VSOutput ColoredFurnitureVP
+(
+    float4				iPosition			: POSITION,
+    float3				iNormal				: NORMAL,
+    float2				iTexcoord			: TEXCOORD0,
+    float4              iColor              : COLOR0,
+
+    // the full World/View/Proj combined matrix
+    uniform float4x4	worldViewProj,
+    
+    // Fog settings
+    //	fogSettings[0] - fog near distance
+    //	fogSettings[1] - fog far distance
+    //	fogSettings[2] - fog scale
+    uniform float4		fogSettings,
+
+    uniform float4		LightPosition[5],
+    uniform float4		LightAttenuation[5],
+    
+    // Diffuse color of the light
+    uniform float4		LightDiffuse[5],
+
+    // Color of the ambient light
+    uniform float4		lightAmbient,
+    
+    // location of the camera in object space
+    uniform float4      EyePosition,
+    
+    // Specular color of the lights
+	uniform float4		LightSpecular[5],
+	
+    // vertical offset in colormap for the row of colors for the current object.
+    // used as the colormap V coordinate
+    uniform float       colormapVCoord,
+    
+    // shininess of each subsurface
+    uniform float4      shininessAndScale[8],
+    
+    // Offsets in the tile atlas for each subsurface's tile
+    uniform float4      tileOffsetAndSize[8],
+    
+    // multiply the lighting by this value to brighten the object when highlighted
+    uniform float       brighten
+)
+{
+    VSOutput output;
+
+    // Calculate the output position
+    output.position  = mul(worldViewProj,iPosition);
+    
+    float3 lightDirection[5];
+    float lightAttenuation[5];
+
+    float3 eyeDirection = normalize(EyePosition.xyz - iPosition.xyz);
+
+    float4 specularColor = 0;
+
+    // do subsurface selection
+    float subSurface = round(iColor.a * 8.0);
+    
+    float shininess = shininessAndScale[subSurface].x;
+    
+    float4 lightingDiffuse = 0;
+    
+    // get the light and eye direction in world space (not normalized)
+    for (int lightIndex = 0; lightIndex < 5; ++lightIndex) {
+        // Account for whether the light is a point source.
+        lightDirection[lightIndex] = LightPosition[lightIndex].xyz - (iPosition * LightPosition[lightIndex].w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+
+        // compute attenuation for this light
+        lightAttenuation[lightIndex] = (lightDistance >
+                                        LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y +
+                      LightAttenuation[lightIndex].z * lightDistance +
+                      LightAttenuation[lightIndex].w * lightDistanceSquared));
+        
+        // compute specular
+        float3 normLightDir  = normalize(lightDirection[lightIndex]);
+        float3 normHalfAngle = normalize(normLightDir + eyeDirection);
+        float specular = dot(iNormal, normLightDir) > 0 ? saturate(dot(iNormal, normHalfAngle)) : 0;
+        float specular_pow = pow(specular, shininess);
+        specularColor = specularColor + lightAttenuation[lightIndex] * LightSpecular[lightIndex] * specular_pow;
+        
+        // calculate diffuse lighting
+        lightingDiffuse = lightingDiffuse +
+                    max(dot(iNormal, normalize(lightDirection[lightIndex])), 0) *		// diffuse lighting
+                    LightDiffuse[lightIndex] * lightAttenuation[lightIndex];             // diffuse color
+    }
+    
+    output.lightingSpecular = specularColor;
+                    
+    output.lightingDiffuse = saturate((lightingDiffuse + lightAmbient) * iColor) * brighten;
+
+    // compute fog
+    float fog = clamp(( output.position.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    output.fog = 1.0 - fog;
+    
+    output.lightingDiffuse.a = 1.0;
+    
+    output.tileOffsetAndSize = tileOffsetAndSize[subSurface];
+    
+    float2 scale = shininessAndScale[subSurface].y;
+    output.texCoord = iTexcoord * scale;
+    output.scaledTexCoord = output.texCoord * output.tileOffsetAndSize.zw;
+    output.unscaledTexCoord = iTexcoord;
+        
+    float colormapPixSize = 1.0 / 32.0;
+    
+    // compute base offset within colormap for this subsurface.  There are four colors
+    // per subsurface, and we add a half pixel offset to get to the pixel center.
+    float colormapBase = ( subSurface * 4 + 0.5 ) * colormapPixSize;
+    
+    output.color0Coord = float2(colormapBase, colormapVCoord);
+    output.color1Coord = float2(colormapBase + colormapPixSize, colormapVCoord);
+    output.color2Coord = float2(colormapBase + 2.0 * colormapPixSize, colormapVCoord);
+    output.color3Coord = float2(colormapBase + 3.0 * colormapPixSize, colormapVCoord);
+
+    return output;
+}
+
+//
+//
+float4 ColoredFurnitureFP2a(
+    // output of vertex shader
+    VSOutput In,
+
+    // pattern tile texture atlas
+    uniform sampler2D	atlasSampler,
+    
+    // colormap texture
+    uniform sampler2D   colormapSampler,
+    
+    // ambient occlusion texture
+    uniform sampler2D   ambientOcclusionSampler
+        
+) : COLOR
+{
+    float4 outputColor;
+    
+    float2 dx = ddx(In.scaledTexCoord);
+    float2 dy = ddy(In.scaledTexCoord);
+        
+    // The frac() isnt enough to properly wrap the texture if the texture coord is negative.  
+    // Artists will make sure texcoords are always positive.
+    float2 texCoord = frac(In.texCoord) * In.tileOffsetAndSize.zw + In.tileOffsetAndSize.xy;
+    
+    float4 atlasMask = tex2Dgrad(atlasSampler, texCoord, dx, dy) * 2.0;
+    float4 color0 = tex2D(colormapSampler, In.color0Coord) * atlasMask.r;
+    float4 color1 = tex2D(colormapSampler, In.color1Coord) * atlasMask.g;
+    float4 color2 = tex2D(colormapSampler, In.color2Coord) * atlasMask.b;
+    float4 color3 = tex2D(colormapSampler, In.color3Coord) * atlasMask.w;
+    float4 ambientOcclusion = tex2D(ambientOcclusionSampler, In.unscaledTexCoord);
+
+    float4 diffuse = color0 + color1 + color2 + color3;
+    
+    // alpha channel of the colormap is a specular multiplier
+    float specularMult = diffuse.a;
+    float4 specular = In.lightingSpecular * specularMult;
+    
+    // scale output color by the color from the vertex shader, which is the
+    // output of the lighting calculations
+    outputColor = (In.lightingDiffuse * diffuse + specular) * ambientOcclusion;
+    outputColor.a = 1;
+    
+    return outputColor;
+}
+
+//
+//
+float4 ColoredFurnitureFP20(
+    // output of vertex shader
+    VSOutput In,
+
+    // pattern tile texture atlas
+    uniform sampler2D	atlasSampler,
+    
+    // colormap texture
+    uniform sampler2D   colormapSampler
+        
+) : COLOR
+{
+    float4 outputColor;
+        
+    // The frac() isnt enough to properly wrap the texture if the texture coord is negative.  
+    // Artists will make sure texcoords are always positive.
+    float2 texCoord = frac(In.texCoord) * In.tileOffsetAndSize.zw + In.tileOffsetAndSize.xy;
+    
+    float4 atlasMask = tex2D(atlasSampler, texCoord) * 2.0;
+    float4 color0 = tex2D(colormapSampler, In.color0Coord) * atlasMask.r;
+    float4 color1 = tex2D(colormapSampler, In.color1Coord) * atlasMask.g;
+    float4 color2 = tex2D(colormapSampler, In.color2Coord) * atlasMask.b;
+    float4 color3 = tex2D(colormapSampler, In.color3Coord) * atlasMask.w;
+
+    float4 diffuse = color0 + color1 + color2 + color3;
+    
+    // alpha channel of the colormap is a specular multiplier
+    float specularMult = diffuse.a;
+    float4 specular = In.lightingSpecular * specularMult;
+    
+    // scale output color by the color from the vertex shader, which is the
+    // output of the lighting calculations
+    outputColor = In.lightingDiffuse * diffuse + specular;
+    outputColor.a = 1;
+    
+    return outputColor;
+}

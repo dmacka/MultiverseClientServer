@@ -1,0 +1,285 @@
+/*********************************************************************NVMH3****
+Path:  NVSDK\Common\media\cgfx
+File:  ocean.fx
+
+Copyright NVIDIA Corporation 2003
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THIS SOFTWARE IS PROVIDED
+*AS IS* AND NVIDIA AND ITS SUPPLIERS DISCLAIM ALL WARRANTIES, EITHER EXPRESS
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL NVIDIA OR ITS SUPPLIERS
+BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES
+WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS,
+BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS)
+ARISING OUT OF THE USE OF OR INABILITY TO USE THIS SOFTWARE, EVEN IF NVIDIA HAS
+BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+Comments:
+	Simple ocean shader with animated bump map and geometric waves
+	Based partly on "Effective Water Simulation From Physical Models", GPU Gems
+
+******************************************************************************/
+
+struct a2v {
+	float4 Position : POSITION;   // in object space
+	float2 TexCoord : TEXCOORD0;
+	//float3 Tangent  : TEXCOORD1;
+	//float3 Binormal : TEXCOORD2;
+	float3 Normal   : NORMAL;
+};
+
+struct v2f {
+	float4 Position  : POSITION;  // in clip space
+	float2 TexCoord  : TEXCOORD0;
+	float3 TexCoord1 : TEXCOORD1; // first row of the 3x3 transform from tangent to cube space
+	float3 TexCoord2 : TEXCOORD2; // second row of the 3x3 transform from tangent to cube space
+	float3 TexCoord3 : TEXCOORD3; // third row of the 3x3 transform from tangent to cube space
+
+	float2 bumpCoord0 : TEXCOORD4;
+	float2 bumpCoord1 : TEXCOORD5;
+	float2 bumpCoord2 : TEXCOORD6;
+	
+	float3 eyeVector  : TEXCOORD7;
+	float  fog		: FOG;	// fog factor
+};
+
+// wave functions
+
+struct Wave {
+  float freq;  // 2*PI / wavelength
+  float amp;   // amplitude
+  float phase; // speed * 2*PI / wavelength
+  float2 dir;
+};
+
+#define NWAVES 2
+Wave wave[NWAVES] = {
+	{ 1.0, 1.0, 0.5, float2(-1, 0) },
+	{ 2.0, 0.5, 1.3, float2(-0.7, 0.7) }	
+};
+
+float evaluateWave(Wave w, float2 pos, float t)
+{
+  return w.amp * sin( dot(w.dir, pos)*w.freq + t*w.phase);
+}
+
+// derivative of wave function
+float evaluateWaveDeriv(Wave w, float2 pos, float t)
+{
+  return w.freq*w.amp * cos( dot(w.dir, pos)*w.freq + t*w.phase);
+}
+
+v2f OceanVP(a2v IN,
+					  uniform float4x4 WorldViewProj,
+					  uniform float4x4 World,
+					  uniform float4x4 ViewIT,
+					  uniform float BumpScale,
+					  uniform float2 textureScale,
+					  uniform float2 bumpSpeed,
+					  uniform float time,
+					  uniform float waveFreq,
+					  uniform float waveAmp,
+					  uniform float seaLevel,
+					  uniform float4 fogSettings
+                	  )
+{
+	v2f OUT;
+
+	// we use the y coord to store the scale for waves, which is based on distance from the camera
+	float waveAmpScale = IN.Position.y;
+	
+    wave[0].freq = waveFreq;
+    wave[0].amp = waveAmp * waveAmpScale;
+    wave[0].dir.x = -1;
+    wave[0].dir.y = 0;
+    wave[0].phase = 0.5;
+
+    wave[1].freq = waveFreq*2.0;
+    wave[1].amp = waveAmp*0.5 * waveAmpScale;
+    wave[1].dir.x = -0.7;
+    wave[1].dir.y = 0.7;
+    wave[1].phase = 1.3;
+        
+    float4 P = IN.Position;
+    float2 waveAdjust = float2(World._m03, World._m23);
+
+	// sum waves	
+	P.y = seaLevel;
+	float ddx = 0.0, ddy = 0.0;
+	
+	// 2d coordinates of current vertex (ignoring Y)
+	float2 flatWorldPos = P.xz + waveAdjust;
+	
+	for(int i=0; i<NWAVES; i++) {
+    	P.y += evaluateWave(wave[i], flatWorldPos, time);
+    	float deriv = evaluateWaveDeriv(wave[i], flatWorldPos, time);
+    	ddx += deriv * wave[i].dir.x;
+    	ddy += deriv * wave[i].dir.y;
+    }
+
+	// compute tangent basis
+    float3 B = float3(1, ddx, 0);
+    float3 T = float3(0, ddy, 1);
+    float3 N = float3(-ddx, 1, -ddy);
+
+	OUT.Position = mul(WorldViewProj, P);
+	
+	// pass texture coordinates for fetching the normal map
+	float2 texCoord = flatWorldPos / 1000;
+	OUT.TexCoord.xy = texCoord*textureScale;
+
+	time = fmod(time, 100.0);
+	OUT.bumpCoord0.xy = texCoord*textureScale + time*bumpSpeed;
+	OUT.bumpCoord1.xy = texCoord*textureScale*2.0 + time*bumpSpeed*4.0;
+	OUT.bumpCoord2.xy = texCoord*textureScale*4.0 + time*bumpSpeed*8.0;
+
+	// compute the 3x3 tranform from tangent space to object space
+	float3x3 objToTangentSpace;
+	// first rows are the tangent and binormal scaled by the bump scale
+	objToTangentSpace[0] = BumpScale * normalize(T);
+	objToTangentSpace[1] = BumpScale * normalize(B);
+	objToTangentSpace[2] = normalize(N);
+
+	OUT.TexCoord1.xyz = mul(objToTangentSpace, float3(World._m00, World._m10, World._m20));
+	OUT.TexCoord2.xyz = mul(objToTangentSpace, float3(World._m01, World._m11, World._m21));
+	OUT.TexCoord3.xyz = mul(objToTangentSpace, float3(World._m02, World._m12, World._m22));
+	
+//	OUT.TexCoord1.xyz = mul(World[0].xyz, objToTangentSpace);
+//	OUT.TexCoord2.xyz = mul(World[1].xyz, objToTangentSpace);
+//	OUT.TexCoord3.xyz = mul(World[2].xyz, objToTangentSpace);
+
+
+	// compute the eye vector (going from shaded point to eye) in cube space
+	//float4 worldPos = mul(P, World);
+	float4 worldPos = mul(World, P);
+	//OUT.eyeVector = ViewIT[3].xyz - worldPos.xyz; // view inv. transpose contains eye position in world space in last row
+	OUT.eyeVector = float3(ViewIT._m03, ViewIT._m13, ViewIT._m23) - worldPos.xyz; // view inv. transpose contains eye position in world space in last row
+	float fog = clamp(( OUT.Position.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    OUT.fog = 1.0 - fog;
+	
+	return OUT;
+}
+
+v2f WaterVP(a2v IN,
+					  uniform float4x4 WorldViewProj,
+					  uniform float4x4 World,
+					  uniform float4x4 ViewIT,
+					  uniform float BumpScale,
+					  uniform float2 textureScale,
+					  uniform float2 bumpSpeed,
+					  uniform float time,
+					  uniform float4 fogSettings
+                	  )
+{
+	v2f OUT;
+        
+    float4 P = IN.Position;
+    float2 waveAdjust = float2(World._m03, World._m23);
+
+	// 2d coordinates of current vertex (ignoring Y)
+	float2 flatWorldPos = P.xz + waveAdjust;
+	
+	// compute tangent basis
+    float3 B = float3(1, 0, 0);
+    float3 T = float3(0, 0, 1);
+    float3 N = float3(0, 1, 0);
+
+	OUT.Position = mul(WorldViewProj, P);
+	
+	// pass texture coordinates for fetching the normal map
+	float2 texCoord = flatWorldPos / 1000;
+	OUT.TexCoord.xy = texCoord*textureScale;
+
+	time = fmod(time, 100.0);
+	OUT.bumpCoord0.xy = texCoord*textureScale + time*bumpSpeed;
+	OUT.bumpCoord1.xy = texCoord*textureScale*2.0 + time*bumpSpeed*4.0;
+	OUT.bumpCoord2.xy = texCoord*textureScale*4.0 + time*bumpSpeed*8.0;
+
+	// compute the 3x3 tranform from tangent space to object space
+	float3x3 objToTangentSpace;
+	// first rows are the tangent and binormal scaled by the bump scale
+	objToTangentSpace[0] = BumpScale * normalize(T);
+	objToTangentSpace[1] = BumpScale * normalize(B);
+	objToTangentSpace[2] = normalize(N);
+
+	OUT.TexCoord1.xyz = mul(objToTangentSpace, float3(World._m00, World._m10, World._m20));
+	OUT.TexCoord2.xyz = mul(objToTangentSpace, float3(World._m01, World._m11, World._m21));
+	OUT.TexCoord3.xyz = mul(objToTangentSpace, float3(World._m02, World._m12, World._m22));
+	
+	// compute the eye vector (going from shaded point to eye) in cube space
+	float4 worldPos = mul(World, P);
+
+	OUT.eyeVector = float3(ViewIT._m03, ViewIT._m13, ViewIT._m23) - worldPos.xyz; // view inv. transpose contains eye position in world space in last row
+	float fog = clamp(( OUT.Position.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    OUT.fog = 1.0 - fog;
+	
+	return OUT;
+}
+
+
+
+// Pixel Shaders
+
+float4 OceanFP(v2f IN,
+				 //uniform samplerCUBE EnvironmentMap,
+				 uniform sampler2D NormalMap,
+				 uniform half4 deepColor,
+				 uniform half4 shallowColor,
+				 uniform half4 reflectionColor,
+				 uniform half4 reflectionAmount,
+				 uniform half4 waterAmount,
+				 uniform half fresnelPower,
+				 uniform half fresnelBias,
+				 uniform half hdrMultiplier
+				 ) : COLOR
+{
+	// sum normal maps
+    half4 t0 = tex2D(NormalMap, IN.bumpCoord0.xy)*2.0-1.0;
+    half4 t1 = tex2D(NormalMap, IN.bumpCoord1.xy)*2.0-1.0;
+    half4 t2 = tex2D(NormalMap, IN.bumpCoord2.xy)*2.0-1.0;
+    half3 N = t0.xyz + t1.xyz + t2.xyz;
+//    half3 N = t1.xyz;
+
+    half3x3 m; // tangent to world matrix
+    m[0] = IN.TexCoord1;
+    m[1] = IN.TexCoord2;
+    m[2] = IN.TexCoord3;
+    //half3 Nw = mul(N.xyz, m);
+    half3 Nw = mul(m, N.xyz);
+    Nw = normalize(Nw);
+
+	// reflection
+    float3 E = normalize(IN.eyeVector);
+    half3 R = reflect(-E, Nw);
+
+    //half4 reflection = texCUBE(EnvironmentMap, R);
+    half4 reflection = half4(1,1,1,1);
+    // hdr effect (multiplier in alpha channel)
+    //reflection.rgb *= (1.0 + reflection.a*hdrMultiplier);
+
+	// fresnel - could use 1D tex lookup for this
+    half facing = 1.0 - max(dot(E, Nw), 0);
+    half fresnel = fresnelBias + (1.0-fresnelBias)*pow(facing, fresnelPower);
+
+    half4 waterColor = lerp(deepColor, shallowColor, facing);
+
+    //float3 outp = ( Nw + 1.0 ) / 2.0;
+    //return float4(outp.x, outp.y, outp.z, 0);
+    
+	return waterColor*waterAmount + reflection*reflectionColor*reflectionAmount*fresnel;
+
+	//return waterColor*waterAmount + reflection*reflectionColor*reflectionAmount;
+	//return waterColor*waterAmount;
+	//return reflection*reflectionColor*reflectionAmount;
+	
+//return float4(0,0,0,0);
+//return float4(N.x, N.y, N.z, 1.0);	
+//	return float4(Nw.x, Nw.y, Nw.z, 1.0);		
+//	return float4(IN.TexCoord3.x, IN.TexCoord3.y, IN.TexCoord3.z, 1.0);
+	
+//	return float4(R.x, R.y, R.z, 1.0);
+	
+//	return waterColor;
+//	return fresnel;
+//	return reflection;
+}

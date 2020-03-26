@@ -1,0 +1,66 @@
+
+material RocketboxBase
+{
+    technique Shader20
+    {
+        scheme Default
+        pass Single
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+            }
+            texture_unit DiffuseMap
+            {
+                tex_coord_set 0
+            }
+        }
+    }
+    // Fallback technique
+    technique Fixed
+    {
+        scheme Fixed
+        pass Single
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit DiffuseMap
+            {
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material RocketboxBaseHair : RocketboxBase
+{
+    technique Shader20
+    {
+        pass Single
+        {
+            scene_blend alpha_blend
+        }
+    }
+    
+    technique Fixed
+    {
+        pass Single
+        {
+            scene_blend alpha_blend
+        }
+    }
+}

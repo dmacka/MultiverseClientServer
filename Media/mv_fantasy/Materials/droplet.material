@@ -1,0 +1,16 @@
+material droplet
+{
+	technique
+	{
+		pass
+		{
+			scene_blend colour_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture basic_droplet.dds
+			}
+		}
+	}
+}

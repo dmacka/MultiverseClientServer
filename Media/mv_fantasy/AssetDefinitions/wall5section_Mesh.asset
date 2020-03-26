@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>wall5section_Mesh</Name>
+  <Description>Wall Section(5)</Description>
+  <Type>Mesh</Type>
+  <Category>Walls and Fences</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\wall5section.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\wall5section_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,42 @@
+<physics_model>
+  <rigid_body sid="colonnade-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.009834473 -0.10796 0.03896411</translate>
+        <box>
+          <half_extents>4.514275 2.213975 1.032995</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-3.6758 3.96452 0.04689728</translate>
+        <box>
+          <half_extents>0.5836402 1.91545 0.5848451</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-1.21352 3.96452 0.04689728</translate>
+        <box>
+          <half_extents>0.58364 1.91545 0.5848451</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>1.23097 3.96452 0.04689728</translate>
+        <box>
+          <half_extents>0.58364 1.91545 0.5848451</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>3.66658 3.96452 0.04689728</translate>
+        <box>
+          <half_extents>0.5836399 1.91545 0.5848451</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0 6.51606 0.03865949</translate>
+        <box>
+          <half_extents>4.43438 0.6566948 0.7955401</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

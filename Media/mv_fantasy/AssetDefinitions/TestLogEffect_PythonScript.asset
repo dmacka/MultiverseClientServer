@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>TestLogEffect_PythonScript</Name>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts\TestLogEffect.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

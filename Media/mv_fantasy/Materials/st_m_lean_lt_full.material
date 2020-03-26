@@ -1,0 +1,7 @@
+material st_m_lean_lt_full.marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex marble_white_rev_darker.dds
+}
+material st_m_lean_lt_full.lambert1 : MVSimpleLighting
+{
+}

@@ -1,0 +1,441 @@
+INFO  [2020-03-26 04:19:02,327] main                 pid 5330@localhost.localdomain
+DEBUG [2020-03-26 04:19:02,328] main                 Using property file /usr/multiverse/bin/multiverse.properties
+DEBUG [2020-03-26 04:19:02,328] main                 Properties are:
+DEBUG [2020-03-26 04:19:02,329] main                     java.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:02,329] main                     multiverse.voiceport = 5051
+DEBUG [2020-03-26 04:19:02,329] main                     log4j.appender.FILE = org.apache.log4j.RollingFileAppender
+DEBUG [2020-03-26 04:19:02,329] main                     sun.java.launcher = SUN_STANDARD
+DEBUG [2020-03-26 04:19:02,329] main                     sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+DEBUG [2020-03-26 04:19:02,329] main                     multiverse.proxyport = 5050
+DEBUG [2020-03-26 04:19:02,329] main                     os.name = Linux
+DEBUG [2020-03-26 04:19:02,329] main                     multiverse.db_password = multiverse
+DEBUG [2020-03-26 04:19:02,329] main                     sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/classes
+DEBUG [2020-03-26 04:19:02,329] main                     multiverse.plugin_dep.sampleworld.MobManager = ObjectManager,WorldManager,Inventory,Quest,Combat
+DEBUG [2020-03-26 04:19:02,330] main                     sun.desktop = gnome
+DEBUG [2020-03-26 04:19:02,330] main                     multiverse.delete_logs_on_startup = true
+DEBUG [2020-03-26 04:19:02,330] main                     java.vm.specification.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:02,330] main                     java.runtime.version = 1.8.0_242-b08
+DEBUG [2020-03-26 04:19:02,330] main                     user.name = dmckay
+DEBUG [2020-03-26 04:19:02,330] main                     user.language = en
+DEBUG [2020-03-26 04:19:02,330] main                     sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/amd64
+DEBUG [2020-03-26 04:19:02,330] main                     multiverse.quad_tree_max_depth = 20
+DEBUG [2020-03-26 04:19:02,330] main                     multiverse.world_available_message = DONE INITIALIZING, you can log in now
+DEBUG [2020-03-26 04:19:02,330] main                     multiverse.plugin_dep.MobManager = ObjectManager,WorldManager,Inventory,Quest
+DEBUG [2020-03-26 04:19:02,330] main                     java.version = 1.8.0_242
+DEBUG [2020-03-26 04:19:02,330] main                     log4j.rootLogger = DEBUG, FILE
+DEBUG [2020-03-26 04:19:02,330] main                     user.timezone = America/Chicago
+DEBUG [2020-03-26 04:19:02,352] main                     multiverse.plugin_dep.Proxy = Instance,Voice
+DEBUG [2020-03-26 04:19:02,353] main                     sun.arch.data.model = 64
+DEBUG [2020-03-26 04:19:02,353] main                     java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/endorsed
+DEBUG [2020-03-26 04:19:02,353] main                     multiverse.voiceserver = localhost
+DEBUG [2020-03-26 04:19:02,353] main                     sun.cpu.isalist = 
+DEBUG [2020-03-26 04:19:02,353] main                     sun.jnu.encoding = UTF-8
+DEBUG [2020-03-26 04:19:02,353] main                     file.encoding.pkg = sun.io
+DEBUG [2020-03-26 04:19:02,353] main                     multiverse.startup_timeout = 120
+DEBUG [2020-03-26 04:19:02,353] main                     multiverse.plugin_dep.Quest = 
+DEBUG [2020-03-26 04:19:02,353] main                     file.separator = /
+DEBUG [2020-03-26 04:19:02,353] main                     java.specification.name = Java Platform API Specification
+DEBUG [2020-03-26 04:19:02,353] main                     java.class.version = 52.0
+DEBUG [2020-03-26 04:19:02,353] main                     log4j.appender.FILE.layout = org.apache.log4j.PatternLayout
+DEBUG [2020-03-26 04:19:02,353] main                     user.country = US
+DEBUG [2020-03-26 04:19:02,353] main                     multiverse.plugin_dep.Inventory = 
+DEBUG [2020-03-26 04:19:02,353] main                     java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre
+DEBUG [2020-03-26 04:19:02,353] main                     multiverse.msgsvr_port = 20374
+DEBUG [2020-03-26 04:19:02,353] main                     java.vm.info = mixed mode
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.jdbcJarPath = /usr/share/java/mysql-connector-java.jar
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.plugin_dep.Instance = ObjectManager,Quest,MobManager,Inventory,WorldManager
+DEBUG [2020-03-26 04:19:02,354] main                     os.version = 3.10.0-1062.18.1.el7.x86_64
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.logs = /usr/multiverse/logs/mv_fantasy
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.plugin_dep.ObjectManager = 
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.log_level = 1
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.packet_aggregation_interval = 0
+DEBUG [2020-03-26 04:19:02,354] main                     path.separator = :
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.plugin_dep.Trainer = 
+DEBUG [2020-03-26 04:19:02,354] main                     java.vm.version = 25.242-b08
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.quad_tree_node_max_objects = 30
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.mvwfile = /usr/multiverse/config/sampleworld/mv_fantasy.mvw
+DEBUG [2020-03-26 04:19:02,354] main                     java.awt.printerjob = sun.print.PSPrinterJob
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.log_rdp_counters = false
+DEBUG [2020-03-26 04:19:02,354] main                     sun.io.unicode.encoding = UnicodeLittle
+DEBUG [2020-03-26 04:19:02,354] main                     log4j.appender.FILE.File = ${multiverse.logs}/${multiverse.loggername}.out
+DEBUG [2020-03-26 04:19:02,354] main                     multiverse.precreated_positional_voice_group = 1
+DEBUG [2020-03-26 04:19:02,355] main                     awt.toolkit = sun.awt.X11.XToolkit
+DEBUG [2020-03-26 04:19:02,355] main                     user.home = /home/dmckay
+DEBUG [2020-03-26 04:19:02,355] main                     java.specification.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:02,355] main                     multiverse.proxyserver = localhost
+DEBUG [2020-03-26 04:19:02,355] main                     multiverse.plugin_dep.WorldManager = 
+DEBUG [2020-03-26 04:19:02,355] main                     multiverse.worldmgrport = 5040
+DEBUG [2020-03-26 04:19:02,355] main                     java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+DEBUG [2020-03-26 04:19:02,355] main                     java.vendor.url = http://java.oracle.com/
+DEBUG [2020-03-26 04:19:02,355] main                     multiverse.loggername = login_manager
+DEBUG [2020-03-26 04:19:02,355] main                     multiverse.log_proxy_histograms = true
+DEBUG [2020-03-26 04:19:02,355] main                     java.vm.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:02,356] main                     multiverse.db_user = multiverse
+DEBUG [2020-03-26 04:19:02,356] main                     java.runtime.name = OpenJDK Runtime Environment
+DEBUG [2020-03-26 04:19:02,356] main                     sun.java.command = multiverse.server.engine.Engine -Pmultiverse.worldname= -i /usr/multiverse/config/common/mvmessages.py -i /usr/multiverse/config/mv_fantasy/worldmessages.py -t /usr/multiverse/config/common/typenumbers.txt /usr/multiverse/bin/login_manager.py /usr/multiverse/config/common/login_manager.py /usr/multiverse/config/common/character_factory.py /usr/multiverse/config/mv_fantasy/character_factory.py /usr/multiverse/config/mv_fantasy/extensions_login.py
+DEBUG [2020-03-26 04:19:02,356] main                     java.class.path = /usr/multiverse/other/rhino1_5R5/js.jar:/usr/share/java/mysql-connector-java.jar:/usr/multiverse/dist/lib/injected.jar:/usr/multiverse/dist/lib/multiverse.jar:/usr/multiverse/dist/lib/mars.jar:/usr/multiverse/dist/lib/.jar:/usr/multiverse/other/java-getopt-1.0.11.jar:/usr/multiverse/other/jython.jar:/usr/multiverse/other/log4j-1.2.14.jar:/usr/multiverse/other/bcel-5.2.jar:.
+DEBUG [2020-03-26 04:19:02,356] main                     multiverse.propertyfile = /usr/multiverse/bin/multiverse.properties
+DEBUG [2020-03-26 04:19:02,356] main                     log4j.appender.FILE.MaxBackupIndex = 3
+DEBUG [2020-03-26 04:19:02,356] main                     multiverse.db_hostname = localhost
+DEBUG [2020-03-26 04:19:02,356] main                     multiverse.db_type = mysql
+DEBUG [2020-03-26 04:19:02,356] main                     java.vm.specification.name = Java Virtual Machine Specification
+DEBUG [2020-03-26 04:19:02,356] main                     java.vm.specification.version = 1.8
+DEBUG [2020-03-26 04:19:02,356] main                     multiverse.plugin_dep.Login = ObjectManager,Instance
+DEBUG [2020-03-26 04:19:02,356] main                     sun.cpu.endian = little
+DEBUG [2020-03-26 04:19:02,356] main                     sun.os.patch.level = unknown
+DEBUG [2020-03-26 04:19:02,356] main                     multiverse.msgsvr_hostname = localhost
+DEBUG [2020-03-26 04:19:02,356] main                     multiverse.worldname = 
+DEBUG [2020-03-26 04:19:02,357] main                     java.io.tmpdir = /tmp
+DEBUG [2020-03-26 04:19:02,357] main                     java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+DEBUG [2020-03-26 04:19:02,357] main                     log4j.appender.FILE.MaxFileSize = 50MB
+DEBUG [2020-03-26 04:19:02,357] main                     multiverse.db_driver = com.mysql.jdbc.Driver
+DEBUG [2020-03-26 04:19:02,357] main                     multiverse.db_name = multiverse
+DEBUG [2020-03-26 04:19:02,357] main                     os.arch = amd64
+DEBUG [2020-03-26 04:19:02,357] main                     java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+DEBUG [2020-03-26 04:19:02,357] main                     multiverse.plugin_dep.Voice = Instance
+DEBUG [2020-03-26 04:19:02,357] main                     log4j.appender.FILE.layout.ConversionPattern = %-5p [%d{ISO8601}] %-20t %m%n
+DEBUG [2020-03-26 04:19:02,357] main                     java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+DEBUG [2020-03-26 04:19:02,357] main                     multiverse.plugin_dep.ClassAbility = 
+DEBUG [2020-03-26 04:19:02,357] main                     user.dir = /usr/multiverse/bin
+DEBUG [2020-03-26 04:19:02,357] main                     line.separator = 
+
+DEBUG [2020-03-26 04:19:02,357] main                     java.vm.name = OpenJDK 64-Bit Server VM
+DEBUG [2020-03-26 04:19:02,357] main                     multiverse.plugin_dep.Domain = Instance,Proxy,Voice
+DEBUG [2020-03-26 04:19:02,357] main                     file.encoding = UTF-8
+DEBUG [2020-03-26 04:19:02,357] main                     multiverse.plugin_dep.Combat = 
+DEBUG [2020-03-26 04:19:02,357] main                     java.specification.version = 1.8
+INFO  [2020-03-26 04:19:02,357] main                 The log level is 1
+INFO  [2020-03-26 04:19:02,359] main                 Multiverse server version 1.5 0 (- -)
+INFO  [2020-03-26 04:19:02,409] main                 Entered MarshallingRuntime.initializeBatch: reading type nums from '/usr/multiverse/config/common/typenumbers.txt'
+INFO  [2020-03-26 04:19:03,895] main                 Entered MarshallingRuntime.initializeBatch: Registered 240 classes
+INFO  [2020-03-26 04:19:03,895] main                 Engine: My local host name is 'localhost.localdomain'
+DEBUG [2020-03-26 04:19:03,897] main                 Engine, multiverse.cputime_logging_interval disabled
+DEBUG [2020-03-26 04:19:03,956] main                 Engine, populateScriptList: option i: /usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:03,957] main                 Engine, populateScriptList: option i: /usr/multiverse/config/mv_fantasy/worldmessages.py
+DEBUG [2020-03-26 04:19:03,957] main                 Engine, populateScriptList: nonoption args element: /usr/multiverse/bin/login_manager.py
+DEBUG [2020-03-26 04:19:03,957] main                 Engine, populateScriptList: nonoption args element: /usr/multiverse/config/common/login_manager.py
+DEBUG [2020-03-26 04:19:03,957] main                 Engine, populateScriptList: nonoption args element: /usr/multiverse/config/common/character_factory.py
+DEBUG [2020-03-26 04:19:03,957] main                 Engine, populateScriptList: nonoption args element: /usr/multiverse/config/mv_fantasy/character_factory.py
+DEBUG [2020-03-26 04:19:03,957] main                 Engine, populateScriptList: nonoption args element: /usr/multiverse/config/mv_fantasy/extensions_login.py
+DEBUG [2020-03-26 04:19:08,029] main                 Engine, Engine: reading in script: /usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:08,030] main                 Engine, Executing init script file: /usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:08,030] main                 runPYFile: file=/usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:09,527] main                 Adding msg type 'mv.PROPERTY', msgNumber 1/0x1
+DEBUG [2020-03-26 04:19:09,528] main                 Adding msg type 'mv.LOGIN', msgNumber 2/0x2
+DEBUG [2020-03-26 04:19:09,528] main                 Adding msg type 'mv.LOGOUT', msgNumber 3/0x3
+DEBUG [2020-03-26 04:19:09,603] main                 Adding msg type 'mv.ANIMATION', msgNumber 4/0x4
+DEBUG [2020-03-26 04:19:09,603] main                 Adding msg type 'mv.COM', msgNumber 5/0x5
+DEBUG [2020-03-26 04:19:09,603] main                 Adding msg type 'mv.COM_REQ', msgNumber 6/0x6
+DEBUG [2020-03-26 04:19:09,604] main                 Adding msg type 'mv.DC_REQ', msgNumber 7/0x7
+DEBUG [2020-03-26 04:19:09,609] main                 Adding msg type 'mv.DESPAWNED', msgNumber 8/0x8
+DEBUG [2020-03-26 04:19:09,609] main                 Adding msg type 'mv.DESPAWN_REQ', msgNumber 9/0x9
+DEBUG [2020-03-26 04:19:09,610] main                 Adding msg type 'mv.DETACH', msgNumber 10/0xa
+DEBUG [2020-03-26 04:19:09,610] main                 Adding msg type 'mv.DIR_LOC_ORIENT', msgNumber 11/0xb
+DEBUG [2020-03-26 04:19:09,610] main                 Adding msg type 'mv.DISPLAY_CONTEXT', msgNumber 12/0xc
+DEBUG [2020-03-26 04:19:09,610] main                 Adding msg type 'mv.EXTENSION', msgNumber 13/0xd
+DEBUG [2020-03-26 04:19:09,610] main                 Adding msg type 'mv.FOG', msgNumber 14/0xe
+DEBUG [2020-03-26 04:19:09,630] main                 Adding msg type 'mv.FREE_REMOTE_OBJ', msgNumber 15/0xf
+DEBUG [2020-03-26 04:19:09,634] main                 Adding msg type 'mv.GETWNODE_REQ', msgNumber 16/0x10
+DEBUG [2020-03-26 04:19:09,634] main                 Adding msg type 'mv.MOB_PATH', msgNumber 17/0x11
+DEBUG [2020-03-26 04:19:09,634] main                 Adding msg type 'mv.MOB_PATH_CORRECTION', msgNumber 18/0x12
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.MOB_PATH_REQ', msgNumber 19/0x13
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.MODIFY_DC', msgNumber 20/0x14
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.NEW_DIRLIGHT', msgNumber 21/0x15
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.FREE_OBJECT', msgNumber 22/0x16
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.NEW_REGION', msgNumber 23/0x17
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.NEW_REMOTE_OBJ', msgNumber 24/0x18
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.OBJINFO_REQ', msgNumber 25/0x19
+DEBUG [2020-03-26 04:19:09,635] main                 Adding msg type 'mv.ORIENT', msgNumber 26/0x1a
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.ORIENT_REQ', msgNumber 27/0x1b
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.PERCEIVER_REGIONS', msgNumber 28/0x1c
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.REFRESH_WNODE', msgNumber 29/0x1d
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.REPARENT_WNODE_REQ', msgNumber 30/0x1e
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.ROAD', msgNumber 31/0x1f
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.FREE_ROAD', msgNumber 32/0x20
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.SETWNODE_REQ', msgNumber 33/0x21
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.SET_AMBIENT', msgNumber 34/0x22
+DEBUG [2020-03-26 04:19:09,636] main                 Adding msg type 'mv.SOUND', msgNumber 35/0x23
+DEBUG [2020-03-26 04:19:09,695] main                 Adding msg type 'mv.SPAWNED', msgNumber 36/0x24
+DEBUG [2020-03-26 04:19:09,695] main                 Adding msg type 'mv.SPAWN_REQ', msgNumber 37/0x25
+DEBUG [2020-03-26 04:19:09,695] main                 Adding msg type 'mv.SYS_CHAT', msgNumber 38/0x26
+DEBUG [2020-03-26 04:19:09,695] main                 Adding msg type 'mv.TARGETED_PROPERTY', msgNumber 39/0x27
+DEBUG [2020-03-26 04:19:09,695] main                 Adding msg type 'mv.UPDATEWNODE', msgNumber 40/0x28
+DEBUG [2020-03-26 04:19:09,695] main                 Adding msg type 'mv.UPDATEWNODE_REQ', msgNumber 41/0x29
+DEBUG [2020-03-26 04:19:09,695] main                 Adding msg type 'mv.UPDATE_OBJECT', msgNumber 42/0x2a
+DEBUG [2020-03-26 04:19:09,696] main                 Adding msg type 'mv.WNODECORRECT', msgNumber 43/0x2b
+DEBUG [2020-03-26 04:19:09,696] main                 Adding msg type 'mv.P2P_EXTENSION', msgNumber 44/0x2c
+DEBUG [2020-03-26 04:19:09,697] main                 Adding msg type 'mv.PERCEPTION_INFO', msgNumber 45/0x2d
+DEBUG [2020-03-26 04:19:09,697] main                 Adding msg type 'mv.PERCEPTION', msgNumber 46/0x2e
+DEBUG [2020-03-26 04:19:09,697] main                 Adding msg type 'mv.HOST_INSTANCE', msgNumber 47/0x2f
+DEBUG [2020-03-26 04:19:09,697] main                 Adding msg type 'mv.PLAYER_PATH_WM_REQ', msgNumber 48/0x30
+DEBUG [2020-03-26 04:19:09,745] main                 Adding msg type 'mv.SET_PERSISTENCE', msgNumber 49/0x31
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.SET_SUBPERSISTENCE', msgNumber 50/0x32
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.LOAD_OBJECT', msgNumber 51/0x33
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.LOAD_SUBOBJECT', msgNumber 52/0x34
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.LOAD_OBJECT_DATA', msgNumber 53/0x35
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.SAVE_OBJECT_DATA', msgNumber 54/0x36
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.SAVE_OBJECT', msgNumber 55/0x37
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.SAVE_SUBOBJECT', msgNumber 56/0x38
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.GENERATE_OBJECT', msgNumber 57/0x39
+DEBUG [2020-03-26 04:19:09,746] main                 Adding msg type 'mv.GENERATE_SUB_OBJECT', msgNumber 58/0x3a
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.SUB_OBJECT_DEPS_READY', msgNumber 59/0x3b
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.REGISTER_TEMPLATE', msgNumber 60/0x3c
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.GET_TEMPLATE', msgNumber 61/0x3d
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.GET_TEMPLATE_NAMES', msgNumber 62/0x3e
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.UNLOAD_OBJECT', msgNumber 63/0x3f
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.UNLOAD_SUBOBJECT', msgNumber 64/0x40
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.DELETE_OBJECT', msgNumber 65/0x41
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.DELETE_SUBOBJECT', msgNumber 66/0x42
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.FIX_WNODE_REQ', msgNumber 67/0x43
+DEBUG [2020-03-26 04:19:09,747] main                 Adding msg type 'mv.GET_NAMED_OBJECT', msgNumber 68/0x44
+DEBUG [2020-03-26 04:19:09,748] main                 Adding msg type 'mv.GET_OBJECT_STATUS', msgNumber 69/0x45
+DEBUG [2020-03-26 04:19:09,749] main                 Adding msg type 'mv.ADD_ITEM', msgNumber 70/0x46
+DEBUG [2020-03-26 04:19:09,750] main                 Adding msg type 'mv.CREATE_INV', msgNumber 71/0x47
+DEBUG [2020-03-26 04:19:09,750] main                 Adding msg type 'mv.INV_UPDATE', msgNumber 72/0x48
+DEBUG [2020-03-26 04:19:09,750] main                 Adding msg type 'mv.ACTIVATE', msgNumber 73/0x49
+DEBUG [2020-03-26 04:19:09,750] main                 Adding msg type 'mv.LOOTALL', msgNumber 74/0x4a
+DEBUG [2020-03-26 04:19:09,750] main                 Adding msg type 'mv.INV_FIND', msgNumber 75/0x4b
+DEBUG [2020-03-26 04:19:09,750] main                 Adding msg type 'mv.INV_REMOVE', msgNumber 76/0x4c
+DEBUG [2020-03-26 04:19:09,750] main                 Adding msg type 'mv.DESTROY_ITEM', msgNumber 77/0x4d
+DEBUG [2020-03-26 04:19:09,754] main                 Adding msg type 'mv.NOTIFY_REACTION_RADIUS', msgNumber 78/0x4e
+DEBUG [2020-03-26 04:19:09,829] main                 Adding msg type 'mv.DUMP_ALL_THREAD_STACKS', msgNumber 79/0x4f
+DEBUG [2020-03-26 04:19:09,829] main                 Adding msg type 'mv.GET_PROPERTY', msgNumber 80/0x50
+DEBUG [2020-03-26 04:19:09,829] main                 Adding msg type 'mv.PLUGIN_STATE', msgNumber 81/0x51
+DEBUG [2020-03-26 04:19:09,829] main                 Adding msg type 'mv.SET_PROPERTY', msgNumber 82/0x52
+DEBUG [2020-03-26 04:19:09,829] main                 Adding msg type 'mv.SET_PROPERTY_NONBLOCK', msgNumber 83/0x53
+DEBUG [2020-03-26 04:19:09,829] main                 Adding msg type 'mv.TRANSFER_OBJECT', msgNumber 84/0x54
+DEBUG [2020-03-26 04:19:09,930] main                 Adding msg type 'mv.COMMAND', msgNumber 85/0x55
+DEBUG [2020-03-26 04:19:09,930] main                 Adding msg type 'mv.EVENT', msgNumber 86/0x56
+DEBUG [2020-03-26 04:19:09,931] main                 Adding msg type 'mv.REQ_QUEST_INFO', msgNumber 87/0x57
+DEBUG [2020-03-26 04:19:09,931] main                 Adding msg type 'mv.REQ_CONCLUDE_QUEST', msgNumber 88/0x58
+DEBUG [2020-03-26 04:19:09,932] main                 Adding msg type 'mv.QUEST_INFO', msgNumber 89/0x59
+DEBUG [2020-03-26 04:19:09,932] main                 Adding msg type 'mv.GET_QUEST_STATUS', msgNumber 90/0x5a
+DEBUG [2020-03-26 04:19:10,058] main                 Adding msg type 'mv.QUEST_RESP', msgNumber 91/0x5b
+DEBUG [2020-03-26 04:19:10,058] main                 Adding msg type 'mv.NEW_QUESTSTATE', msgNumber 92/0x5c
+DEBUG [2020-03-26 04:19:10,059] main                 Adding msg type 'mv.CONCLUDE_QUEST', msgNumber 93/0x5d
+DEBUG [2020-03-26 04:19:10,059] main                 Adding msg type 'mv.QUEST_STATE_STATUS_CHANGE', msgNumber 94/0x5e
+DEBUG [2020-03-26 04:19:10,059] main                 Adding msg type 'mv.QUEST_LOG_INFO', msgNumber 95/0x5f
+DEBUG [2020-03-26 04:19:10,059] main                 Adding msg type 'mv.QUEST_STATE_INFO', msgNumber 96/0x60
+DEBUG [2020-03-26 04:19:10,059] main                 Adding msg type 'mv.REMOVE_QUEST_RESP', msgNumber 97/0x61
+DEBUG [2020-03-26 04:19:10,059] main                 Adding msg type 'mv.REQ_RESET_QUESTS', msgNumber 98/0x62
+DEBUG [2020-03-26 04:19:10,061] main                 Adding msg type 'mv.MARS_INV_FIND', msgNumber 99/0x63
+DEBUG [2020-03-26 04:19:10,061] main                 Adding msg type 'mv.TRADE_START_REQ', msgNumber 100/0x64
+DEBUG [2020-03-26 04:19:10,061] main                 Adding msg type 'mv.TRADE_START', msgNumber 101/0x65
+DEBUG [2020-03-26 04:19:10,061] main                 Adding msg type 'mv.TRADE_COMPLETE', msgNumber 102/0x66
+DEBUG [2020-03-26 04:19:10,061] main                 Adding msg type 'mv.TRADE_OFFER_REQ', msgNumber 103/0x67
+DEBUG [2020-03-26 04:19:10,062] main                 Adding msg type 'mv.TRADE_OFFER_UPDATE', msgNumber 104/0x68
+DEBUG [2020-03-26 04:19:10,062] main                 Adding msg type 'mv.SWAP_ITEM', msgNumber 105/0x69
+DEBUG [2020-03-26 04:19:10,063] main                 Adding msg type 'mv.AUTO_ATTACK', msgNumber 106/0x6a
+DEBUG [2020-03-26 04:19:10,063] main                 Adding msg type 'mv.START_ABILITY', msgNumber 107/0x6b
+DEBUG [2020-03-26 04:19:10,063] main                 Adding msg type 'mv.COOLDOWN', msgNumber 108/0x6c
+DEBUG [2020-03-26 04:19:10,063] main                 Adding msg type 'mv.ABILITY_PROGRESS', msgNumber 109/0x6d
+DEBUG [2020-03-26 04:19:10,064] main                 Adding msg type 'mv.DAMAGE', msgNumber 110/0x6e
+DEBUG [2020-03-26 04:19:10,064] main                 Adding msg type 'mv.RELEASE_OBJECT', msgNumber 111/0x6f
+DEBUG [2020-03-26 04:19:10,064] main                 Adding msg type 'mv.ABILITY_UPDATE', msgNumber 112/0x70
+DEBUG [2020-03-26 04:19:10,064] main                 Adding msg type 'mv.ADD_SKILL', msgNumber 113/0x71
+DEBUG [2020-03-26 04:19:10,064] main                 Adding msg type 'mv.TRAINING_FAILED', msgNumber 114/0x72
+DEBUG [2020-03-26 04:19:10,064] main                 Adding msg type 'mv.COMBAT_ABILITY_MISSED', msgNumber 115/0x73
+DEBUG [2020-03-26 04:19:10,064] main                 Adding msg type 'mv.SKILL_UPDATE', msgNumber 116/0x74
+DEBUG [2020-03-26 04:19:10,065] main                 Adding msg type 'mv.INVOKE_EFFECT', msgNumber 117/0x75
+DEBUG [2020-03-26 04:19:10,067] main                 Adding msg type 'mv.REGISTER_INSTANCE_TEMPLATE', msgNumber 118/0x76
+DEBUG [2020-03-26 04:19:10,068] main                 Adding msg type 'mv.CREATE_INSTANCE', msgNumber 119/0x77
+DEBUG [2020-03-26 04:19:10,068] main                 Adding msg type 'mv.GET_INSTANCE_INFO', msgNumber 120/0x78
+DEBUG [2020-03-26 04:19:10,092] main                 Adding msg type 'mv.INSTANCE_ENTRY_REQ', msgNumber 121/0x79
+DEBUG [2020-03-26 04:19:10,093] main                 Adding msg type 'mv.GET_MARKER', msgNumber 122/0x7a
+DEBUG [2020-03-26 04:19:10,093] main                 Adding msg type 'mv.GET_REGION', msgNumber 123/0x7b
+DEBUG [2020-03-26 04:19:10,093] main                 Adding msg type 'mv.LOAD_INSTANCE', msgNumber 124/0x7c
+DEBUG [2020-03-26 04:19:10,094] main                 Adding msg type 'mv.UNLOAD_INSTANCE', msgNumber 125/0x7d
+DEBUG [2020-03-26 04:19:10,094] main                 Adding msg type 'mv.DELETE_INSTANCE', msgNumber 126/0x7e
+DEBUG [2020-03-26 04:19:10,094] main                 Adding msg type 'mv.LOAD_INSTANCE_CONTENT', msgNumber 127/0x7f
+DEBUG [2020-03-26 04:19:10,095] main                 Adding msg type 'mv.INSTANCE_UNLOADED', msgNumber 128/0x80
+DEBUG [2020-03-26 04:19:10,095] main                 Adding msg type 'mv.INSTANCE_DELETED', msgNumber 129/0x81
+DEBUG [2020-03-26 04:19:10,097] main                 Adding msg type 'mv.CREATE_SPAWN_GEN', msgNumber 130/0x82
+DEBUG [2020-03-26 04:19:10,237] main                 Adding msg type 'mv.VOICE_PARMS', msgNumber 131/0x83
+DEBUG [2020-03-26 04:19:10,237] main                 Adding msg type 'mv.PLAYER_PATH_REQ', msgNumber 132/0x84
+DEBUG [2020-03-26 04:19:10,237] main                 Adding msg type 'mv.UPDATE_PLAYER_IGNORE_LIST', msgNumber 133/0x85
+DEBUG [2020-03-26 04:19:10,237] main                 Adding msg type 'mv.RELAY_UPDATE_PLAYER_IGNORE_LIST', msgNumber 134/0x86
+DEBUG [2020-03-26 04:19:10,237] main                 Adding msg type 'mv.GET_MATCHING_PLAYERS', msgNumber 135/0x87
+DEBUG [2020-03-26 04:19:10,238] main                 Adding msg type 'mv.PLAYER_IGNORE_LIST', msgNumber 136/0x88
+DEBUG [2020-03-26 04:19:10,238] main                 Adding msg type 'mv.PLAYER_IGNORE_LIST_REQ', msgNumber 137/0x89
+DEBUG [2020-03-26 04:19:10,238] main                 Adding msg type 'mv.GET_PLAYER_LOGIN_STATUS', msgNumber 138/0x8a
+DEBUG [2020-03-26 04:19:10,239] main                 Adding msg type 'mv.SEARCH', msgNumber 139/0x8b
+DEBUG [2020-03-26 04:19:10,291] main                 Adding msg type 'mv.REQ_TRAINER_INFO', msgNumber 140/0x8c
+DEBUG [2020-03-26 04:19:10,292] main                 Adding msg type 'mv.REQ_SKILL_TRAINING', msgNumber 141/0x8d
+DEBUG [2020-03-26 04:19:10,292] main                 Adding msg type 'mv.TRAINING_INFO', msgNumber 142/0x8e
+DEBUG [2020-03-26 04:19:10,295] main                 Adding msg type 'mv.STAT_XP_UPDATE', msgNumber 143/0x8f
+DEBUG [2020-03-26 04:19:10,296] main                 Adding msg type 'mv.HANDLE_EXP', msgNumber 144/0x90
+DEBUG [2020-03-26 04:19:10,298] main                 Adding msg type 'mv.GROUP_INVITE', msgNumber 145/0x91
+DEBUG [2020-03-26 04:19:10,298] main                 Adding msg type 'mv.GROUP_INVITE_RESPONSE', msgNumber 146/0x92
+DEBUG [2020-03-26 04:19:10,299] main                 Adding msg type 'mv.GROUP_REMOVE_MEMBER', msgNumber 147/0x93
+DEBUG [2020-03-26 04:19:10,299] main                 Adding msg type 'mv.GROUP_CHAT', msgNumber 148/0x94
+DEBUG [2020-03-26 04:19:10,299] main                 Adding msg type 'mv.REQUEST_GROUP_INFO', msgNumber 149/0x95
+DEBUG [2020-03-26 04:19:10,299] main                 Adding msg type 'mv.GROUP_INFO_RESPONSE', msgNumber 150/0x96
+DEBUG [2020-03-26 04:19:10,299] main                 Adding msg type 'mv.GROUP_SET_ALLOWED_SPEAKER', msgNumber 151/0x97
+DEBUG [2020-03-26 04:19:10,299] main                 Adding msg type 'mv.GROUP_MUTE_VOICE_CHAT', msgNumber 152/0x98
+DEBUG [2020-03-26 04:19:10,299] main                 Adding msg type 'mv.GROUP_VOICE_CHAT_STATUS', msgNumber 153/0x99
+DEBUG [2020-03-26 04:19:10,303] main                 Adding msg type 'mv.VOICECLIENT', msgNumber 154/0x9a
+DEBUG [2020-03-26 04:19:10,303] main                 Adding msg type 'mv.VOICE_MEMBER_ADDED', msgNumber 155/0x9b
+DEBUG [2020-03-26 04:19:10,304] main                 Adding msg type 'mv.VOICE_MEMBER_REMOVED', msgNumber 156/0x9c
+DEBUG [2020-03-26 04:19:10,305] main                 Adding msg type 'mv.GET_PLUGIN_STATUS', msgNumber 157/0x9d
+DEBUG [2020-03-26 04:19:10,305] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:10,305] main                 Engine, Engine: reading in script: /usr/multiverse/config/mv_fantasy/worldmessages.py
+WARN  [2020-03-26 04:19:10,305] main                 didnt find local script file, skipping: /usr/multiverse/config/mv_fantasy/worldmessages.py
+DEBUG [2020-03-26 04:19:10,351] main                 Initializing Database with driver com.mysql.jdbc.Driver
+DEBUG [2020-03-26 04:19:10,351] main                 classpath = /usr/multiverse/other/rhino1_5R5/js.jar:/usr/share/java/mysql-connector-java.jar:/usr/multiverse/dist/lib/injected.jar:/usr/multiverse/dist/lib/multiverse.jar:/usr/multiverse/dist/lib/mars.jar:/usr/multiverse/dist/lib/.jar:/usr/multiverse/other/java-getopt-1.0.11.jar:/usr/multiverse/other/jython.jar:/usr/multiverse/other/log4j-1.2.14.jar:/usr/multiverse/other/bcel-5.2.jar:.
+DEBUG [2020-03-26 04:19:10,473] main                 com.mysql.jdbc.Driver driver loaded
+DEBUG [2020-03-26 04:19:10,473] main                 Database: starting keepalive
+DEBUG [2020-03-26 04:19:10,586] main                 Engine, connecting to localhostuser = multiverse passwd=multiverse
+DEBUG [2020-03-26 04:19:10,586] main                 *** url = jdbc:mysql://localhost/multiverse username = multiverse password = multiverse
+INFO  [2020-03-26 04:19:13,324] main                 connected to database
+DEBUG [2020-03-26 04:19:13,324] main                 Reading namespaces from the database
+DEBUG [2020-03-26 04:19:13,356] main                 Read 15 namespaces from the database
+INFO  [2020-03-26 04:19:13,356] main                 encached the mapping of namespace strings to ints
+DEBUG [2020-03-26 04:19:13,481] main                 Adding msg type 'msgsys.AGENT_HELLO', msgNumber 5000/0x1388
+DEBUG [2020-03-26 04:19:13,481] main                 Adding msg type 'msgsys.HELLO_RESPONSE', msgNumber 5001/0x1389
+DEBUG [2020-03-26 04:19:13,481] main                 Adding msg type 'msgsys.ALLOC_NAME', msgNumber 5002/0x138a
+DEBUG [2020-03-26 04:19:13,481] main                 Adding msg type 'msgsys.NEW_AGENT', msgNumber 5003/0x138b
+DEBUG [2020-03-26 04:19:13,481] main                 Adding msg type 'msgsys.AGENT_STATE', msgNumber 5004/0x138c
+DEBUG [2020-03-26 04:19:13,481] main                 Adding msg type 'msgsys.ADVERTISE', msgNumber 5005/0x138d
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.SUBSCRIBE', msgNumber 5006/0x138e
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.UNSUBSCRIBE', msgNumber 5007/0x138f
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.FILTER_UPDATE', msgNumber 5008/0x1390
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.AWAIT_PLUGIN_DEPENDENTS', msgNumber 5009/0x1391
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.PLUGIN_AVAILABLE', msgNumber 5010/0x1392
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.RESPONSE', msgNumber 5011/0x1393
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.BOOLEAN_RESPONSE', msgNumber 5012/0x1394
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.LONG_RESPONSE', msgNumber 5013/0x1395
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.INT_RESPONSE', msgNumber 5014/0x1396
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.STRING_RESPONSE', msgNumber 5015/0x1397
+DEBUG [2020-03-26 04:19:13,482] main                 Adding msg type 'msgsys.ALLOC_NAME_RESPONSE', msgNumber 5016/0x1398
+DEBUG [2020-03-26 04:19:13,607] main                 Sending msgsys.ADVERTISE id=1 to login_manager
+DEBUG [2020-03-26 04:19:13,610] SelfMessage          SelfMessageHandler.handle pos=50
+DEBUG [2020-03-26 04:19:13,611] SelfMessage          handleSelfMessage id=1 type=msgsys.ADVERTISE class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:13,611] SelfMessage          [login_manager,1] handleAdvertise: Adding 6 and removing 0
+DEBUG [2020-03-26 04:19:13,611] SelfMessage          sendResponse to login_manager,1 type=msgsys.RESPONSE id=2 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:13,612] SelfMessage          SelfMessageHandler.handle pos=28
+DEBUG [2020-03-26 04:19:13,612] SelfMessage          handleSelfMessage id=2 responseTo=1 type=msgsys.RESPONSE class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:13,617] main                 TcpServer, bound to port: 44029
+DEBUG [2020-03-26 04:19:13,620] main                 MessageAgent: connected to domain server java.nio.channels.SocketChannel[connected local=/127.0.0.1:47338 remote=localhost/127.0.0.1:20374]
+INFO  [2020-03-26 04:19:13,868] main                 My agent-id: 3
+DEBUG [2020-03-26 04:19:13,874] main                 SecureTokenManager.initDomain: reading domain key. keyId=0xde144850edfd6cfe algorithm=HmacSHA1
+DEBUG [2020-03-26 04:19:13,990] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=52 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:13,990] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=52 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:14,012] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=54 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:14,621] AgentConnection-1    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:38392 remote=/127.0.0.1:43247]
+DEBUG [2020-03-26 04:19:14,632] AgentConnection-2    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:46408 remote=/127.0.0.1:37340]
+DEBUG [2020-03-26 04:19:14,658] AgentConnection-1    connect: Accepted connection from combat
+DEBUG [2020-03-26 04:19:14,724] AgentConnection-1    received connect: Accepting connection from objmgr
+DEBUG [2020-03-26 04:19:14,727] MessageIO            handleMessageData from combat,4 type=msgsys.ADVERTISE len=138 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:14,745] MessageIO            [combat,4] handleAdvertise: Adding 29 and removing 0
+DEBUG [2020-03-26 04:19:14,750] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=52 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:14,765] MessageIO            handleMessageData from objmgr,4 type=msgsys.ADVERTISE len=158 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:14,765] MessageIO            [objmgr,4] handleAdvertise: Adding 34 and removing 0
+DEBUG [2020-03-26 04:19:14,773] AgentConnection-2    connect: Accepted connection from instance
+DEBUG [2020-03-26 04:19:14,780] MessageIO            handleMessageData from instance,4 type=msgsys.ADVERTISE len=70 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:14,781] MessageIO            [instance,4] handleAdvertise: Adding 12 and removing 0
+DEBUG [2020-03-26 04:19:15,504] AgentConnection-2    received connect: Accepting connection from wmgr_1
+DEBUG [2020-03-26 04:19:15,530] MessageIO            handleMessageData from wmgr_1,6 type=msgsys.ADVERTISE len=138 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:15,530] MessageIO            [wmgr_1,6] handleAdvertise: Adding 29 and removing 0
+DEBUG [2020-03-26 04:19:16,312] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=57 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,681] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=53 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,734] AgentConnection-2    received connect: Accepting connection from voiceserver
+DEBUG [2020-03-26 04:19:16,885] MessageIO            handleMessageData from voiceserver,3 type=msgsys.ADVERTISE len=46 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:16,886] MessageIO            [voiceserver,3] handleAdvertise: Adding 6 and removing 0
+DEBUG [2020-03-26 04:19:16,954] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=55 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:17,004] AgentConnection-1    received connect: Accepting connection from proxy_1
+DEBUG [2020-03-26 04:19:17,033] MessageIO            handleMessageData from proxy_1,5 type=msgsys.ADVERTISE len=318 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:17,033] MessageIO            [proxy_1,5] handleAdvertise: Adding 74 and removing 0
+DEBUG [2020-03-26 04:19:17,164] AgentConnection-2    received connect: Accepting connection from mobserver
+DEBUG [2020-03-26 04:19:17,218] MessageIO            handleMessageData from mobserver,5 type=msgsys.ADVERTISE len=170 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:17,218] MessageIO            [mobserver,5] handleAdvertise: Adding 37 and removing 0
+WARN  [2020-03-26 04:19:17,221] main                 engine: world geometry is not set
+DEBUG [2020-03-26 04:19:17,224] main                 Engine, Executing script file: /usr/multiverse/bin/login_manager.py
+DEBUG [2020-03-26 04:19:17,224] main                 runPYFile: file=/usr/multiverse/bin/login_manager.py
+DEBUG [2020-03-26 04:19:17,307] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:17,308] main                 Engine, Executing script file: /usr/multiverse/config/common/login_manager.py
+DEBUG [2020-03-26 04:19:17,308] main                 runPYFile: file=/usr/multiverse/config/common/login_manager.py
+DEBUG [2020-03-26 04:19:17,420] main                 SecureTokenManager.registerMasterPublicKey: decoding public key keyId=0xc algorithm=DSA
+DEBUG [2020-03-26 04:19:17,743] main                 Engine, Engine.registerPlugin: loading class multiverse.mars.plugins.MarsLoginPlugin
+DEBUG [2020-03-26 04:19:17,747] main                 Engine, Engine.registerPlugin: registering Login
+DEBUG [2020-03-26 04:19:17,748] main                 EnginePlugin.activate: plugin=Login
+DEBUG [2020-03-26 04:19:17,760] main                 subscribe [MessageTypeFilter types=mv.DUMP_ALL_THREAD_STACKS,] matching agents 1
+DEBUG [2020-03-26 04:19:17,761] main                 Sending msgsys.SUBSCRIBE id=10 to proxy_1
+DEBUG [2020-03-26 04:19:17,772] MessageIO            handleMessageData from proxy_1,12 responseTo=10 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:17,783] main                 EnginePlugin.activate: plugin=Login, created createSubscription for dumpAllStacks
+DEBUG [2020-03-26 04:19:17,784] main                 EnginePlugin.activate: registered DumpAllStacksMessageHook
+DEBUG [2020-03-26 04:19:17,784] main                 Sending msgsys.AWAIT_PLUGIN_DEPENDENTS id=11 to DomainServer
+DEBUG [2020-03-26 04:19:18,757] MessageIO            handleMessageData from objmgr,24 type=msgsys.SUBSCRIBE len=106 class=multiverse.msgsys.SubscribeMessage
+DEBUG [2020-03-26 04:19:18,758] MessageIO            [objmgr,24] Got subscription subId=2 filter [MessageTypeFilter types=mv.GENERATE_OBJECT,mv.GET_OBJECT_STATUS,mv.SAVE_OBJECT,mv.DELETE_OBJECT,mv.LOAD_OBJECT,mv.SET_PERSISTENCE,mv.GET_PLUGIN_STATUS,mv.DELETE_INSTANCE,mv.GET_TEMPLATE,mv.FIX_WNODE_REQ,mv.REGISTER_TEMPLATE,mv.GET_NAMED_OBJECT,mv.LOAD_INSTANCE_CONTENT,mv.LOAD_OBJECT_DATA,mv.UNLOAD_INSTANCE,mv.SAVE_OBJECT_DATA,mv.UNLOAD_OBJECT,mv.GET_TEMPLATE_NAMES,]
+DEBUG [2020-03-26 04:19:18,758] MessageIO            sendResponse to objmgr,24 type=msgsys.RESPONSE id=12 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:19,534] MessageIO            handleMessageData from instance,17 type=msgsys.SUBSCRIBE len=58 class=multiverse.msgsys.SubscribeMessage
+DEBUG [2020-03-26 04:19:19,535] MessageIO            [instance,17] Got subscription subId=2 filter [MessageTypeFilter types=mv.GET_REGION,mv.REGISTER_INSTANCE_TEMPLATE,mv.CREATE_INSTANCE,mv.GET_INSTANCE_INFO,mv.GET_MARKER,mv.LOAD_INSTANCE,]
+DEBUG [2020-03-26 04:19:19,535] MessageIO            sendResponse to instance,17 type=msgsys.RESPONSE id=13 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,368] MessageIO            handleMessageData from DomainServer,0 responseTo=11 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,369] main                 TcpServer, bound to port: 5040
+DEBUG [2020-03-26 04:19:25,382] main                 EnginePlugin.activate: plugin=Login, onActivate complete, calling activateHooks
+DEBUG [2020-03-26 04:19:25,383] main                 EnginePlugin.activate: plugin=Login, activate hooks called
+DEBUG [2020-03-26 04:19:25,383] main                 Sending msgsys.PLUGIN_AVAILABLE id=14 to DomainServer
+DEBUG [2020-03-26 04:19:25,383] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:25,383] main                 Engine, Executing script file: /usr/multiverse/config/common/character_factory.py
+DEBUG [2020-03-26 04:19:25,383] main                 runPYFile: file=/usr/multiverse/config/common/character_factory.py
+DEBUG [2020-03-26 04:19:25,500] main                 ObjectManagerClient: registering template: [Template: name=DefaultPlayer (ns=NS.inv, key=:inv_items, val=)(ns=NS.wmgr, key=:objType, val=[PLAYER,3])(ns=NS.wmgr, key=:displayContext, val=[DisplayContext: meshFile=human_female.mesh, attachableFlag=false, castShadow=false, receiveShadow=false, numSubmeshes=3, submesh=[Submesh: name=bodyShape-lib.0, material=human_female.skin_material], submesh=[Submesh: name=hair_bShape-lib.0, material=human_female.hair_b_material], submesh=[Submesh: name=head_aShape-lib.0, material=human_female.head_a_material]])
+DEBUG [2020-03-26 04:19:25,501] main                 sendRPC type=mv.REGISTER_TEMPLATE id=15 class=multiverse.server.plugins.ObjectManagerClient$RegisterTemplateMessage
+DEBUG [2020-03-26 04:19:25,501] main                 Sending mv.REGISTER_TEMPLATE id=15 to objmgr
+DEBUG [2020-03-26 04:19:25,521] MessageIO            handleMessageData from objmgr,805 responseTo=15 type=msgsys.RESPONSE len=26 class=multiverse.msgsys.BooleanResponseMessage
+DEBUG [2020-03-26 04:19:25,522] main                 ObjectManagerClient: registered template: [Template: name=DefaultPlayer (ns=NS.inv, key=:inv_items, val=)(ns=NS.wmgr, key=:objType, val=[PLAYER,3])(ns=NS.wmgr, key=:displayContext, val=[DisplayContext: meshFile=human_female.mesh, attachableFlag=false, castShadow=false, receiveShadow=false, numSubmeshes=3, submesh=[Submesh: name=bodyShape-lib.0, material=human_female.skin_material], submesh=[Submesh: name=hair_bShape-lib.0, material=human_female.hair_b_material], submesh=[Submesh: name=head_aShape-lib.0, material=human_female.head_a_material]])
+DEBUG [2020-03-26 04:19:25,533] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:25,534] main                 Engine, Executing script file: /usr/multiverse/config/mv_fantasy/character_factory.py
+DEBUG [2020-03-26 04:19:25,534] main                 runPYFile: file=/usr/multiverse/config/mv_fantasy/character_factory.py
+DEBUG [2020-03-26 04:19:25,646] main                 ObjectManagerClient: registering template: [Template: name=DefaultPlayer (ns=NS.inv, key=:inv_items, val=*Leather Tunic; *Leather Pants)(ns=NS.wmgr, key=runThreshold, val=5000.0)(ns=NS.wmgr, key=:objType, val=[PLAYER,3])(ns=NS.wmgr, key=:displayContext, val=[DisplayContext: meshFile=human_female_ruth.mesh, attachableFlag=false, castShadow=true, receiveShadow=false, numSubmeshes=3, submesh=[Submesh: name=human_female_head_ruth-mesh.0, material=human_female_ruth.ruth_head_mat], submesh=[Submesh: name=human_female_body_ruth-mesh.0, material=human_female_ruth.ruth_body_clothed_mat], submesh=[Submesh: name=human_female_head_ruth_hair-mesh.0, material=human_female_ruth.ruth_hair_mat]])(ns=NS.combat, key=combat.userflag, val=true)(ns=NS.combat, key=strength, val=multiverse.mars.objects.MarsStat@5b4954b2)(ns=NS.combat, key=stamina, val=multiverse.mars.objects.MarsStat@74eec640)(ns=NS.combat, key=weaponBaseDmg, val=15)(ns=NS.combat, key=health, val=multiverse.mars.objects.MarsStat@3973b6d4)(ns=NS.combat, key=offense skill, val=multiverse.mars.objects.MarsStat@18dd7767)(ns=NS.combat, key=intelligence, val=multiverse.mars.objects.MarsStat@9205c0a)(ns=NS.combat, key=combat.autoability, val=attack ability)(ns=NS.combat, key=deadstate, val=false)(ns=NS.combat, key=combat.regeneffect, val=regen effect)(ns=NS.combat, key=defense skill, val=multiverse.mars.objects.MarsStat@bfe47a8)(ns=NS.combat, key=armor, val=multiverse.mars.objects.MarsStat@2f1f9515)(ns=NS.combat, key=mana, val=multiverse.mars.objects.MarsStat@5c8ab9de)(ns=NS.combat, key=agility, val=multiverse.mars.objects.MarsStat@57416e49)(ns=NS.combat, key=weaponVarDmg, val=15)
+DEBUG [2020-03-26 04:19:25,646] main                 sendRPC type=mv.REGISTER_TEMPLATE id=16 class=multiverse.server.plugins.ObjectManagerClient$RegisterTemplateMessage
+DEBUG [2020-03-26 04:19:25,646] main                 Sending mv.REGISTER_TEMPLATE id=16 to objmgr
+DEBUG [2020-03-26 04:19:25,696] MessageIO            handleMessageData from objmgr,807 responseTo=16 type=msgsys.RESPONSE len=26 class=multiverse.msgsys.BooleanResponseMessage
+DEBUG [2020-03-26 04:19:25,697] main                 ObjectManagerClient: registered template: [Template: name=DefaultPlayer (ns=NS.inv, key=:inv_items, val=*Leather Tunic; *Leather Pants)(ns=NS.wmgr, key=runThreshold, val=5000.0)(ns=NS.wmgr, key=:objType, val=[PLAYER,3])(ns=NS.wmgr, key=:displayContext, val=[DisplayContext: meshFile=human_female_ruth.mesh, attachableFlag=false, castShadow=true, receiveShadow=false, numSubmeshes=3, submesh=[Submesh: name=human_female_head_ruth-mesh.0, material=human_female_ruth.ruth_head_mat], submesh=[Submesh: name=human_female_body_ruth-mesh.0, material=human_female_ruth.ruth_body_clothed_mat], submesh=[Submesh: name=human_female_head_ruth_hair-mesh.0, material=human_female_ruth.ruth_hair_mat]])(ns=NS.combat, key=combat.userflag, val=true)(ns=NS.combat, key=strength, val=multiverse.mars.objects.MarsStat@5b4954b2)(ns=NS.combat, key=stamina, val=multiverse.mars.objects.MarsStat@74eec640)(ns=NS.combat, key=weaponBaseDmg, val=15)(ns=NS.combat, key=health, val=multiverse.mars.objects.MarsStat@3973b6d4)(ns=NS.combat, key=offense skill, val=multiverse.mars.objects.MarsStat@18dd7767)(ns=NS.combat, key=intelligence, val=multiverse.mars.objects.MarsStat@9205c0a)(ns=NS.combat, key=combat.autoability, val=attack ability)(ns=NS.combat, key=deadstate, val=false)(ns=NS.combat, key=combat.regeneffect, val=regen effect)(ns=NS.combat, key=defense skill, val=multiverse.mars.objects.MarsStat@bfe47a8)(ns=NS.combat, key=armor, val=multiverse.mars.objects.MarsStat@2f1f9515)(ns=NS.combat, key=mana, val=multiverse.mars.objects.MarsStat@5c8ab9de)(ns=NS.combat, key=agility, val=multiverse.mars.objects.MarsStat@57416e49)(ns=NS.combat, key=weaponVarDmg, val=15)
+DEBUG [2020-03-26 04:19:25,721] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:25,721] main                 Engine, Executing script file: /usr/multiverse/config/mv_fantasy/extensions_login.py
+DEBUG [2020-03-26 04:19:25,721] main                 runPYFile: file=/usr/multiverse/config/mv_fantasy/extensions_login.py
+DEBUG [2020-03-26 04:19:25,756] main                 Engine, script completed
+DEBUG [2020-03-26 04:20:10,596] DBKeepalive          Database: ping
+INFO  [2020-03-26 04:20:11,107] TcpAccept            LoginPlugin: CONNECTION remote=/192.168.1.2:63821 local=/192.168.1.6:5040
+DEBUG [2020-03-26 04:20:11,111] LoginConnection-1    LoginPlugin: code 10 (156 bytes)
+DEBUG [2020-03-26 04:20:11,112] LoginConnection-1    LoginPlugin: SecureCharacterRequestMessage version=1.5.7389.7676 token=multiverse.server.network.MVByteBuffer@2ee283f1
+DEBUG [2020-03-26 04:20:11,114] LoginConnection-1    SecureTokenManager.importToken: token=[1, 1, 0, 0, 0, 6, 109, 97, 115, 116, 101, 114, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 1, 113, 22, 37, -50, -107, 24, 0, 0, 0, 2, 0, 0, 0, 10, 97, 99, 99, 111, 117, 110, 116, 95, 105, 100, 3, 0, 0, 0, 1, 0, 0, 0, 12, 97, 99, 99, 111, 117, 110, 116, 95, 110, 97, 109, 101, 1, 0, 0, 0, 4, 100, 97, 118, 101, 48, 44, 2, 20, 18, -99, -73, 80, -91, 20, -62, -34, -3, -128, 117, -69, -30, 13, 111, -47, -48, -51, -12, 47, 2, 20, 22, -77, 98, 6, 83, -124, -18, -29, 69, -102, 64, 85, 23, -32, 79, 52, -32, -111, -50, -75]
+DEBUG [2020-03-26 04:20:11,143] LoginConnection-1    SecureTokenManager.validateMasterAuthenticator rv=true
+DEBUG [2020-03-26 04:20:11,146] LoginConnection-1    getgameid: multiverseid 1 maps to gameID=1852
+DEBUG [2020-03-26 04:20:11,146] LoginConnection-1    MarsLoginPlugin: character oid: 1852
+DEBUG [2020-03-26 04:20:11,159] LoginConnection-1    retrieveEntityDataByOidAndNamespace: oid=1852 size=10450
+DEBUG [2020-03-26 04:20:11,293] LoginConnection-1    MarsMob.init: name=null, perceiver=null
+DEBUG [2020-03-26 04:20:11,294] LoginConnection-1    MarsMob.init: generating perceiver
+DEBUG [2020-03-26 04:20:11,295] LoginConnection-1    MVObject.setPerceiver: obj oid=null, perceiver=[MobilePerceiver:387697015 elem=null radius=100000]
+DEBUG [2020-03-26 04:20:11,295] LoginConnection-1    MarsMob.init: generated perceiver=[MobilePerceiver:387697015 elem=null radius=100000], func=[MobilePerceiver:387697015 elem=null radius=100000]
+DEBUG [2020-03-26 04:20:11,373] LoginConnection-1    MarsLoginPlugin: loaded character from db: [MVObject: Dave:1852, type=[PLAYER,3]]
+DEBUG [2020-03-26 04:20:11,374] LoginConnection-1    retrieveEntityDataByOidAndNamespace: oid=1852 size=10450
+DEBUG [2020-03-26 04:20:11,377] LoginConnection-1    MarsMob.init: name=null, perceiver=null
+DEBUG [2020-03-26 04:20:11,377] LoginConnection-1    MarsMob.init: generating perceiver
+DEBUG [2020-03-26 04:20:11,378] LoginConnection-1    MVObject.setPerceiver: obj oid=null, perceiver=[MobilePerceiver:1002821857 elem=null radius=100000]
+DEBUG [2020-03-26 04:20:11,378] LoginConnection-1    MarsMob.init: generated perceiver=[MobilePerceiver:1002821857 elem=null radius=100000], func=[MobilePerceiver:1002821857 elem=null radius=100000]
+DEBUG [2020-03-26 04:20:11,411] LoginConnection-1    Display context for 'Dave': [DisplayContext: meshFile=human_male_fantasy.mesh, attachableFlag=false, castShadow=true, receiveShadow=false, numSubmeshes=5, submesh=[Submesh: name=human_male_body-mesh.0, material=human_male_fantasy.human_male_body_01], submesh=[Submesh: name=male_leather_b_legs-mesh.0, material=human_male_fantasy.human_male_armor_leather_b], submesh=[Submesh: name=male_head_01_hair_01-mesh.0, material=human_male_fantasy.human_male_head_01_hair_01], submesh=[Submesh: name=male_leather_b_chest-mesh.0, material=human_male_fantasy.human_male_armor_leather_b], submesh=[Submesh: name=human_male_head_01-mesh.0, material=human_male_fantasy.human_male_head_01]]
+INFO  [2020-03-26 04:20:11,411] LoginConnection-1    LoginPlugin: GET_CHARACTERS remote=/192.168.1.2:63821 account=1 count=1 names=Dave(1852),
+DEBUG [2020-03-26 04:20:11,412] LoginConnection-1    LoginPlugin: returning characters: serverVersion=1.5 worldToken= errorMessage= nChars=1
+DEBUG [2020-03-26 04:20:11,412] LoginConnection-1    propertyMessage: key=characterName, val=Dave
+DEBUG [2020-03-26 04:20:11,412] LoginConnection-1    propertyMessage: key=characterId, val=1852
+DEBUG [2020-03-26 04:20:11,412] LoginConnection-1    propertyMessage: key=displayContext, val=human_male_fantasy.meshhuman_male_body-mesh.0human_male_fantasy.human_male_body_01male_leather_b_legs-mesh.0human_male_fantasy.human_male_armor_leather_bmale_head_01_hair_01-mesh.0human_male_fantasy.human_male_head_01_hair_01male_leather_b_chest-mesh.0human_male_fantasy.human_male_armor_leather_bhuman_male_head_01-mesh.0human_male_fantasy.human_male_head_01primaryWeaponFW_sword_human_katareen.mesh
+DEBUG [2020-03-26 04:20:23,885] LoginConnection-1    LoginPlugin: code 8 (36 bytes)
+DEBUG [2020-03-26 04:20:23,886] LoginConnection-1    LoginPlugin: CharacterSelectRequestMessage prop count=1
+INFO  [2020-03-26 04:20:23,887] LoginConnection-1    LoginPlugin: SELECT_CHARACTER oid=1852 name=Dave allowed=true
+DEBUG [2020-03-26 04:20:23,899] LoginConnection-1    putPropertyMap: character_oid=1852, proxy_server=proxy_1
+DEBUG [2020-03-26 04:20:23,965] LoginConnection-1    MVByteBuffer.reallocate: size=512 requested=122 newSize=512
+DEBUG [2020-03-26 04:20:23,965] LoginConnection-1    LoginPlugin: assigned proxy Proxy1 host=localhost.localdomain port=5050
+DEBUG [2020-03-26 04:20:23,965] LoginConnection-1    LoginPlugin: select character response: nProps=3
+DEBUG [2020-03-26 04:20:23,966] LoginConnection-1    putPropertyMap: proxyPort=5050, proxyHostname=localhost.localdomain, token=[B@723d44e4
+INFO  [2020-03-26 04:20:23,989] LoginConnection-1    LoginPlugin: DISCONNECT remote=/192.168.1.2:63821 local=/192.168.1.6:5040
+DEBUG [2020-03-26 04:21:10,602] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:22:10,610] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:23:10,612] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:24:10,615] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:25:10,617] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:26:10,619] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:27:10,626] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:28:10,630] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:29:10,632] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:30:10,634] DBKeepalive          Database: ping

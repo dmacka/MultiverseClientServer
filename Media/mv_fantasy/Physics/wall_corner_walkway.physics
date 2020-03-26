@@ -1,0 +1,130 @@
+<physics_model>
+  <rigid_body sid="wall_corner_walkway-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>1.38665 -0.4907902 2.918016</translate>
+        <box>
+          <half_extents>0.1302066 0.7139749 0.09950723</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1 0 0 6.66192</rotate>
+        <translate>-0.03442749 1.033656 3.189692</translate>
+        <box>
+          <half_extents>2.865932 2.243303 0.1824421</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>2.19678 0.5766414 1.72531</translate>
+        <box>
+          <half_extents>0.08938233 1.784311 0.1003264</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>-1.28491 -0.4907902 2.890336</translate>
+        <box>
+          <half_extents>0.1302066 0.7139749 0.09950723</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-2.19742 0.5766414 1.72531</translate>
+        <box>
+          <half_extents>0.08938233 1.784311 0.1003264</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.04273658 2.41013 2.20859</translate>
+        <box>
+          <half_extents>3.006525 0.03407983 0.7009969</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.520366 1.046896 1.82161</translate>
+        <box>
+          <half_extents>2.399571 0.05670398 0.05468531</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 44.67281</rotate>
+        <translate>2.21827 1.392338 2.31307</translate>
+        <box>
+          <half_extents>0.06635761 0.07063831 0.8885415</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 4.917075</rotate>
+        <translate>-1.75278 0.6093504 1.347084</translate>
+        <box>
+          <half_extents>0.3665497 1.882117 0.05248998</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-2.22941 1.392338 2.34997</translate>
+        <box>
+          <half_extents>0.06635767 0.07063831 0.6417066</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>2.27746 1.392338 -2.16957</translate>
+        <box>
+          <half_extents>0.6417066 0.07063831 0.06635791</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.07319313 -0.9799647 0.1852345 43.91997</rotate>
+        <translate>2.992115 0.9636487 3.098251</translate>
+        <box>
+          <half_extents>0.1676896 2.132823 0.3369938</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 43.53028</rotate>
+        <translate>1.62837 0.5766413 1.69651</translate>
+        <box>
+          <half_extents>0.1003264 1.784311 0.08938239</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>1.6528 0.5766414 -2.18475</translate>
+        <box>
+          <half_extents>0.1003264 1.784311 0.08938233</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>2.13608 2.41013 -0.3636001</translate>
+        <box>
+          <half_extents>0.7009969 0.03407983 2.598749</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>1.7491 1.146444 -0.4910911</translate>
+        <box>
+          <half_extents>0.05468531 0.05670398 2.435245</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1.421295E-07 -4.942253E-06 -1 17.70962</rotate>
+        <translate>2.845506 -0.4907901 -1.37461</translate>
+        <box>
+          <half_extents>0.09950724 0.7139749 0.1302064</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>7.257048E-07 -5.219379E-06 -1 17.70958</rotate>
+        <translate>2.817826 -0.49079 1.29694</translate>
+        <box>
+          <half_extents>0.09950725 0.713975 0.1302065</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>9.11679E-08 -1.064841E-08 1 6.66192</rotate>
+        <translate>3.117182 1.033656 0.08525001</translate>
+        <box>
+          <half_extents>0.1824421 2.243303 2.865933</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

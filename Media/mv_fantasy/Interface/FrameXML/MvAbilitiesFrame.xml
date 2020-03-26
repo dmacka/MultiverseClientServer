@@ -1,0 +1,208 @@
+<Ui>
+   <Script file="MvAbilitiesFrame.py" />
+
+   <Button name="AbilitiesFrameButton" virtual="true">
+      <Scripts language="python">
+         <OnClick>
+            AbilitiesFrameButton_OnClick(this, args)
+         </OnClick>
+         <OnEnter>
+            AbilitiesFrameButton_OnEnter(this)
+         </OnEnter>
+         <OnLeave>
+            AbilitiesFrameButton_OnLeave(this)
+         </OnLeave>
+      </Scripts>
+      <Size>
+         <AbsDimension x="151" y="41"/>
+      </Size>
+      <Layers>
+         <Layer level="BACKGROUND">
+	    <Texture name="$parentIconTexture" file="Interface\Icons\INV_clothes_shirt">
+	       <Size>
+	          <AbsDimension x="41" y="41"/>
+	       </Size>
+	       <Anchors>
+	          <Anchor point="TOPLEFT">
+	             <Offset>
+		        <AbsDimension x="0" y="0"/>
+	             </Offset>
+	          </Anchor>
+	       </Anchors>
+            </Texture>
+	    <Texture name="$parentNameFrame" file="Interface\QuestFrame\UI-QuestItemNameFrame">
+	       <Size>
+	          <AbsDimension x="107" y="41"/>
+	       </Size>
+	       <Anchors>
+	          <Anchor point="LEFT" relativeTo="$parentIconTexture" relativePoint="RIGHT">
+	             <Offset>
+		        <AbsDimension x="2" y="0"/>
+	             </Offset>
+                  </Anchor>
+               </Anchors>
+            </Texture>
+	    <FontString name="$parentName" text="Name" inherits="NormalFont" justifyH="LEFT">
+	       <Size>
+	          <AbsDimension x="90" y="36"/>
+	       </Size>
+	       <Anchors>
+	          <Anchor point="LEFT" relativeTo="$parentNameFrame">
+	             <Offset>
+		        <AbsDimension x="15" y="0"/>
+	             </Offset>
+	          </Anchor>
+	       </Anchors>
+            </FontString>
+         </Layer>
+      </Layers>
+   </Button>
+
+    <Frame name="AbilitiesFrame" inherits="MvBasicFrame" frameStrata="HIGH" toplevel="true" movable="true" enableMouse="true" hidden="true" virtual="true">
+	<Size>
+	    <AbsDimension x="162" y="560"/>
+	</Size>
+	<Layers>
+	    <Layer level="ARTWORK">
+        	<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior">
+		    <Anchors>
+			<Anchor point="TOPLEFT" relativeTo="$parent">
+			    <Offset>
+				<AbsDimension x="5" y="-5"/>
+			    </Offset>
+			</Anchor>
+			<Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+			    <Offset>
+				<AbsDimension x="-5" y="5"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</Texture>
+	    </Layer>
+	</Layers>
+	<Frames>
+	    <Button name="$parentItem1" inherits="AbilitiesFrameButton" id="1">
+		<Anchors>
+		    <Anchor point="TOPLEFT">
+			<Offset>
+			    <AbsDimension x="6" y="-6"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem2" inherits="AbilitiesFrameButton" id="2">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem1" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem3" inherits="AbilitiesFrameButton" id="3">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem2" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem4" inherits="AbilitiesFrameButton" id="4">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem3" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem5" inherits="AbilitiesFrameButton" id="5">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem4" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem6" inherits="AbilitiesFrameButton" id="6">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem5" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem7" inherits="AbilitiesFrameButton" id="7">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem6" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem8" inherits="AbilitiesFrameButton" id="8">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem7" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem9" inherits="AbilitiesFrameButton" id="9">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem8" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem10" inherits="AbilitiesFrameButton" id="10">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem9" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem11" inherits="AbilitiesFrameButton" id="11">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem10" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem12" inherits="AbilitiesFrameButton" id="12">
+		<Anchors>
+		    <Anchor point="TOPLEFT" relativeTo="$parentItem11" relativePoint="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="0" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	</Frames>
+	<Scripts language="python">
+	    <OnLoad>
+    AbilitiesFrame_OnLoad(this)
+	    </OnLoad>
+	    <OnShow>
+    AbilitiesFrame_OnShow(this)
+	    </OnShow>
+	    <OnEvent>
+    AbilitiesFrame_OnEvent(this, args)
+	    </OnEvent>
+	</Scripts>
+    </Frame>
+
+    <Frame name="MyAbilitiesFrame" inherits="AbilitiesFrame" parent="UIParent" id="100" hidden="true"/>
+
+</Ui>

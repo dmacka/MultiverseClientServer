@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>fountain_Mesh</Name>
+  <Description>Fountain</Description>
+  <Type>Mesh</Type>
+  <Category>Props</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\fountain.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\fountain_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

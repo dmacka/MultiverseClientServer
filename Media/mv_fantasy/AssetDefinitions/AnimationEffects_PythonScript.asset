@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>AnimationEffects_PythonScript</Name>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts\AnimationEffects.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

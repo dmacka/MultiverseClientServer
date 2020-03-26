@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Imageset Name="TradeFrame" Imagefile="TradeFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-TradeFrame-BotLeft" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-TradeFrame-BotRight" XPos="256" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-TradeFrame-EnchantIcon" XPos="384" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-TradeFrame-TopLeft" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-TradeFrame-TopRight" XPos="256" YPos="256" Width="128" Height="256" />
+</Imageset>

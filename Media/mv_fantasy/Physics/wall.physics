@@ -1,0 +1,48 @@
+<physics_model>
+  <rigid_body sid="wall-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>-1 0 0 6.66192</rotate>
+        <translate>-0.03442749 1.033656 0.09263048</translate>
+        <box>
+          <half_extents>2.865932 2.243303 0.182442</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>1.87558 0.415177 -0.7357234</translate>
+        <box>
+          <half_extents>0.1302064 1.599633 0.09950751</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.997131 0.01165138 0.07479306 17.75969</rotate>
+        <translate>-0.1225603 0.4151813 -0.7539946</translate>
+        <box>
+          <half_extents>0.1302064 1.599633 0.09950751</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>1.38665 -0.4907902 -0.1790531</translate>
+        <box>
+          <half_extents>0.1302064 0.7139747 0.09950736</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>-1.97934 0.415177 -0.7523335</translate>
+        <box>
+          <half_extents>0.1302064 1.599633 0.09950751</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>-1.28491 -0.4907902 -0.2067311</translate>
+        <box>
+          <half_extents>0.1302064 0.7139747 0.09950736</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

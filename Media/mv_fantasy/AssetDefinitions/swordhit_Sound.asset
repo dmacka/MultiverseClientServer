@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>swordhit_Sound</Name>
+  <Description>swordhit</Description>
+  <Type>Sound</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Sounds\swordhit.wav</TargetFile>
+      <FileType>Sound</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

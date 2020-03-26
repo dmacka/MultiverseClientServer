@@ -1,0 +1,130 @@
+INFO  [2020-03-26 04:18:49,949] main                 pid 5247@localhost.localdomain
+DEBUG [2020-03-26 04:18:49,950] main                 Using property file /usr/multiverse/bin/master.properties
+DEBUG [2020-03-26 04:18:49,950] main                 Properties are:
+DEBUG [2020-03-26 04:18:49,950] main                     java.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:18:49,950] main                     log4j.appender.FILE = org.apache.log4j.RollingFileAppender
+DEBUG [2020-03-26 04:18:49,950] main                     sun.java.launcher = SUN_STANDARD
+DEBUG [2020-03-26 04:18:49,951] main                     sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+DEBUG [2020-03-26 04:18:49,951] main                     os.name = Linux
+DEBUG [2020-03-26 04:18:49,951] main                     sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/classes
+DEBUG [2020-03-26 04:18:49,951] main                     multiverse.db_password = multiverse
+DEBUG [2020-03-26 04:18:49,951] main                     multiverse.delete_logs_on_startup = true
+DEBUG [2020-03-26 04:18:49,952] main                     sun.desktop = gnome
+DEBUG [2020-03-26 04:18:49,952] main                     java.vm.specification.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:18:49,952] main                     java.runtime.version = 1.8.0_242-b08
+DEBUG [2020-03-26 04:18:49,952] main                     user.name = dmckay
+DEBUG [2020-03-26 04:18:49,952] main                     user.language = en
+DEBUG [2020-03-26 04:18:49,952] main                     sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/amd64
+DEBUG [2020-03-26 04:18:49,952] main                     multiverse.world_available_message = DONE INITIALIZING, you can log in now
+DEBUG [2020-03-26 04:18:49,952] main                     java.version = 1.8.0_242
+DEBUG [2020-03-26 04:18:49,952] main                     log4j.rootLogger = TRACE, FILE
+DEBUG [2020-03-26 04:18:49,952] main                     user.timezone = America/Chicago
+DEBUG [2020-03-26 04:18:49,952] main                     sun.arch.data.model = 64
+DEBUG [2020-03-26 04:18:49,952] main                     multiverse.master_rdp_port = 9010
+DEBUG [2020-03-26 04:18:49,952] main                     java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/endorsed
+DEBUG [2020-03-26 04:18:49,952] main                     multiverse.master_tcp_port = 9005
+DEBUG [2020-03-26 04:18:49,952] main                     sun.cpu.isalist = 
+DEBUG [2020-03-26 04:18:49,952] main                     sun.jnu.encoding = UTF-8
+DEBUG [2020-03-26 04:18:49,953] main                     file.encoding.pkg = sun.io
+DEBUG [2020-03-26 04:18:49,953] main                     file.separator = /
+DEBUG [2020-03-26 04:18:49,953] main                     java.specification.name = Java Platform API Specification
+DEBUG [2020-03-26 04:18:49,953] main                     java.class.version = 52.0
+DEBUG [2020-03-26 04:18:49,953] main                     log4j.appender.FILE.layout = org.apache.log4j.PatternLayout
+DEBUG [2020-03-26 04:18:49,953] main                     user.country = US
+DEBUG [2020-03-26 04:18:49,953] main                     java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre
+DEBUG [2020-03-26 04:18:49,953] main                     java.vm.info = mixed mode
+DEBUG [2020-03-26 04:18:49,953] main                     multiverse.jdbcJarPath = /usr/share/java/mysql-connector-java.jar
+DEBUG [2020-03-26 04:18:49,953] main                     os.version = 3.10.0-1062.18.1.el7.x86_64
+DEBUG [2020-03-26 04:18:49,953] main                     multiverse.logs = /usr/multiverse/logs/master
+DEBUG [2020-03-26 04:18:49,953] main                     multiverse.log_level = 1
+DEBUG [2020-03-26 04:18:49,953] main                     path.separator = :
+DEBUG [2020-03-26 04:18:49,953] main                     java.vm.version = 25.242-b08
+DEBUG [2020-03-26 04:18:49,953] main                     java.awt.printerjob = sun.print.PSPrinterJob
+DEBUG [2020-03-26 04:18:49,953] main                     sun.io.unicode.encoding = UnicodeLittle
+DEBUG [2020-03-26 04:18:49,953] main                     multiverse.log_rdp_counters = false
+DEBUG [2020-03-26 04:18:49,953] main                     log4j.appender.FILE.File = ${multiverse.logs}/${multiverse.loggername}.out
+DEBUG [2020-03-26 04:18:49,953] main                     awt.toolkit = sun.awt.X11.XToolkit
+DEBUG [2020-03-26 04:18:49,953] main                     user.home = /home/dmckay
+DEBUG [2020-03-26 04:18:49,954] main                     java.specification.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:18:49,954] main                     java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+DEBUG [2020-03-26 04:18:49,954] main                     java.vendor.url = http://java.oracle.com/
+DEBUG [2020-03-26 04:18:49,954] main                     multiverse.loggername = master
+DEBUG [2020-03-26 04:18:49,954] main                     java.vm.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:18:49,954] main                     multiverse.db_user = multiverse
+DEBUG [2020-03-26 04:18:49,954] main                     java.runtime.name = OpenJDK Runtime Environment
+DEBUG [2020-03-26 04:18:49,954] main                     sun.java.command = multiverse.server.engine.MasterServer /usr/multiverse/bin/master_server.py
+DEBUG [2020-03-26 04:18:49,954] main                     java.class.path = /usr/multiverse/other/rhino1_5R5/js.jar:/usr/share/java/mysql-connector-java.jar:/usr/multiverse/dist/lib/injected.jar:/usr/multiverse/dist/lib/multiverse.jar:/usr/multiverse/dist/lib/mars.jar:/usr/multiverse/other/java-getopt-1.0.11.jar:/usr/multiverse/other/jython.jar:/usr/multiverse/other/log4j-1.2.14.jar:/usr/multiverse/other/bcel-5.2.jar:.
+DEBUG [2020-03-26 04:18:49,954] main                     multiverse.propertyfile = /usr/multiverse/bin/master.properties
+DEBUG [2020-03-26 04:18:49,954] main                     log4j.appender.FILE.MaxBackupIndex = 3
+DEBUG [2020-03-26 04:18:49,954] main                     multiverse.db_hostname = localhost
+DEBUG [2020-03-26 04:18:49,954] main                     multiverse.db_type = mysql
+DEBUG [2020-03-26 04:18:49,954] main                     java.vm.specification.name = Java Virtual Machine Specification
+DEBUG [2020-03-26 04:18:49,954] main                     java.vm.specification.version = 1.8
+DEBUG [2020-03-26 04:18:49,954] main                     sun.cpu.endian = little
+DEBUG [2020-03-26 04:18:49,954] main                     sun.os.patch.level = unknown
+DEBUG [2020-03-26 04:18:49,955] main                     java.io.tmpdir = /tmp
+DEBUG [2020-03-26 04:18:49,955] main                     java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+DEBUG [2020-03-26 04:18:49,955] main                     log4j.appender.FILE.MaxFileSize = 50MB
+DEBUG [2020-03-26 04:18:49,955] main                     multiverse.db_driver = com.mysql.jdbc.Driver
+DEBUG [2020-03-26 04:18:49,955] main                     multiverse.db_name = multiverse
+DEBUG [2020-03-26 04:18:49,955] main                     os.arch = amd64
+DEBUG [2020-03-26 04:18:49,955] main                     java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+DEBUG [2020-03-26 04:18:49,955] main                     java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+DEBUG [2020-03-26 04:18:49,955] main                     log4j.appender.FILE.layout.ConversionPattern = %-5p [%d{ISO8601}] %-20t %m%n
+DEBUG [2020-03-26 04:18:49,955] main                     user.dir = /usr/multiverse/bin
+DEBUG [2020-03-26 04:18:49,955] main                     line.separator = 
+
+DEBUG [2020-03-26 04:18:49,955] main                     java.vm.name = OpenJDK 64-Bit Server VM
+DEBUG [2020-03-26 04:18:49,955] main                     file.encoding = UTF-8
+DEBUG [2020-03-26 04:18:49,955] main                     java.specification.version = 1.8
+INFO  [2020-03-26 04:18:49,955] main                 The log level is 1
+INFO  [2020-03-26 04:18:49,958] main                 Multiverse server version 1.5 0 (- -)
+DEBUG [2020-03-26 04:18:50,041] main                 SecureTokenManager.initDomain: reading domain key. keyId=0x1 algorithm=HmacSHA1
+DEBUG [2020-03-26 04:18:50,860] main                 Executing script file: /usr/multiverse/bin/master_server.py
+DEBUG [2020-03-26 04:18:50,861] main                 runPYFile: file=/usr/multiverse/bin/master_server.py
+DEBUG [2020-03-26 04:18:51,021] main                 SecureTokenManager.initMaster: master key keyId=0xc algorithm=DSA
+DEBUG [2020-03-26 04:18:51,029] main                 script completed
+DEBUG [2020-03-26 04:18:51,044] main                 Database: starting keepalive
+DEBUG [2020-03-26 04:18:51,045] main                 *** url = jdbc:mysql://localhost/multiverse username = multiverse password = multiverse
+DEBUG [2020-03-26 04:18:51,450] main                 RDPServer: starting rdpServerThread with priority 7
+INFO  [2020-03-26 04:18:51,600] main                 masterserver: rdp on port 9010
+DEBUG [2020-03-26 04:18:51,608] main                 TcpServer, bound to port: 9010
+INFO  [2020-03-26 04:18:51,611] main                 masterserver: tcp on port 9005
+DEBUG [2020-03-26 04:18:51,612] main                 masterserver: tcp server listening on port 9005
+DEBUG [2020-03-26 04:19:48,648] pool-1-thread-1      cookie=-1 version=1
+DEBUG [2020-03-26 04:19:48,648] pool-1-thread-1      MasterServer.handleAuth: username len=4
+DEBUG [2020-03-26 04:19:48,648] pool-1-thread-1      MasterServer.handleAuth: login username=dave
+DEBUG [2020-03-26 04:19:48,679] pool-1-thread-1      dataLen=36
+DEBUG [2020-03-26 04:19:48,679] pool-1-thread-1      data=AAAABGRhdmUAAAABAAAAFKLlKPc4IbK/xDfXUjZklibjRvc5
+DEBUG [2020-03-26 04:19:48,691] pool-1-thread-1      password=test
+DEBUG [2020-03-26 04:19:48,691] pool-1-thread-1      authResponse=gykpABq1TeErz6vfYDkRSOo4oDg=
+DEBUG [2020-03-26 04:19:48,691] pool-1-thread-1      authenticator=gykpABq1TeErz6vfYDkRSOo4oDg=
+DEBUG [2020-03-26 04:19:48,699] pool-1-thread-1      putPropertyMap: account_id=1, account_name=dave
+DEBUG [2020-03-26 04:19:48,723] pool-1-thread-1      MVByteBuffer.reallocate: size=512 requested=131 newSize=512
+DEBUG [2020-03-26 04:19:48,723] pool-1-thread-1      tokenLen=131 token=AQEAAAAGbWFzdGVyAAAAAAAAAAIAAAAAAAAADAAAAXEWJc6VGAAAAAIAAAAKYWNjb3VudF9pZAMA
+AAABAAAADGFjY291bnRfbmFtZQEAAAAEZGF2ZTAsAhQSnbdQpRTC3v2AdbviDW/R0M30LwIUFrNi
+BlOE7uNFmkBVF+BPNOCRzrU=
+DEBUG [2020-03-26 04:19:48,723] pool-1-thread-1      tokenLen=131 token=AQEAAAAGbWFzdGVyAAAAAAAAAAIAAAAAAAAADAAAAXEWJc6VGAAAAAIAAAAKYWNjb3VudF9pZAMA
+AAABAAAADGFjY291bnRfbmFtZQEAAAAEZGF2ZTAsAhQSnbdQpRTC3v2AdbviDW/R0M30LwIUFrNi
+BlOE7uNFmkBVF+BPNOCRzrU=
+DEBUG [2020-03-26 04:19:48,724] pool-1-thread-1      SocketHandler: closed socket: Socket[addr=/192.168.1.2,port=63819,localport=9005]
+DEBUG [2020-03-26 04:19:48,752] RDPServer            masterserver: new incoming connection: RDP(/192.168.1.2:5367)
+DEBUG [2020-03-26 04:19:48,759] RDPCallback          masterserver: got name resolution request
+DEBUG [2020-03-26 04:19:48,759] RDPCallback          masterserver.resolvename: looking up worldName mv_fantasy
+DEBUG [2020-03-26 04:19:48,770] RDPCallback          masterverse.resolvename: resolved worldName mv_fantasy to 192.168.1.6:5040
+DEBUG [2020-03-26 04:19:48,771] RDPCallback          masterverse.resolvename: patcher for worldName mv_fantasy at http://192.168.1.6/patcher/world_patcher.html with media at: http://192.168.1.6/sampleworld/update/
+DEBUG [2020-03-26 04:19:48,771] RDPCallback          MVByteBuffer.reallocate: size=43 requested=90 newSize=172
+DEBUG [2020-03-26 04:19:48,782] RDPCallback          RDPConnection.send: time in ms=1
+DEBUG [2020-03-26 04:19:51,049] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:20:11,105] RDPServer            RDPServer.processExistingConnection: got reset packet for con RDP(/192.168.1.2:5367)
+DEBUG [2020-03-26 04:20:11,105] RDPServer            Masterserver: connection reset
+DEBUG [2020-03-26 04:20:51,052] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:21:51,054] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:22:51,058] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:23:51,063] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:24:51,066] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:25:51,068] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:26:51,073] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:27:51,076] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:28:51,078] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:29:51,092] DBKeepalive          Database: ping

@@ -1,0 +1,142 @@
+material directional_marker.lambert2
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture directional_marker.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material directional_marker.red
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture directional_marker_red.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material directional_marker.orange
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture directional_marker_orange.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material directional_marker.yellow
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture directional_marker_yellow.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material directional_marker.greyscale
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture directional_marker_greyscale.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+
+material directional_marker.custom
+{
+   technique
+   {
+       pass
+       {
+           shading phong
+
+           ambient  1.00000 1.00000 1.00000 1.00000
+           diffuse  1.00000 1.00000 1.00000 1.00000
+           specular 0.00000 0.00000 0.00000 1.00000 0.00000
+           emissive 0.00000 0.00000 0.00000 1.00000
+                     texture_unit
+           {
+               // need a texture here even though it is not used, so that SetPass() doesn't
+               // throw the texture_unit away.
+               texture directional_marker_greyscale_custom.dds
+               color_op_ex modulate src_manual src_diffuse 0.0 1.0 0.0
+           }
+           texture_unit
+           {
+               texture directional_marker_greyscale_custom.dds
+               color_op_ex modulate src_current src_texture
+           }
+       }
+   }
+} 
+
+material directional_marker.marker : directional_marker.orange
+{
+}

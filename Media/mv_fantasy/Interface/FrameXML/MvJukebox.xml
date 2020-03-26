@@ -1,0 +1,369 @@
+<Ui>
+
+  <Script file="MvJukebox.py"/>
+
+  <FontString name="JukeboxFont" inherits="NormalFont" virtual="true">
+    <FontHeight> <AbsValue val="12"/> </FontHeight>
+    <Color r="1.0" g="1.0" b="1.0"/>
+  </FontString>
+  <FontString name="JukeboxBannerFont" inherits="NormalFont" virtual="true">
+    <FontHeight> <AbsValue val="60"/> </FontHeight>
+    <Color r="0.0" g="0.0" b="0.0"/>
+  </FontString>
+
+  <Frame name="JukeboxBanner" virtual="true">
+    <Size> <AbsDimension x="600" y="75"/> </Size>
+    <Layers>
+       <Layer>
+          <FontString inherits="JukeboxBannerFont" text="LES Jukebox" justifyH="LEFT"/>
+          <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+             <Color r="0.3" g="0.3" b="0.3" a="0.3"/>
+          </Texture>
+       </Layer>
+    </Layers>
+    <Frames>
+      <Button name="$parentClose">
+        <Size> <AbsDimension x="32" y="32"/> </Size>
+        <Anchors> <Anchor point="TOPRIGHT"/> </Anchors>
+        <NormalTexture file="Interface\MvButtons\Mv-CloseButton-Up"/>
+        <Scripts language="python">
+          <OnClick>
+            MvJukebox_Close()
+          </OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+  </Frame>
+
+  <Button name="JukeboxChannelEntry" virtual="true">
+    <Size> <AbsDimension x="582" y="22"/> </Size>
+<!--
+    <NormalTexture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.6" g="0.3" b="0.3" a="0.3"/>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset> <AbsDimension x="2" y="-1"/> </Offset>
+        </Anchor>
+        <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+          <Offset> <AbsDimension x="0" y="1"/> </Offset>
+        </Anchor>
+      </Anchors>
+    </NormalTexture>
+-->
+    <HighlightTexture name="$parentHighlight" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.5" g="0.5" b="0.3" a="0.3"/>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset> <AbsDimension x="2" y="-1"/> </Offset>
+        </Anchor>
+        <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+          <Offset> <AbsDimension x="0" y="1"/> </Offset>
+        </Anchor>
+      </Anchors>
+    </HighlightTexture>
+    <PushedTexture name="$parentPushed" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.5" g="0.3" b="0.3" a="0.3"/>
+      <Anchors>
+        <Anchor point="TOPLEFT" relativeTo="$parent">
+          <Offset> <AbsDimension x="2" y="-1"/> </Offset>
+        </Anchor>
+        <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+          <Offset> <AbsDimension x="0" y="1"/> </Offset>
+        </Anchor>
+      </Anchors>
+    </PushedTexture>
+    <Frames>
+      <Frame name="$parentPlay" hidden="true">
+        <Size> <AbsDimension x="16" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="LEFT"> <Offset> <AbsDimension x="2" y="0"/> </Offset> </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer>
+            <Texture file="Interface\MvJukebox\Play">
+            </Texture>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Frame name="$parentName">
+        <Size> <AbsDimension x="450" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="$parentPlay" relativePoint="RIGHT">
+            <Offset> <AbsDimension x="2" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer>
+	    <FontString name="$parentString" inherits="JukeboxFont" text="DJ Steve" justifyH="LEFT"/>
+<!--
+            <Texture file="Interface\MvButtons\Mv-White6x6">
+              <Color r="0.7" g="0.7" b="0.3" a="0.3"/>
+            </Texture>
+-->
+          </Layer>
+        </Layers>
+      </Frame>
+      <Frame name="$parentCost">
+        <Size> <AbsDimension x="108" y="16"/> </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="$parentName" relativePoint="RIGHT">
+            <Offset> <AbsDimension x="2" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer>
+	    <FontString name="$parentString" inherits="JukeboxFont" text="$0.10/min" justifyH="LEFT"/>
+<!--
+            <Texture file="Interface\MvButtons\Mv-White6x6">
+              <Color r="0.7" g="0.7" b="0.3" a="0.3"/>
+            </Texture>
+-->
+          </Layer>
+        </Layers>
+      </Frame>
+    </Frames>
+    <Scripts language="python">
+      <OnEnter>
+        this.LockHighlight()
+      </OnEnter>
+      <OnLeave>
+        this.UnlockHighlight()
+      </OnLeave>
+      <OnClick>
+        MvJukebox_SelectChannel(this)
+      </OnClick>
+    </Scripts>
+  </Button>
+
+  <Frame name="JukeboxChannelsChild" virtual="true">
+    <Frames>
+      <Button name="$parentChannel1" inherits="JukeboxChannelEntry" id="1">
+      </Button>
+      <Button name="$parentChannel2" inherits="JukeboxChannelEntry" id="2">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel1" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel3" inherits="JukeboxChannelEntry" id="3">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel2" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel4" inherits="JukeboxChannelEntry" id="4">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel3" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel5" inherits="JukeboxChannelEntry" id="5">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel4" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel6" inherits="JukeboxChannelEntry" id="6">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel5" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel7" inherits="JukeboxChannelEntry" id="7">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel6" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel8" inherits="JukeboxChannelEntry" id="8">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel7" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel9" inherits="JukeboxChannelEntry" id="9">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel8" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel10" inherits="JukeboxChannelEntry" id="10">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel9" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel11" inherits="JukeboxChannelEntry" id="11">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel10" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel12" inherits="JukeboxChannelEntry" id="12">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel11" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel13" inherits="JukeboxChannelEntry" id="13">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel12" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel14" inherits="JukeboxChannelEntry" id="14">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel13" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+      <Button name="$parentChannel15" inherits="JukeboxChannelEntry" id="15">
+        <Anchors>
+          <Anchor point="TOP" relativeTo="$parentChannel14" relativePoint="BOTTOM"/>
+        </Anchors>
+      </Button>
+    </Frames>
+    <Scripts language="python">
+      <OnLoad>
+        MvJukebox_RegisterChannelList(this)
+      </OnLoad>
+    </Scripts>
+  </Frame>
+
+<!--
+  <Frame name="JukeboxChannelList" virtual="true">
+    <Size> <AbsDimension x="600" y="222"/> </Size>
+    <Layers>
+       <Layer>
+          <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+             <Color r="0.3" g="0.6" b="0.3" a="0.3"/>
+          </Texture>
+       </Layer>
+    </Layers>
+    <Frames>
+      <ScrollFrame name="$parentScrollFrame">
+        <ScrollChild>
+          <Frame name="$parentChannels" inherits="JukeboxChannelsChild">
+          </Frame>
+        </ScrollChild>
+      </ScrollFrame>
+    </Frames>
+  </Frame>
+-->
+
+  <Frame name="JukeboxControls" virtual="true">
+    <Size> <AbsDimension x="600" y="103"/> </Size>
+    <Layers>
+      <Layer>
+        <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+          <Color r="0.4" g="0.4" b="0.4" a="0.3"/>
+        </Texture>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Button name="$parentPlay">
+        <Size> <AbsDimension x="99" y="99"/> </Size>
+        <Anchors>
+          <Anchor point="LEFT"/>
+        </Anchors>
+        <NormalTexture file="Interface\MvJukebox\Play">
+        </NormalTexture>
+        <HighlightTexture file="Interface\MvJukebox\Play">
+          <Color r="0.3" g="0.9" b="0.3" a="0.3"/>
+        </HighlightTexture>
+        <Scripts language="python">
+          <OnEnter>
+            this.LockHighlight()
+          </OnEnter>
+          <OnLeave>
+            this.UnlockHighlight()
+          </OnLeave>
+          <OnClick>
+            MvJukebox_PlaySelected()
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Frame name="$parentMoney">
+        <Size> <AbsDimension x="200" y="99"/> </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="$parentPlay" relativePoint="RIGHT">
+            <Offset> <AbsDimension x="2" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer>
+            <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+              <Color r="0.3" g="0.3" b="0.3" a="0.3"/>
+            </Texture>
+          </Layer>
+        </Layers>
+      </Frame>
+      <Frame name="$parentInfo">
+        <Size> <AbsDimension x="295" y="99"/> </Size>
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT">
+            <Offset> <AbsDimension x="-2" y="0"/> </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer>
+            <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+              <Color r="0.3" g="0.3" b="0.3" a="0.3"/>
+            </Texture>
+            <FontString name="$parentDescription" inherits="JukeboxFont" justifyH="LEFT" justifyV="TOP" text="All the Top 40 songs to destroy your brain and ruin your ears"/>
+          </Layer>
+        </Layers>
+      </Frame>
+    </Frames>
+  </Frame>
+
+
+  <Frame name="MvJukeboxFrame" toplevel="true" movable="true" resizable="true" frameStrata="HIGH" parent="UIParent" enableMouse="true" enableKeyboard="true" alpha="1.0" hidden="true">
+
+    <Size> <AbsDimension x="600" y="400"/> </Size>
+    <Anchors>
+      <Anchor point="CENTER"> <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor>
+    </Anchors>
+
+    <Frames>
+      <Frame name="$parentBanner" inherits="JukeboxBanner"/>
+
+      <Frame name="$parentChannels">
+        <Size> <AbsDimension x="600" y="222"/> </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentBanner" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+        <Layers>
+           <Layer>
+              <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+                <Color r="0.4" g="0.4" b="0.4" a="0.3"/>
+              </Texture>
+           </Layer>
+        </Layers>
+        <Frames>
+          <ScrollFrame name="$parentScrollFrame" inherits="MvScrollFrameTemplate">
+            <Size> <AbsDimension x="584" y="222"/> </Size>
+            <ScrollChild>
+              <Frame name="$parentChannels" inherits="JukeboxChannelsChild">
+              </Frame>
+            </ScrollChild>
+          </ScrollFrame>
+        </Frames>
+      </Frame>
+
+<!--
+      <Frame name="$parentChannels" inherits="JukeboxChannelList">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentBanner" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Frame>
+-->
+
+      <Frame name="$parentControls" inherits="JukeboxControls">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parentChannels" relativePoint="BOTTOMLEFT"/>
+        </Anchors>
+      </Frame>
+    </Frames>
+
+    <Scripts language="python">
+      <OnLoad>
+        MvJukebox_OnLoad(this)
+      </OnLoad>
+      <OnShow>
+        MvJukebox_UpdateChannelList(this)
+      </OnShow>
+      <OnEvent>
+        MvJukebox_OnEvent(this, args)
+      </OnEvent>
+    </Scripts>
+
+  </Frame>
+</Ui>

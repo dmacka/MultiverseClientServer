@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>st_f_kneel_drk_Mesh</Name>
+  <Description>st_f_kneel_drk</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Statues</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\st_f_kneel_drk.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\st_f_kneel_drk_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\st_f_kneel_drk.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

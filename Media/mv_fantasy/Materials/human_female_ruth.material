@@ -1,0 +1,236 @@
+material human_female_ruth.ruth_hair_mat
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+
+            }
+
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+
+            }
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+		    }
+	    
+	        // Normal map
+	        texture_unit
+	        {
+                tex_coord_set 0
+	            texture human_female_ruth_hair_normals.dds
+	        }
+	        // Specular map
+            texture_unit
+	        {
+		        tex_coord_set 1
+                texture human_female_ruth_hair_specular.dds
+	        }
+	        // Diffuse map
+	        texture_unit
+	        {
+	            alpha_rejection greater 128
+	            tex_coord_set 2
+                texture human_female_ruth_hair_diffuse.dds
+	        }
+        }
+    }
+}
+material human_female_ruth.ruth_head_mat
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+
+            }
+
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+
+            }
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+		    }
+	    
+	        // Normal map
+	        texture_unit
+	        {
+                tex_coord_set 0
+	            texture human_female_ruth_head_normals.dds
+	        }
+	        // Specular map
+            texture_unit
+	        {
+		        tex_coord_set 1
+                texture human_female_ruth_head_specular.dds
+	        }
+	        // Diffuse map
+	        texture_unit
+	        {
+	            alpha_rejection greater 128
+	            tex_coord_set 2
+                texture human_female_ruth_head_diffuse.dds
+	        }
+        }
+    }
+}
+material human_female_ruth.ruth_body_clothed_mat
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+
+            }
+
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+
+            }
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+		    }
+	    
+	        // Normal map
+	        texture_unit
+	        {
+                tex_coord_set 0
+	            texture human_female_ruth_body_normals.dds
+	        }
+	        // Specular map
+            texture_unit
+	        {
+		        tex_coord_set 1
+                texture human_female_ruth_body_specular.dds
+	        }
+	        // Diffuse map
+	        texture_unit
+	        {
+	            alpha_rejection greater 128
+	            tex_coord_set 2
+                texture human_female_ruth_body_diffuse.dds
+	        }
+        }
+    }
+}
+material human_female_ruth.leather_armor_mat
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+
+            }
+
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+
+            }
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+		    }
+	    
+	        // Normal map
+	        texture_unit
+	        {
+                tex_coord_set 0
+	            texture human_female_ruth_leather_a_normals.dds
+	        }
+	        // Specular map
+            texture_unit
+	        {
+		        tex_coord_set 1
+                texture human_female_ruth_leather_a_specular.dds
+	        }
+	        // Diffuse map
+	        texture_unit
+	        {
+	            alpha_rejection greater 128
+	            tex_coord_set 2
+                texture human_female_ruth_leather_a_diffuse.dds
+	        }
+        }
+    }
+}
+material human_female_ruth.brax_armor_mat
+{
+
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+
+            }
+
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+
+            }
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+		    }
+	    
+	        // Normal map
+	        texture_unit
+	        {
+                tex_coord_set 0
+	            texture human_female_brax_armor_normal.dds
+	        }
+	        // Specular map
+            texture_unit
+	        {
+		        tex_coord_set 1
+                texture human_female_brax_armor_specular.dds
+	        }
+	        // Diffuse map
+	        texture_unit
+	        {
+	            alpha_rejection greater 128
+	            tex_coord_set 2
+                texture human_female_brax_armor_diffuse.dds
+	        }
+        }
+    }
+}

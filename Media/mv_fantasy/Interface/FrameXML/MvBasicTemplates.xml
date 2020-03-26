@@ -1,0 +1,429 @@
+<Ui>
+
+  <Script file="MvBasicTemplates.py"/>
+
+
+  <FontString name="MvDefaultFont"  font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight> <AbsValue val="12"/> </FontHeight>
+    <Color r="0.5" g="0.5" b="0.5"/>
+  </FontString>
+
+
+  <Frame name="MvThinFrameTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\Edge2x2W00A10" tile="false">
+      <EdgeSize>
+	<AbsValue val="1"/>
+      </EdgeSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="BACKGROUND">
+	<Texture name="$parent_txBackground" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	  <Anchors>
+	    <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+	      <Offset>
+		<AbsDimension x="1" y="-1"/>
+	      </Offset>
+	    </Anchor>
+	    <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+	      <Offset>
+		<AbsDimension x="-1" y="1"/>
+	      </Offset>
+	    </Anchor>
+	  </Anchors>
+	  <Color r="1.0" g="0.0" b="0.0"/>
+	</Texture>
+      </Layer>
+    </Layers>
+  </Frame>
+
+
+  <Frame name="MvOneOptionDialogTemplate" inherits="MvThinFrameTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="200" y="200"/>
+    </Size>
+    <Frames>
+      <Frame name="$parent_fFooter">
+	<Size>
+	  <AbsDimension x="0" y="50"/>
+	</Size>
+	<Anchors>
+	  <Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Frames>
+	  <Button name="$parent_bOption" text="Option">
+	    <Size><AbsDimension x="50" y="20"/></Size>
+	    <Anchors>
+	      <Anchor point="CENTER" relativePoint="CENTER">
+		<Offset>
+		  <AbsDimension x="0" y="0"/>
+		</Offset>
+	      </Anchor>
+	    </Anchors>
+	    <NormalText name="$parent_tNormal" inherits="MvDefaultFont" justifyH="CENTER" justifyV="MIDDLE">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	    </NormalText>
+	    <NormalTexture name="$parent_txNormal" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+	    </NormalTexture>
+	    <HighlightTexture name="$parent_txHighlight" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.8" g="0.8" b="0.8" a="1.0"/>
+	    </HighlightTexture>
+	    <PushedTexture name="$parent_txPushed" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+	    </PushedTexture>
+	    <DisabledTexture name="$parent_txDisabled" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.2" g="0.2" b="0.2" a="1.0"/>
+	    </DisabledTexture>
+	    <Scripts language="python">
+	      <OnEnter>this.LockHighlight()</OnEnter>
+	      <OnLeave>this.UnlockHighlight()</OnLeave>
+	      <OnMouseDown>this.UnlockHighlight()</OnMouseDown>
+	      <OnMouseUp>this.LockHighlight()</OnMouseUp>
+	    </Scripts>
+	  </Button>
+	</Frames>
+      </Frame>
+      <Frame name="$parent_fHeader">
+	<Anchors>
+	  <Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor relativeTo="$parent_fFooter" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Layers>
+	  <Layer level="BACKGROUND">
+	    <FontString name="$parent_fsDialog" inherits="MvDefaultFont" justifyH="CENTER" justifyV="MIDDLE" text="One Option Dialog">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	    </FontString>
+	  </Layer>
+	</Layers>
+      </Frame>
+    </Frames>
+  </Frame>
+
+
+  <Frame name="MvTwoOptionsDialogTemplate" inherits="MvThinFrameTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="200" y="200"/>
+    </Size>
+    <Frames>
+      <Frame name="$parent_fFooter">
+	<Size>
+	  <AbsDimension x="0" y="50"/>
+	</Size>
+	<Anchors>
+	  <Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Frames>
+	  <Button name="$parent_bOption1" text="Option1">
+	    <Size><AbsDimension x="50" y="20"/></Size>
+	    <Anchors>
+	      <Anchor point="LEFT" relativePoint="LEFT">
+		<Offset>
+		  <AbsDimension x="10" y="0"/>
+		</Offset>
+	      </Anchor>
+	    </Anchors>
+	    <NormalText name="$parent_tNormal" inherits="MvDefaultFont" justifyH="CENTER" justifyV="MIDDLE">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	    </NormalText>
+	    <NormalTexture name="$parent_txNormal" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+	    </NormalTexture>
+	    <HighlightTexture name="$parent_txHighlight" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.8" g="0.8" b="0.8" a="1.0"/>
+	    </HighlightTexture>
+	    <PushedTexture name="$parent_txPushed" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+	    </PushedTexture>
+	    <DisabledTexture name="$parent_txDisabled" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.2" g="0.2" b="0.2" a="1.0"/>
+	    </DisabledTexture>
+	    <Scripts language="python">
+	      <OnEnter>this.LockHighlight()</OnEnter>
+	      <OnLeave>this.UnlockHighlight()</OnLeave>
+	      <OnMouseDown>this.UnlockHighlight()</OnMouseDown>
+	      <OnMouseUp>this.LockHighlight()</OnMouseUp>
+	    </Scripts>
+	  </Button>
+	  <Button name="$parent_bOption2" text="Option2">
+	    <Size><AbsDimension x="50" y="20"/></Size>
+	    <Anchors>
+	      <Anchor point="RIGHT" relativePoint="RIGHT">
+		<Offset>
+		  <AbsDimension x="-10" y="0"/>
+		</Offset>
+	      </Anchor>
+	    </Anchors>
+	    <NormalText name="$parent_tNormal" inherits="MvDefaultFont" justifyH="CENTER" justifyV="MIDDLE">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	    </NormalText>
+	    <NormalTexture name="$parent_txNormal" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.7" g="0.7" b="0.7" a="1.0"/>
+	    </NormalTexture>
+	    <HighlightTexture name="$parent_txHighlight" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.8" g="0.8" b="0.8" a="1.0"/>
+	    </HighlightTexture>
+	    <PushedTexture name="$parent_txPushed" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+	    </PushedTexture>
+	    <DisabledTexture name="$parent_txDisabled" file="Interface\MvBasicTextures\Patch6x6W10A10">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	      <Color r="0.2" g="0.2" b="0.2" a="1.0"/>
+	    </DisabledTexture>
+	    <Scripts language="python">
+	      <OnEnter>this.LockHighlight()</OnEnter>
+	      <OnLeave>this.UnlockHighlight()</OnLeave>
+	      <OnMouseDown>this.UnlockHighlight()</OnMouseDown>
+	      <OnMouseUp>this.LockHighlight()</OnMouseUp>
+	    </Scripts>
+	  </Button>
+	</Frames>
+      </Frame>
+      <Frame name="$parent_fHeader">
+	<Anchors>
+	  <Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor relativeTo="$parent_fFooter" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+	<Layers>
+	  <Layer level="BACKGROUND">
+	    <FontString name="$parent_fsDialog" inherits="MvDefaultFont" justifyH="CENTER" justifyV="MIDDLE" text="Two Options Dialog">
+	      <Anchors>
+		<Anchor relativeTo="$parent" point="TOPLEFT" relativePoint="TOPLEFT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+		<Anchor relativeTo="$parent" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+		  <Offset>
+		    <AbsDimension x="0" y="0"/>
+		  </Offset>
+		</Anchor>
+	      </Anchors>
+	    </FontString>
+	  </Layer>
+	</Layers>
+      </Frame>
+    </Frames>
+  </Frame>
+
+</Ui>

@@ -1,0 +1,74 @@
+
+vertex_program MVSMWater/VP cg
+{
+	source Ocean.cg
+	entry_point WaterVP
+	profiles vs_2_0
+}
+
+fragment_program WaterFP cg
+{
+	source Ocean.cg
+	entry_point OceanFP
+	profiles ps_2_0
+}
+
+
+material MVSMWater
+{
+    technique
+	{
+		pass
+		{
+			cull_hardware none
+			cull_software none
+			vertex_program_ref MVSMWater/VP
+			{
+				param_named_auto World world_matrix
+				param_named_auto WorldViewProj worldviewproj_matrix
+				param_named_auto ViewIT inverse_view_matrix
+				param_named time float 0
+				param_named BumpScale float 0.5
+				param_named textureScale float2 0.015625 0.0078125
+				param_named bumpSpeed float2 -0.015 0.0
+                param_named_auto fogSettings fog_params
+			}
+			fragment_program_ref WaterFP
+			{
+				param_named deepColor float4 0.0 0.0 0.1 1.0
+				param_named shallowColor float4 0.0 0.3 0.5 1.0
+				param_named reflectionColor float4 1.0 1.0 1.0 1.0
+				param_named reflectionAmount float4 0.2 0.2 0.2 1.0
+				param_named waterAmount float4 1.0 1.0 1.0 1.0
+				param_named fresnelBias float 0.1
+				param_named fresnelPower float 4.0
+			}		
+			texture_unit
+			{
+				texture waves.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			ambient 0.3 0.3 0.3
+			// temporarily make this opaque for the demo
+			// scene_blend modulate
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture Water02.dds
+				scroll_anim 0.01 0.01
+			}
+		}
+	}
+}
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>Skys_Material</Name>
+  <Description>Skys</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\Skys.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

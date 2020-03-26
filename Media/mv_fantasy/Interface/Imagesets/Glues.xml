@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Imageset Name="Glues" Imagefile="Glues.tga" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+    <Image Name="loading" XPos="0" YPos="0" Width="512" Height="512" />
+    <Image Name="loadingOld" XPos="512" YPos="0" Width="512" Height="512" />
+</Imageset>

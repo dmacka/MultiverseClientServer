@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<Imageset Name="Pictures" Imagefile="Pictures.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="11482_crystals_east" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="11482_crystals_mini_east" XPos="256" YPos="0" Width="128" Height="128" />
+    <Image Name="11482_crystals_mini_west" XPos="384" YPos="0" Width="128" Height="128" />
+    <Image Name="11482_crystals_north" XPos="512" YPos="0" Width="256" Height="256" />
+    <Image Name="11482_crystals_west" XPos="768" YPos="0" Width="256" Height="256" />
+    <Image Name="11733_blackrock_256" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="11733_nightdragon_256" XPos="256" YPos="256" Width="256" Height="256" />
+    <Image Name="11733_ungoro_256" XPos="512" YPos="256" Width="256" Height="256" />
+    <Image Name="11733_windblossom_256" XPos="768" YPos="256" Width="256" Height="256" />
+    <Image Name="14679_Tirion_256" XPos="0" YPos="512" Width="256" Height="256" />
+    <Image Name="9330_gammerita_color_256" XPos="256" YPos="512" Width="256" Height="256" />
+    <Image Name="9330_gammerita_sepia_256" XPos="512" YPos="512" Width="256" Height="256" />
+    <Image Name="Linken_sepia_256px" XPos="768" YPos="512" Width="256" Height="256" />
+    <Image Name="Linken__color_256px" XPos="0" YPos="768" Width="256" Height="256" />
+</Imageset>

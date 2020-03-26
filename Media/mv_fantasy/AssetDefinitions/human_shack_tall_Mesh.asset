@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>human_shack_tall_Mesh</Name>
+  <Description>Human Tall Shack</Description>
+  <Type>Mesh</Type>
+  <Category>Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\human_shack_tall.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\human_shack_tall_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\human_shack_tall.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvQuestFrame" Imagefile="MvQuestFrame.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="Mv-DialogFrame-TopLeft"   XPos="512" YPos="333" Width="64" Height="64" />
+    <Image Name="Mv-DialogFrame-TopRight"  XPos="796" YPos="333" Width="64" Height="64" />
+
+    <Image Name="Mv-DialogFrame-BotLeft"   XPos="128" YPos="354" Width="64" Height="64" />
+    <Image Name="Mv-DialogFrame-BotRight"  XPos="412" YPos="354" Width="64" Height="64" />
+
+    <Image Name="Mv-DialogFrame-TopBorder" XPos="670" YPos="333" Width="64" Height="64" />
+    <Image Name="Mv-DialogFrame-BotBorder" XPos="286" YPos="354" Width="64" Height="64" />
+
+    <Image Name="Mv-DialogFrame-LeftBorder"  XPos="128" YPos="322" Width="64" Height="64" />
+    <Image Name="Mv-DialogFrame-RightBorder" XPos="412" YPos="322" Width="64" Height="64" />
+
+    <Image Name="Mv-DialogFrame-Interior"    XPos="270" YPos="322" Width="64" Height="64" />
+
+    <Image Name="Mv-BulletPoint" XPos="640" YPos="0" Width="16" Height="16" />
+</Imageset>

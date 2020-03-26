@@ -1,0 +1,62 @@
+<physics_model>
+  <rigid_body sid="st_f_kneel_drk-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 40.60965</rotate>
+        <translate>-0.01923451 1.45536 0.05036301</translate>
+        <box>
+          <half_extents>0.6025122 0.07799999 0.3413902</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 3.927074</rotate>
+        <translate>0.08079951 0.592903 0.1713764</translate>
+        <box>
+          <half_extents>0.07784131 0.2503299 0.2490033</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 17.35974</rotate>
+        <translate>-0.1261579 0.5198155 -0.1988285</translate>
+        <box>
+          <half_extents>0.07784129 0.1779675 0.261669</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -0.9999999 0 25.93717</rotate>
+        <translate>-0.0349125 0.8471005 -0.01658135</translate>
+        <box>
+          <half_extents>0.1514947 0.5473895 0.1109526</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0.9999999 0 1.433103</rotate>
+        <translate>-0.2493343 1.26975 -0.1346201</translate>
+        <box>
+          <half_extents>0.1514946 0.1606899 0.05131632</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.7070949 0.6948841 -0.1309696 43.24515</rotate>
+        <translate>0.251956 1.26975 0.150529</translate>
+        <box>
+          <half_extents>0.07617249 0.05131664 0.2316114</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 5.625015</rotate>
+        <translate>-0.0192345 1.45536 0.05036301</translate>
+        <box>
+          <half_extents>0.3413899 0.078 0.6025124</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0.9999999 0 27.98376</rotate>
+        <translate>-0.01923451 1.45536 0.05036301</translate>
+        <box>
+          <half_extents>0.6025126 0.078 0.3413902</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

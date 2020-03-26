@@ -1,0 +1,801 @@
+struct a2v_s {
+    float4 position : POSITION;
+    float3 normal    : NORMAL;
+    float2 texCoord : TEXCOORD0;
+    float4 blendIdx : BLENDINDICES;
+    float4 blendWgt : BLENDWEIGHT;
+};
+
+// arguments to the vertex shader
+// in this version, we pass in the tangent, and compute the bitangent
+struct a2v_t {
+    float4 position : POSITION;
+    float3 normal    : NORMAL;
+    float2 texCoord : TEXCOORD0;
+    float3 tangent    : TANGENT;
+};
+
+// arguments to the vertex shader
+// in this version, we pass in the tangent, and compute the bitangent
+struct a2v_t_s {
+    float4 position : POSITION;
+    float3 normal    : NORMAL;
+    float2 texCoord : TEXCOORD0;
+    float3 tangent    : TANGENT;
+    float4 blendIdx : BLENDINDICES;
+    float4 blendWgt : BLENDWEIGHT;
+};
+
+// arguments to the vertex shader
+// in an ideal world, the tangent would be encoded with that semantic,
+// but i lost that data in the ogre mesh format
+struct a2v_tex {
+    float4 position : POSITION;
+    float3 normal    : NORMAL;
+    float2 texCoord : TEXCOORD0;
+    float3 tangent    : TEXCOORD1;
+};
+
+// arguments to the vertex shader
+// in this version, we pass in the tangent, and compute the bitangent
+struct a2v_tex_s {
+    float4 position : POSITION;
+    float3 normal    : NORMAL;
+    float2 texCoord : TEXCOORD0;
+    float3 tangent    : TEXCOORD1;
+    float4 blendIdx : BLENDINDICES;
+    float4 blendWgt : BLENDWEIGHT;
+};
+
+// arguments to the vertex shader
+// in this variant, we pass in both the tangent and the binormal.
+// this lets us use a reflected portion of the texture in the normal
+// map.
+struct a2v_tb {
+    float4 position : POSITION;
+    float3 normal    : NORMAL;
+    float2 texCoord : TEXCOORD0;
+    float3 tangent    : TANGENT;
+    float3 bitangent : BINORMAL;
+};
+
+// arguments from the vertex shader to the fragment shader
+struct v2f {
+    float4 position        : POSITION;
+    float2 texCoord        : TEXCOORD0;
+    float3 lightDirection    : TEXCOORD1;
+    float3 eyeDirection    : TEXCOORD2;
+};
+
+// arguments from the vertex shader to the fragment shader
+struct v2f_multi {
+    float4 position        : POSITION;
+    float2 texCoord        : TEXCOORD0;
+    float3 eyeDirection    : TEXCOORD1;
+    float3 lightDirection0    : TEXCOORD2;
+    float3 lightDirection1    : TEXCOORD3;
+    float2 lightAttenuation : TEXCOORD4;
+};
+
+struct a2v_color {
+    float4 position : POSITION;
+    float4 color    : COLOR;
+};
+
+struct a2v_color_s {
+    float4 position : POSITION;
+    float4 color    : COLOR;
+    float4 blendIdx : BLENDINDICES;
+    float4 blendWgt : BLENDWEIGHT;
+};
+
+struct v2f_color {
+    float4 position        : POSITION;
+    float4 color        : COLOR;
+};
+
+// Convert a float3 that has been encoded as a color into a vector
+float3 expand(float3 v) { return (v - 0.5) * 2; }
+float3 compress(float3 v) { return (v * 0.5) + 0.5; }
+
+// This maps the light and eye directions into tangent space
+// Tangents are passed in with the tangent semantic
+v2f DiffuseBumpVS(a2v_t IN,
+                  uniform float4x4 WorldViewProj,
+                  uniform float4x4 WorldMatrix,
+                  uniform float4 LightPosition,
+                  uniform float4 EyePosition)
+{
+    v2f OUT;
+    
+    OUT.position = mul(WorldViewProj, IN.position );
+    OUT.texCoord = IN.texCoord;
+
+    float3 bitangent = cross(IN.tangent, IN.normal);
+    // compute the 3x3 tranform from object space to tangent space
+    float3x3 rotation = float3x3(IN.tangent, bitangent, IN.normal);
+
+    // get the light and eye direction in object space (not normalized)
+    float4 lightPosition = mul(WorldMatrix, LightPosition);
+    float3 lightDirection = lightPosition.xyz - (IN.position * lightPosition.w ).xyz;
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (IN.position * eyePosition.w).xyz;
+    
+    // get the light and eye direction in tangent space
+     OUT.lightDirection = compress(mul(rotation, lightDirection));
+    OUT.eyeDirection = compress(mul(rotation, eyeDirection));
+
+    return OUT;
+}
+
+// This maps the light and eye directions into tangent space
+// Tangents are passed in with the tangent semantic
+// This also handles the light setup, including attenuation
+// for up to two lights, and linear fog.
+v2f_multi CompoundVS(a2v_t IN,
+             out float oFog : FOG,
+             uniform float4 FogSettings,
+             uniform float4x4 WorldViewProj,
+             uniform float4 LightPosition[2],
+             uniform float4 LightAttenuation[2],
+             uniform float4 EyePosition)
+{
+    v2f_multi OUT;
+    
+    float3 bitangent = cross(IN.tangent, IN.normal);
+    // compute the 3x3 tranform from object space to tangent space
+    float3x3 rotation = float3x3(IN.tangent, bitangent, IN.normal);
+
+    // params for light direction and attenuation
+    float3 lightDirection[2];
+    float2 lightAttenuation;
+
+    // get the light and eye direction in object space (not normalized)
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        // get the light direction in object space (not normalized)
+        float4 lightPosition = LightPosition[lightIndex];
+        lightDirection[lightIndex] = lightPosition.xyz - (IN.position * lightPosition.w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+        lightAttenuation[lightIndex] = (lightDistance > LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y + LightAttenuation[lightIndex].z * lightDistance + LightAttenuation[lightIndex].w * lightDistanceSquared));
+        // get the light direction in tangent space
+        lightDirection[lightIndex] = mul(rotation, lightDirection[lightIndex]);
+    }
+
+    // the light direction for passing to fragment shader
+    OUT.lightDirection0 = compress(lightDirection[0]);
+    OUT.lightDirection1 = compress(lightDirection[1]);
+
+    // the light attenuation for passing to fragment shader
+    OUT.lightAttenuation.x = saturate(lightAttenuation[0]);
+    OUT.lightAttenuation.y = saturate(lightAttenuation[1]);
+
+    // get the eye direction in object space (not normalized)
+    float3 eyeDirection = EyePosition.xyz - (IN.position * EyePosition.w).xyz;
+    // get the eye direction in tangent space
+    OUT.eyeDirection = compress(mul(rotation, eyeDirection));
+
+    OUT.position = mul(WorldViewProj, IN.position);
+    OUT.texCoord = IN.texCoord;
+
+    // compute linear fog
+    float eyeDistance = length(eyeDirection);
+    float fog = clamp((eyeDistance - FogSettings[0]) / (FogSettings[1] - FogSettings[0]), 0.0, 1.0) * FogSettings[2];
+    oFog = 1.0 - fog;
+
+    return OUT;
+}
+
+// This maps the light and eye directions into tangent space
+// Tangents are passed in with the tangent semantic
+// This also handles the light setup, including attenuation
+// for up to two lights, and linear fog.
+// This variant does hardware skinning on the vertices
+// The eye and light vectors are converted to world space, 
+// since the normals, tangents and binormals have also been 
+// transformed
+v2f_multi CompoundVS_Skinned(a2v_t_s IN,
+             out float oFog : FOG,
+             uniform float4 FogSettings,
+             uniform float3x4 WorldMatrix3x4Array[64],
+             uniform float4x4 ViewProj,
+             uniform float4x4 WorldMatrix,
+             uniform float4x4 InvWorldMatrix,
+             uniform float4 LightPosition[2],
+             uniform float4 LightAttenuation[2],
+             uniform float4 EyePosition)
+{
+    v2f_multi OUT;
+
+    float3x4 transform = float3x4(0,0,0,0,0,0,0,0,0,0,0,0);
+
+    // build transform matrix (normalized weights)
+    for (int i = 0; i < 4; ++i)
+    {
+        transform += WorldMatrix3x4Array[IN.blendIdx[i]] * IN.blendWgt[i];
+    }
+
+    // float4 position = float4(mul(transform, IN.position), 1);
+    float4 position = float4(mul(transform, IN.position ), 1);
+
+    float3 normal = mul((float3x3)transform, IN.normal);
+    float3 tangent = mul((float3x3)transform, IN.tangent);
+
+    normal = normalize(normal);
+    tangent = normalize(tangent);
+
+    float3 bitangent = cross(tangent, normal);
+    // compute the 3x3 transform from world space to tangent space
+    float3x3 rotation = float3x3(tangent, bitangent, normal);
+
+    // params for light direction and attenuation
+    float3 lightDirection[2];
+    float2 lightAttenuation;
+
+    // get the light and eye direction in object space (not normalized)
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        // get the light direction in world space (not normalized)
+        float4 lightPosition = mul(WorldMatrix, LightPosition[lightIndex]);
+        lightDirection[lightIndex] = lightPosition.xyz - (position * lightPosition.w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+        lightAttenuation[lightIndex] = (lightDistance > LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y + LightAttenuation[lightIndex].z * lightDistance + LightAttenuation[lightIndex].w * lightDistanceSquared));
+        // get the light direction in tangent space
+        lightDirection[lightIndex] = mul(rotation, lightDirection[lightIndex]);
+    }
+
+    // the light direction for passing to fragment shader
+    OUT.lightDirection0 = compress(lightDirection[0]);
+    OUT.lightDirection1 = compress(lightDirection[1]);
+
+    // the light attenuation for passing to fragment shader
+    OUT.lightAttenuation.x = saturate(lightAttenuation[0]);
+    OUT.lightAttenuation.y = saturate(lightAttenuation[1]);
+
+    // get the eye direction in object space (not normalized)
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (position * eyePosition.w).xyz;
+    // get the eye direction in tangent space
+    OUT.eyeDirection = compress(mul(rotation, eyeDirection));
+
+    OUT.position = mul(ViewProj, position);
+    OUT.texCoord = IN.texCoord;
+
+    // compute linear fog
+    float eyeDistance = length(eyeDirection);
+    float fog = clamp((eyeDistance - FogSettings[0]) / (FogSettings[1] - FogSettings[0]), 0.0, 1.0) * FogSettings[2];
+    oFog = 1.0 - fog;
+
+    return OUT;
+}
+
+// This maps the light and eye directions into tangent space
+// Tangents are passed in with the texcoord semantic
+// This also handles the light setup, including attenuation
+// for up to two lights, and linear fog.
+// This variant does hardware skinning on the vertices
+// The eye and light vectors are converted to world space, 
+// since the normals, tangents and binormals have also been 
+// transformed
+v2f_multi CompoundVS_TexTangent_Skinned(a2v_tex_s IN,
+             out float oFog : FOG,
+             uniform float4 FogSettings,
+             uniform float3x4 WorldMatrix3x4Array[64],
+             uniform float4x4 ViewProj,
+             uniform float4x4 WorldMatrix,
+             uniform float4x4 InvWorldMatrix,
+             uniform float4 LightPosition[2],
+             uniform float4 LightAttenuation[2],
+             uniform float4 EyePosition)
+{
+    v2f_multi OUT;
+
+    float3x4 transform = float3x4(0,0,0,0,0,0,0,0,0,0,0,0);
+
+    // build transform matrix (normalized weights)
+    for (int i = 0; i < 4; ++i)
+    {
+        transform += WorldMatrix3x4Array[IN.blendIdx[i]] * IN.blendWgt[i];
+    }
+
+    float4 position = float4(mul(transform, IN.position ), 1);
+
+    float3 normal = mul((float3x3)transform, IN.normal);
+    float3 tangent = mul((float3x3)transform, expand(IN.tangent));
+
+    normal = normalize(normal);
+    tangent = normalize(tangent);
+
+    float3 bitangent = cross(tangent, normal);
+    // compute the 3x3 transform from world space to tangent space
+    float3x3 rotation = float3x3(tangent, bitangent, normal);
+
+    // params for light direction and attenuation
+    float3 lightDirection[2];
+    float2 lightAttenuation;
+
+    // get the light and eye direction in object space (not normalized)
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        // get the light direction in world space (not normalized)
+        float4 lightPosition = mul(WorldMatrix, LightPosition[lightIndex]);
+        lightDirection[lightIndex] = lightPosition.xyz - (position * lightPosition.w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+        lightAttenuation[lightIndex] = (lightDistance > LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y + LightAttenuation[lightIndex].z * lightDistance + LightAttenuation[lightIndex].w * lightDistanceSquared));
+        // get the light direction in tangent space
+        lightDirection[lightIndex] = mul(rotation, lightDirection[lightIndex]);
+    }
+
+    // the light direction for passing to fragment shader
+    OUT.lightDirection0 = compress(lightDirection[0]);
+    OUT.lightDirection1 = compress(lightDirection[1]);
+
+    // the light attenuation for passing to fragment shader
+    OUT.lightAttenuation.x = saturate(lightAttenuation[0]);
+    OUT.lightAttenuation.y = saturate(lightAttenuation[1]);
+
+    // get the eye direction in object space (not normalized)
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (position * eyePosition.w).xyz;
+    // get the eye direction in tangent space
+    OUT.eyeDirection = compress(mul(rotation, eyeDirection));
+
+    OUT.position = mul(ViewProj, position);
+    OUT.texCoord = IN.texCoord;
+
+    // compute linear fog
+    float eyeDistance = length(eyeDirection);
+    float fog = clamp((eyeDistance - FogSettings[0]) / (FogSettings[1] - FogSettings[0]), 0.0, 1.0) * FogSettings[2];
+    oFog = 1.0 - fog;
+
+    return OUT;
+}
+
+// This maps the light and eye directions into tangent space
+// Tangents are passed in with the texcoord semantic
+// This also handles the light setup, including attenuation
+// for up to two lights, and linear fog.
+v2f_multi CompoundVS_TexTangent(a2v_tex IN,
+             out float oFog : FOG,
+             uniform float4 FogSettings,
+             uniform float4x4 WorldViewProj,
+             uniform float4x4 WorldMatrix,
+             uniform float4 LightPosition[2],
+             uniform float4 LightAttenuation[2],
+             uniform float4 EyePosition)
+{
+    v2f_multi OUT;
+    
+    float3 tangent = expand(IN.tangent);    
+    float3 bitangent = cross(tangent, IN.normal);
+    // compute the 3x3 tranform from object space to tangent space
+    float3x3 rotation = float3x3(tangent, bitangent, IN.normal);
+
+    // params for light direction and attenuation
+    float3 lightDirection[2];
+    float2 lightAttenuation;
+
+    // get the light and eye direction in object space (not normalized)
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        // get the light direction in object space (not normalized)
+        float4 lightPosition = LightPosition[lightIndex];
+        lightDirection[lightIndex] = lightPosition.xyz - (IN.position * lightPosition.w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+        lightAttenuation[lightIndex] = (lightDistance > LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y + LightAttenuation[lightIndex].z * lightDistance + LightAttenuation[lightIndex].w * lightDistanceSquared));
+        // get the light direction in tangent space
+        lightDirection[lightIndex] = mul(rotation, lightDirection[lightIndex]);
+    }
+
+    // the light direction for passing to fragment shader
+    OUT.lightDirection0 = compress(lightDirection[0]);
+    OUT.lightDirection1 = compress(lightDirection[1]);
+
+    // the light attenuation for passing to fragment shader
+    OUT.lightAttenuation.x = saturate(lightAttenuation[0]);
+    OUT.lightAttenuation.y = saturate(lightAttenuation[1]);
+
+    // get the eye direction in object space (not normalized)
+    float3 eyeDirection = EyePosition.xyz - (IN.position * EyePosition.w).xyz;
+    // get the eye direction in tangent space
+    OUT.eyeDirection = compress(mul(rotation, eyeDirection));
+
+    OUT.position = mul(WorldViewProj, IN.position);
+    OUT.texCoord = IN.texCoord;
+
+    // compute linear fog
+    float eyeDistance = length(eyeDirection);
+    float fog = clamp((eyeDistance - FogSettings[0]) / (FogSettings[1] - FogSettings[0]), 0.0, 1.0) * FogSettings[2];
+    oFog = 1.0 - fog;
+
+    return OUT;
+}
+
+// Tangents are passed in as a second texture coordinate
+v2f DiffuseBumpVS_Tex(a2v_tex IN,
+                  uniform float4x4 WorldViewProj,
+                  uniform float4x4 WorldMatrix,
+                  uniform float4 LightPosition,
+                  uniform float4 EyePosition)
+{
+    v2f OUT;
+    
+    OUT.position = mul(WorldViewProj, IN.position);
+    OUT.texCoord = IN.texCoord;
+
+    float3 bitangent = cross(IN.tangent, IN.normal);
+    // compute the 3x3 tranform from object space to tangent space
+    float3x3 rotation = float3x3(IN.tangent, bitangent, IN.normal);
+
+    // get the light and eye direction in object space (not normalized)
+    float4 lightPosition = mul(WorldMatrix, LightPosition);
+    float3 lightDirection = lightPosition.xyz - (IN.position * lightPosition.w).xyz;
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (IN.position * eyePosition.w).xyz;
+    
+    // get the light and eye direction in tangent space
+    OUT.lightDirection = compress(mul(rotation, lightDirection));
+    OUT.eyeDirection = compress(mul(rotation, eyeDirection));
+
+    return OUT;
+}
+
+// This maps the light and eye directions into tangent space
+// Because we use the bitangent here, this variant can handle
+// reflected surfaces in the texture map.
+v2f DiffuseBumpVS_TB(a2v_tb IN,
+                  uniform float4x4 WorldViewProj,
+                  uniform float4x4 WorldMatrix,
+                  uniform float4 LightPosition,
+                  uniform float4 EyePosition)
+{
+    v2f OUT;
+    
+    OUT.position = mul(WorldViewProj, IN.position);
+    OUT.texCoord = IN.texCoord;
+
+    float3 bitangent = IN.bitangent;
+    // compute the 3x3 tranform from object space to tangent space
+    float3x3 rotation = float3x3(IN.tangent, bitangent, IN.normal);
+
+    // get the light and eye direction in object space (not normalized)
+    float4 lightPosition = mul(WorldMatrix, LightPosition);
+    float3 lightDirection = lightPosition.xyz - (IN.position * lightPosition.w).xyz;
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (IN.position * eyePosition.w).xyz;
+    
+    // get the light and eye direction in tangent space
+    OUT.lightDirection = compress(mul(rotation, lightDirection));
+    OUT.eyeDirection = compress(mul(rotation, eyeDirection));
+
+    return OUT;
+}
+/*
+    Basic ambient lighting vertex program
+*/
+void AmbientOneVS(float4 position        : POSITION,
+                  float2 texCoord        : TEXCOORD0,
+                  out float4 oPosition    : POSITION,
+                  out float2 oTexCoord    : TEXCOORD0,
+                  out float4 oColor        : COLOR,
+                  out float oFog : FOG,
+                  uniform float4 fogSettings,
+                  uniform float4x4 WorldViewProj,
+                  uniform float4 LMa)
+{
+    oPosition = mul(WorldViewProj, position);
+    oTexCoord = texCoord;
+    oColor = LMa;
+    oFog = (fogSettings[1] - oPosition.z) / (fogSettings[1] - fogSettings[0]) * fogSettings[2]; // compute linear fog
+}
+
+
+/*
+    Basic ambient lighting vertex program
+*/
+void AmbientOneVS_Skinned(float4 position        : POSITION,
+                          float2 texCoord        : TEXCOORD0,
+                          float4 blendIdx        : BLENDINDICES,
+                          float4 blendWgt        : BLENDWEIGHT,
+                          out float4 oPosition    : POSITION,
+                          out float2 oTexCoord    : TEXCOORD0,
+                          out float4 oColor        : COLOR,
+                          uniform float4x4 ViewProj,
+                          uniform float3x4 WorldMatrix3x4Array[64],
+                          uniform float4 LMa)
+{
+        float4 blendPos = float4(0, 0, 0, 0);
+    
+    for (int i = 0; i < 4; i++) {
+        blendPos += float4(mul(WorldMatrix3x4Array[blendIdx[i]], position).xyz, 1.0) * blendWgt[i];
+    }
+    
+    oPosition = mul(ViewProj, blendPos);
+    oTexCoord = texCoord;
+    oColor = LMa;
+}
+
+
+// This maps the light and eye directions into tangent space
+v2f DiffuseBumpVS_Skinned(a2v_t IN,
+                          float4 blendIdx        : BLENDINDICES,
+                          float4 blendWgt        : BLENDWEIGHT,
+                          uniform float4x4 WorldViewProj,
+                          uniform float4 LightPosition,
+                          uniform float3 EyePosition,
+                          uniform float4 BoneMatrices[72])
+{
+    v2f OUT;
+    float4 position = 0;
+    float3 normal = 0;
+    float3 tangent = 0;
+    
+    for (int i=0; i<4; i++) {
+        float index = blendIdx[i];
+        float4x4 model = float4x4(BoneMatrices[index+0],
+                                  BoneMatrices[index+1],
+                                  BoneMatrices[index+2],
+                                  float4(0,0,0,1));
+        // Assume no scaling in matrix, just rotate & translate
+        float3x3 rotate = float3x3(model[0].xyz,
+                                   model[1].xyz,
+                                   model[2].xyz);
+        position += blendWgt[i] * mul(model, IN.position);
+        normal     += blendWgt[i] * mul(rotate, IN.normal);
+        tangent     += blendWgt[i] * mul(rotate, IN.tangent);
+    }
+
+    OUT.position = mul(WorldViewProj, position);
+    OUT.texCoord = IN.texCoord ;
+
+    // compute the 3x3 tranform from tangent space to object space
+    float3 bitangent = cross(tangent, normal);
+    float3x3 rotation = float3x3(tangent, bitangent, normal);
+
+    // get the light and eye direction in object space
+    float3 lightDirection = LightPosition.xyz - (position * LightPosition.w).xyz;
+    float3 eyeDirection = EyePosition - position.xyz;
+
+    // get the light and eye direction in tangent space
+    OUT.lightDirection = mul(rotation, lightDirection);
+    OUT.eyeDirection = mul(rotation, eyeDirection);
+
+    return OUT;
+}
+
+
+// Apply the normal map and specular map
+void DiffuseBumpPS_20_NS(v2f IN,
+                      out float4 oColor : COLOR,
+                      uniform float4 LMd, // diffuse light
+                      uniform float4 LMs, // specular light
+                      uniform float shininess,
+                      uniform sampler2D NormalMap,
+                      uniform sampler2D GlossMap)
+{
+    // fetch and expand normal
+    float3 normal = normalize(expand(tex2D(NormalMap, IN.texCoord).rgb));
+    // fetch specular (gloss map) data
+    float4 glossTex = tex2D(GlossMap, IN.texCoord);
+    float3 normLightDir = normalize(expand(IN.lightDirection));
+    float3 normEyeDir = normalize(expand(IN.eyeDirection));
+    float3 normHalfAngle = normalize(normLightDir + normEyeDir);
+    
+    float diffuse = saturate(dot(normal, normLightDir));
+    float specular = dot(normal, normLightDir) > 0 ?
+       saturate(dot(normal, normHalfAngle)) : 0;
+    float specular_pow = pow(specular, shininess);
+    
+    oColor = LMd * diffuse + LMs * glossTex * specular_pow;
+}
+
+// Apply the normal map - specular color should be scaled down
+void DiffuseBumpPS_20_N(v2f IN,
+                      out float4 oColor : COLOR,
+                      uniform float4 LMd, // diffuse light
+                      uniform float4 LMs, // specular light
+                      uniform float shininess,
+                      uniform sampler2D NormalMap)
+{
+    // fetch and expand normal
+    float3 normal = normalize(expand(tex2D(NormalMap, IN.texCoord).rgb));
+    float3 normLightDir = normalize(expand(IN.lightDirection));
+    float3 normEyeDir = normalize(expand(IN.eyeDirection));
+    float3 normHalfAngle = normalize(normLightDir + normEyeDir);
+    
+    float diffuse = saturate(dot(normal, normLightDir));
+    float specular = dot(normal, normLightDir) > 0 ?
+       saturate(dot(normal, normHalfAngle)) : 0;
+    float specular_pow = pow(specular, shininess);
+    
+    oColor = LMd * diffuse + LMs * specular_pow;
+}
+
+// Apply the normal map, specular map, and diffuse map
+// Use attenuation data from the vertex shader to set up
+// the lighting
+void CompoundPS_20_NS(v2f_multi IN,
+          out float4 oColor : COLOR,
+          uniform float4 LMe, // emissive light
+          uniform float4 LMa, // ambient light
+          uniform float4 LMd[2], // diffuse light
+          uniform float4 LMs[2], // specular light
+          uniform float shininess,
+          uniform sampler2D NormalMap,
+          uniform sampler2D SpecularMap,
+          uniform sampler2D DiffuseMap)
+{
+    // fetch and expand normal
+    float3 normal = normalize(expand(tex2D(NormalMap, IN.texCoord).rgb));
+    // fetch specular (specular map) data
+    float4 specularTex = tex2D(SpecularMap, IN.texCoord);
+    float3 normEyeDir = normalize(expand(IN.eyeDirection));
+
+    float3 normLightDir;
+    float3 normHalfAngle;
+    
+    // Set up the lights in the easier format
+    float3 lightDirection[2];
+    lightDirection[0] = expand(IN.lightDirection0);
+    lightDirection[1] = expand(IN.lightDirection1);
+
+    float attenuation[2];
+    attenuation[0] = saturate(IN.lightAttenuation.x);
+    attenuation[1] = saturate(IN.lightAttenuation.y);
+
+    float4 diffuseTex = tex2D(DiffuseMap, IN.texCoord); // rgba
+    float4 color = (LMe + LMa) * diffuseTex;
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        float3 normLightDir  = normalize(lightDirection[lightIndex]);
+        float3 normHalfAngle = normalize(normLightDir + normEyeDir);
+        float diffuse = saturate(dot(normal, normLightDir));
+        float specular = dot(normal, normLightDir) > 0 ?
+           saturate(dot(normal, normHalfAngle)) : 0;
+        float specular_pow = pow(specular, shininess);
+        color = color + attenuation[lightIndex] * (LMd[lightIndex] * diffuse * diffuseTex +
+                               LMs[lightIndex] * specularTex * specular_pow);
+    }
+
+    color.a = diffuseTex.a;
+    oColor = saturate(color);
+}
+
+void CompoundPS_20_NSE(v2f_multi IN,
+          out float4 oColor : COLOR,
+          uniform float4 LMa, // ambient light
+          uniform float4 LMd[2], // diffuse light
+          uniform float4 LMs[2], // specular light
+          uniform float shininess,
+          uniform sampler2D NormalMap,
+          uniform sampler2D SpecularMap,
+          uniform sampler2D DiffuseMap,
+          uniform sampler2D EmissiveMap)
+{
+    // fetch and expand normal
+    float3 normal = normalize(expand(tex2D(NormalMap, IN.texCoord).rgb));
+    // fetch specular (specular map) data
+    float4 specularTex = tex2D(SpecularMap, IN.texCoord);
+    float3 normEyeDir = normalize(expand(IN.eyeDirection));
+
+    float3 normLightDir;
+    float3 normHalfAngle;
+    
+    // Set up the lights in the easier format
+    float3 lightDirection[2];
+    lightDirection[0] = expand(IN.lightDirection0);
+    lightDirection[1] = expand(IN.lightDirection1);
+
+    float attenuation[2];
+    attenuation[0] = saturate(IN.lightAttenuation.x);
+    attenuation[1] = saturate(IN.lightAttenuation.y);
+
+    float4 emissiveTex = tex2D(EmissiveMap, IN.texCoord);
+    float4 diffuseTex = tex2D(DiffuseMap, IN.texCoord); // rgba
+    float4 color = emissiveTex + LMa * diffuseTex;
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        float3 normLightDir  = normalize(lightDirection[lightIndex]);
+        float3 normHalfAngle = normalize(normLightDir + normEyeDir);
+        float diffuse = saturate(dot(normal, normLightDir));
+        float specular = dot(normal, normLightDir) > 0 ?
+           saturate(dot(normal, normHalfAngle)) : 0;
+        float specular_pow = pow(specular, shininess);
+        color = color + attenuation[lightIndex] * (LMd[lightIndex] * diffuse * diffuseTex +
+                               LMs[lightIndex] * specularTex * specular_pow);
+    }
+
+    color.a = diffuseTex.a;
+    oColor = saturate(color);
+}
+
+// Apply the normal map and diffuse map
+// Use attenuation data from the vertex shader to set up
+// the lighting
+void CompoundPS_20_N(v2f_multi IN,
+          out float4 oColor : COLOR,
+          uniform float4 LMe, // emissive light
+          uniform float4 LMa, // ambient light
+          uniform float4 LMd[2], // diffuse light
+          uniform float4 LMs[2], // specular light
+          uniform float spec_level,
+          uniform float shininess,
+          uniform sampler2D NormalMap,
+          uniform sampler2D DiffuseMap)
+{
+    // fetch and expand normal
+    float3 normal = normalize(expand(tex2D(NormalMap, IN.texCoord).rgb));
+
+    float3 normEyeDir = normalize(expand(IN.eyeDirection));
+
+    float3 normLightDir;
+    float3 normHalfAngle;
+    
+    // Set up the lights in the easier format
+    float3 lightDirection[2];
+    lightDirection[0] = expand(IN.lightDirection0);
+    lightDirection[1] = expand(IN.lightDirection1);
+
+    float attenuation[2];
+    attenuation[0] = saturate(IN.lightAttenuation.x);
+    attenuation[1] = saturate(IN.lightAttenuation.y);
+
+    float4 diffuseTex = tex2D(DiffuseMap, IN.texCoord); // rgba
+    float4 color = (LMe + LMa) * diffuseTex;
+
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        float3 normLightDir  = normalize(lightDirection[lightIndex]);
+        float3 normHalfAngle = normalize(normLightDir + normEyeDir);
+        float diffuse = saturate(dot(normal, normLightDir));
+        float specular = dot(normal, normLightDir) > 0 ?
+           saturate(dot(normal, normHalfAngle)) : 0;
+        float specular_pow = pow(specular, shininess) * spec_level;
+        color = color + attenuation[lightIndex] * (LMd[lightIndex] * diffuse * diffuseTex +
+                               LMs[lightIndex] * specular_pow);
+    }
+
+    color.a = diffuseTex.a;
+    oColor = saturate(color);
+}
+
+// Pass the vertex data to the pixel shader
+v2f_color ColorVS_Basic(a2v_color IN,
+                  uniform float4x4 WorldViewProj)
+{
+	v2f_color OUT;
+        OUT.position = mul(WorldViewProj, IN.position);
+	OUT.color = IN.color;
+	return OUT;
+}
+
+// Simply use the data from the vertex for the color
+void ColorPS_Basic(v2f_color IN,
+	           out float4 oColor : COLOR)
+{
+	oColor = IN.color;
+}
+
+//  Basic vertex program with hardware skinning for animations with 4
+//  blend weights per vertex
+v2f_color ColorVS4_Basic_Skinned(a2v_color_s IN,
+                                 uniform float3x4 WorldMatrix3x4Array[73],
+                                 uniform float4x4 ViewProj)
+{
+    v2f_color OUT;
+
+    float4 position = float4(0, 0, 0, 0);
+
+    for (int i = 0; i < 4; i++) {
+	position += float4(mul(WorldMatrix3x4Array[IN.blendIdx[i]], IN.position).xyz, 1.0) * IN.blendWgt[i];
+    }
+
+    OUT.position = mul(ViewProj, position);
+    OUT.color = IN.color;
+    return OUT;
+}

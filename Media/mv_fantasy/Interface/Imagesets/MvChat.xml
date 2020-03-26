@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvChat" Imagefile="MvChatFrame.tga" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+  <Image Name="Mv-Chat-Background" XPos="0" YPos="0" Width="16" Height="16" />
+  <Image Name="Mv-Chat-Border" XPos="16" YPos="0" Width="64" Height="128" />
+  <Image Name="Mv-Chat-InnerBorder" XPos="80" YPos="0" Width="64" Height="128" />
+  <Image Name="Mv-Chat-Tab" XPos="144" YPos="0" Width="64" Height="32" />
+  <Image Name="Mv-Chat-BlinkHilight" XPos="208" YPos="0" Width="32" Height="32" />
+  <Image Name="Mv-Chat-ScrollEnd-Disabled" XPos="432" YPos="0" Width="32" Height="32" />
+  <Image Name="Mv-Chat-ScrollEnd-Down" XPos="464" YPos="0" Width="32" Height="32" />
+  <Image Name="Mv-Chat-ScrollEnd-Up" XPos="0" YPos="128" Width="32" Height="32" />
+  <Image Name="Mv-Chat-Input-Border-Left" XPos="128" YPos="128" Width="256" Height="32" />
+  <Image Name="Mv-Chat-Input-Border-Right" XPos="0" YPos="160" Width="256" Height="32" />
+  <Image Name="Mv-Chat-Input-Border" XPos="256" YPos="160" Width="256" Height="32" />
+  
+  <Image Name="Mv-ChatFrame-Interior"    XPos="0"  YPos="0"  Width="15" Height="15" />
+  
+  <Image Name="Mv-ChatFrame-TopLeft"     XPos="16" YPos="0"  Width="10" Height="10" />
+  <Image Name="Mv-ChatFrame-TopRight"    XPos="70" YPos="0"  Width="10" Height="10" />
+  
+  <Image Name="Mv-ChatFrame-BotLeft"     XPos="16" YPos="99" Width="10" Height="10" />
+  <Image Name="Mv-ChatFrame-BotRight"    XPos="70" YPos="99" Width="10" Height="10" />
+  
+  <Image Name="Mv-ChatFrame-TopBorder"   XPos="38" YPos="0"  Width="10" Height="10" />
+  <Image Name="Mv-ChatFrame-BotBorder"   XPos="38" YPos="99" Width="10" Height="10" />
+  
+  <Image Name="Mv-ChatFrame-LeftBorder"  XPos="16" YPos="44"  Width="10" Height="10" />
+  <Image Name="Mv-ChatFrame-RightBorder" XPos="70" YPos="44"  Width="10" Height="10" />
+  
+  <Image Name="Mv-ChatFrame-Chat-Up"       XPos="304" YPos="0" Width="32" Height="32" />
+  <Image Name="Mv-ChatFrame-Chat-Down"     XPos="272" YPos="0" Width="32" Height="32" />
+  <Image Name="Mv-ChatFrame-Chat-Disabled" XPos="240" YPos="0" Width="32" Height="32" />
+  
+  <Image Name="Mv-ChatFrame-ScrollUp-Up"       XPos="96" YPos="128" Width="32" Height="32" />
+  <Image Name="Mv-ChatFrame-ScrollUp-Disabled" XPos="32" YPos="128" Width="32" Height="32" />
+  <Image Name="Mv-ChatFrame-ScrollUp-Down"     XPos="64" YPos="128" Width="32" Height="32" />
+  
+  <Image Name="Mv-ChatFrame-ScrollDown-Up"       XPos="400" YPos="0"  Width="32" Height="32" />
+  <Image Name="Mv-ChatFrame-ScrollDown-Down"     XPos="368" YPos="0" Width="32" Height="32" />
+  <Image Name="Mv-ChatFrame-ScrollDown-Disabled" XPos="336" YPos="0" Width="32" Height="32" />
+  
+</Imageset>

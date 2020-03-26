@@ -1,0 +1,82 @@
+// CG Vertex shader definition
+vertex_program ColoredFurnitureVP hlsl
+{
+    source ColoredFurniture.cg
+    entry_point ColoredFurnitureVP	
+    target vs_2_0
+
+    default_params					
+    {
+        param_named_auto worldViewProj      worldviewproj_matrix
+
+        param_named_auto LightDiffuse[0] light_diffuse_colour 0
+        param_named_auto LightDiffuse[1] light_diffuse_colour 1
+        param_named_auto LightDiffuse[2] light_diffuse_colour 2
+        param_named_auto LightDiffuse[3] light_diffuse_colour 3
+        param_named_auto LightDiffuse[4] light_diffuse_colour 4
+        
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightPosition[2] light_position_object_space 2
+        param_named_auto LightPosition[3] light_position_object_space 3
+        param_named_auto LightPosition[4] light_position_object_space 4
+
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto LightAttenuation[2] light_attenuation 2
+        param_named_auto LightAttenuation[3] light_attenuation 3
+        param_named_auto LightAttenuation[4] light_attenuation 4
+
+        param_named_auto lightAmbient ambient_light_colour
+        
+        param_named_auto EyePosition camera_position_object_space
+        
+		param_named_auto LightSpecular[0] light_specular_colour 0
+        param_named_auto LightSpecular[1] light_specular_colour 1
+        param_named_auto LightSpecular[2] light_specular_colour 2
+        param_named_auto LightSpecular[3] light_specular_colour 3
+        param_named_auto LightSpecular[4] light_specular_colour 4
+        
+        param_named_auto fogSettings fog_params
+        
+        // vertical offset of this object's color row in the colormap.
+        // should be pixel center
+        param_named colormapVCoord float 0
+        
+        param_named shininessAndScale[0] float4 10 1 0 0
+        param_named shininessAndScale[1] float4 10 1 0 0
+        param_named shininessAndScale[2] float4 10 1 0 0
+        param_named shininessAndScale[3] float4 10 1 0 0
+        param_named shininessAndScale[4] float4 10 1 0 0
+        param_named shininessAndScale[5] float4 10 1 0 0
+        param_named shininessAndScale[6] float4 10 1 0 0
+        param_named shininessAndScale[7] float4 10 1 0 0
+        
+        param_named tileOffsetAndSize[0] float4 0.062988   0.062988    0.124023 0.124023
+        param_named tileOffsetAndSize[1] float4 0.312988   0.062988    0.124023 0.124023
+        param_named tileOffsetAndSize[2] float4 0.562988   0.062988    0.124023 0.124023
+        param_named tileOffsetAndSize[3] float4 0.812988   0.062988    0.124023 0.124023
+        param_named tileOffsetAndSize[4] float4 0.062988   0.312988    0.124023 0.124023
+        param_named tileOffsetAndSize[5] float4 0.312988   0.312988    0.124023 0.124023
+        param_named tileOffsetAndSize[6] float4 0.312988   0.312988    0.124023 0.124023
+        param_named tileOffsetAndSize[7] float4 0.312988   0.312988    0.124023 0.124023
+        
+        param_named brighten float 1.0
+    }
+}
+
+// pixel shader for GPUs with pixel shader model 2a
+fragment_program ColoredFurnitureFP2a hlsl		
+{
+    source ColoredFurniture.cg
+    entry_point ColoredFurnitureFP2a
+    target ps_2_a
+}
+
+// pixel shader for GPUs with pixel shader model 2.0 (mostly intel)
+fragment_program ColoredFurnitureFP20 hlsl		
+{
+    source ColoredFurniture.cg
+    entry_point ColoredFurnitureFP20
+    target ps_2_0
+}

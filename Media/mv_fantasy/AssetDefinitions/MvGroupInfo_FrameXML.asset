@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>MvGroupInfo_FrameXML</Name>
+  <Type>Frame XML</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MvGroupInfo.xml</TargetFile>
+      <NewFileName />
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MvGroupInfo.py</TargetFile>
+      <NewFileName />
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\Imagesets\VoiceIcons.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>ImageFiles\voice_icons.tga</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

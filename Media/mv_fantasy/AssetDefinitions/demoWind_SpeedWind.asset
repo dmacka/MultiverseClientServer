@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>demoWind_SpeedWind</Name>
+  <Description>demoWind</Description>
+  <Type>SpeedWind</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>SpeedTree\demoWind.ini</TargetFile>
+      <FileType>SpeedWind</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

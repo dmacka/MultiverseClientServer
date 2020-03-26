@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<Imageset Name="Minimap" Imagefile="Minimap.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="HumanUITile-TimeIndicator" XPos="0" YPos="0" Width="256" Height="128" />
+    <Image Name="MiniMap-TrackingBorder" XPos="256" YPos="0" Width="64" Height="64" />
+    <Image Name="MinimapArrow" XPos="320" YPos="0" Width="32" Height="32" />
+    <Image Name="ObjectIcons" XPos="352" YPos="0" Width="128" Height="128" />
+    <Image Name="POIIcons" XPos="0" YPos="128" Width="64" Height="64" />
+    <Image Name="ROTATING-MINIMAPARROW" XPos="64" YPos="128" Width="32" Height="32" />
+    <Image Name="ROTATING-MINIMAPCORPSEARROW" XPos="96" YPos="128" Width="32" Height="32" />
+    <Image Name="TooltipBackdrop" XPos="128" YPos="128" Width="128" Height="16" />
+    <Image Name="UI-Minimap-Border" XPos="256" YPos="128" Width="256" Height="256" />
+    <Image Name="UI-Minimap-MinimizeButtonDown-Disabled" XPos="0" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-MinimizeButtonDown-Highlight" XPos="32" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-MinimizeButtonDown-Up" XPos="64" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-MinimizeButtonUp-Disabled" XPos="96" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-MinimizeButtonUp-Down" XPos="128" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-MinimizeButtonUp-Highlight" XPos="160" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-MinimizeButtonUp-Up" XPos="192" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-ZoomButton-Highlight" XPos="224" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-ZoomInButton-Disabled" XPos="256" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-ZoomInButton-Down" XPos="288" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-ZoomOutButton-Disabled" XPos="320" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-ZoomOutButton-Down" XPos="352" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-Minimap-ZoomOutButton-Up" XPos="384" YPos="384" Width="32" Height="32" />
+    <Image Name="UI-TOD-Indicator" XPos="0" YPos="416" Width="128" Height="64" />
+</Imageset>

@@ -1,0 +1,151 @@
+<Ui>
+
+    <Script file="MvTarget.py"/>
+
+    <Button name="TargetFrame" frameStrata="LOW" toplevel="true" movable="true" parent="UIParent">
+	<Size>
+	    <AbsDimension x="232" y="100"/>
+	</Size>
+	<Anchors>
+	    <Anchor point="TOPLEFT">
+		<Offset>
+		    <AbsDimension x="250" y="-4"/>
+		</Offset>
+	    </Anchor>
+	</Anchors>
+	<HitRectInsets>
+	    <AbsInset left="96" right="6" top="4" bottom="9"/>
+	</HitRectInsets>
+	<Layers>
+	    <Layer level="BACKGROUND">
+		<Texture name="TargetFrameBackground">
+		    <Size>
+			<AbsDimension x="119" y="41"/>
+		    </Size>
+		    <Anchors>
+			<Anchor point="TOPRIGHT">
+			    <Offset>
+				<AbsDimension x="-107" y="-22"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		    <Color r="0" g="0" b="0" a="0.5"/>
+		</Texture>
+		<Texture name="TargetFrameNameBackground" file="Interface\TargetingFrame\UI-TargetingFrame-LevelBackground">
+		    <Size>
+			<AbsDimension x="122" y="19"/>
+		    </Size>
+		    <Anchors>
+			<Anchor point="TOPRIGHT">
+			    <Offset>
+				<AbsDimension x="-105" y="-22"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</Texture>
+	    </Layer>
+	    <Layer level="BORDER">
+		<Texture name="TargetPortrait">
+		    <Size>
+			<AbsDimension x="64" y="64"/>
+		    </Size>
+		    <Anchors>
+			<Anchor point="TOPRIGHT">
+			    <Offset>
+				<AbsDimension x="-42" y="-12"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</Texture>
+	    </Layer>
+	</Layers>
+	<Frames>
+	    <Frame setAllPoints="true">
+		<Layers>
+		    <Layer level="BACKGROUND">
+			<Texture name="TargetFrameTexture" file="Interface\TargetingFrame\UI-TargetingFrame">
+			    <TexCoords left="0.09375" right="1.0" top="0" bottom="0.78125"/>
+			</Texture>
+			<FontString name="TargetName" inherits="NormalFont">
+			    <Size>
+				<AbsDimension x="100" y="14"/>
+			    </Size>
+			    <Anchors>
+				<Anchor point="CENTER">
+				    <Offset>
+					<AbsDimension x="-50" y="19"/>
+				    </Offset>
+				</Anchor>
+			    </Anchors>
+			</FontString>
+			<FontString name="TargetLevelText" inherits="SmallFont">
+			    <Anchors>
+				<Anchor point="CENTER">
+				    <Offset>
+					<AbsDimension x="63" y="-16"/>
+				    </Offset>
+				</Anchor>
+			    </Anchors>
+			</FontString>
+			<FontString name="TargetDeadText" inherits="SmallFont" text="DEAD">
+			    <Anchors>
+				<Anchor point="CENTER">
+				    <Offset>
+					<AbsDimension x="-50" y="3"/>
+				    </Offset>
+				</Anchor>
+			    </Anchors>
+			</FontString>
+		    </Layer>
+		</Layers>
+	    </Frame>
+	    <StatusBar name="TargetFrameHealthBar">
+		<Size>
+		    <AbsDimension x="122" y="12"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOPRIGHT">
+			<Offset>
+			    <AbsDimension x="-104" y="-41"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnEvent>
+    UnitFrameHealthBar_Update(this, args.eventArgs[0])
+		    </OnEvent>
+		</Scripts>
+		<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+	    </StatusBar>
+	    <StatusBar name="TargetFrameManaBar">
+		<Size>
+		    <AbsDimension x="122" y="12"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOPRIGHT">
+			<Offset>
+			    <AbsDimension x="-104" y="-52"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnEvent>
+    UnitFrameManaBar_Update(this, args.eventArgs[0])
+		    </OnEvent>
+		</Scripts>
+		<BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+		<BarColor r="0" g="0" b="1.0"/>
+	    </StatusBar>
+	</Frames>
+        <Scripts language="python">
+	    <OnLoad>
+    UnitFrame_Initialize(this, "target", TargetName, TargetPortrait, TargetFrameHealthBar, None, TargetFrameManaBar, None)
+    TargetFrame_OnLoad(this)
+	    </OnLoad>
+	    <OnEvent>
+    TargetFrame_OnEvent(this, args)
+	    </OnEvent>
+	</Scripts>
+    </Button>
+
+</Ui>

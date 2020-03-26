@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>broadsword_Mesh</Name>
+  <Description>Broadsword</Description>
+  <Type>Mesh</Type>
+  <Category>Weapons</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\broadsword.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\broadsword_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

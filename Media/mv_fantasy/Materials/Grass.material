@@ -1,0 +1,28 @@
+material Grass
+{
+	technique
+	{
+		pass
+		{
+			specular 1 1 1 1 0
+
+			scene_blend alpha_blend
+			depth_write off
+			cull_hardware none
+
+			texture_unit
+			{
+				texture grass_04.dds
+			}
+
+			scene_blend alpha_blend
+			depth_write off
+			cull_hardware none
+
+			texture_unit
+			{
+				texture grass_04.dds
+			}
+		}
+	}
+}

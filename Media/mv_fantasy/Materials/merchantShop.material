@@ -1,0 +1,66 @@
+material merchantShop.merchantShopRoof_Material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture merchant_shop.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material merchantShop.merchantRack_Material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture merchantRack.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material merchantShop.barrel_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture barrel.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

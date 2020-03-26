@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>F50_hotwheel_Mesh</Name>
+  <Description>FerrariF50</Description>
+  <Category>Characters</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\F50_hotwheel.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\F50_hotwheel_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\F50_hotwheel.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\F50_hotwheel.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

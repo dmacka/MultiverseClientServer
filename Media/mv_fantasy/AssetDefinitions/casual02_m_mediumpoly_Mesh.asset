@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>casual02_m_mediumpoly_Mesh</Name>
+  <Description>casual02_m_mediumpoly</Description>
+  <Category>Characters</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\casual02_m_mediumpoly.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\casual02_m_mediumpoly_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\casual02_m_mediumpoly.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>		
+    <AssetFile>
+      <TargetFile>Skeletons\casual02_m_mediumpoly.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+
+  </Files>
+</AssetDefinition>

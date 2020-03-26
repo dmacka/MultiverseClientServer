@@ -1,0 +1,178 @@
+<physics_model>
+  <rigid_body sid="gazebo_a-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0.000147354 0.001052956 0.9999995 15.92653</rotate>
+        <translate>-6.345989 -0.9731028 -0.02519428</translate>
+        <box>
+          <half_extents>2.457709 0.6524423 1.481671</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 17.09855</rotate>
+        <translate>-3.811708 1.903766 -1.588472</translate>
+        <box>
+          <half_extents>0.1151919 1.589879 0.1135665</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 25.99104</rotate>
+        <translate>-1.587378 1.903766 -3.829412</translate>
+        <box>
+          <half_extents>0.1151915 1.589879 0.1135667</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -0.9999999 0 21.07901</rotate>
+        <translate>1.599868 1.903766 -3.826273</translate>
+        <box>
+          <half_extents>0.1151918 1.589878 0.1135667</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 25.94051</rotate>
+        <translate>3.836419 1.903766 -1.601311</translate>
+        <box>
+          <half_extents>0.1135665 1.589879 0.1151915</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 23.79538</rotate>
+        <translate>3.836419 1.903766 1.574751</translate>
+        <box>
+          <half_extents>0.1151917 1.589879 0.1135668</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0.9999999 0 23.20209</rotate>
+        <translate>1.607646 1.903766 3.839171</translate>
+        <box>
+          <half_extents>0.1135665 1.589878 0.1151919</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 19.95083</rotate>
+        <translate>-1.586186 1.903766 3.838272</translate>
+        <box>
+          <half_extents>0.1135667 1.589879 0.1151919</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 28.88507</rotate>
+        <translate>-3.834847 1.903766 1.585912</translate>
+        <box>
+          <half_extents>0.1151914 1.589879 0.1135666</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.9999768 0.006725585 0.001033189 17.46402</rotate>
+        <translate>0 3.84715 2.188492</translate>
+        <box>
+          <half_extents>1.812698 0.3934702 2.149804</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.9995816 -0.02820695 -0.006396795 17.47064</rotate>
+        <translate>0 3.820072 -2.271299</translate>
+        <box>
+          <half_extents>1.812698 0.3934705 2.149804</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.001487636 0.02313511 0.9997312 17.46834</rotate>
+        <translate>-2.248112 3.807476 0.1620512</translate>
+        <box>
+          <half_extents>2.149804 0.3934703 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.002584913 0.03027446 -0.9995383 17.47172</rotate>
+        <translate>2.245224 3.841357 0.1620511</translate>
+        <box>
+          <half_extents>2.149804 0.3934704 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.1417405 0.927502 0.3459039 47.92087</rotate>
+        <translate>-1.513064 3.84715 1.668693</translate>
+        <box>
+          <half_extents>2.149804 0.3934705 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.1513814 0.9864666 0.06298642 135.6034</rotate>
+        <translate>1.558142 3.811471 1.6248</translate>
+        <box>
+          <half_extents>2.149803 0.3934704 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.1516356 0.9864269 -0.06299716 224.8033</rotate>
+        <translate>1.616283 3.841357 -1.576851</translate>
+        <box>
+          <half_extents>2.149804 0.3934701 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.1513829 0.9864748 -0.06285393 135.6881</rotate>
+        <translate>-1.571041 3.820072 -1.668076</translate>
+        <box>
+          <half_extents>2.149804 0.3934703 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0 5.813774 -0.09071881</translate>
+        <box>
+          <half_extents>0.1842056 0.9926255 0.4901444</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0 -0.3051801 0</translate>
+        <box>
+          <half_extents>4.200562 0.6524423 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 44.99781</rotate>
+        <translate>0 -0.3051801 0</translate>
+        <box>
+          <half_extents>4.200562 0.6524423 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0 -0.3051801 0</translate>
+        <box>
+          <half_extents>1.812698 0.6524423 4.200562</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 44.9973</rotate>
+        <translate>0 -0.3051801 0</translate>
+        <box>
+          <half_extents>4.200562 0.6524423 1.812698</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-0.9999732 -0.007245074 -0.001013344 15.92692</rotate>
+        <translate>0.02518677 -0.9826801 -6.38286</translate>
+        <box>
+          <half_extents>1.481671 0.6524423 2.457709</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.9989859 -0.04458982 0.006237787 15.94244</rotate>
+        <translate>0.02518665 -0.9730886 6.318987</translate>
+        <box>
+          <half_extents>1.481671 0.6524425 2.457709</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0.003615184 -0.02584166 -0.9996596 15.93185</rotate>
+        <translate>6.36953 -0.9731028 -0.02519428</translate>
+        <box>
+          <half_extents>2.457708 0.6524423 1.481671</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

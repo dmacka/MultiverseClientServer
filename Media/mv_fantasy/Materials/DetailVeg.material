@@ -1,0 +1,59 @@
+vertex_program Multiverse/DetailVeg/VP cg
+{
+	source DetailVeg.cg
+	entry_point DetailVegVP
+	profiles vs_1_1
+}
+
+fragment_program Multiverse/DetailVeg/FP cg
+{
+	source DetailVeg.cg
+	entry_point DetailVegFP
+	profiles ps_1_1
+}
+
+material Multiverse/DetailVeg
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none
+			vertex_program_ref Multiverse/DetailVeg/VP
+			{
+                param_named_auto world				world_matrix
+                param_named_auto viewProj			viewproj_matrix
+                param_named_auto fogSettings		fog_params
+				param_named_auto sideVector			view_side_vector
+				param_named_auto upVector			view_up_vector
+				param_named_auto cameraPos			camera_position_object_space
+				param_named viewRadius float 44000
+				param_named viewFade float 20000
+				param_named windDirection float3 1 0 0
+				param_named_auto time				time
+				
+				// stuff for lighting
+				param_named_auto lightDirection light_position 0
+                param_named_auto lightDiffuse light_diffuse_colour 0
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 1.0 1.0 1.0 1.0
+			}
+			fragment_program_ref Multiverse/DetailVeg/FP
+			{
+				//param_named vegColor float3 0.418 0.535 0.277
+				//param_named vegColor float3 0.648 0.605 0.520
+				//param_named vegColor float3 0.563 0.527 0.441
+				//param_named vegColor float3 0.512 0.5 0.379
+			}
+			texture_unit
+			{
+			    filtering anisotropic
+			    max_anisotropy 4
+				tex_address_mode clamp
+				alpha_rejection greater 80
+				texture DetailVegAtlas.dds
+			}
+		}
+	}
+}

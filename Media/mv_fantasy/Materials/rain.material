@@ -1,0 +1,16 @@
+material Rain
+{
+	technique
+	{
+		pass
+		{
+			scene_blend modulate
+			depth_write off
+
+			texture_unit
+			{
+				texture basic_droplet.dds
+			}
+		}
+	}
+}

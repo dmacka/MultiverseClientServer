@@ -1,0 +1,73 @@
+<Ui>
+
+    <Frame name="MasterTooltip" frameStrata="TOOLTIP" hidden="true" virtual="true">
+	<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+	    <EdgeSize>
+		<AbsValue val="16"/>
+	    </EdgeSize>
+	    <TileSize>
+		<AbsValue val="16"/>
+	    </TileSize>
+	    <BackgroundInsets>
+		<AbsInset left="5" right="5" top="5" bottom="5"/>
+	    </BackgroundInsets>
+	</Backdrop>
+	<Layers>
+	    <Layer level="ARTWORK">
+		<FontString name="$parentTextLeft1" inherits="TooltipFont" hidden="true">
+		    <Anchors>
+			<Anchor point="TOPLEFT">
+			    <Offset>
+				<AbsDimension x="10" y="-10"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</FontString>
+		<FontString name="$parentTextLeft2" inherits="TooltipFont" hidden="true">
+		    <Anchors>
+			<Anchor point="TOPLEFT" relativeTo="$parentTextLeft1" relativePoint="BOTTOMLEFT">
+			    <Offset>
+				<AbsDimension x="0" y="-2"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</FontString>
+	    </Layer>
+	</Layers>
+    </Frame>
+	
+    <Frame name="ItemTooltip" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MasterTooltip">
+	<Scripts language="python">
+	    <OnLoad>
+    frame = this
+    frame.SetPoint("BOTTOMRIGHT", "UIParent", "BOTTOMRIGHT", -13, 70)
+    frame.SetHeight(68)
+    frame.SetWidth(170)
+    frame.SetBackdropColor(0, 0, 0)
+    ItemTooltipTextLeft1.Show()
+	    </OnLoad>
+	</Scripts>
+    </Frame>
+
+    <Frame name="ObjectTooltip" frameStrata="TOOLTIP" hidden="true" parent="UIParent" inherits="MasterTooltip">
+        <Scripts language="python">
+            <OnLoad>
+                ObjectTooltipTextLeft1.Show()
+                this.SetHeight(68)
+                this.SetWidth(170)
+                this.SetBackdropColor(0, 0, 0)
+                this.RegisterEvent("MOUSEOVER_TARGET_CHANGED")
+            </OnLoad>
+            <OnEvent>
+                target = MarsUnit._GetUnit("mouseover")
+                if (target is not None) and (target.PropertyExists("tooltip")):
+                    x, y = ClientAPI.GetMousePosition()
+                    this.SetPoint("TOPLEFT", "UIParent", "TOPLEFT", int(x+5), int(-y-15))
+                    ObjectTooltipTextLeft1.SetText(target.GetProperty("tooltip"))
+                    this.Show()
+                else:
+                    this.Hide()
+            </OnEvent>
+        </Scripts>
+    </Frame>
+</Ui>

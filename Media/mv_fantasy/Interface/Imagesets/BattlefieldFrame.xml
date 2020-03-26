@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Imageset Name="BattlefieldFrame" Imagefile="BattlefieldFrame.tga" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+    <Image Name="Battleground-Alliance" XPos="0" YPos="0" Width="32" Height="32" />
+    <Image Name="Battleground-Horde" XPos="32" YPos="0" Width="32" Height="32" />
+    <Image Name="UI-Battlefield-BotLeft" XPos="64" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-Battlefield-BotRight" XPos="320" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-Battlefield-Icon" XPos="448" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-Battlefield-TopLeft" XPos="512" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-Battlefield-TopRight" XPos="768" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-Battlefield-WorldMap1" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-Battlefield-WorldMap2" XPos="256" YPos="256" Width="64" Height="256" />
+</Imageset>

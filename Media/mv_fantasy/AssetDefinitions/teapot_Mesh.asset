@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>teapot_Mesh</Name>
+  <Description>teapot</Description>
+  <Type>Mesh</Type>
+  <Category>Test Shapes</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\teapot.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

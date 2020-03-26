@@ -1,0 +1,128 @@
+<physics_model>
+  <rigid_body sid="human_house_openshape-obj.0">
+    <technique_common>
+      <shape>
+        <rotate>0 0 -1 25.47572</rotate>
+        <translate>2.997104 4.35035 -0.02497949</translate>
+        <box>
+          <half_extents>3.884796 0.129121 5.042495</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>3.481341 0.8475704 3.460353</translate>
+        <box>
+          <half_extents>0.4665259 3.037122 0.510075</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>3.481341 0.8475704 -3.385451</translate>
+        <box>
+          <half_extents>0.4665256 3.002012 0.5100747</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -0.9999999 0 44.99999</rotate>
+        <translate>-3.596315 0.3350174 -3.44895</translate>
+        <box>
+          <half_extents>0.4665259 2.772316 0.5100747</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 45</rotate>
+        <translate>-3.596315 0.2900676 3.523218</translate>
+        <box>
+          <half_extents>0.4665259 2.776591 0.5100747</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>6.408065 0.275708 -4.130435</translate>
+        <box>
+          <half_extents>0.1275693 2.602746 0.1394776</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>6.408065 0.275708 -2.63966</translate>
+        <box>
+          <half_extents>0.1275693 2.602746 0.1394773</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>6.408065 0.275708 2.559253</translate>
+        <box>
+          <half_extents>0.1275693 2.602746 0.1394773</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>6.408065 0.275708 3.757579</translate>
+        <box>
+          <half_extents>0.1275693 2.602746 0.1394773</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.01041992 -1.050114 0.01539624</translate>
+        <box>
+          <half_extents>3.741583 1.253807 3.687774</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>4.886425 -1.050114 0.01539649</translate>
+        <box>
+          <half_extents>1.718924 1.253807 2.930985</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.222343 0.09894825 -0.06739478</translate>
+        <box>
+          <half_extents>3.732903 0.1288434 4.076039</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-4.002772 1.565219 -0.06739478</translate>
+        <box>
+          <half_extents>0.1291213 1.399915 4.076039</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0.1083179 1.73747 -4.014084</translate>
+        <box>
+          <half_extents>4.07604 1.479167 0.1056902</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0 1 38.86893</rotate>
+        <translate>-2.552235 4.294157 -0.02497949</translate>
+        <box>
+          <half_extents>2.674232 0.1291216 5.042495</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="human_house_open_rampshape-obj.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -0.9999999 0 1.932627</rotate>
+        <translate>-1.460324 -1.08455 5.227666</translate>
+        <box>
+          <half_extents>2.395504 1.306427 1.273762</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.514539E-08 8.937104E-08 -1 20.51939</rotate>
+        <translate>4.304704 -1.178323 5.291832</translate>
+        <box>
+          <half_extents>3.649455 0.1288435 1.304572</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="human_house_open_porchshape-obj.0">
+    <technique_common>
+      <shape>
+        <translate>5.257361 0.09894825 0</translate>
+        <box>
+          <half_extents>1.753831 0.1288434 2.977113</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

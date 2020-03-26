@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>bang_Mesh</Name>
+  <Description>bang</Description>
+  <Type>Mesh</Type>
+  <Category>Misc</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\bang.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\bang_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

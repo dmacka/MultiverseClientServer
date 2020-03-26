@@ -1,0 +1,81 @@
+material barrel_half_open.half_barrel
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.10000 0.10000 0.10000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture barrel.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material barrel_half_open.water_surface
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.10000 0.10000 0.10000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+			scene_blend alpha_blend
+
+            texture_unit
+            {
+                texture barrel_water.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material barrel_half_open.junk
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.10000 0.10000 0.10000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture barrel_junk.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material barrel_half_open.ColorMaterial_E499B800
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.89412 0.60000 0.72157 1.00000
+            diffuse  0.89412 0.60000 0.72157 1.00000
+            specular 1.00000 1.00000 1.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+        }
+    }
+}

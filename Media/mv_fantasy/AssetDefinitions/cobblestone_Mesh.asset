@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>cobblestone_Mesh</Name>
+  <Description>cobblestone</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\cobblestone.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\cobblestone_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\cobblestone.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

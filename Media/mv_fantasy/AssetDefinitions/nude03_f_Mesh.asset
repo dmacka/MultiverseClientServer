@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nude03_f_Mesh</Name>
+  <Description>nude03_f</Description>
+  <Type>Mesh</Type>
+  <Category>Rocketbox - Nude</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\nude03_f.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,34 @@
+<physics_model>
+  <rigid_body sid="stb_f_dance_lt-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 22.50005</rotate>
+        <translate>0 0.09661946 0</translate>
+        <box>
+          <half_extents>0.4503363 0.1173056 0.1931052</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.50005</rotate>
+        <translate>0 0.09661946 0</translate>
+        <box>
+          <half_extents>0.1931052 0.1173056 0.4503363</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.50005</rotate>
+        <translate>0 0.09661946 0</translate>
+        <box>
+          <half_extents>0.1931052 0.1173056 0.4503363</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.50005</rotate>
+        <translate>0 0.09661946 0</translate>
+        <box>
+          <half_extents>0.4503363 0.1173056 0.1931052</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

@@ -1,0 +1,419 @@
+// arguments from the vertex shader to the fragment shader
+struct v2f_basic {
+    float4 position        : POSITION;
+    float2 texCoord        : TEXCOORD0;
+};
+
+// arguments from the vertex shader to the fragment shader
+struct v2f_multi {
+    float4 position        : POSITION;
+    float2 texCoord        : TEXCOORD0;
+    float3 eyeDirection    : TEXCOORD1;
+    float3 lightDirection0    : TEXCOORD2;
+    float3 lightDirection1    : TEXCOORD3;
+    float2 lightAttenuation : TEXCOORD4;
+    float2 tattooTexCoord : TEXCOORD5;
+};
+
+// arguments to the vertex shader
+// in this version, we pass in the tangent, and compute the bitangent
+struct a2v_t_s {
+    float4 position : POSITION;
+    float3 normal   : NORMAL;
+    float2 texCoord : TEXCOORD0;
+    float2 tattooTexCoord : TEXCOORD1;
+    float3 tangent    : TANGENT0;
+    float4 blendIdx : BLENDINDICES;
+    float4 blendWgt : BLENDWEIGHT;
+};
+
+struct ShadowCasterVSOutput
+{
+	float4	position		: POSITION;
+	float4	color			: COLOR0;
+	float	fog				: FOG;
+	float	depth			: TEXCOORD0;
+};
+
+struct ShadowReceiverVSOutput
+{
+  float4 position		: POSITION;     // Vertex position in screen-space
+  float4 lightPosition	: TEXCOORD0;    // Fragment's position in light space
+  float4 fade			: TEXCOORD1;
+  float fog				: FOG;
+};
+
+// Convert a float3 that has been encoded as a color into a vector
+float3 expand(float3 v) { return (v - 0.5) * 2; }
+float3 compress(float3 v) { return (v * 0.5) + 0.5; }
+float expand1(float v) { return (v - 0.5) * 2; }
+float compress1(float v) { return (v * 0.5) + 0.5; }
+
+//  Basic vertex program with hardware skinning for animations with
+//  4 blend weights per vertex.  For Shadow Caster.
+ShadowCasterVSOutput LayeredAvatarVP_Shadow(float4 iPosition    : POSITION,
+                                          float4 iBlendIdx	 : BLENDINDICES,
+                                          float4 iBlendWgt	 : BLENDWEIGHT,
+                                          uniform float4 FogSettings,
+                                          uniform float3x4 WorldMatrix3x4Array[73],
+                                          uniform float4x4 ViewProj,
+                                          uniform float4x4 WorldMatrix,
+                                          uniform float4 EyePosition,
+                                          uniform float4 AmbientLightColor)
+{
+    ShadowCasterVSOutput OUT;
+
+    float4 position = float4(0, 0, 0, 0);
+
+    for (int i = 0; i < 4; i++) {
+		position += float4(mul(WorldMatrix3x4Array[iBlendIdx[i]], iPosition).xyz, 1.0) * iBlendWgt[i];
+	}
+
+    OUT.position = mul(ViewProj, position);
+    OUT.depth = OUT.position.z;
+	
+    // get the eye direction in world space (not normalized)
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (position * eyePosition.w).xyz;
+
+    // compute linear fog
+    float eyeDistance = length(eyeDirection);
+    float fog = clamp((eyeDistance - FogSettings[0]) / (FogSettings[1] - FogSettings[0]),
+                      0.0, 1.0) * FogSettings[2];
+    OUT.fog = 1.0 - fog;
+    
+    OUT.color = AmbientLightColor;
+
+    return OUT;
+}
+
+//  Basic vertex program with hardware skinning for animations with
+//  4 blend weights per vertex.  For Shadow Caster.
+ShadowReceiverVSOutput LayeredAvatarVP_ShadowReceiver(float4 iPosition    : POSITION,
+                                          float4 iBlendIdx	 : BLENDINDICES,
+                                          float4 iBlendWgt	 : BLENDWEIGHT,
+                                          uniform float4 FogSettings,
+                                          uniform float3x4 WorldMatrix3x4Array[73],
+                                          uniform float4x4 ViewProj,
+                                          uniform float4x4 WorldMatrix,
+                                          uniform float4 EyePosition,
+                                          uniform float4x4 TextureViewProjection)
+{
+    ShadowReceiverVSOutput OUT;
+
+    float4 position = float4(0, 0, 0, 0);
+
+    for (int i = 0; i < 4; i++) {
+		position += float4(mul(WorldMatrix3x4Array[iBlendIdx[i]], iPosition).xyz, 1.0) * iBlendWgt[i];
+	}
+
+    OUT.position = mul(ViewProj, position);
+    
+    
+    // Compute vertex position in light space
+    // First object to world space
+    OUT.lightPosition = mul(WorldMatrix, iPosition);
+    // Then world to light space
+    OUT.lightPosition = mul(TextureViewProjection, OUT.lightPosition);
+   
+    // get the eye direction in world space (not normalized)
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (position * eyePosition.w).xyz;
+    float eyeDistance = length(eyeDirection); 
+    
+    // compute fog
+	float fade = clamp(( eyeDistance - FogSettings[0] ) / (FogSettings[1] - FogSettings[0]),0.0,1.0) * FogSettings[2];
+    OUT.fade = fade;
+    //Out.fade = 0;
+    OUT.fog = 1;
+    
+    return OUT;
+}
+
+// This maps the light and eye directions into tangent space
+// Tangents are passed in with the tangent semantic
+// This also handles the light setup, including attenuation
+// for up to two lights, and linear fog.
+// This variant does hardware skinning on the vertices
+// The eye and light vectors are converted to world space, 
+// since the normals, tangents and binormals have also been 
+// transformed
+v2f_multi LayeredAvatarVP20(a2v_t_s IN,
+             out float oFog : FOG,
+             uniform float4 FogSettings : register(c0),
+             uniform float4x4 ViewProj : register(c1),
+             uniform float4x4 WorldMatrix : register(c5),
+             uniform float4x4 InvWorldMatrix : register(c9),
+             uniform float4 LightPosition[2] : register(c13),
+             uniform float4 LightAttenuation[2] : register(c15),
+             uniform float4 EyePosition : register(c17),
+             uniform float3x4 WorldMatrix3x4Array[64])
+{
+    v2f_multi OUT;
+
+    float3x4 transform = float3x4(0,0,0,0,0,0,0,0,0,0,0,0);
+
+    // build transform matrix (normalized weights)
+    for (int i = 0; i < 4; ++i)
+    {
+        transform += WorldMatrix3x4Array[IN.blendIdx[i]] * IN.blendWgt[i];
+    }
+
+    float4 position = float4(mul(transform, IN.position), 1);
+
+    float3 normal = mul((float3x3)transform, IN.normal);
+    float3 tangent = mul((float3x3)transform, IN.tangent);
+
+    normal = normalize(normal);
+    tangent = normalize(tangent);
+
+    float3 bitangent = cross(tangent, normal);
+    // compute the 3x3 transform from world space to tangent space
+    float3x3 rotation = float3x3(tangent, bitangent, normal);
+
+    // params for light direction and attenuation
+    float3 lightDirection[2];
+    float2 lightAttenuation;
+
+    // get the light and eye direction in object space (not normalized)
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        // get the light direction in world space (not normalized)
+        float4 lightPosition = mul(WorldMatrix, LightPosition[lightIndex]);
+        lightDirection[lightIndex] = lightPosition.xyz - (position * lightPosition.w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+        lightAttenuation[lightIndex] = (lightDistance > LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y + LightAttenuation[lightIndex].z * lightDistance + LightAttenuation[lightIndex].w * lightDistanceSquared));
+        // get the light direction in tangent space
+        lightDirection[lightIndex] = mul(rotation, lightDirection[lightIndex]);
+    }
+
+    // the light direction for passing to fragment shader
+    OUT.lightDirection0 = lightDirection[0];
+    OUT.lightDirection1 = lightDirection[1];
+
+    // the light attenuation for passing to fragment shader
+    OUT.lightAttenuation.x = saturate(lightAttenuation[0]);
+    OUT.lightAttenuation.y = saturate(lightAttenuation[1]);
+
+    // get the eye direction in object space (not normalized)
+    float4 eyePosition = mul(WorldMatrix, EyePosition);
+    float3 eyeDirection = eyePosition.xyz - (position * eyePosition.w).xyz;
+    // get the eye direction in tangent space
+    OUT.eyeDirection = mul(rotation, eyeDirection);
+
+    OUT.position = mul(ViewProj, position);
+    OUT.texCoord = IN.texCoord;
+    OUT.tattooTexCoord = IN.tattooTexCoord;
+
+    // compute linear fog
+    float eyeDistance = length(eyeDirection);
+    float fog = clamp((eyeDistance - FogSettings[0]) / (FogSettings[1] - FogSettings[0]), 0.0, 1.0) * FogSettings[2];
+    oFog = 1.0 - fog;
+
+    return OUT;
+}
+
+// This variant does hardware skinning on the vertices
+// All we write into the output is the position and texcoord
+v2f_basic LayeredAvatarVP20_Depth(a2v_t_s IN,
+             out float oFog : FOG,
+             uniform float4 FogSettings : register(c0),
+             uniform float4x4 ViewProj : register(c1),
+             uniform float4x4 WorldMatrix : register(c5),
+             uniform float4x4 InvWorldMatrix : register(c9),
+             uniform float4 EyePosition : register(c13),
+             uniform float3x4 WorldMatrix3x4Array[64])
+{
+    v2f_basic OUT;
+
+    float3x4 transform = float3x4(0,0,0,0,0,0,0,0,0,0,0,0);
+
+    // build transform matrix (normalized weights)
+    for (int i = 0; i < 4; ++i)
+    {
+        transform += WorldMatrix3x4Array[IN.blendIdx[i]] * IN.blendWgt[i];
+    }
+
+    float4 position = float4(mul(transform, IN.position), 1);
+
+    float4 viewSpacePosition = mul(ViewProj, position);
+    OUT.position = viewSpacePosition;
+    OUT.texCoord.x = viewSpacePosition.z / viewSpacePosition.w;
+    OUT.texCoord.y = viewSpacePosition.z / viewSpacePosition.w;
+
+    // compute linear fog
+    oFog = 1.0;
+
+    return OUT;
+}
+
+// Apply the normal map, specular map, and diffuse map
+// Use attenuation data from the vertex shader to set up
+// the lighting
+void LayeredAvatarFP20(v2f_multi IN,
+          out float4 oColor : COLOR,
+          uniform float4 EmissiveAdd,  // value to add to emissive
+          uniform float4 EmissiveMult, // value to multiply emissive by
+          uniform float4 TattooEmissiveMult,
+          uniform float4 LMa, // ambient light
+          uniform float4 LMd[2], // diffuse light
+          uniform float4 LMs[2], // specular light
+          uniform float shininess,
+          uniform float2 tattooOffset,
+          uniform float4 skinColor,
+          uniform sampler2D SkinMap,
+          uniform sampler2D TattooMap,
+          uniform sampler2D ClothesMap,
+          uniform sampler2D SpecularMap,
+          uniform sampler2D EmissiveMap,
+          uniform sampler2D NormalMap)
+{
+    // fetch layered diffuse textures
+    float4 skinTex = tex2D(SkinMap, IN.texCoord) * 2 * skinColor; // rgba
+    float4 tattooTex = tex2D(TattooMap, IN.tattooTexCoord - tattooOffset);
+    float4 clothesTex = tex2D(ClothesMap, IN.texCoord);
+    
+    float4 diffuseTex;
+    
+    // combine the layers
+    diffuseTex.rgb = lerp(skinTex.rgb, tattooTex.rgb, tattooTex.a);
+    diffuseTex.a = max(skinTex.a, tattooTex.a);
+    diffuseTex.rgb = lerp(diffuseTex.rgb, clothesTex.rgb, clothesTex.a);
+    diffuseTex.a = max(diffuseTex.a, clothesTex.a);
+    
+    float4 tattooEmissive = tattooTex.a * TattooEmissiveMult;
+    
+    // fetch specular (specular map) data
+    float4 specularTex = tex2D(SpecularMap, IN.texCoord);
+    // fetch the emissive map
+    float4 emissiveTex = tex2D(EmissiveMap, IN.texCoord);
+    // fetch and expand normal
+    float3 normal = normalize(expand(tex2D(NormalMap, IN.texCoord).rgb));
+        
+    float3 normEyeDir = normalize(IN.eyeDirection);
+
+    float3 normLightDir;
+    float3 normHalfAngle;
+    
+    // Set up the lights in the easier format
+    float3 lightDirection[2];
+    lightDirection[0] = IN.lightDirection0;
+    lightDirection[1] = IN.lightDirection1;
+
+    float attenuation[2];
+    attenuation[0] = saturate(IN.lightAttenuation.x);
+    attenuation[1] = saturate(IN.lightAttenuation.y);
+
+    float4 color = ((emissiveTex * EmissiveMult) + EmissiveAdd  + tattooEmissive + LMa) * diffuseTex;
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        float3 normLightDir  = normalize(lightDirection[lightIndex]);
+        float3 normHalfAngle = normalize(normLightDir + normEyeDir);
+        float diffuse = saturate(dot(normal, normLightDir));
+        float specular = dot(normal, normLightDir) > 0 ?
+           saturate(dot(normal, normHalfAngle)) : 0;
+        float specular_pow = pow(specular, shininess);
+        color = color + attenuation[lightIndex] * (LMd[lightIndex] * diffuse * diffuseTex +
+                               LMs[lightIndex] * specularTex * specular_pow);
+    }
+
+    color.a = diffuseTex.a;
+    oColor = saturate(color);
+}
+
+// hair specific pixel shader
+void LayeredAvatarHairFP20(v2f_multi IN,
+          out float4 oColor : COLOR,
+          uniform float4 EmissiveAdd,  // value to add to emissive
+          uniform float4 EmissiveMult, // value to multiply emissive by
+          uniform float4 TattooEmissiveMult,
+          uniform float4 LMa, // ambient light
+          uniform float4 LMd[2], // diffuse light
+          uniform float4 LMs[2], // specular light
+          uniform float shininess,
+          uniform float2 tattooOffset,
+          uniform float4 skinColor0,
+          uniform float4 skinColor1,
+          uniform float4 skinColor2,
+          uniform float4 skinColor3,
+          uniform sampler2D SkinMap,
+          uniform sampler2D TattooMap,
+          uniform sampler2D ClothesMap,
+          uniform sampler2D SpecularMap,
+          uniform sampler2D EmissiveMap,
+          uniform sampler2D NormalMap)
+{
+    // fetch skin pattern
+    float4 skinPat = tex2D(SkinMap, IN.texCoord) * 2;
+    
+    // colorize skin pattern
+    float4 skinTex = skinPat.r * skinColor3 + skinPat.g * skinColor1 + skinPat.b * skinColor2 + skinPat.a * skinColor0;
+    // it's ok to use a sum of less than one for the other channels, but alpha should be normalized
+    skinTex.a = 1.0;
+    // fetch layered diffuse textures
+    float4 tattooTex = tex2D(TattooMap, IN.tattooTexCoord - tattooOffset);
+    float4 clothesTex = tex2D(ClothesMap, IN.texCoord);
+    
+    float4 diffuseTex;
+    
+    // combine the layers
+    diffuseTex.rgb = lerp(skinTex.rgb, tattooTex.rgb, tattooTex.a);
+    diffuseTex.a = max(skinTex.a, tattooTex.a);
+    diffuseTex.rgb = lerp(diffuseTex.rgb, clothesTex.rgb, clothesTex.a);
+    diffuseTex.a = max(diffuseTex.a, clothesTex.a);
+    
+    float4 tattooEmissive = tattooTex.a * TattooEmissiveMult;
+    
+    // fetch specular (specular map) data
+    float4 specularTex = tex2D(SpecularMap, IN.texCoord);
+    // fetch the emissive map
+    float4 emissiveTex = tex2D(EmissiveMap, IN.texCoord);
+    // fetch and expand normal
+    float3 normal = normalize(expand(tex2D(NormalMap, IN.texCoord).rgb));
+        
+    float3 normEyeDir = IN.eyeDirection;
+
+    float3 normLightDir;
+    float3 normHalfAngle;
+    
+    // Set up the lights in the easier format
+    float3 lightDirection[2];
+    lightDirection[0] = IN.lightDirection0;
+    lightDirection[1] = IN.lightDirection1;
+
+    float attenuation[2];
+    attenuation[0] = IN.lightAttenuation.x;
+    attenuation[1] = IN.lightAttenuation.y;
+
+    float4 color = ((emissiveTex * EmissiveMult) + EmissiveAdd  + tattooEmissive + LMa) * diffuseTex;
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        float3 normLightDir  = normalize(lightDirection[lightIndex]);
+        float3 normHalfAngle = normalize(normLightDir + normEyeDir);
+        float diffuse = saturate(dot(normal, normLightDir));
+        float specular = dot(normal, normLightDir) > 0 ?
+           saturate(dot(normal, normHalfAngle)) : 0;
+        float specular_pow = pow(specular, shininess);
+        color = color + attenuation[lightIndex] * (LMd[lightIndex] * diffuse * diffuseTex +
+                               LMs[lightIndex] * specularTex * specular_pow);
+    }
+
+    color.a = diffuseTex.a;
+    oColor = saturate(color);
+}
+
+void LayeredAvatarFPSolid(v2f_multi IN,
+          out float4 oColor : COLOR,
+          uniform float4 SurfaceColor)
+{
+    oColor = SurfaceColor;
+}
+
+void LayeredAvatarFP20_Depth(v2f_basic IN,
+          out float4 oColor : COLOR)
+{
+    oColor.r = (float)(int)(IN.texCoord.x * 256) / 256;
+    oColor.g = (float)((int)(IN.texCoord.x * 256 * 256) % 256) / 256.0;
+    oColor.b = 0.0f;
+    oColor.a = 1.0f;
+}

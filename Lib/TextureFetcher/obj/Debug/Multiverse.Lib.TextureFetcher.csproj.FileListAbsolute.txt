@@ -1,0 +1,16 @@
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\TextureFetcher.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\TextureFetcher.pdb
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\Axiom.Engine.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\log4net.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\LogUtil.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\Tao.DevIl.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\Axiom.MathLib.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\Axiom.Engine.pdb
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\LogUtil.pdb
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\Tao.DevIl.dll.config
+D:\Multiverse\src-v1\Lib\TextureFetcher\bin\Debug\Axiom.MathLib.pdb
+D:\Multiverse\src-v1\Lib\TextureFetcher\obj\Debug\Multiverse.Lib.TextureFetcher.csprojResolveAssemblyReference.cache
+D:\Multiverse\src-v1\Lib\TextureFetcher\obj\Debug\TextureFetcher.dll
+D:\Multiverse\src-v1\Lib\TextureFetcher\obj\Debug\TextureFetcher.pdb
+D:\Multiverse\src-v1\Lib\TextureFetcher\obj\Debug\Multiverse.Lib.TextureFetcher.csproj.CoreCompileInputs.cache

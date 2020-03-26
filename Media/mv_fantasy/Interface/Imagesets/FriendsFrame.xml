@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<Imageset Name="FriendsFrame" Imagefile="FriendsFrame.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="FriendsFrameScrollIcon" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="GuildFrame-BotLeft" XPos="64" YPos="0" Width="256" Height="256" />
+    <Image Name="GuildFrame-BotRight" XPos="320" YPos="0" Width="128" Height="256" />
+    <Image Name="IgnoreFrame-BotLeft" XPos="448" YPos="0" Width="256" Height="256" />
+    <Image Name="IgnoreFrame-BotRight" XPos="704" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-FriendsFrame-BotLeft" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-FriendsFrame-BotRight" XPos="256" YPos="256" Width="128" Height="256" />
+    <Image Name="UI-FriendsFrame-ButtonsPatch" XPos="384" YPos="256" Width="256" Height="64" />
+    <Image Name="UI-FriendsFrame-HighlightBar" XPos="640" YPos="256" Width="256" Height="32" />
+    <Image Name="UI-FriendsFrame-TopLeft" XPos="0" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-FriendsFrame-TopRight" XPos="256" YPos="512" Width="128" Height="256" />
+    <Image Name="UI-FriendsFrameTab-InactiveTab" XPos="384" YPos="512" Width="64" Height="64" />
+    <Image Name="UI-FriendsFrameTab" XPos="448" YPos="512" Width="64" Height="64" />
+    <Image Name="UI-IgnoreFrame-BotLeft" XPos="512" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-IgnoreFrame-BotRight" XPos="768" YPos="512" Width="128" Height="256" />
+    <Image Name="WhoFrame-BotLeft" XPos="0" YPos="768" Width="256" Height="256" />
+    <Image Name="WhoFrame-BotRight" XPos="256" YPos="768" Width="128" Height="256" />
+    <Image Name="WhoFrame-ColumnTabs" XPos="384" YPos="768" Width="64" Height="32" />
+</Imageset>

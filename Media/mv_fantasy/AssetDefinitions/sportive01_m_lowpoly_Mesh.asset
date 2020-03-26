@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>sportive01_m_lowpoly_Mesh</Name>
+  <Description>sportive01_m_lowpoly</Description>
+  <Type>Mesh</Type>
+  <Category>Rocketbox - Sportive</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\sportive01_m_lowpoly.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\sportive01_m_lowpoly_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\rocketbox_m_lowpoly.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

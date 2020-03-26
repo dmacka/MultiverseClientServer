@@ -1,0 +1,41 @@
+smoke
+{
+    	material        	smoke
+    	particle_width  	550
+    	particle_height 	550
+    	cull_each       	true
+    	quota           	500
+    	billboard_type  	point
+    
+    	// Area emitter
+    	emitter Point
+    	{
+		angle               		7
+        	emission_rate       		4
+        	time_to_live        		15
+        	direction           		0 1 0
+        	velocity_min        		700
+        	velocity_max        		1100
+		colour_range_start		0.8 0.8 0.8 0.35
+		colour_range_end		0.8 0.8 0.8 0.35
+	}
+
+	affector ColourFader
+	{
+		alpha -0.0235
+	}
+
+   	affector Rotator
+   	{
+        	rotation_range_start  		0
+        	rotation_range_end   	 	360
+        	rotation_speed_range_start  	-30
+        	rotation_speed_range_end    	100
+   	}
+
+   	affector Scaler
+   	{
+	       	rate 	150
+   	}
+
+}

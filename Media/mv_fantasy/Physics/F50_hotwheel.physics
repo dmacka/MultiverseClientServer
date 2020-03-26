@@ -1,0 +1,13 @@
+<physics_model>
+  <rigid_body sid="lp_body-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>0.0 0.739047 0.0604081</translate>
+        <capsule>
+          <height>0.0</height>
+          <radius>0.616 0.616</radius>
+        </capsule>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

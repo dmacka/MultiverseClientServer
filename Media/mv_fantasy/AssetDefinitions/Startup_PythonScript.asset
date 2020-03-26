@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>Startup_PythonScript</Name>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts\ClientInit.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Scripts\Startup.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

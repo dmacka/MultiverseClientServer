@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Imageset Name="MailFrame" Imagefile="MailFrame.tga" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+    <Image Name="Mail-Icon" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="MailItemBorder" XPos="64" YPos="0" Width="256" Height="64" />
+    <Image Name="MailPopup-Divider" XPos="320" YPos="0" Width="256" Height="32" />
+    <Image Name="MailPopup-Top" XPos="576" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-OpenMail-BotLeft" XPos="0" YPos="256" Width="256" Height="256" />
+</Imageset>

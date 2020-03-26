@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>crocodile_Material</Name>
+  <Description>crocodile</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\crocodile.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\crocodile_body_diffuse.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>   
+    <AssetFile>
+      <TargetFile>Textures\crocodile_body_specular.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\crocodile_body_normals.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

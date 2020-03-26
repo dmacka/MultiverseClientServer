@@ -1,0 +1,46 @@
+material hall.hall_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture hall.dds
+                tex_coord_set 0
+                alpha_rejection greater 225
+
+            }
+        }
+    }
+}
+material hall.windows_hall_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture hall.dds
+                tex_coord_set 0
+                alpha_rejection greater 225
+
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Imageset Name="OptionsFrame" Imagefile="OptionsFrame.tga" NativeHorzRes="512" NativeVertRes="64" AutoScaled="false">
+    <Image Name="21stepgrayscale" XPos="0" YPos="0" Width="256" Height="32" />
+    <Image Name="NvidiaLogo" XPos="256" YPos="0" Width="128" Height="64" />
+</Imageset>

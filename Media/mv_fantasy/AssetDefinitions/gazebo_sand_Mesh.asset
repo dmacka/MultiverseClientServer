@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>gazebo_sand_Mesh</Name>
+  <Description>gazebo_sand</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\gazebo_sand.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\gazebo_sand_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\gazebo_sand.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>grass1_PlantType</Name>
+  <Description>Colorized Grass 1</Description>
+  <Type>Plant Type</Type>
+  <Properties>
+    <Property name="AssetName" value="grass1" />
+  </Properties>
+  <Files>
+    <AssetFile>
+      <TargetFile>Textures\DetailVeg.imageset</TargetFile>
+      <FileType>ImageSet</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\DetailVeg_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>barrel_Material</Name>
+  <Description>barrel</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\barrel.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+	
+    <AssetFile>
+      <TargetFile>Textures\barrel.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

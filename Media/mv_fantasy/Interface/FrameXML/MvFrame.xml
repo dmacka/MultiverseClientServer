@@ -1,0 +1,75 @@
+<Ui>
+
+  <Frame name="MvBasicFrame" virtual="true">
+    <Layers>
+      <Layer level="BACKGROUND">
+        
+        <Texture file="Interface\MvChat\Mv-ChatFrame-TopLeft">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors><Anchor point="TOPLEFT">     <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor></Anchors>
+        </Texture>
+        
+        <Texture file="Interface\MvChat\Mv-ChatFrame-TopRight">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors><Anchor point="TOPRIGHT">    <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor></Anchors>
+        </Texture>
+        
+        <Texture file="Interface\MvChat\Mv-ChatFrame-BotLeft">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors><Anchor point="BOTTOMLEFT">  <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor></Anchors>
+        </Texture>
+        
+        <Texture file="Interface\MvChat\Mv-ChatFrame-BotRight">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors><Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor></Anchors>
+        </Texture>
+        
+        <Texture file="Interface\MvChat\Mv-ChatFrame-TopBorder">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors>
+            <Anchor point="TOPLEFT">  <Offset><AbsDimension x="10"  y="0"/></Offset> </Anchor>
+            <Anchor point="TOPRIGHT"> <Offset><AbsDimension x="-10" y="0"/></Offset> </Anchor>
+          </Anchors>
+        </Texture>
+        
+        <Texture file="Interface\MvChat\Mv-ChatFrame-BotBorder">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors>
+            <Anchor point="BOTTOMLEFT">  <Offset><AbsDimension x="10"  y="0"/></Offset> </Anchor>
+            <Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="-10" y="0"/></Offset> </Anchor>
+          </Anchors>
+        </Texture>
+        
+        <Texture file="Interface\MvChat\Mv-ChatFrame-LeftBorder">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors>
+            <Anchor point="TOPLEFT">    <Offset><AbsDimension x="0" y="-10"/></Offset> </Anchor>
+            <Anchor point="BOTTOMLEFT"> <Offset><AbsDimension x="0" y="10"/></Offset>  </Anchor>
+          </Anchors>
+        </Texture>
+
+        <Texture file="Interface\MvChat\Mv-ChatFrame-RightBorder">
+          <Size><AbsDimension x="10" y="10"/></Size>
+          <Anchors>
+            <Anchor point="TOPRIGHT">    <Offset><AbsDimension x="0" y="-10"/></Offset> </Anchor>
+            <Anchor point="BOTTOMRIGHT"> <Offset><AbsDimension x="0" y="10"/></Offset>  </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+    </Layers>
+  </Frame>
+
+    <Button name="CloseButton" virtual="true">
+	<Size>
+	    <AbsDimension x="32" y="32"/>
+	</Size>
+	<Scripts language="python">
+	    <OnClick>
+    HideUIPanel(this.GetParent())
+	    </OnClick>
+	</Scripts>
+	<NormalTexture file="Interface\MvButtons\Mv-CloseButton-Up"/>
+	<PushedTexture file="Interface\MvButtons\Mv-CloseButton-Down"/>
+    </Button>
+
+</Ui>

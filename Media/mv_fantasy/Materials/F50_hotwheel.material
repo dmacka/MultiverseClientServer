@@ -1,0 +1,74 @@
+material F50_hotwheel.f50_Mat
+{
+    technique
+    {
+        pass
+        {
+            fog_override false
+
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		param_named_auto FogSettings fog_params
+		param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		param_named_auto LightAttenuation[0] light_attenuation 0
+		param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+		tex_coord_set 0
+	        texture F50_texture_01_normals.tga
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+		tex_coord_set 1
+	        texture F50_texture_01_specular.tga
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+		tex_coord_set 2
+	        texture F50_texture_01_diffuse.tga
+	    }
+        }
+    }
+    // fallback method for machines without the ps_2_0 support
+    technique
+    {
+        pass
+        {
+            cull_hardware none
+            cull_software none
+
+            // base colours, not needed for rendering, but as information
+            // to lighting pass categorisation routine
+            ambient 1 1 1
+            diffuse 0 0 0
+            specular 0 0 0 0
+
+            texture_unit
+            {
+                texture F50_texture_01_diffuse.tga
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<Imageset Name="TaxiFrame" Imagefile="TaxiFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-Taxi-Icon-Gray" XPos="0" YPos="0" Width="16" Height="16" />
+    <Image Name="UI-Taxi-Icon-Green" XPos="16" YPos="0" Width="16" Height="16" />
+    <Image Name="UI-Taxi-Icon-Yellow" XPos="32" YPos="0" Width="16" Height="16" />
+    <Image Name="UI-TaxiFrame-BotLeft" XPos="48" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-TaxiFrame-BotRight" XPos="304" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-TaxiFrame-TopLeft" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-TaxiFrame-TopRight" XPos="256" YPos="256" Width="128" Height="256" />
+</Imageset>

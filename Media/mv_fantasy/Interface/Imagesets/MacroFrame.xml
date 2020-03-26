@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Imageset Name="MacroFrame" Imagefile="MacroFrame.tga" NativeHorzRes="1024" NativeVertRes="256" AutoScaled="false">
+    <Image Name="MacroFrame-BotLeft" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="MacroFrame-BotRight" XPos="256" YPos="0" Width="128" Height="256" />
+    <Image Name="MacroPopup-BotLeft" XPos="384" YPos="0" Width="256" Height="64" />
+    <Image Name="MacroPopup-BotRight" XPos="640" YPos="0" Width="64" Height="64" />
+    <Image Name="MacroPopup-TopLeft" XPos="704" YPos="0" Width="256" Height="256" />
+    <Image Name="MacroPopup-TopRight" XPos="960" YPos="0" Width="64" Height="256" />
+</Imageset>

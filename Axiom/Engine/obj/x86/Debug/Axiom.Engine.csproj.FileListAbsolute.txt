@@ -1,0 +1,17 @@
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\Axiom.Engine.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\Axiom.Engine.pdb
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\Axiom.MathLib.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\ICSharpCode.SharpZipLib.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\log4net.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\LogUtil.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\System.Data.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\System.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\System.Drawing.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\System.Xml.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\Tao.DevIl.dll
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\LogUtil.pdb
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\Axiom.MathLib.pdb
+D:\Multiverse\src-v1\Axiom\Engine\bin\x86\Debug\Tao.DevIl.dll.config
+D:\Multiverse\src-v1\Axiom\Engine\obj\x86\Debug\Axiom.Engine.csprojResolveAssemblyReference.cache
+D:\Multiverse\src-v1\Axiom\Engine\obj\x86\Debug\Axiom.Engine.dll
+D:\Multiverse\src-v1\Axiom\Engine\obj\x86\Debug\Axiom.Engine.pdb

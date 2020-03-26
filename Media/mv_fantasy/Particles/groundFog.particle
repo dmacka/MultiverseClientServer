@@ -1,0 +1,47 @@
+// Exudes aureola particles which around the model float upwards
+groundFog
+{
+    material        smoke
+    particle_width  5000
+    particle_height 5000
+    cull_each       false
+    quota           10000
+//    billboard_type  point
+    billboard_type  perpendicular_common
+    common_direction 0 1 0
+    common_up_vector 0 0 1
+//    local_space true
+
+    // Area emitter
+    emitter Box
+    {
+        angle           180
+        emission_rate   0
+	emission_remainder 150
+        time_to_live    10000
+        position        0 250 0
+        direction       0 1 0
+        velocity  	0
+        colour          0.7 0.7 1 0
+	width		12000
+	height		20000
+	depth		300
+    }
+
+    // Rotater
+    affector Rotator
+    {
+        rotation_range_start 0
+        rotation_range_end 360
+        rotation_speed_range_start -30
+        rotation_speed_range_end 30
+    }
+
+    affector ColourInterpolator
+    {
+        colour0 0.7 0.7 1 0
+        time0 0
+        colour1 0.7 0.7 1 0.3
+        time1 0.0005
+    }
+}

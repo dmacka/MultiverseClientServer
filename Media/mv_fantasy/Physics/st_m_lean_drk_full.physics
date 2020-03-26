@@ -1,0 +1,23 @@
+<physics_model>
+  <rigid_body sid="stb_m_lean_drk-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0 0.342156 0.06320752</translate>
+        <box>
+          <half_extents>0.372172 0.394297 0.3763185</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="st_m_lean_drk-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 0 0.9999999 9.535869</rotate>
+        <translate>-0.079166 1.558358 0.099553</translate>
+        <box>
+          <half_extents>0.2755065 0.8832691 0.233185</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

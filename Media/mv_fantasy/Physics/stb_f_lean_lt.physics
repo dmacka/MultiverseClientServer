@@ -1,0 +1,12 @@
+<physics_model>
+  <rigid_body sid="stb_f_lean_lt-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0 0.2352716 0.05820349</translate>
+        <box>
+          <half_extents>0.373163 0.2582114 0.3731625</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

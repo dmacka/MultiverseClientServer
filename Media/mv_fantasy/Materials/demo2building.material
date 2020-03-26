@@ -1,0 +1,1065 @@
+material demo2building.wood_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+		tex_coord_set 0
+	        texture D2Wbuilding_pews_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+		tex_coord_set 1
+	        texture D2Wbuilding_pews_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_pews.dds
+	    }
+        }
+    }
+}
+
+
+material demo2building.collision_voulume_default
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.83922 0.00784 0.00784 0.00000
+            diffuse  0.83922 0.00784 0.00784 0.00000
+            specular 0.00784 0.00784 0.00784 0.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 0.00000
+
+        }
+    }
+}
+material demo2building.brass_rail_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_brass_rail_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_brass_rail_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_brass_rail.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.stairs_exterior_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_outside_stairs_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_outside_stairs_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_outside_stairs.dds
+	    }
+        }
+    }
+    
+}
+
+material demo2building.divider_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_dividers_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_dividers_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_dividers.dds
+	    }
+        }
+    }
+    
+}
+
+material demo2building.alcove_walls_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_walls_interior_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_walls_interior_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_walls_interior.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.alcove_trim_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_dividers_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_dividers_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_dividers.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.entrance_wall_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor_waterdrop_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor_waterdrop_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_waterdrop.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.entrance_waterdrop_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor_waterdrop_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor_waterdrop_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_waterdrop.dds
+	    }
+        }
+    }
+  
+}
+
+material demo2building.entrance_brass_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_brass_rail_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_brass_rail_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_brass_rail.dds
+	    }
+        }
+    }
+  
+}
+
+material demo2building.waterdrop_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor_waterdrop_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor_waterdrop_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_waterdrop.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.floor_carpet_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_carpet_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_carpet_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_carpet.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.floor_carpet_mat2
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_carpet_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_carpet_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_carpet.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.interior_walls_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_walls_interior_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_walls_interior_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_walls_interior.dds
+	    }
+        }
+    }
+  
+}
+
+material demo2building.interior_walls_mat2
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_walls_interior_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_walls_interior_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_walls_interior.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.exterior_wall_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_wall_exterior_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_wall_exterior_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_wall_exterior.dds
+	    }
+        }
+    }
+  
+}
+
+material demo2building.exterior_wall_trim_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_wall_trim_exterior_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_wall_trim_exterior_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_wall_trim_exterior.dds
+	    }
+        }
+    }
+   
+}
+
+material demo2building.floor_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor1_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor1_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor1.dds
+	    }
+        }
+    }
+
+}
+
+material demo2building.floor_trim_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor1_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor1_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_trim.dds
+	    }
+        }
+    }
+ 
+}
+
+material demo2building.floor_accent_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor1_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor1_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_accent.dds
+	    }
+        }
+    }
+ 
+}
+
+material demo2building.floor_dance_mat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor_dance_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor_dance_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_dance.dds
+	    }
+        }
+    }
+
+}
+
+material demo2building.tile_work
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_fountain_tile_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_fountain_tile_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_fountain_tile.dds
+	    }
+        }
+    }
+ 
+}
+
+material demo2building.tile_accent
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_fountain_tile_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_fountain_tile_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_fountain_tile_accent.dds
+	    }
+        }
+    }
+
+}
+
+material demo2building.wood_seat
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_pews_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_pews_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_pews.dds
+	    }
+        }
+    }
+ 
+}
+
+material demo2building.bar_floor
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor_bar_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor_bar_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_bar.dds
+	    }
+        }
+    }
+ 
+}
+
+material demo2building.bar_step
+{
+    technique
+    {
+        pass
+        {
+            
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture D2Wbuilding_floor1_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture D2Wbuilding_floor1_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture D2Wbuilding_floor_accent.dds
+	    }
+        }
+    }
+ 
+}
+

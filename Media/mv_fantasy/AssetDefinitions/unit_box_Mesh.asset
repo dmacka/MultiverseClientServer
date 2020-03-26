@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>unit_box_Mesh</Name>
+  <Description>unit_box</Description>
+  <Type>Mesh</Type>
+  <Category>Test Shapes</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\unit_box.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\unit_box_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

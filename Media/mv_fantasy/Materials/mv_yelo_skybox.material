@@ -1,0 +1,19 @@
+material Multiverse/mv_yelo_skyBox
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			
+			fog_override true
+
+			texture_unit
+			{
+				cubic_texture mv_yelo_north.dds mv_yelo_south.dds mv_yelo_west.dds mv_yelo_east.dds mv_yelo_top.dds mv_yelo_top.dds separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}

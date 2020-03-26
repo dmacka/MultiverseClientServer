@@ -1,0 +1,74 @@
+// Healing spell particle effect
+heal-spell
+{
+    material        heartparticle
+    particle_width  200
+    particle_height 200
+    cull_each       false
+    quota           300
+    billboard_type  point
+    local_space     true
+    
+    // Area emitter
+    emitter Ring
+    {
+        angle           0
+        emission_rate   10
+        time_to_live    1.5
+        direction       0 1 0
+        velocity_min    1000
+        velocity_max    2000
+        width           2000
+        height          2000
+        depth           200
+        inner_width     0.9
+        inner_height    0.9
+        duration 2
+    }
+
+    // Fader
+    affector ColourFader
+    {
+        red -0.25
+        green -0.25
+        blue -0.25
+    }
+}
+
+// A sparkly fountain
+heal-spell-fountain
+{
+    material        flare2
+    particle_width  500
+    particle_height 500
+    cull_each       false
+    quota           300
+    billboard_type  oriented_self
+    local_space     true
+
+    emitter Ring
+    {
+        angle           0
+        emission_rate   10
+        time_to_live    1
+        direction       0 1 0
+        velocity_min    1500
+        velocity_max    3000
+        width           2000
+        height          2000
+        depth           200
+        inner_width     0.9
+        inner_height    0.9
+        colour_range_start  1 0 0
+        colour_range_end    1 0.7 0
+        duration 2
+    }    
+
+    // Fader
+    affector ColourFader
+    {
+        red -0.25
+        green -0.25
+        blue -0.25
+    }
+}

@@ -1,0 +1,20 @@
+material Terrain/WaterPlane
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.3 0.3 0.3
+			// temporarily make this opaque for the demo
+			// scene_blend modulate
+			cull_hardware none
+			cull_software none
+
+			texture_unit
+			{
+				texture Water02.dds
+				scroll_anim 0.01 0.01
+			}
+		}
+	}
+}

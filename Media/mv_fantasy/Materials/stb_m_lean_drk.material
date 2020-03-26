@@ -1,0 +1,7 @@
+material stb_m_lean_drk.lambert1 : MVSimpleLighting
+{
+}
+material stb_m_lean_drk.marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex female_marble_blue_grey.dds
+}

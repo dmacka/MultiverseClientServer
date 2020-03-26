@@ -1,0 +1,223 @@
+<Ui>
+
+    <Script file="MvSocialBar.py"/>
+
+    <Button name="ActionBarButton" inherits="ActionButton" virtual="true">
+	<Scripts language="python">
+	    <OnClick>
+    ActionBarButton_OnClick(this, args)
+	    </OnClick>
+	    <OnEnter>
+    ActionBarButton_OnEnter(this)
+	    </OnEnter>
+	    <OnLeave>
+    ActionBarButton_OnLeave(this)
+	    </OnLeave>
+	</Scripts>
+    </Button>
+
+    <Frame name="ActionBar" inherits="MvBasicFrame" frameStrata="HIGH" toplevel="true" movable="true" enableMouse="true" hidden="true" virtual="true">
+	<Size>
+	    <AbsDimension x="500" y="47"/>
+	</Size>
+	<Layers>
+	    <Layer level="ARTWORK">
+        	<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior">
+		    <Anchors>
+			<Anchor point="TOPLEFT" relativeTo="$parent">
+			    <Offset>
+				<AbsDimension x="5" y="-5"/>
+			    </Offset>
+			</Anchor>
+			<Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+			    <Offset>
+				<AbsDimension x="-5" y="5"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</Texture>
+	    </Layer>
+	</Layers>
+	<Frames>
+	    <Button name="$parentItem1" inherits="ActionBarButton" id="1">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT">
+			<Offset>
+			    <AbsDimension x="6" y="6"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ToggleMinimap()
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem2" inherits="ActionBarButton" id="2">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem1" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Log("In ActionBarButton2 OnClick")
+    ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/dance")
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem3" inherits="ActionBarButton" id="3">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem2" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Log("In ActionBarButton3 OnClick")
+    ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation wave")
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem4" inherits="ActionBarButton" id="4">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem3" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Log("In ActionBarButton4 OnClick")
+    ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation laugh")
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem5" inherits="ActionBarButton" id="5">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem4" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Log("In ActionBarButton5 OnClick")
+    ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation claphands")
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem6" inherits="ActionBarButton" id="6">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem5" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Log("In ActionBarButton6 OnClick")
+    ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation cheer")
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem7" inherits="ActionBarButton" id="7">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem6" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Log("In ActionBarButton7 OnClick")
+    ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation cry")
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem8" inherits="ActionBarButton" id="8">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem7" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Log("In ActionBarButton8 OnClick")
+    ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation fight")
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem9" inherits="ActionBarButton" id="9">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem8" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem10" inherits="ActionBarButton" id="10">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem9" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentItem11" inherits="ActionBarButton" id="11">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem10" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    SocialHelp.Show()
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	    <Button name="$parentItem12" inherits="ActionBarButton" id="12">
+		<Anchors>
+		    <Anchor point="BOTTOMLEFT" relativeTo="$parentItem11" relativePoint="BOTTOMRIGHT">
+			<Offset>
+			    <AbsDimension x="5" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+		<Scripts language="python">
+		    <OnClick>
+    ClientAPI.Exit()
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	</Frames>
+	<Scripts language="python">
+	    <OnLoad>
+    ActionBar_OnLoad(this)
+	    </OnLoad>
+	    <OnShow>
+    ActionBar_OnShow(this)
+	    </OnShow>
+	    <OnEvent>
+    ActionBar_OnEvent(this, args)
+	    </OnEvent>
+	</Scripts>
+    </Frame>
+
+    <Frame name="MyActionBar" inherits="ActionBar" parent="UIParent" id="100" hidden="true"/>
+
+</Ui>

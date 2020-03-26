@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>creation_gazebo_Material</Name>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\creation_gazebo.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\BlankTexture512x512_specular.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\BlankTexture512x512_normals.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\creation_gazebo.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\DiffuseBump.cg</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\Multiverse.program</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>dagger_Mesh</Name>
+  <Description>Dagger</Description>
+  <Type>Mesh</Type>
+  <Category>Weapons</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\dagger.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\dagger_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

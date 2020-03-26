@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset Name="PaperDollInfoFrame" Imagefile="PaperDollInfoFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-Character-CharacterTab-BottomLeft" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-Character-CharacterTab-BottomRight" XPos="256" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-Character-CharacterTab-L1" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-Character-CharacterTab-R1" XPos="256" YPos="256" Width="128" Height="256" />
+</Imageset>

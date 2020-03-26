@@ -1,0 +1,16 @@
+material unit_cylinder.ColorMaterial_5774002
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.00000 1.00000 0.00000 1.00000
+            diffuse  0.00000 1.00000 0.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+        }
+    }
+}

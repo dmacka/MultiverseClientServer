@@ -1,0 +1,36 @@
+// teleporter particle effect
+teleporter
+{
+    material        flare2
+    particle_width  750
+    particle_height 750
+    cull_each       false
+    quota           300
+    billboard_type  oriented_self
+    local_space     true
+
+    emitter Ring
+    {
+        angle           0
+        emission_rate   30
+        time_to_live    2.5
+        direction       0 1 0
+        velocity_min    1000
+        velocity_max    2000
+        width           8000
+        height          8000
+        depth           200
+        inner_width     0.01
+        inner_height    0.01
+        colour_range_start  0 0 1
+        colour_range_end    0 0.7 1
+    }    
+
+    // Fader
+    affector ColourFader
+    {
+        red -0.25
+        green -0.25
+        blue -0.25
+    }
+}

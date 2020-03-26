@@ -1,0 +1,574 @@
+﻿<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ui="http://www.multiverse.net/ui" targetNamespace="http://www.multiverse.net/ui"> <!-- schema -->
+
+  <!-- Simple Types -->
+
+  <xs:simpleType name="alphaModeType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="BLEND"/>
+      <xs:enumeration value="ADD" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="drawLayerType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="BACKGROUND"/>
+      <xs:enumeration value="ARTWORK"/>
+      <xs:enumeration value="BORDER"/>
+      <xs:enumeration value="OVERLAY"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="frameStratType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="TOOLTIP"/>
+      <xs:enumeration value="FULLSCREEN_DIALOG"/>
+      <xs:enumeration value="FULLSCREEN"/>
+      <xs:enumeration value="DIALOG"/>
+      <xs:enumeration value="HIGH"/>
+      <xs:enumeration value="MEDIUM"/>
+      <xs:enumeration value="LOW"/>
+      <xs:enumeration value="BACKGROUND"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="languageType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="python"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="levelType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="BACKGROUND"/>
+      <xs:enumeration value="ARTWORK"/>
+      <xs:enumeration value="BORDER"/>
+      <xs:enumeration value="OVERLAY"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="hJustifyType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="LEFT"/>
+      <xs:enumeration value="CENTER"/>
+      <xs:enumeration value="RIGHT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="orientationType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="VERTICAL"/>
+      <xs:enumeration value="HORIZONTAL"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PointType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="TOPLEFT"/>
+      <xs:enumeration value="TOPRIGHT"/>
+      <xs:enumeration value="BOTTOMLEFT"/>
+      <xs:enumeration value="BOTTOMRIGHT"/>
+      <xs:enumeration value="TOP"/>
+      <xs:enumeration value="BOTTOM"/>
+      <xs:enumeration value="LEFT"/>
+      <xs:enumeration value="RIGHT"/>
+      <xs:enumeration value="CENTER"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="vJustifyType">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="TOP"/>
+      <xs:enumeration value="MIDDLE"/>
+      <xs:enumeration value="BOTTOM"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- End Simple Types -->
+
+  <!-- Complex Types -->
+
+
+  <xs:complexType name="AbsDimension">
+    <xs:attribute name="x" type="xs:float"/>
+    <xs:attribute name="y" type="xs:float"/>
+  </xs:complexType>
+
+  <xs:complexType name="AbsInset">
+    <xs:attribute name="left" type="xs:int"/>
+    <xs:attribute name="right" type="xs:int"/>
+    <xs:attribute name="top" type="xs:int"/>
+    <xs:attribute name="bottom" type="xs:int"/>
+  </xs:complexType>
+
+  <xs:complexType name="AbsValue">
+    <xs:attribute name="val" type="xs:int"/>
+  </xs:complexType>
+
+  <xs:complexType name="Anchor">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="Offset" type="ui:Offset"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="point" type="ui:PointType"/>
+    <xs:attribute name="relativeTo" type="xs:string" default="$parent"/>
+    <xs:attribute name="relativePoint" type="ui:PointType"/>
+  </xs:complexType>
+
+  <xs:complexType name="Anchors">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="Anchor" type="ui:Anchor"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Backdrop">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="BackgroundInsets" type="ui:BackgroundInsets"/>
+        <xs:element name="TileSize" type="ui:TileSize"/>
+        <xs:element name="EdgeSize" type="ui:EdgeSize"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="bgFile" type="xs:string"/>
+    <xs:attribute name="edgeFile" type="xs:string"/>
+    <xs:attribute name="tile" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="BackgroundInsets">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="AbsInset" type="ui:AbsInset"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Browser">
+    <xs:complexContent>
+      <xs:extension base="ui:FrameType">
+        <xs:attribute name="url" type="xs:string"/>
+        <xs:attribute name="scrollbars" type="xs:boolean"/>
+        <xs:attribute name="line" type="xs:unsignedInt"/>
+        <xs:attribute name="errors" type="xs:boolean"/>
+        <xs:attribute name="capture" type="xs:string"/>
+        <xs:attribute name="border" type="xs:unsignedInt"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ButtonType">
+    <xs:complexContent>
+      <xs:extension base="ui:FrameType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:choice>
+            <xs:element name="DisabledText" type="ui:FontStringType"/>
+            <xs:element name="DisabledTexture" type="ui:TextureType"/>
+            <xs:element name="DisabledColor" type="ui:Color" />
+            <xs:element name="HighlightTexture" type="ui:TextureType"/>
+            <xs:element name="HighlightText" type="ui:FontStringType"/>
+            <xs:element name="HighlightColor" type="ui:Color" />
+            <xs:element name="NormalText" type="ui:FontStringType"/>
+            <xs:element name="NormalTexture" type="ui:TextureType"/>
+            <xs:element name="NormalColor" type="ui:Color" />
+            <xs:element name="PushedText" type="ui:FontStringType"/>
+            <xs:element name="PushedTextOffset" type="ui:Offset"/>
+            <xs:element name="PushedTexture" type="ui:TextureType"/>
+            <xs:element name="PushedColor" type="ui:Color" />
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="text" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CheckedButton">
+    <xs:complexContent>
+      <xs:extension base="ui:ButtonType">
+        <xs:sequence maxOccurs="unbounded" minOccurs="0">
+          <xs:choice>
+            <xs:element name="CheckedTexture" type="ui:TextureType"/>
+            <xs:element name="DisabledCheckedTexture" type="ui:TextureType"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="Checked" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="Color">
+    <xs:attribute name="r" type="xs:float"/>
+    <xs:attribute name="b" type="xs:float"/>
+    <xs:attribute name="g" type="xs:float"/>
+    <xs:attribute name="a" type="xs:float" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="EdgeSize">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="AbsValue" type="ui:AbsValue"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EditBox">
+    <xs:complexContent>
+      <xs:extension base="ui:FrameType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:choice>
+            <xs:element name="FontString" type="ui:FontStringType"/>
+            <xs:element name="HighlightColor" type="ui:Color"/>
+            <xs:element name="TextInsets" type="ui:TextInsets"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="password" type="xs:boolean"/>
+        <xs:attribute name="historyLines" type="xs:unsignedInt"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="FontHeight">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="AbsValue" type="ui:AbsValue"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="FontStringType">
+    <xs:complexContent>
+      <xs:extension base="ui:LayeredRegionType">
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element name="Color" type="ui:Color"/>
+          <xs:element name="FontHeight" type="ui:FontHeight"/>
+          <xs:element name="Shadow" type="ui:Shadow"/>
+        </xs:choice>
+        <xs:attribute name="name" type="xs:string" />
+        <xs:attribute name="font" type="xs:string"/>
+        <xs:attribute name="justifyV" type="ui:vJustifyType"/>
+        <xs:attribute name="justifyH" type="ui:hJustifyType"/>
+        <xs:attribute name="monochrome" type="xs:boolean"/>
+        <xs:attribute name="nonspacewrap" type="xs:boolean"/>
+        <xs:attribute name="text" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="Frames">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="Script" type="ui:ScriptType"/>
+        <xs:element name="Frame" type="ui:FrameType"/>
+        <xs:element name="Slider" type="ui:Slider"/>
+        <xs:element name="StatusBar" type="ui:StatusBar"/>
+        <xs:element name="Browser" type="ui:Browser"/>
+        <xs:element name="Button" type="ui:ButtonType"/>
+        <xs:element name="EditBox" type="ui:EditBox"/>
+        <xs:element name="ScrollFrame" type="ui:ScrollFrame"/>
+        <xs:element name="ScrollingMessageFrame" type="ui:ScrollingMessageFrame"/>
+        <xs:element name="FontString" type="ui:FontStringType"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FrameType">
+    <xs:complexContent>
+      <xs:extension base="ui:Region">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:choice>
+            <xs:element name="Frames" type="ui:Frames"/>
+            <xs:element name="Backdrop" type="ui:Backdrop"/>
+            <xs:element name="Layers" type="ui:Layers"/>
+            <xs:element name="Scripts" type="ui:Scripts"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="alpha" type="xs:float"/>
+        <xs:attribute name="enableKeyboard" type="xs:boolean"/>
+        <xs:attribute name="enableMouse" type="xs:boolean"/>
+        <xs:attribute name="frameLevel" type="ui:levelType"/>
+        <xs:attribute name="frameStrata" type="ui:frameStratType"/>
+        <xs:attribute name="id" type="xs:int"/>
+        <xs:attribute name="parent" type="xs:string"/>
+        <xs:attribute name="movable" type="xs:boolean"/>
+        <xs:attribute name="resizable" type="xs:boolean"/>
+        <xs:attribute name="toplevel" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="Gradient">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="MinColor" type="ui:Color"/>
+        <xs:element name="MaxColor" type="ui:Color"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="orientation" type="ui:orientationType"/>
+  </xs:complexType>
+
+  <xs:complexType name="HitRectInsets">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="AbsInset" type="ui:AbsInset"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Layer">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="Texture" type="ui:TextureType"/>
+        <xs:element name="Fonstring" type="ui:FontStringType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="level" type="ui:levelType"/>
+  </xs:complexType>
+
+  <xs:complexType name="Layers">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="Layer" type="ui:Layer"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="LayeredRegionType">
+    <xs:complexContent>
+      <xs:extension base="ui:Region"/>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="Offset">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="AbsDimension" type="ui:AbsDimension"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Region">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="Anchors" type="ui:Anchors"/>
+        <xs:element name="Size" type="ui:Size"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="hidden" type="xs:boolean"/>
+    <xs:attribute name="inherits" type="xs:string"/>
+    <xs:attribute name="name" type="xs:string"/>
+    <xs:attribute name="setAllPoints" type="xs:boolean"/>
+    <xs:attribute name="virtual" type="xs:boolean"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="RelDimension">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="AbsDimension" type="ui:AbsDimension"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="ScriptType">
+    <xs:attribute name="file" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="Scripts">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="OnChar" type="xs:string"/>
+        <xs:element name="OnClick" type="xs:string"/>
+        <xs:element name="OnDoubleClick" type="xs:string"/>
+        <xs:element name="OnDragStart" type="xs:string"/>
+        <xs:element name="OnDragStop" type="xs:string"/>
+        <xs:element name="OnEnter" type="xs:string"/>
+        <xs:element name="OnEvent" type="xs:string"/>
+        <xs:element name="OnHide" type="xs:string"/>
+        <xs:element name="OnHorizontalScroll" type="xs:string"/>
+        <xs:element name="OnKeyDown" type="xs:string"/>
+        <xs:element name="OnKeyUp" type="xs:string"/>
+        <xs:element name="OnLeave" type="xs:string"/>
+        <xs:element name="OnLoad" type="xs:string"/>
+        <xs:element name="OnMouseDown" type="xs:string"/>
+        <xs:element name="OnMouseUp" type="xs:string"/>
+        <xs:element name="OnMouseWheel" type="xs:string"/>
+        <xs:element name="OnReceiveDrag" type="xs:string"/>
+        <xs:element name="OnScrollRangeChanged" type="xs:string"/>
+        <xs:element name="OnShow" type="xs:string"/>
+        <xs:element name="OnSizeChanged" type="xs:string"/>
+        <xs:element name="OnUpdate" type="xs:string"/>
+        <xs:element name="OnValueChanged" type="xs:string"/>
+        <xs:element name="OnVerticalScroll" type="xs:string"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="language" type="xs:string" default="python"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="ScrollChild">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="Frame" type="ui:FrameType"/>
+        <xs:element name="Slider" type="ui:Slider"/>
+        <xs:element name="StatusBar" type="ui:StatusBar"/>
+        <xs:element name="Browser" type="ui:Browser"/>
+        <xs:element name="Button" type="ui:ButtonType"/>
+        <xs:element name="EditBox" type="ui:EditBox"/>
+        <xs:element name="ScrollFrame" type="ui:ScrollFrame"/>
+        <xs:element name="ScrollingMessageFrame" type="ui:ScrollingMessageFrame"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ScrollFrame">
+    <xs:complexContent>
+      <xs:extension base="ui:FrameType">
+        <xs:sequence maxOccurs="unbounded" minOccurs="0">
+          <xs:choice>
+            <xs:element name="ScrollChild" type="ui:ScrollChild"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="ScrollingMessageFrame">
+    <xs:complexContent>
+      <xs:extension base="ui:FrameType">
+        <xs:sequence maxOccurs="unbounded" minOccurs="0">
+          <xs:choice>
+            <xs:element name="FontString" type="ui:FontStringType"/>
+            <xs:element name="TextInsets" type="ui:TextInsets"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="maxLines" type="xs:unsignedInt"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Shadow">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="Color" type="ui:Color"/>
+        <xs:element name="Offset" type="ui:Offset"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="Size">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:choice>
+        <xs:element name="AbsDimension" type="ui:AbsDimension"/>
+        <xs:element name="RelDimension" type="ui:RelDimension"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Slider">
+    <xs:complexContent>
+      <xs:extension base="ui:FrameType">
+        <xs:sequence maxOccurs="unbounded" minOccurs="0">
+          <xs:choice>
+            <xs:element name="ThumbTexture" type="xs:string"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="defaultValue" type="xs:float"/>
+        <xs:attribute name="drawLayer" type="ui:drawLayerType"/>
+        <xs:attribute name="maxValue" type="xs:float"/>
+        <xs:attribute name="minValue" type="xs:float"/>
+        <xs:attribute name="orientation" type="ui:orientationType"/>
+        <xs:attribute name="valueStep" type="xs:float"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="StatusBar">
+    <xs:complexContent>
+      <xs:extension base="ui:FrameType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:choice>
+            <xs:element name="BarTexture" type="ui:TextureType"/>
+            <xs:element name="BarColor" type="ui:Color"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="drawLayer" type="ui:drawLayerType"/>
+        <xs:attribute name="minValue" type="xs:float"/>
+        <xs:attribute name="maxValue" type="xs:float"/>
+        <xs:attribute name="defaultValue" type="xs:float"/>
+        <xs:attribute name="orientation" type="ui:orientationType"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TexCoords">
+    <xs:attribute name="left" type="xs:float"/>
+    <xs:attribute name="righ" type="xs:float"/>
+    <xs:attribute name="top" type="xs:float"/>
+    <xs:attribute name="bottom" type="xs:float"/>
+  </xs:complexType>
+
+  <xs:complexType name="TextInsets">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="AbsInset" type="ui:AbsInset"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TextureType">
+    <xs:complexContent>
+      <xs:extension base="ui:LayeredRegionType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+          <xs:choice>
+            <xs:element name="TexCoords" type="ui:TexCoords"/>
+            <xs:element name="Color" type="ui:Color"/>
+            <xs:element name="Gradient" type="ui:Gradient" maxOccurs="unbounded"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="alphaMode" type="ui:alphaModeType"/>
+        <xs:attribute name="file" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TileSize">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="AbsValue" type="ui:AbsValue"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Elements -->
+
+  <xs:element name="Ui">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:choice>
+          <xs:element name="Script" type="ui:ScriptType"/>
+          <xs:element name="Frame" type="ui:FrameType"/>
+          <xs:element name="Slider" type="ui:Slider"/>
+          <xs:element name="StatusBar" type="ui:StatusBar"/>
+          <xs:element name="Browser" type="ui:Browser"/>
+          <xs:element name="Button" type="ui:ButtonType"/>
+          <xs:element name="EditBox" type="ui:EditBox"/>
+          <xs:element name="ScrollFrame" type="ui:ScrollFrame"/>
+          <xs:element name="ScrollingMessageFrame" type="ui:ScrollingMessageFrame"/>
+          <xs:element name="FontString" type="ui:FontStringType"/>
+        </xs:choice>
+      </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+
+  <!-- End Elements -->
+
+</xs:schema>        <!-- End schema -->

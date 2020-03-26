@@ -1,0 +1,21 @@
+material wall_corner.wall
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.10000 0.10000 0.10000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture wall.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

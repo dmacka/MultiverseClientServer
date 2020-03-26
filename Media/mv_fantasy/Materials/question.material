@@ -1,0 +1,5 @@
+material question._1_-_Default : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex Yellow_Icon.dds
+}
+

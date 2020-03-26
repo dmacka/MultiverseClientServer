@@ -1,0 +1,231 @@
+material LayeredAvatar
+{
+    technique Shader20
+    {
+        scheme Default
+        pass Single
+        {
+            // Vertex program reference
+            vertex_program_ref LayeredAvatarVP20
+            {
+            }
+            shadow_caster_vertex_program_ref LayeredAvatarVP_Shadow
+            {
+            }
+            shadow_receiver_vertex_program_ref LayeredAvatarVP_ShadowReceiver
+            {
+            }          
+
+            fragment_program_ref LayeredAvatarFP20
+            {
+            }          
+
+            texture_unit SkinMap
+            {
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            
+            texture_unit TattooMap
+            {
+                texture blank_tattoo.dds
+                tex_address_mode border
+                tex_border_colour 0.0 0.0 0.0 0.0
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            
+            texture_unit ClothesMap
+            {
+                texture blank_clothes.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }   
+                        
+            texture_unit SpecularMap
+            {
+                texture blank_specular.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }
+
+            texture_unit EmissiveMap
+            {
+                texture blank_emissive.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            
+	        texture_unit NormalMap
+            {
+                texture blank_normal.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }            
+
+        }
+    }
+    
+    technique Fixed
+    {
+        scheme Fixed
+        pass Single
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit SkinMap
+            {
+                color_op_ex source1 src_texture src_texture
+                tex_coord_set 0
+            }
+
+            texture_unit TattooMap
+            {
+                color_op alpha_blend
+                alpha_op_ex source1 src_current src_current
+                scroll 0 0
+                tex_coord_set 1
+                tex_address_mode border
+                tex_border_colour 0.0 0.0 0.0 0.0
+            }   
+            
+            texture_unit ClothesMap
+            {
+                color_op alpha_blend
+                alpha_op_ex source1 src_current src_current
+                tex_coord_set 0
+            }
+            
+            texture_unit EmissiveMap
+            {
+                tex_coord_set 0
+                // default is to modulate by light
+                color_op_ex modulate src_current src_diffuse
+                // for emissive, use the following
+                //color_op_ex modulate src_current src_texture
+                alpha_op_ex source1 src_current src_current
+            }
+        }
+    }
+}
+
+material LayeredAvatarHair
+{
+    technique Shader20
+    {
+        scheme Default
+        pass Single
+        {
+            // Vertex program reference
+            vertex_program_ref LayeredAvatarVP20
+            {
+            }
+            shadow_caster_vertex_program_ref LayeredAvatarVP_Shadow
+            {
+            }
+            shadow_receiver_vertex_program_ref LayeredAvatarVP_ShadowReceiver
+            {
+            }          
+
+            fragment_program_ref LayeredAvatarHairFP20
+            {
+            }          
+
+            texture_unit SkinMap
+            {
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            
+            texture_unit TattooMap
+            {
+                texture blank_tattoo.dds
+                tex_address_mode border
+                tex_border_colour 0.0 0.0 0.0 0.0
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            
+            texture_unit ClothesMap
+            {
+                texture blank_clothes.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }   
+                        
+            texture_unit SpecularMap
+            {
+                texture blank_specular.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }
+
+            texture_unit EmissiveMap
+            {
+                texture blank_emissive.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            
+	        texture_unit NormalMap
+            {
+                texture blank_normal.dds
+                filtering anisotropic
+                max_anisotropy 8
+            }            
+
+        }
+    }
+    
+    technique Fixed
+    {
+        scheme Fixed
+        pass Single
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit SkinMap
+            {
+                color_op_ex source1 src_texture src_texture
+                tex_coord_set 0
+            }
+
+            texture_unit TattooMap
+            {
+                color_op alpha_blend
+                alpha_op_ex source1 src_current src_current
+                scroll 0 0
+                tex_coord_set 1
+                tex_address_mode border
+                tex_border_colour 0.0 0.0 0.0 0.0
+            }   
+            
+            texture_unit ClothesMap
+            {
+                color_op alpha_blend
+                alpha_op_ex source1 src_current src_current
+                tex_coord_set 0
+            }
+            
+            texture_unit EmissiveMap
+            {
+                tex_coord_set 0
+                // default is to modulate by light
+                color_op_ex modulate src_current src_diffuse
+                // for emissive, use the following
+                //color_op_ex modulate src_current src_texture
+                alpha_op_ex source1 src_current src_current
+            }
+        }
+    }
+}

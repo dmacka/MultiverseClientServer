@@ -1,0 +1,9 @@
+material colonnade.stonework : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex colonnade.dds
+}
+
+material colonnade.lambert1 : MVSimpleLighting
+{
+}
+

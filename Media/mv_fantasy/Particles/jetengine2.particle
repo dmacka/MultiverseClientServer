@@ -1,0 +1,29 @@
+jetengine2
+{
+	material 		flare
+	particle_width 	150
+	particle_height	150
+	cull_each		false
+	quota			200
+	billboard_type	point
+
+	emitter Point
+	{
+		angle 3
+		emission_rate 100
+	        time_to_live    1
+        	direction       0 -1 0
+	        velocity_min    3500
+        	velocity_max    4000
+	        colour_range_start  0.5 1 1
+        	colour_range_end    0.3 0.8 1
+		
+	}
+	affector ColourFader
+	{
+		red -1
+		green -1
+		blue -0.5
+	}
+	
+}

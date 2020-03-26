@@ -1,0 +1,4 @@
+D:\Multiverse\src-v1\Tools\BaseAssetPackager\bin\x86\Debug\BaseAssetPackager.exe
+D:\Multiverse\src-v1\Tools\BaseAssetPackager\bin\x86\Debug\BaseAssetPackager.pdb
+D:\Multiverse\src-v1\Tools\BaseAssetPackager\obj\x86\Debug\BaseAssetPackager.exe
+D:\Multiverse\src-v1\Tools\BaseAssetPackager\obj\x86\Debug\BaseAssetPackager.pdb

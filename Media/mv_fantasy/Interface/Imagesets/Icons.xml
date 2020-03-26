@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Imageset Name="Icons" Imagefile="Icons.tga" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+    <Image Name="INV_clothes_armor" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_belt" XPos="64" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_boots" XPos="128" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_cloak" XPos="192" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_glove_cloth" XPos="256" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_glove_fur" XPos="320" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_glove_leather" XPos="384" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_helmet_leather" XPos="448" YPos="0" Width="64" Height="64" />
+    <Image Name="INV_clothes_pants" XPos="0" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_clothes_shirt" XPos="64" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_clothes_wrist-bracers" XPos="128" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_container_bag" XPos="192" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_container_supplies-box" XPos="256" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_drink_bottle-water" XPos="320" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_food_apple" XPos="384" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_hide_basic-pelt" XPos="448" YPos="64" Width="64" Height="64" />
+    <Image Name="INV_magic_charm" XPos="0" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_mined_ironore" XPos="64" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_misc_scroll" XPos="128" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_spell_potion" XPos="192" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_weapon_axe" XPos="256" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_weapon_dagger" XPos="320" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_weapon_shield" XPos="384" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_weapon_spear" XPos="448" YPos="128" Width="64" Height="64" />
+    <Image Name="INV_weapon_sword" XPos="0" YPos="192" Width="64" Height="64" />
+    <Image Name="INV_empty" XPos="64" YPos="192" Width="64" Height="64" />
+</Imageset>

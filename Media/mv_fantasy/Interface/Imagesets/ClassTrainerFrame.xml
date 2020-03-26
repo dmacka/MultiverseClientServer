@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<Imageset Name="ClassTrainerFrame" Imagefile="ClassTrainerFrame.tga" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-ClassTrainer-BotLeft" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-ClassTrainer-BotRight" XPos="256" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-ClassTrainer-DetailHeaderLeft" XPos="384" YPos="0" Width="256" Height="64" />
+    <Image Name="UI-ClassTrainer-DetailHeaderRight" XPos="640" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-ClassTrainer-ExpandTab-Left" XPos="704" YPos="0" Width="8" Height="32" />
+    <Image Name="UI-ClassTrainer-FilterBorder" XPos="712" YPos="0" Width="128" Height="32" />
+    <Image Name="UI-ClassTrainer-HorizontalBar" XPos="0" YPos="256" Width="256" Height="64" />
+    <Image Name="UI-ClassTrainer-ScrollBar" XPos="256" YPos="256" Width="64" Height="128" />
+    <Image Name="UI-ClassTrainer-TopLeft" XPos="320" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-ClassTrainer-TopRight" XPos="576" YPos="256" Width="128" Height="256" />
+</Imageset>

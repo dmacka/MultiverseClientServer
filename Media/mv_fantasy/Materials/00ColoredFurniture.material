@@ -1,0 +1,60 @@
+material ColoredFurniture
+{
+    technique Shader2a
+    {
+        pass Single
+        {
+   
+            // Make this pass use the vertex shader define above
+            vertex_program_ref ColoredFurnitureVP
+            {
+            }
+            
+            fragment_program_ref ColoredFurnitureFP2a
+            {
+            }
+
+            texture_unit AtlasTex
+            {
+                filtering anisotropic
+                max_anisotropy 4
+            }
+            texture_unit ColormapTex
+            {
+                filtering none
+            }
+            texture_unit AmbientOcclusionTex
+            {
+            }
+        }
+    }
+    
+    technique Shader20
+    {
+        pass Single
+        {
+   
+            // Make this pass use the vertex shader define above
+            vertex_program_ref ColoredFurnitureVP
+            {
+            }
+            
+            fragment_program_ref ColoredFurnitureFP20
+            {
+            }
+
+            texture_unit AtlasTex
+            {
+                filtering anisotropic
+                max_anisotropy 4
+            }
+            texture_unit ColormapTex
+            {
+                filtering none
+            }
+            texture_unit AmbientOcclusionTex
+            {
+            }
+        }
+    }
+}

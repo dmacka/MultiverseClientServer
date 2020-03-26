@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>tiny_cube_Mesh</Name>
+  <Description>tiny_cube</Description>
+  <Type>Mesh</Type>
+  <Category>Test Shapes</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\tiny_cube.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\tiny_cube_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\tiny_cube.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,8 @@
+material stage.lambert1 : MVSimpleLighting
+{
+}
+
+material stage.stage_phong : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex Stage_01.dds
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>brax_Mesh</Name>
+  <Description>Brax</Description>
+  <Type>Mesh</Type>
+  <Category>Creatures</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\brax.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\brax_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\brax.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\brax.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

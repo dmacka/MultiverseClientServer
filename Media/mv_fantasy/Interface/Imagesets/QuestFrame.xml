@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Imageset Name="QuestFrame" Imagefile="QuestFrame.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="UI-HorizontalBreak" XPos="0" YPos="0" Width="256" Height="32" />
+    <Image Name="UI-Quest-BotLeft" XPos="256" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-Quest-BotRight" XPos="512" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-Quest-BulletPoint" XPos="640" YPos="0" Width="16" Height="16" />
+    <Image Name="UI-Quest-TopLeft" XPos="656" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-Quest-TopRight" XPos="0" YPos="256" Width="128" Height="256" />
+    <Image Name="UI-QuestGreeting-BotLeft" XPos="128" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-QuestGreeting-BotRight" XPos="384" YPos="256" Width="128" Height="256" />
+    <Image Name="UI-QuestGreeting-TopLeft" XPos="512" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-QuestGreeting-TopRight" XPos="768" YPos="256" Width="128" Height="256" />
+    <Image Name="UI-QuestItemNameFrame" XPos="907" YPos="267" Width="106" Height="41" />
+    <Image Name="UI-QuestLog-BookIcon" XPos="0" YPos="512" Width="64" Height="64" />
+    <Image Name="UI-QuestLog-BotLeft" XPos="64" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-QuestLog-BotRight" XPos="320" YPos="512" Width="128" Height="256" />
+    <Image Name="UI-QuestLog-Empty-BotLeft" XPos="448" YPos="512" Width="256" Height="128" />
+    <Image Name="UI-QuestLog-Empty-BotRight" XPos="704" YPos="512" Width="64" Height="128" />
+    <Image Name="UI-QuestLog-Empty-TopLeft" XPos="768" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-QuestLog-Empty-TopRight" XPos="0" YPos="768" Width="64" Height="256" />
+    <Image Name="UI-QuestLog-TopLeft" XPos="64" YPos="768" Width="256" Height="256" />
+    <Image Name="UI-QuestLog-TopRight" XPos="320" YPos="768" Width="128" Height="256" />
+    <Image Name="UI-QuestLogSortTab-Left" XPos="448" YPos="768" Width="8" Height="32" />
+    <Image Name="UI-QuestLogSortTab-Middle" XPos="456" YPos="768" Width="64" Height="32" />
+    <Image Name="UI-QuestLogSortTab-Right" XPos="520" YPos="768" Width="8" Height="32" />
+    <Image Name="UI-QuestLogTitleHighlight" XPos="528" YPos="768" Width="128" Height="16" />
+    <Image Name="UI-QuestTitleHighlight" XPos="656" YPos="768" Width="128" Height="16" />
+</Imageset>

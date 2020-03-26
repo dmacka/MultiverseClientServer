@@ -1,0 +1,11 @@
+
+material casual07_f_lowpoly.body : RocketboxBase
+{
+    set_texture_alias DiffuseMap casual07_f_20.dds
+}
+
+material casual07_f_lowpoly.hair_transparent : RocketboxBaseHair
+{
+    set_texture_alias DiffuseMap casual07_f_20_hair.dds
+}
+

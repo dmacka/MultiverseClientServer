@@ -1,0 +1,53 @@
+material MVSMShadowCaster
+{
+	technique
+	{
+		
+		pass
+		{
+			fog_override true
+			vertex_program_ref MVSMShadowCasterVP
+            {
+				param_named_auto ModelViewProjection worldviewproj_matrix
+				param_named_auto AmbientLight ambient_light_colour
+            }
+            fragment_program_ref MVSMShadowCasterFP
+            {
+				param_named DepthOffset float 0.001
+            }
+        }
+    }
+}
+
+material MVSMShadowReceiver
+{
+	technique
+	{
+		pass
+		{
+			scene_blend modulate
+			
+			// use depth bias 2 to avoid z-fighting with decals
+			depth_bias 2
+			
+			vertex_program_ref MVSMShadowReceiverVP
+            {
+				param_named_auto ModelViewProjection worldviewproj_matrix
+				param_named_auto Model world_matrix
+				param_named_auto TextureViewProjection texture_viewproj_matrix
+				param_named_auto FadeSettings shadow_fade_params
+            }
+            fragment_program_ref MVSMShadowReceiverFP
+            {
+				param_named ShadowColor float4 0 0 0 1
+				param_named TexelOffset float2 0 0
+            }
+            
+            texture_unit
+            {
+				tex_address_mode clamp
+				filtering linear linear linear
+            }
+		}
+	}
+}

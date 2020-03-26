@@ -1,0 +1,38 @@
+<Ui>
+
+    <Button name="ActionButton" virtual="true">
+	<Size>
+	    <AbsDimension x="36" y="36"/>
+	</Size>
+	<Layers>
+	    <Layer level="BORDER">
+		<Texture name="$parentIconTexture"/>
+		<FontString name="$parentHotKey" inherits="SmallFont" justifyH="RIGHT" hidden="true">
+		    <Size>
+			<AbsDimension x="32" y="10"/>
+		    </Size>
+		    <Anchors>
+			<Anchor point="TOPLEFT">
+			    <Offset>
+				<AbsDimension x="2" y="-2"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</FontString>
+		<FontString name="$parentCount" inherits="NormalFont" justifyH="RIGHT" hidden="true">
+		    <Anchors>
+			<Anchor point="BOTTOMRIGHT">
+			    <Offset>
+				<AbsDimension x="-2" y="2"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</FontString>
+	    </Layer>
+	</Layers>
+	<PushedTexture file="Interface\Icons\INV_Pushed"/>
+	<HighlightTexture alphaMode="ADD" file="Interface\Icons\INV_Highlight"/>
+    </Button>
+
+</Ui>
+

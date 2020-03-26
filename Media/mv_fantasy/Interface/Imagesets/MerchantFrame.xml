@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset Name="MerchantFrame" Imagefile="MerchantFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-Merchant-BotLeft" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-Merchant-LabelSlots" XPos="256" YPos="0" Width="128" Height="64" />
+    <Image Name="UI-Merchant-RepairIcons" XPos="384" YPos="0" Width="128" Height="64" />
+    <Image Name="UI-Merchant-TopLeft" XPos="0" YPos="256" Width="256" Height="256" />
+</Imageset>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>world_editor_point_light_marker_Mesh</Name>
+  <Description>Point Light Marker</Description>
+  <Type>Mesh</Type>
+  <Category>Misc</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\world_editor_point_light_marker.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\world_editor_point_light_marker_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

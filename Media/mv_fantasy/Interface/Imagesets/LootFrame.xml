@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="LootFrame" Imagefile="LootFrame.tga" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+    <Image Name="UI-LootPanel" XPos="0" YPos="0" Width="256" Height="256" />
+</Imageset>

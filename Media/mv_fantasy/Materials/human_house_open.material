@@ -1,0 +1,9 @@
+material human_house_open._01_-_Default : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex human_house_open_texture.dds
+}
+
+material human_house_open.initialShadingGroup : MVSimpleLighting
+{
+}
+

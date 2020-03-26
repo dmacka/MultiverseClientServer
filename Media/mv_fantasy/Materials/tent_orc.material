@@ -1,0 +1,53 @@
+material tent_orc.shield_material : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                texture weapon_rack.dds
+                alpha_rejection greater 225
+            }
+        }
+    }
+}
+
+material tent_orc.orc_tent_material : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                texture orc_tent.dds
+                alpha_rejection greater 225
+            }
+        }
+    }
+}
+material tent_orc.wood_rope_material : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                texture lezhanka.dds
+                alpha_rejection greater 225
+            }
+        }
+    }
+}
+
+material tent_orc.skull_material : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex skull.dds
+}
+
+material tent_orc.ground_material : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex ramp.dds
+}

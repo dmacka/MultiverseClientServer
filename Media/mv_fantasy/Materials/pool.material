@@ -1,0 +1,7 @@
+material pool.pool_marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex pool_marble.dds
+}
+material pool.lambert1 : MVSimpleLighting
+{
+}

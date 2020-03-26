@@ -1,0 +1,13 @@
+<physics_model>
+  <rigid_body sid="casual01_m_highpoly-obj.0">
+    <technique_common>
+      <shape>
+        <translate>0 .9 0</translate>
+        <capsule>
+          <height>1.2</height>
+          <radius>0.25 0.25</radius>
+        </capsule>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

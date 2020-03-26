@@ -1,0 +1,133 @@
+vertex_program EmissiveBuildingVP11 cg
+{
+    source EmissiveBuilding.cg
+    entry_point EmissiveBuildingVP11
+    profiles vs_1_1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldViewProj worldviewproj_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program EmissiveBuildingVP11_nocolor cg
+{
+    source EmissiveBuilding.cg
+    entry_point EmissiveBuildingVP11_nocolor
+    profiles vs_1_1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldViewProj worldviewproj_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+// Fragment shader for normal mapped materials
+// that include a specular map and an emissive map
+fragment_program EmissiveBuildingFP20 hlsl
+{
+    source EmissiveBuilding.cg
+    entry_point EmissiveBuildingFP20
+    target ps_2_0
+
+    default_params 
+    {
+        param_named LMa float4 0 0 0 0
+        param_named_auto LMd[0] light_diffuse_colour 0
+        param_named_auto LMd[1] light_diffuse_colour 1
+        param_named_auto LMs[0] light_specular_colour 0
+        param_named_auto LMs[1] light_specular_colour 1
+        param_named shininess float 10
+        param_named colorMult float4 1 1 1 1
+        param_named emissiveMult float4 0 0 0 0
+        param_named diffuseMult float 0
+        param_named_auto fogColor fog_colour
+    }
+}
+
+vertex_program EmissiveBuildingVP11_VertexLighting cg
+{
+    source EmissiveBuilding.cg
+    entry_point EmissiveBuildingVP11_VertexLighting
+    profiles vs_1_1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldViewProj worldviewproj_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto LightSpecular[0] light_specular_colour 0
+        param_named_auto LightSpecular[1] light_specular_colour 1
+        param_named_auto EyePosition camera_position_object_space
+        param_named shininess float 10
+    }
+}
+
+vertex_program EmissiveBuildingVP11_VertexLighting_NoColor cg
+{
+    source EmissiveBuilding.cg
+    entry_point EmissiveBuildingVP11_VertexLighting_NoColor
+    profiles vs_1_1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldViewProj worldviewproj_matrix
+        param_named_auto WorldMat world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto LightSpecular[0] light_specular_colour 0
+        param_named_auto LightSpecular[1] light_specular_colour 1
+        param_named_auto EyePosition camera_position_object_space
+        param_named shininess float 10
+    }
+}
+
+fragment_program EmissiveBuildingFP20_VertexLighting hlsl
+{
+    source EmissiveBuilding.cg
+    entry_point EmissiveBuildingFP20_VertexLighting
+    target ps_2_0
+
+    default_params 
+    {
+        param_named LMa float4 0 0 0 0
+        param_named colorMult float4 1 1 1 1
+        param_named emissiveMult float4 0 0 0 0
+        param_named specularMult float4 1 1 1 1
+        param_named_auto fogColor fog_colour
+    }
+}
+
+fragment_program EmissiveBuildingFP20_VertexLightingAlpha hlsl
+{
+    source EmissiveBuilding.cg
+    entry_point EmissiveBuildingFP20_VertexLightingAlpha
+    target ps_2_0
+
+    default_params 
+    {
+        param_named LMa float4 0 0 0 0
+        param_named colorMult float4 1 1 1 1
+        param_named emissiveMult float4 0 0 0 0
+        param_named specularMult float4 1 1 1 1
+        param_named_auto fogColor fog_colour
+    }
+}

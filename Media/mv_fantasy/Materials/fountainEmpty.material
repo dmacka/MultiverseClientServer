@@ -1,0 +1,4 @@
+material fountainEmpty.lambert3 : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex town_fountain.dds
+}

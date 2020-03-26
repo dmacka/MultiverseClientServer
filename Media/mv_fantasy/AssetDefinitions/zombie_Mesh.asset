@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>zombie_Mesh</Name>
+  <Description>Zombie</Description>
+  <Type>Mesh</Type>
+  <Category>Creatures</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\zombie.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\zombie_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\zombie.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\zombie.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

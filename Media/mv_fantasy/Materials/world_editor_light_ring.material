@@ -1,0 +1,55 @@
+material world_editor_light_ring.lightRing.red
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      cull_hardware none
+      cull_software none
+      fog_override true
+      texture_unit
+      {
+        texture red-circle-gradient.png
+      }
+    }
+  }
+}
+
+
+material world_editor_light_ring.lightRing.yellow
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      cull_hardware none
+      cull_software none
+      fog_override true
+      texture_unit
+      {
+        texture yellow-circle-gradient.png
+      }
+    }
+  }
+}
+
+
+material world_editor_light_ring.lightRing.green
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      cull_hardware none
+      cull_software none
+      fog_override true
+      texture_unit
+      {
+        texture green-circle-gradient.png
+      }
+    }
+  }
+}

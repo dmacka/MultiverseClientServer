@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>World_editor_light_arrow_Mesh</Name>
+  <Description>Directional Light Marker</Description>
+  <Type>Mesh</Type>
+  <Category>Misc</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\World_editor_light_arrow.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\World_editor_light_arrow_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

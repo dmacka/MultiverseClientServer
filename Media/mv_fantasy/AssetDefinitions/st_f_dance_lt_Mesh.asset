@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>st_f_dance_lt_Mesh</Name>
+  <Description>st_f_dance_lt</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Statues</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\st_f_dance_lt.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\st_f_dance_lt_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\st_f_dance_lt.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

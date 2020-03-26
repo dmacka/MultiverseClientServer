@@ -1,0 +1,4 @@
+material spear.spear____Default____Standard__  : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex spear_004.dds
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>FraserFir_RT_Snow_SpeedTree</Name>
+  <Description>Fraser Fir - Snow</Description>
+  <Type>SpeedTree</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>SpeedTree\FraserFir_RT_Snow.tre</TargetFile>
+      <FileType>SpeedTree</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\FraserFirSnow_Composite.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\FraserFirBark.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\FraserFirBarkNormals.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\FraserFir_SelfShadow.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

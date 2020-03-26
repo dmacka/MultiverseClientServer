@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>MvFonts_FrameXML</Name>
+  <Type>Frame XML</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\MvFonts.xml</TargetFile>
+      <FileType>XML</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Fonts\MUFN____.TTF</TargetFile>
+      <FileType>Font</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Fonts\ARIALN.TTF</TargetFile>
+      <FileType>Font</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

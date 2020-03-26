@@ -1,0 +1,12 @@
+<physics_model>
+  <rigid_body sid="pool-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0 2.037651 0</translate>
+        <box>
+          <half_extents>10.07477 3.572681 16.50885</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

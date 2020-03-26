@@ -1,0 +1,19 @@
+material Multiverse/d2w_skyBox
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			
+			fog_override true
+
+			texture_unit
+			{
+				cubic_texture mv_night_north.dds mv_night_south.dds mv_night_west.dds mv_night_east.dds mv_night_top.dds mv_night_top.dds separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}

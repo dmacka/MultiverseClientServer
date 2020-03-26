@@ -1,0 +1,33 @@
+blast2
+{
+	quota	5000
+	material	streak
+	particle_width	100
+	particle_height	300
+	cull_each	false
+	billboard_type  oriented_self
+	common_up_vector 0 1 0
+	common_direction 1 0 0
+
+	emitter Point
+	{
+		angle	99
+		colour_range_start	1 1 0 1
+		colour_range_end	1 0.3 0.3 1
+		direction	0 1 0
+		emission_rate	5000
+		position	0 0 0
+		velocity	4000
+		time_to_live	0.4
+		duration	0.3
+		repeat_delay	1.8
+	}
+
+	affector ColourFader
+	{
+		red	-1.0
+		green	-1.0
+		blue	-0.25
+		alpha	-0.2
+	}
+}

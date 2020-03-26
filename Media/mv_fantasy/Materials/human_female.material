@@ -1,0 +1,332 @@
+material human_female.head_a_material
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named spec_level float 0.1
+                param_named shininess float 1
+            }
+
+            texture_unit
+            {
+                texture human_female_face.dds
+                tex_coord_set 0
+            }
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_female_face.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material human_female.skin_material
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named spec_level float 0.1
+                param_named shininess float 1
+            }
+
+            texture_unit
+            {
+                texture human_female_skin.dds
+                tex_coord_set 0
+            }
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_female_skin.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material human_female.leather_a_material
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named spec_level float 0.2
+                param_named shininess float 1
+            }
+
+            texture_unit
+            {
+                texture human_female_leather_a.dds
+                tex_coord_set 0
+            }
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_female_leather_a.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_female.hair_b_material
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named spec_level float 0.2
+                param_named shininess float 1
+            }
+
+            texture_unit
+            {
+                texture human_female_hair_a.dds
+                tex_coord_set 0
+            }
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_female_hair_a.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_female.plate_b_material
+{
+    technique
+    {
+        pass
+        {
+            cull_hardware none
+            cull_software none
+
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_N
+            {
+                param_named spec_level float 0.4
+                param_named shininess float 10
+            }
+
+            // Normal map
+            texture_unit
+            {
+                tex_coord_set 0
+                texture ARMOR_revised_1024_nm.tga
+            }
+            // Diffuse map
+            texture_unit
+            {
+                alpha_rejection greater 128
+                tex_coord_set 1
+                texture ARMOR_col.dds
+            }
+        }
+    }
+}
+material human_female.plate_b_material_white
+{
+    technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_N
+            {
+                param_named spec_level float 0.4
+                param_named shininess float 10
+            }
+
+            // Normal map
+            texture_unit
+            {
+               tex_coord_set 0
+               texture ARMOR_revised_1024_nm.tga
+            }
+            // Diffuse map
+            texture_unit
+            {
+                alpha_rejection greater 128
+                tex_coord_set 1
+                texture blank.dds
+            }
+        }
+    }
+}
+material human_female.plate_b_material_basic
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named spec_level float 0.4
+                param_named shininess float 1
+            }
+
+            texture_unit
+            {
+                texture ARMOR_col.dds
+                tex_coord_set 0
+            }
+        }
+    }
+
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture ARMOR_col.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

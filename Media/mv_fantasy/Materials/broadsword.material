@@ -1,0 +1,51 @@
+material broadsword.sword_color
+{
+	technique
+	{
+		pass
+		{
+			shading phong
+
+			ambient 0.00000 0.00000 0.00000 1.00000
+			diffuse 0.77920 0.77920 0.77920 0.80000
+			specular 0.50000 0.50000 0.50000 1.00000 20.00000
+			emissive 0.00000 0.00000 0.00000 1.00000
+
+		}
+	}
+}
+
+material broadsword.hilt_color
+{
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			ambient 0.00000 0.00000 0.00000 1.00000
+			diffuse 0.60640 0.52126 0.06003 0.80000
+			specular 0.50000 0.50000 0.50000 1.00000 0.70000
+			emissive 0.00000 0.00000 0.00000 1.00000
+
+		}
+	}
+}
+
+material broadsword.grip_color
+{
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			ambient 0.00000 0.00000 0.00000 1.00000
+			diffuse 0.12240 0.06536 0.04847 0.80000
+			specular 0.50000 0.50000 0.50000 1.00000 0.70000
+			emissive 0.00000 0.00000 0.00000 1.00000
+
+		}
+	}
+}
+

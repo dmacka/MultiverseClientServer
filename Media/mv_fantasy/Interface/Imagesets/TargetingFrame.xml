@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Imageset Name="TargetingFrame" Imagefile="TargetingFrame.tga" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+    <Image Name="BarFill2" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PartyFrame" XPos="64" YPos="0" Width="128" Height="64" />
+    <Image Name="UI-StatusBar" XPos="192" YPos="0" Width="64" Height="8" />
+    <Image Name="UI-TargetingFrame-BarFill" XPos="0" YPos="64" Width="512" Height="64" />
+    <Image Name="UI-TargetingFrame-LevelBackground" XPos="0" YPos="128" Width="64" Height="64" />
+    <Image Name="UI-TargetingFrame" XPos="64" YPos="128" Width="256" Height="128" />
+</Imageset>

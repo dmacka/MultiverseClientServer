@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset Name="KeyBindingFrame" Imagefile="KeyBindingFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-KeyBindingFrame-Bot" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-KeyBindingFrame-BotRight" XPos="256" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-KeyBindingFrame-Top" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-KeyBindingFrame-TopRight" XPos="256" YPos="256" Width="128" Height="256" />
+</Imageset>

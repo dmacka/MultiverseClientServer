@@ -1,0 +1,162 @@
+// version of the CompoundVS shader that
+// includes hardware skinning
+
+vertex_program LayeredAvatarVP_Shadow cg
+{
+    includes_skeletal_animation true
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarVP_Shadow
+    profiles vs_2_0
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto AmbientLightColor ambient_light_colour
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program LayeredAvatarVP_Flat cg
+{
+    includes_skeletal_animation true
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarVP_Shadow
+    profiles vs_2_0
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program LayeredAvatarVP_ShadowReceiver cg
+{
+    includes_skeletal_animation true
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarVP_ShadowReceiver
+    profiles vs_2_0
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto EyePosition camera_position_object_space
+        param_named_auto TextureViewProjection texture_viewproj_matrix
+    }
+}
+
+vertex_program LayeredAvatarVP20 hlsl
+{
+    includes_skeletal_animation true
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarVP20
+    target vs_2_0
+    column_major_matrices false
+
+    default_params
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space       
+    }
+}
+
+vertex_program LayeredAvatarVP20_Depth hlsl
+{
+    includes_skeletal_animation true
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarVP20_Depth
+    target vs_2_0
+    column_major_matrices false
+
+    default_params
+    {
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+    }
+}
+
+fragment_program LayeredAvatarFP20 hlsl
+{
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarFP20
+    target ps_2_0
+
+    default_params 
+    {
+        param_named EmissiveAdd float4 0 0 0 0
+        param_named EmissiveMult float4 0 0 0 0
+        param_named TattooEmissiveMult float4 0 0 0 0
+        param_named_auto LMa ambient_light_colour
+        param_named_auto LMd[0] light_diffuse_colour 0
+        param_named_auto LMd[1] light_diffuse_colour 1
+        param_named_auto LMs[0] light_specular_colour 0
+        param_named_auto LMs[1] light_specular_colour 1
+        param_named shininess float 10
+        param_named tattooOffset float2 0 0
+        param_named skinColor float4 0.5 0.5 0.5 1.0
+    }
+}
+
+fragment_program LayeredAvatarHairFP20 hlsl
+{
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarHairFP20
+    target ps_2_0
+
+    default_params 
+    {
+        param_named EmissiveAdd float4 0 0 0 0
+        param_named EmissiveMult float4 0 0 0 0
+        param_named TattooEmissiveMult float4 0 0 0 0
+        param_named_auto LMa ambient_light_colour
+        param_named_auto LMd[0] light_diffuse_colour 0
+        param_named_auto LMd[1] light_diffuse_colour 1
+        param_named_auto LMs[0] light_specular_colour 0
+        param_named_auto LMs[1] light_specular_colour 1
+        param_named shininess float 10
+        param_named tattooOffset float2 0 0
+        param_named skinColor0 float4 0.333 0.176 0.094 1.0
+        param_named skinColor1 float4 0.416 0.325 0.235 1.0
+        param_named skinColor2 float4 0.470 0.208 0.075 1.0
+        param_named skinColor3 float4 0.0 0.0 0.0 1.0
+    }
+}
+
+fragment_program LayeredAvatarFPSolid hlsl
+{
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarFPSolid
+    target ps_2_0
+
+    default_params 
+    {
+        param_named SurfaceColor float4 1 0 0 0
+    }
+}
+
+fragment_program LayeredAvatarFP20_Depth hlsl
+{
+    source LayeredAvatar.cg
+    entry_point LayeredAvatarFP20_Depth
+    target ps_2_0
+
+    default_params 
+    {
+    }
+}

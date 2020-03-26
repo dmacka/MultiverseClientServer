@@ -1,0 +1,120 @@
+struct DetailVegVSOutput
+{
+	// transformed vertex coordinate
+	float4	position				: POSITION;
+	
+	// lighting intensity color multiplier
+	float4	color					: COLOR0;
+	
+	// texture coordinate from vertex
+	float2	texCoord				: TEXCOORD0;
+
+	// fog factor
+	float4  fog						: FOG;
+	
+	// fade value
+	float3	fade					: TEXCOORD1;
+};
+
+// Vertex program for Detail Vegitation
+DetailVegVSOutput DetailVegVP
+(
+	float4				iPosition			: POSITION,
+	float3				iNormal				: NORMAL,
+	float2				iTexcoord			: TEXCOORD0,
+	
+	// offset of this vertex from the plant base (iPosition)
+	float2				iPointOffset		: TEXCOORD1,
+	
+	// wind parameters
+	// iWindParams.x - windWeight - how much to scale calculated wind offset
+	float2				iWindParams			: TEXCOORD2,
+	
+	float4				iColor				: COLOR0,
+
+	// the full World/View/Proj combined matrix
+	uniform float4x4	world,
+	uniform float4x4	viewProj,
+	
+	// Fog settings
+	//	fogSettings[0] - fog near distance
+	//	fogSettings[1] - fog far distance
+	//	fogSettings[2] - fog scale
+	uniform float4		fogSettings,
+
+	uniform float3		sideVector,
+	uniform float3		upVector,
+	uniform float3		cameraPos,
+	uniform float		viewRadius,
+	uniform float		viewFade,
+	uniform float3		windDirection,
+	uniform float		time,
+		// Direction of single directional light.  Used for diffuse lighting of terrain.
+	uniform float4		lightDirection,
+	
+	// Diffuse color of the directional light
+	uniform float4		lightDiffuse,
+	
+	// Color of the ambient light
+	uniform float4		lightAmbient,
+	
+	// Diffuse color of the terrain
+	uniform float4		materialDiffuse,
+	
+	// Ambient color of the terrain
+	uniform float4		materialAmbient
+)
+{
+	DetailVegVSOutput output;
+	
+	// compute world position
+	float4 wPosition = mul(world, iPosition);
+	
+	// adjust point in world coordinates based on camera side/up vectors and the offsets for this vertex
+	wPosition.xyz += sideVector * iPointOffset.x;
+	wPosition.xyz += upVector * iPointOffset.y;
+	
+	//float windMagnitude = ( sin(time*2) + 0.3 * sin(time*5.17) ) / 1.3;
+	float windMagnitude = ( sin((time+ wPosition.x/3000.0)*2) + 0.3 * sin((time+ wPosition.x/3000.0)*5.17) ) / 1.3 * 2.0;
+	
+	wPosition.xyz += iWindParams.x * windMagnitude * windDirection;
+	
+	output.position = mul(viewProj, wPosition);
+	
+	lightDirection = normalize(lightDirection);
+	
+	// Do lighting calculations
+    output.color = iColor * ( dot(iNormal, lightDirection) *							// diffuse lighting
+					lightDiffuse * materialDiffuse +						// diffuse color
+					lightAmbient * materialAmbient );							// ambient color
+	output.texCoord = iTexcoord;
+	
+	float3 distvec = cameraPos - iPosition.xyz;  
+	float3 distsq = distvec * distvec;
+
+	// distance from point to camera	
+	float cameraDist = sqrt(distsq.x + distsq.z);
+	
+	// compute fade value
+	// the fade value is scaled by 0.686275 since the alpha test
+	// value is 80, we need to have a fade value between
+	// 0 and 0.686275.  We computed that value like this:
+	//  (255 - 80) / 255
+	output.fade.xyz = clamp(( cameraDist - viewRadius ) / viewFade, 0, 1) * 0.686275;
+	
+
+	output.fog = (fogSettings[1] - output.position.z) / 
+					(fogSettings[1] - fogSettings[0]) * fogSettings[2];	// compute linear fog
+					
+	return output;
+}
+
+float4 DetailVegFP(DetailVegVSOutput In,
+	uniform sampler2D		bbTexture
+	): COLOR
+{
+	float4 outputColor = tex2D(bbTexture, In.texCoord);
+	outputColor.rgb *= In.color.rgb;
+	outputColor.a -= In.fade.x;
+    return outputColor;
+}

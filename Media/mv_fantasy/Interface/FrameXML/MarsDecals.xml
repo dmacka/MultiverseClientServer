@@ -1,0 +1,16 @@
+<Ui>
+  <Script file="MarsDecals.py"/>
+  <Frame name="hiddenDecalFrame" hidden="true">
+    <Scripts language="python">
+      <OnUpdate>
+        DecalFrame_Update()
+      </OnUpdate>
+      <OnLoad>
+        DecalFrame_OnLoad(this)
+      </OnLoad>
+      <OnEvent>
+        DecalFrame_OnEvent(this,args)
+      </OnEvent>
+    </Scripts>
+  </Frame>
+</Ui>

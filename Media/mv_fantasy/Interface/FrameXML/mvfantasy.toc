@@ -1,0 +1,29 @@
+## Title: Fantasy World UI Elements
+## DefaultState: enabled
+## Author: Robin McCollum
+## eMail: robin@multiverse.net
+## URL: http://www.multiverse.net/
+## Interface: 0
+## Version: 0.81
+## Notes: This is the prototype UI
+## RequiredDeps:
+## OptionalDeps:
+## SavedVariables:
+MvFonts.xml
+MvFrame.xml
+MvDialog.xml
+MvChat.xml
+MvItemButton.xml
+MvContainer.xml
+MvTooltip.xml
+MvStatus.xml
+MarsUnit.xml
+MarsPlayer.xml
+MarsTarget.xml
+MvActionButton.xml
+MvActionBar.xml
+MvQuestLog.xml
+MvAbilitiesFrame.xml
+MvFantasyHelp.xml
+MvSecureTrade.xml
+MvChatBubble.xml

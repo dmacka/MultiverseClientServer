@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvChatBubble" Imagefile="MvChatBubble.tga" NativeHorzRes="64" NativeVertRes="16" AutoScaled="false">
+	<Image Name="edge" XPos="0" YPos="1" Width="48" Height="6" />
+	<Image Name="tail" XPos="50" YPos="0" Width="7" Height="12" />
+	<Image Name="background" XPos="59" YPos="1" Width="2" Height="2" />
+</Imageset>

@@ -1,0 +1,21 @@
+material creation_gazebo_skycyl.creation_skycyl
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.00000 0.00000 0.00000 0.00000
+            diffuse  0.00000 0.00000 0.00000 0.00000
+            specular 0.00000 0.00000 0.00000 0.00000 1.00000
+            emissive 1.00000 1.00000 1.0000 0.00000
+
+            texture_unit
+            {
+                texture creation_skycyl.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

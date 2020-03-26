@@ -1,0 +1,480 @@
+// Bump map with specular vertex program, support for this is required
+vertex_program Examples/DiffuseBumpVS cg
+{
+    source DiffuseBump.cg
+    entry_point DiffuseBumpVS
+    profiles vs_1_1 arbvp1
+}
+
+// Standard vertex shader used for normal mapped materials with
+// a single pass.
+vertex_program Examples/CompoundVS cg
+{
+    source DiffuseBump.cg
+    entry_point CompoundVS
+    profiles vs_1_1 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldViewProj worldviewproj_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+// version of the CompoundVS shader that
+// includes hardware skinning
+vertex_program Examples/CompoundVS_Skinned cg
+{
+    includes_skeletal_animation true
+    source DiffuseBump.cg
+    entry_point CompoundVS_Skinned
+    profiles vs_2_0
+
+    default_params
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space       
+    }
+}
+
+
+// Standard vertex shader used for normal mapped materials with
+// a single pass where the tangents are stored as texture coords.
+vertex_program Examples/CompoundVS_TexTangent cg
+{
+    source DiffuseBump.cg
+    entry_point CompoundVS_TexTangent
+    profiles vs_1_1 arbvp1
+}
+
+// version of the CompoundVS_TexTangent shader that
+// includes hardware skinning
+vertex_program Examples/CompoundVS_TexTangent_Skinned cg
+{
+    includes_skeletal_animation true
+    source DiffuseBump.cg
+    entry_point CompoundVS_TexTangent_Skinned
+    profiles vs_2_0
+
+    default_params
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program Examples/DiffuseBumpVS_Tex cg
+{
+    source DiffuseBump.cg
+    entry_point DiffuseBumpVS_Tex
+    profiles vs_1_1 arbvp1
+}
+
+vertex_program Examples/DiffuseBumpVS_TB cg
+{
+    source DiffuseBump.cg
+    entry_point DiffuseBumpVS_TB
+    profiles vs_1_1 arbvp1
+}
+
+vertex_program Examples/AmbientOneVS cg
+{
+    source DiffuseBump.cg
+    entry_point AmbientOneVS
+    profiles vs_1_1 arbvp1
+}
+
+fragment_program Examples/DiffuseBumpPS_20_NS cg
+{
+    source DiffuseBump.cg
+    entry_point DiffuseBumpPS_20_NS
+    profiles ps_2_0 arbfp1 fp20
+}
+
+fragment_program Examples/DiffuseBumpPS_20_N cg
+{
+    source DiffuseBump.cg
+    entry_point DiffuseBumpPS_20_N
+    profiles ps_2_0 arbfp1 fp20
+}
+
+// Fragment shader for normal mapped materials
+// that do not include a specular map
+fragment_program Examples/CompoundPS_20_N cg
+{
+    source DiffuseBump.cg
+    entry_point CompoundPS_20_N
+    profiles ps_2_0 arbfp1 fp20
+
+    default_params 
+    {
+        param_named LMe float4 0 0 0 1
+        param_named_auto LMa ambient_light_colour
+        param_named_auto LMd[0] light_diffuse_colour 0
+        param_named_auto LMd[1] light_diffuse_colour 1
+        param_named_auto LMs[0] light_specular_colour 0
+        param_named_auto LMs[1] light_specular_colour 1
+        param_named shininess float 1
+    }
+}
+
+// Fragment shader for normal mapped materials
+// that include a specular map
+fragment_program Examples/CompoundPS_20_NS cg
+{
+    source DiffuseBump.cg
+    entry_point CompoundPS_20_NS
+    profiles ps_2_0 arbfp1 fp20
+
+    default_params 
+    {
+        param_named LMe float4 0 0 0 1
+        param_named_auto LMa ambient_light_colour
+        param_named_auto LMd[0] light_diffuse_colour 0
+        param_named_auto LMd[1] light_diffuse_colour 1
+        param_named_auto LMs[0] light_specular_colour 0
+        param_named_auto LMs[1] light_specular_colour 1
+        param_named shininess float 1
+    }
+}
+
+// Fragment shader for normal mapped materials
+// that include a specular map and an emissive map
+fragment_program Examples/CompoundPS_20_NSE cg
+{
+    source DiffuseBump.cg
+    entry_point CompoundPS_20_NSE
+    profiles ps_2_0 arbfp1 fp20
+
+    default_params 
+    {
+        param_named_auto LMa ambient_light_colour
+        param_named_auto LMd[0] light_diffuse_colour 0
+        param_named_auto LMd[1] light_diffuse_colour 1
+        param_named_auto LMs[0] light_specular_colour 0
+        param_named_auto LMs[1] light_specular_colour 1
+        param_named shininess float 1
+    }
+}
+
+vertex_program Examples/DiffuseBumpVS_Skinned cg
+{
+    includes_skeletal_animation true
+    source DiffuseBump.cg
+    entry_point DiffuseBumpVS_Skinned
+    profiles vs_2_0 arbvp1
+}
+
+vertex_program Examples/AmbientOneVS_Skinned cg 
+{
+    includes_skeletal_animation true
+    source DiffuseBump.cg
+    entry_point AmbientOneVS_Skinned
+    profiles vs_2_0 arbvp1
+}
+
+vertex_program CompoundVS1_Basic_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS1_Basic_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS2_Basic_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS2_Basic_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS3_Basic_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS3_Basic_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS4_Basic_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS4_Basic_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS1_Shadow_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS1_Shadow_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto AmbientLightColor ambient_light_colour
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS2_Shadow_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS2_Shadow_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto AmbientLightColor ambient_light_colour
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS3_Shadow_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS3_Shadow_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto AmbientLightColor ambient_light_colour
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS4_Shadow_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS4_Shadow_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto AmbientLightColor ambient_light_colour
+        param_named_auto EyePosition camera_position_object_space
+    }
+}
+
+vertex_program CompoundVS1_ShadowReceiver_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS1_ShadowReceiver_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto EyePosition camera_position_object_space
+        param_named_auto TextureViewProjection texture_viewproj_matrix
+    }
+}
+
+vertex_program CompoundVS2_ShadowReceiver_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS2_ShadowReceiver_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto EyePosition camera_position_object_space
+        param_named_auto TextureViewProjection texture_viewproj_matrix
+    }
+}
+
+vertex_program CompoundVS3_ShadowReceiver_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS3_ShadowReceiver_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto EyePosition camera_position_object_space
+        param_named_auto TextureViewProjection texture_viewproj_matrix
+    }
+}
+
+vertex_program CompoundVS4_ShadowReceiver_Skinned cg
+{
+    includes_skeletal_animation true
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundVS4_ShadowReceiver_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto FogSettings fog_params
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+        param_named_auto WorldMatrix world_matrix
+        param_named_auto EyePosition camera_position_object_space
+        param_named_auto TextureViewProjection texture_viewproj_matrix
+    }
+}
+
+fragment_program CompoundPS_Basic cg
+{
+    source Compound_Basic_Skinned.cg
+    entry_point CompoundPS_20_Basic
+    profiles ps_2_0 arbfp1 fp20
+
+    default_params 
+    {
+        param_named LMe float4 0 0 0 1
+        param_named_auto LMa ambient_light_colour
+        param_named_auto LMd[0] light_diffuse_colour 0
+        param_named_auto LMd[1] light_diffuse_colour 1
+        param_named_auto LMs[0] light_specular_colour 0
+        param_named_auto LMs[1] light_specular_colour 1
+        param_named shininess float 1
+        param_named spec_level float 0.1
+    }
+}
+
+// Vertex shader used to copy the color data from the
+// vertex buffer and pass it to the fragment shader
+vertex_program ColorVS_Basic cg
+{
+    source DiffuseBump.cg
+    entry_point ColorVS_Basic
+    profiles vs_1_1 arbvp1
+
+    default_params 
+    {
+        param_named_auto WorldViewProj worldviewproj_matrix
+    }
+}
+
+// Vertex shader used to copy the color data from the
+// vertex buffer and pass it to the fragment shader.
+// This also applies skinning information for 4 bones
+vertex_program ColorVS4_Basic_Skinned cg
+{
+    includes_skeletal_animation true
+    source DiffuseBump.cg
+    entry_point ColorVS4_Basic_Skinned
+    profiles vs_2_0 arbvp1
+
+    default_params 
+    {
+        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+        param_named_auto ViewProj viewproj_matrix
+    }
+}
+
+// Use the passed color data (from the vertex program) as 
+// the color to draw.
+fragment_program ColorPS_Basic cg
+{
+    source DiffuseBump.cg
+    entry_point ColorPS_Basic
+    profiles ps_2_0 arbfp1 fp20
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>green_unit_cylinder_Material</Name>
+  <Description>A material for the green cylinder used to display paths in the World Editor</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\green_unit_cylinder.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

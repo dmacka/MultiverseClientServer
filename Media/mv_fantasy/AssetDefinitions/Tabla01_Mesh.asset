@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>Tabla01_Mesh</Name>
+  <Description>Park Bench</Description>
+  <Type>Mesh</Type>
+  <Category>Furniture</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\Tabla01.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

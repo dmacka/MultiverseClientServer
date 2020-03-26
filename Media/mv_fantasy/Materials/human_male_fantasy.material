@@ -1,0 +1,601 @@
+material human_male_fantasy.human_male_head_01
+{
+        technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_head_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_head_01_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_head_01_hair_01
+{
+          technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_head_01_hair_01_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_head_01_hair_01_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_armor_leather_a
+{
+       technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_armor_leather_a_01_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_armor_leather_a_01_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_armor_leather_a_01_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_armor_leather_b
+{
+         technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_armor_leather_b_01_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_armor_leather_b_01_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_armor_leather_b_01_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_armor_peasant
+{
+        technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_armor_peasant_01_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_armor_peasant_01_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_armor_plate_01
+{
+         technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_armor_plate_01_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_armor_plate_01_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_armor_plate_01_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_body_02
+{
+        technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_body_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_body_02_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_body_01
+{
+        technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_body_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_body_01_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_head_02
+{
+        technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_head_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_head_02_diffuse.dds
+	    }
+        }
+    }
+}
+material human_male_fantasy.human_male_head_02_hair_01
+{
+        technique
+    {
+        pass
+        {
+            fog_override true
+    
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS_Skinned
+            {
+		        param_named_auto FogSettings fog_params
+		        param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+		        param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+		        param_named_auto LightAttenuation[0] light_attenuation 0
+		        param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+
+		// number in vs4 in this shadow caster/receiver case refers to the number of verticies weighted per bone 
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            } 
+            
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 10
+	    }
+
+	    // Normal map
+	    texture_unit
+	    {
+	        texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+	        texture human_male_fantasy_head_02_hair_01_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+	        texture human_male_fantasy_head_02_hair_01_diffuse.dds
+	    }
+        }
+    }
+ }

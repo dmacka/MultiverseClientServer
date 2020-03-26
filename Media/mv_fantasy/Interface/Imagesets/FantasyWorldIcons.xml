@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<Imageset Name="FantasyWorldIcons" Imagefile="FantasyWorldIcons.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="ARMOR_plate_A_head"    XPos="66"  YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_A_chest"   XPos="130" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_A_legs"    XPos="194" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_A_hands"   XPos="258" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_A_feet"    XPos="322" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_B_head"    XPos="450" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_B_chest"   XPos="514" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_B_legs"    XPos="578" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_B_hands"   XPos="642" YPos="68"  Width="60" Height="60" />
+    <Image Name="ARMOR_plate_B_feet"    XPos="706" YPos="68"  Width="60" Height="60" />
+
+    <Image Name="ARMOR_leather_A_head"  XPos="66"  YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_leather_A_chest" XPos="130" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_leather_A_legs"  XPos="194" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_leather_A_hands" XPos="258" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_leather_A_feet"  XPos="322" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_scale_A_head"    XPos="450" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_scale_A_chest"   XPos="514" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_scale_A_legs"    XPos="578" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_scale_A_hands"   XPos="642" YPos="196" Width="60" Height="60" />
+    <Image Name="ARMOR_scale_A_feet"    XPos="706" YPos="196" Width="60" Height="60" />
+
+    <Image Name="WEAPON_dagger_A"       XPos="66"  YPos="324" Width="60" Height="60" />
+    <Image Name="WEAPON_sword_A"        XPos="130" YPos="324" Width="60" Height="60" />
+    <Image Name="WEAPON_axe_A"          XPos="194" YPos="324" Width="60" Height="60" />
+    <Image Name="WEAPON_mace_A"         XPos="258" YPos="324" Width="60" Height="60" />
+    <Image Name="WEAPON_spear_A"        XPos="322" YPos="324" Width="60" Height="60" />
+    <Image Name="SHIELD_kite_A"         XPos="386" YPos="324" Width="60" Height="60" />
+    <Image Name="SHIELD_kite_B"         XPos="450" YPos="324" Width="60" Height="60" />
+    <Image Name="SHIELD_kite_C"         XPos="514" YPos="324" Width="60" Height="60" />
+    <Image Name="SHIELD_kite_D"         XPos="578" YPos="324" Width="60" Height="60" />
+
+    <Image Name="ITEM_scroll_A"         XPos="66"  YPos="452" Width="60" Height="60" />
+    <Image Name="ITEM_potion_A"         XPos="130" YPos="452" Width="60" Height="60" />
+    <Image Name="SPELL_heal_A"          XPos="194" YPos="452" Width="60" Height="60" />
+    <Image Name="SPELL_heal_B"          XPos="258" YPos="452" Width="60" Height="60" />
+    <Image Name="SPELL_heal_C"          XPos="322" YPos="452" Width="60" Height="60" />
+    <Image Name="ITEM_book_A"           XPos="386" YPos="452" Width="60" Height="60" />
+    <Image Name="ITEM_book_B"           XPos="450" YPos="452" Width="60" Height="60" />
+    <Image Name="ITEM_book_C"           XPos="514" YPos="452" Width="60" Height="60" />
+    <Image Name="ITEM_book_D"           XPos="578" YPos="452" Width="60" Height="60" />
+
+    <Image Name="SPELL_stun_A"          XPos="66"  YPos="580" Width="60" Height="60" />
+    <Image Name="SPELL_strike_A"        XPos="130" YPos="580" Width="60" Height="60" />
+    <Image Name="SPELL_fireball_A"      XPos="194" YPos="580" Width="60" Height="60" />
+    <Image Name="SPELL_fireball_B"      XPos="258" YPos="580" Width="60" Height="60" />
+    <Image Name="SPELL_poison_A"        XPos="322" YPos="580" Width="60" Height="60" />
+</Imageset>

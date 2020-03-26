@@ -1,0 +1,34 @@
+<Ui>
+
+    <Button name="ItemButton" virtual="true">
+	<Size>
+	    <AbsDimension x="37" y="37"/>
+	</Size>
+	<Layers>
+	    <Layer level="BORDER">
+		<Texture name="$parentIconTexture"/>
+		<FontString name="$parentCount" inherits="ItemCountFont" justifyH="RIGHT" hidden="true">
+		    <Anchors>
+			<Anchor point="BOTTOMRIGHT">
+			    <Offset>
+				<AbsDimension x="-5" y="2"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</FontString>
+		<FontString name="$parentStock" inherits="ItemStoreFont" justifyH="LEFT" hidden="true">
+		    <Anchors>
+			<Anchor point="TOPLEFT">
+			    <Offset>
+				<AbsDimension x="0" y="-2"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</FontString>
+	    </Layer>
+	</Layers>
+	<PushedTexture file="Interface\Icons\INV_Pushed"/>
+	<HighlightTexture alphaMode="ADD" file="Interface\Icons\INV_Highlight"/>
+    </Button>
+
+ </Ui>

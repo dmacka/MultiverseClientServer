@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>st_f_dance_drk_shade_full_Mesh</Name>
+  <Description>st_f_dance_drk_shade_full</Description>
+  <Category>Social World Statues</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\st_f_dance_drk_shade_full.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

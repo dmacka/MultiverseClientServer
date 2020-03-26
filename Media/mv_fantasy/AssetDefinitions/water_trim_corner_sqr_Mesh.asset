@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>water_trim_corner_sqr_Mesh</Name>
+  <Description>water_trim_corner_sqr</Description>
+  <Type>Mesh</Type>
+  <Category>Social World Buildings</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\water_trim_corner_sqr.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\water_trim_corner_sqr_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\water_trim_corner_sqr.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

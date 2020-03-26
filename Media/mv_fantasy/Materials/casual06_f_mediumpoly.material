@@ -1,0 +1,132 @@
+
+material casual06_f_mediumpoly.body
+{
+    technique
+    {
+        pass
+        {
+            
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 1
+                param_named spec_level float 0.1
+            }
+            texture_unit
+            {
+                texture casual06_f_20.dds
+                tex_coord_set 0
+            }
+        }
+    }
+    // Fallback technique
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture casual06_f_20.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material casual06_f_mediumpoly.hair_transparent
+{
+    technique
+    {
+        pass
+        {
+            
+            scene_blend alpha_blend
+
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+                param_named_auto FogSettings fog_params
+                param_named_auto WorldMatrix3x4Array[0] world_matrix_array_3x4
+                param_named_auto ViewProj viewproj_matrix
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+                param_named_auto EyePosition camera_position_object_space
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+                param_named LMe float4 0 0 0 1
+                param_named_auto LMa ambient_light_colour
+                param_named_auto LMd[0] light_diffuse_colour 0
+                param_named_auto LMd[1] light_diffuse_colour 1
+                param_named_auto LMs[0] light_specular_colour 0
+                param_named_auto LMs[1] light_specular_colour 1
+                param_named shininess float 1
+                param_named spec_level float 0.1
+            }
+            texture_unit
+            {
+                texture casual06_f_hairalpha.dds
+                tex_coord_set 0
+            }
+        }
+    }
+    // Fallback technique
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture casual06_f_hairalpha.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

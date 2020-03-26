@@ -1,0 +1,14 @@
+<physics_model>
+  <rigid_body sid="barrel_open-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>0.08095767 0 -0.9967175 94.62843</rotate>
+        <translate>0.003529022 0.299732 0.0001553803</translate>
+        <capsule>
+          <height>0.2780571</height>
+          <radius>0.317833 0.317833</radius>
+        </capsule>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

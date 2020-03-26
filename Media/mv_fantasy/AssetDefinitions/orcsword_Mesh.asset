@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>orcsword_Mesh</Name>
+  <Description>Orc Sword</Description>
+  <Type>Mesh</Type>
+  <Category>Weapons</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\orcsword.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\orcsword_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

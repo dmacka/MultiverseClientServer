@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Imageset Name="PaperDoll" Imagefile="PaperDoll.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="UI-Backpack-EmptySlot" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Ammo" XPos="64" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Bag" XPos="128" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Chest" XPos="192" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Feet" XPos="256" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Finger" XPos="320" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Hands" XPos="384" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Head" XPos="448" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Legs" XPos="512" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-MainHand" XPos="576" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Neck" XPos="640" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Ranged" XPos="704" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-REar" XPos="768" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-RFinger" XPos="832" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-SecondaryHand" XPos="896" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Shirt" XPos="960" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Shoulder" XPos="0" YPos="64" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Tabard" XPos="64" YPos="64" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Trinket" XPos="128" YPos="64" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Waist" XPos="192" YPos="64" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-Slot-Wrists" XPos="256" YPos="64" Width="64" Height="64" />
+    <Image Name="UI-PaperDoll-SlotBackground" XPos="320" YPos="64" Width="512" Height="512" />
+    <Image Name="UI-PaperDollBackground-L1" XPos="0" YPos="576" Width="256" Height="256" />
+    <Image Name="UI-PaperDollBackground-L2" XPos="256" YPos="576" Width="256" Height="256" />
+    <Image Name="UI-PaperDollBackground-R1" XPos="512" YPos="576" Width="32" Height="256" />
+    <Image Name="UI-PaperDollBackground-R2" XPos="544" YPos="576" Width="32" Height="256" />
+</Imageset>

@@ -1,0 +1,46 @@
+material wolf.wolf_rig_019_wolf_phong1
+{
+    technique
+    {
+        pass
+        {
+            // Vertex program reference
+            vertex_program_ref CompoundVS4_Basic_Skinned
+            {
+            }
+            shadow_caster_vertex_program_ref CompoundVS4_Shadow_Skinned
+            {
+            }
+            shadow_receiver_vertex_program_ref CompoundVS4_ShadowReceiver_Skinned
+            {
+            }
+            fragment_program_ref CompoundPS_Basic
+            {
+            }
+            texture_unit
+            {
+                texture wolf_body_diffuse.dds
+            }
+        }
+    }
+    // fallback method for machines without the ps_2_0 support
+    technique
+    {
+        pass
+        {
+            cull_hardware none
+            cull_software none
+
+            // base colours, not needed for rendering, but as information
+            // to lighting pass categorisation routine
+            ambient 1 1 1
+            diffuse 0 0 0
+            specular 0 0 0 0
+
+            texture_unit
+            {
+                texture wolf_body_diffuse.dds
+            }
+        }
+    }
+}

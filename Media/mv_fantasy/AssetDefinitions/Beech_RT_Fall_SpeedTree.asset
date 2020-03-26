@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>Beech_RT_Fall_SpeedTree</Name>
+  <Description>Beech - Fall</Description>
+  <Type>SpeedTree</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>SpeedTree\Beech_RT_Fall.tre</TargetFile>
+      <FileType>SpeedTree</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\BeechFall_Composite.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\Beech_SelfShadow.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\BeechBark.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\BeechBarkNormals.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

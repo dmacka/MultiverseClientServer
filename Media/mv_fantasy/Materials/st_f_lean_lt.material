@@ -1,0 +1,18 @@
+material st_f_lean_lt.marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex marble_white_rev_darker.dds
+}
+
+material st_f_lean_lt.female_marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex female_face_marble_white_rev_darker.dds
+}
+
+material st_f_lean_lt.female_face_marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex female_face_marble_white_rev_darker.dds
+}
+
+material st_f_lean_lt.lambert1 : MVSimpleLighting
+{
+}

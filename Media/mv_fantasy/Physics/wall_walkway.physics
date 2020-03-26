@@ -1,0 +1,70 @@
+<physics_model>
+  <rigid_body sid="wall_walkway-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>-1 0 0 6.66192</rotate>
+        <translate>-0.03442749 1.033656 0.09263047</translate>
+        <box>
+          <half_extents>2.865932 2.243303 0.182442</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.007161133 1.146444 -1.27545</translate>
+        <box>
+          <half_extents>2.894284 0.05670398 0.05468506</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-2.22941 1.392338 -0.747098</translate>
+        <box>
+          <half_extents>0.06635767 0.07063831 0.6417065</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>2.1816 1.392338 -0.747098</translate>
+        <box>
+          <half_extents>0.06635767 0.07063831 0.6417065</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>1.38665 -0.4907902 -0.1790531</translate>
+        <box>
+          <half_extents>0.1302066 0.7139748 0.09950736</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 17.70962</rotate>
+        <translate>-1.28491 -0.4907902 -0.2067311</translate>
+        <box>
+          <half_extents>0.1302066 0.7139748 0.09950736</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>2.19678 0.5766414 -1.37175</translate>
+        <box>
+          <half_extents>0.08938233 1.784311 0.1003264</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-2.19742 0.5766414 -1.37175</translate>
+        <box>
+          <half_extents>0.08938233 1.784311 0.1003264</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1 0 0 4.917075</rotate>
+        <translate>-1.75278 0.6093504 -1.749976</translate>
+        <box>
+          <half_extents>0.3665496 1.882117 0.05248975</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.04273658 2.41013 -0.8884791</translate>
+        <box>
+          <half_extents>3.006525 0.03407983 0.7009968</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

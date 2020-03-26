@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>crocodile_Mesh</Name>
+  <Description>Crocodile</Description>
+  <Type>Mesh</Type>
+  <Category>Creatures</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\crocodile.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\crocodile_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\crocodile.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

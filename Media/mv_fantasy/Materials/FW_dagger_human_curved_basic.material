@@ -1,0 +1,39 @@
+material FW_dagger_human_curved_basic.dagger_sword
+{
+    technique
+    {
+        pass
+        {   
+            // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+            }
+
+	    // Normal map
+	    texture_unit
+	    {
+			tex_coord_set 0
+	        texture FW_daggers_swords_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+			tex_coord_set 1
+	        texture FW_daggers_swords_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+			tex_coord_set 2
+	        texture FW_daggers_swords_diffuse.dds
+	    }
+        }
+    }
+   
+}

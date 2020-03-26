@@ -1,0 +1,33 @@
+# Assets needed for _any_ world
+AlphaSplatTerrain_Material.asset
+DetailVeg_Material.asset
+directional_marker_Mesh.asset
+HMETerrain_Material.asset
+MVSMShadows_Material.asset
+MVSMTerrain_Material.asset
+Ocean_Material.asset
+Terrain_Material.asset
+Trees_Material.asset
+Water_Material.asset
+
+# Assets used by the UI
+AdditionalUIAssets
+AxiomIcon_Icon
+Library_PythonScript
+MarsDecals_FrameXML
+MarsPlayer_FrameXML
+MarsTarget_FrameXML
+MarsUnit_FrameXML
+MvActionBar_FrameXML
+MvActionButton_FrameXML
+MvChat_FrameXML
+MvContainer_FrameXML
+MvDialog_FrameXML
+MvFonts_FrameXML
+MvFrame_FrameXML
+MvItemButton_FrameXML
+MvStatus_FrameXML
+MvTooltip_FrameXML
+MvChatBubble_FrameXML
+tiny_cube_Mesh
+MvContextMenu_FrameXML

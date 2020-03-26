@@ -1,0 +1,47 @@
+// A sparkly fountain
+waterfountain
+{
+    material        waterfountain
+    particle_width  200
+    particle_height 200
+    cull_each       false
+    quota           1500
+    billboard_type  oriented_self
+    
+    // Area emitter
+    emitter Point
+    {
+        angle           3
+        emission_rate   300
+        time_to_live    4
+        direction       0 1 0
+        velocity_min    2500
+        velocity_max    3000
+        colour_range_start 0.05 0.09 0.1
+        colour_range_end 0.05 0.09 0.1
+    }
+
+    // Gravity
+    affector LinearForce
+    {
+        force_vector      0 -1500 0
+        force_application add
+    }
+
+    affector ColourFader2
+    {
+	red1 0.05
+	green1 0.09
+        blue1 0.1
+	red2 -0.025
+	green2 -0.045
+        blue2 -0.05
+        state_change 2
+    }
+
+    affector Scaler
+    {
+        rate 1
+    }
+
+}

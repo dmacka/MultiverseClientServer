@@ -1,0 +1,18 @@
+material human_meeting_house._01_-_Default : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+				alpha_rejection greater 128
+                texture human_meeting_house.dds
+            }
+        }
+    }
+}
+
+material human_meeting_house.initialShadingGroup : MVSimpleLighting
+{
+}

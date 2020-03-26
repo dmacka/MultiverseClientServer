@@ -1,0 +1,1048 @@
+INFO  [2020-03-26 04:19:06,963] main                 pid 5404@localhost.localdomain
+DEBUG [2020-03-26 04:19:06,964] main                 Using property file /usr/multiverse/bin/multiverse.properties
+DEBUG [2020-03-26 04:19:06,964] main                 Properties are:
+DEBUG [2020-03-26 04:19:06,965] main                     java.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:06,965] main                     multiverse.voiceport = 5051
+DEBUG [2020-03-26 04:19:06,965] main                     log4j.appender.FILE = org.apache.log4j.RollingFileAppender
+DEBUG [2020-03-26 04:19:06,965] main                     sun.java.launcher = SUN_STANDARD
+DEBUG [2020-03-26 04:19:06,965] main                     sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+DEBUG [2020-03-26 04:19:06,965] main                     multiverse.proxyport = 5050
+DEBUG [2020-03-26 04:19:06,965] main                     os.name = Linux
+DEBUG [2020-03-26 04:19:06,965] main                     multiverse.db_password = multiverse
+DEBUG [2020-03-26 04:19:06,965] main                     sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/classes
+DEBUG [2020-03-26 04:19:06,965] main                     multiverse.plugin_dep.sampleworld.MobManager = ObjectManager,WorldManager,Inventory,Quest,Combat
+DEBUG [2020-03-26 04:19:07,004] main                     sun.desktop = gnome
+DEBUG [2020-03-26 04:19:07,004] main                     multiverse.delete_logs_on_startup = true
+DEBUG [2020-03-26 04:19:07,004] main                     java.vm.specification.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:07,004] main                     java.runtime.version = 1.8.0_242-b08
+DEBUG [2020-03-26 04:19:07,004] main                     user.name = dmckay
+DEBUG [2020-03-26 04:19:07,004] main                     user.language = en
+DEBUG [2020-03-26 04:19:07,004] main                     sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/amd64
+DEBUG [2020-03-26 04:19:07,004] main                     multiverse.quad_tree_max_depth = 20
+DEBUG [2020-03-26 04:19:07,004] main                     multiverse.world_available_message = DONE INITIALIZING, you can log in now
+DEBUG [2020-03-26 04:19:07,004] main                     multiverse.plugin_dep.MobManager = ObjectManager,WorldManager,Inventory,Quest
+DEBUG [2020-03-26 04:19:07,004] main                     java.version = 1.8.0_242
+DEBUG [2020-03-26 04:19:07,004] main                     log4j.rootLogger = DEBUG, FILE
+DEBUG [2020-03-26 04:19:07,004] main                     user.timezone = America/Chicago
+DEBUG [2020-03-26 04:19:07,004] main                     multiverse.plugin_dep.Proxy = Instance,Voice
+DEBUG [2020-03-26 04:19:07,004] main                     sun.arch.data.model = 64
+DEBUG [2020-03-26 04:19:07,004] main                     java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/endorsed
+DEBUG [2020-03-26 04:19:07,004] main                     multiverse.voiceserver = localhost
+DEBUG [2020-03-26 04:19:07,005] main                     sun.cpu.isalist = 
+DEBUG [2020-03-26 04:19:07,005] main                     sun.jnu.encoding = UTF-8
+DEBUG [2020-03-26 04:19:07,005] main                     file.encoding.pkg = sun.io
+DEBUG [2020-03-26 04:19:07,005] main                     multiverse.startup_timeout = 120
+DEBUG [2020-03-26 04:19:07,005] main                     multiverse.plugin_dep.Quest = 
+DEBUG [2020-03-26 04:19:07,005] main                     file.separator = /
+DEBUG [2020-03-26 04:19:07,005] main                     java.specification.name = Java Platform API Specification
+DEBUG [2020-03-26 04:19:07,005] main                     java.class.version = 52.0
+DEBUG [2020-03-26 04:19:07,005] main                     log4j.appender.FILE.layout = org.apache.log4j.PatternLayout
+DEBUG [2020-03-26 04:19:07,005] main                     user.country = US
+DEBUG [2020-03-26 04:19:07,005] main                     multiverse.plugin_dep.Inventory = 
+DEBUG [2020-03-26 04:19:07,005] main                     java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre
+DEBUG [2020-03-26 04:19:07,005] main                     multiverse.msgsvr_port = 20374
+DEBUG [2020-03-26 04:19:07,005] main                     java.vm.info = mixed mode
+DEBUG [2020-03-26 04:19:07,005] main                     multiverse.jdbcJarPath = /usr/share/java/mysql-connector-java.jar
+DEBUG [2020-03-26 04:19:07,005] main                     multiverse.plugin_dep.Instance = ObjectManager,Quest,MobManager,Inventory,WorldManager
+DEBUG [2020-03-26 04:19:07,005] main                     os.version = 3.10.0-1062.18.1.el7.x86_64
+DEBUG [2020-03-26 04:19:07,005] main                     multiverse.logs = /usr/multiverse/logs/mv_fantasy
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.plugin_dep.ObjectManager = 
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.log_level = 1
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.packet_aggregation_interval = 0
+DEBUG [2020-03-26 04:19:07,006] main                     path.separator = :
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.plugin_dep.Trainer = 
+DEBUG [2020-03-26 04:19:07,006] main                     java.vm.version = 25.242-b08
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.quad_tree_node_max_objects = 30
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.mvwfile = /usr/multiverse/config/sampleworld/mv_fantasy.mvw
+DEBUG [2020-03-26 04:19:07,006] main                     java.awt.printerjob = sun.print.PSPrinterJob
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.log_rdp_counters = false
+DEBUG [2020-03-26 04:19:07,006] main                     sun.io.unicode.encoding = UnicodeLittle
+DEBUG [2020-03-26 04:19:07,006] main                     log4j.appender.FILE.File = ${multiverse.logs}/${multiverse.loggername}.out
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.precreated_positional_voice_group = 1
+DEBUG [2020-03-26 04:19:07,006] main                     awt.toolkit = sun.awt.X11.XToolkit
+DEBUG [2020-03-26 04:19:07,006] main                     user.home = /home/dmckay
+DEBUG [2020-03-26 04:19:07,006] main                     java.specification.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.proxyserver = localhost
+DEBUG [2020-03-26 04:19:07,006] main                     multiverse.plugin_dep.WorldManager = 
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.worldmgrport = 5040
+DEBUG [2020-03-26 04:19:07,007] main                     java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+DEBUG [2020-03-26 04:19:07,007] main                     java.vendor.url = http://java.oracle.com/
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.loggername = voiceserver
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.log_proxy_histograms = true
+DEBUG [2020-03-26 04:19:07,007] main                     java.vm.vendor = Oracle Corporation
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.db_user = multiverse
+DEBUG [2020-03-26 04:19:07,007] main                     java.runtime.name = OpenJDK Runtime Environment
+DEBUG [2020-03-26 04:19:07,007] main                     sun.java.command = multiverse.server.engine.Engine -Pmultiverse.worldname= -i /usr/multiverse/config/common/mvmessages.py -i /usr/multiverse/config/mv_fantasy/worldmessages.py -t /usr/multiverse/config/common/typenumbers.txt /usr/multiverse/config/common/voice.py /usr/multiverse/config/mv_fantasy/voice.py
+DEBUG [2020-03-26 04:19:07,007] main                     java.class.path = /usr/multiverse/other/rhino1_5R5/js.jar:/usr/share/java/mysql-connector-java.jar:/usr/multiverse/dist/lib/injected.jar:/usr/multiverse/dist/lib/multiverse.jar:/usr/multiverse/dist/lib/mars.jar:/usr/multiverse/dist/lib/.jar:/usr/multiverse/other/java-getopt-1.0.11.jar:/usr/multiverse/other/jython.jar:/usr/multiverse/other/log4j-1.2.14.jar:/usr/multiverse/other/bcel-5.2.jar:.
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.propertyfile = /usr/multiverse/bin/multiverse.properties
+DEBUG [2020-03-26 04:19:07,007] main                     log4j.appender.FILE.MaxBackupIndex = 3
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.db_hostname = localhost
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.db_type = mysql
+DEBUG [2020-03-26 04:19:07,007] main                     java.vm.specification.name = Java Virtual Machine Specification
+DEBUG [2020-03-26 04:19:07,007] main                     java.vm.specification.version = 1.8
+DEBUG [2020-03-26 04:19:07,007] main                     multiverse.plugin_dep.Login = ObjectManager,Instance
+DEBUG [2020-03-26 04:19:07,007] main                     sun.cpu.endian = little
+DEBUG [2020-03-26 04:19:07,008] main                     sun.os.patch.level = unknown
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.msgsvr_hostname = localhost
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.worldname = 
+DEBUG [2020-03-26 04:19:07,008] main                     java.io.tmpdir = /tmp
+DEBUG [2020-03-26 04:19:07,008] main                     java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+DEBUG [2020-03-26 04:19:07,008] main                     log4j.appender.FILE.MaxFileSize = 50MB
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.db_driver = com.mysql.jdbc.Driver
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.db_name = multiverse
+DEBUG [2020-03-26 04:19:07,008] main                     os.arch = amd64
+DEBUG [2020-03-26 04:19:07,008] main                     java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.plugin_dep.Voice = Instance
+DEBUG [2020-03-26 04:19:07,008] main                     log4j.appender.FILE.layout.ConversionPattern = %-5p [%d{ISO8601}] %-20t %m%n
+DEBUG [2020-03-26 04:19:07,008] main                     java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.plugin_dep.ClassAbility = 
+DEBUG [2020-03-26 04:19:07,008] main                     user.dir = /usr/multiverse/bin
+DEBUG [2020-03-26 04:19:07,008] main                     line.separator = 
+
+DEBUG [2020-03-26 04:19:07,008] main                     java.vm.name = OpenJDK 64-Bit Server VM
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.plugin_dep.Domain = Instance,Proxy,Voice
+DEBUG [2020-03-26 04:19:07,008] main                     file.encoding = UTF-8
+DEBUG [2020-03-26 04:19:07,008] main                     multiverse.plugin_dep.Combat = 
+DEBUG [2020-03-26 04:19:07,009] main                     java.specification.version = 1.8
+INFO  [2020-03-26 04:19:07,009] main                 The log level is 1
+INFO  [2020-03-26 04:19:07,011] main                 Multiverse server version 1.5 0 (- -)
+INFO  [2020-03-26 04:19:07,018] main                 Entered MarshallingRuntime.initializeBatch: reading type nums from '/usr/multiverse/config/common/typenumbers.txt'
+INFO  [2020-03-26 04:19:09,290] main                 Entered MarshallingRuntime.initializeBatch: Registered 240 classes
+INFO  [2020-03-26 04:19:09,290] main                 Engine: My local host name is 'localhost.localdomain'
+DEBUG [2020-03-26 04:19:09,291] main                 Engine, multiverse.cputime_logging_interval disabled
+DEBUG [2020-03-26 04:19:09,407] main                 Engine, populateScriptList: option i: /usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:09,407] main                 Engine, populateScriptList: option i: /usr/multiverse/config/mv_fantasy/worldmessages.py
+DEBUG [2020-03-26 04:19:09,407] main                 Engine, populateScriptList: nonoption args element: /usr/multiverse/config/common/voice.py
+DEBUG [2020-03-26 04:19:09,407] main                 Engine, populateScriptList: nonoption args element: /usr/multiverse/config/mv_fantasy/voice.py
+DEBUG [2020-03-26 04:19:13,855] main                 Engine, Engine: reading in script: /usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:13,855] main                 Engine, Executing init script file: /usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:13,856] main                 runPYFile: file=/usr/multiverse/config/common/mvmessages.py
+DEBUG [2020-03-26 04:19:14,873] main                 Adding msg type 'mv.PROPERTY', msgNumber 1/0x1
+DEBUG [2020-03-26 04:19:14,874] main                 Adding msg type 'mv.LOGIN', msgNumber 2/0x2
+DEBUG [2020-03-26 04:19:14,875] main                 Adding msg type 'mv.LOGOUT', msgNumber 3/0x3
+DEBUG [2020-03-26 04:19:14,892] main                 Adding msg type 'mv.ANIMATION', msgNumber 4/0x4
+DEBUG [2020-03-26 04:19:14,893] main                 Adding msg type 'mv.COM', msgNumber 5/0x5
+DEBUG [2020-03-26 04:19:14,893] main                 Adding msg type 'mv.COM_REQ', msgNumber 6/0x6
+DEBUG [2020-03-26 04:19:14,893] main                 Adding msg type 'mv.DC_REQ', msgNumber 7/0x7
+DEBUG [2020-03-26 04:19:14,893] main                 Adding msg type 'mv.DESPAWNED', msgNumber 8/0x8
+DEBUG [2020-03-26 04:19:14,893] main                 Adding msg type 'mv.DESPAWN_REQ', msgNumber 9/0x9
+DEBUG [2020-03-26 04:19:14,893] main                 Adding msg type 'mv.DETACH', msgNumber 10/0xa
+DEBUG [2020-03-26 04:19:14,894] main                 Adding msg type 'mv.DIR_LOC_ORIENT', msgNumber 11/0xb
+DEBUG [2020-03-26 04:19:14,894] main                 Adding msg type 'mv.DISPLAY_CONTEXT', msgNumber 12/0xc
+DEBUG [2020-03-26 04:19:14,894] main                 Adding msg type 'mv.EXTENSION', msgNumber 13/0xd
+DEBUG [2020-03-26 04:19:14,894] main                 Adding msg type 'mv.FOG', msgNumber 14/0xe
+DEBUG [2020-03-26 04:19:14,894] main                 Adding msg type 'mv.FREE_REMOTE_OBJ', msgNumber 15/0xf
+DEBUG [2020-03-26 04:19:14,895] main                 Adding msg type 'mv.GETWNODE_REQ', msgNumber 16/0x10
+DEBUG [2020-03-26 04:19:14,896] main                 Adding msg type 'mv.MOB_PATH', msgNumber 17/0x11
+DEBUG [2020-03-26 04:19:14,896] main                 Adding msg type 'mv.MOB_PATH_CORRECTION', msgNumber 18/0x12
+DEBUG [2020-03-26 04:19:14,896] main                 Adding msg type 'mv.MOB_PATH_REQ', msgNumber 19/0x13
+DEBUG [2020-03-26 04:19:14,896] main                 Adding msg type 'mv.MODIFY_DC', msgNumber 20/0x14
+DEBUG [2020-03-26 04:19:14,896] main                 Adding msg type 'mv.NEW_DIRLIGHT', msgNumber 21/0x15
+DEBUG [2020-03-26 04:19:14,896] main                 Adding msg type 'mv.FREE_OBJECT', msgNumber 22/0x16
+DEBUG [2020-03-26 04:19:14,896] main                 Adding msg type 'mv.NEW_REGION', msgNumber 23/0x17
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.NEW_REMOTE_OBJ', msgNumber 24/0x18
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.OBJINFO_REQ', msgNumber 25/0x19
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.ORIENT', msgNumber 26/0x1a
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.ORIENT_REQ', msgNumber 27/0x1b
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.PERCEIVER_REGIONS', msgNumber 28/0x1c
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.REFRESH_WNODE', msgNumber 29/0x1d
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.REPARENT_WNODE_REQ', msgNumber 30/0x1e
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.ROAD', msgNumber 31/0x1f
+DEBUG [2020-03-26 04:19:14,897] main                 Adding msg type 'mv.FREE_ROAD', msgNumber 32/0x20
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.SETWNODE_REQ', msgNumber 33/0x21
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.SET_AMBIENT', msgNumber 34/0x22
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.SOUND', msgNumber 35/0x23
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.SPAWNED', msgNumber 36/0x24
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.SPAWN_REQ', msgNumber 37/0x25
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.SYS_CHAT', msgNumber 38/0x26
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.TARGETED_PROPERTY', msgNumber 39/0x27
+DEBUG [2020-03-26 04:19:14,898] main                 Adding msg type 'mv.UPDATEWNODE', msgNumber 40/0x28
+DEBUG [2020-03-26 04:19:14,899] main                 Adding msg type 'mv.UPDATEWNODE_REQ', msgNumber 41/0x29
+DEBUG [2020-03-26 04:19:14,899] main                 Adding msg type 'mv.UPDATE_OBJECT', msgNumber 42/0x2a
+DEBUG [2020-03-26 04:19:14,899] main                 Adding msg type 'mv.WNODECORRECT', msgNumber 43/0x2b
+DEBUG [2020-03-26 04:19:14,919] main                 Adding msg type 'mv.P2P_EXTENSION', msgNumber 44/0x2c
+DEBUG [2020-03-26 04:19:14,920] main                 Adding msg type 'mv.PERCEPTION_INFO', msgNumber 45/0x2d
+DEBUG [2020-03-26 04:19:14,920] main                 Adding msg type 'mv.PERCEPTION', msgNumber 46/0x2e
+DEBUG [2020-03-26 04:19:14,920] main                 Adding msg type 'mv.HOST_INSTANCE', msgNumber 47/0x2f
+DEBUG [2020-03-26 04:19:14,920] main                 Adding msg type 'mv.PLAYER_PATH_WM_REQ', msgNumber 48/0x30
+DEBUG [2020-03-26 04:19:14,924] main                 Adding msg type 'mv.SET_PERSISTENCE', msgNumber 49/0x31
+DEBUG [2020-03-26 04:19:14,924] main                 Adding msg type 'mv.SET_SUBPERSISTENCE', msgNumber 50/0x32
+DEBUG [2020-03-26 04:19:14,924] main                 Adding msg type 'mv.LOAD_OBJECT', msgNumber 51/0x33
+DEBUG [2020-03-26 04:19:14,924] main                 Adding msg type 'mv.LOAD_SUBOBJECT', msgNumber 52/0x34
+DEBUG [2020-03-26 04:19:14,925] main                 Adding msg type 'mv.LOAD_OBJECT_DATA', msgNumber 53/0x35
+DEBUG [2020-03-26 04:19:14,932] main                 Adding msg type 'mv.SAVE_OBJECT_DATA', msgNumber 54/0x36
+DEBUG [2020-03-26 04:19:14,933] main                 Adding msg type 'mv.SAVE_OBJECT', msgNumber 55/0x37
+DEBUG [2020-03-26 04:19:14,933] main                 Adding msg type 'mv.SAVE_SUBOBJECT', msgNumber 56/0x38
+DEBUG [2020-03-26 04:19:14,933] main                 Adding msg type 'mv.GENERATE_OBJECT', msgNumber 57/0x39
+DEBUG [2020-03-26 04:19:14,933] main                 Adding msg type 'mv.GENERATE_SUB_OBJECT', msgNumber 58/0x3a
+DEBUG [2020-03-26 04:19:14,933] main                 Adding msg type 'mv.SUB_OBJECT_DEPS_READY', msgNumber 59/0x3b
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.REGISTER_TEMPLATE', msgNumber 60/0x3c
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.GET_TEMPLATE', msgNumber 61/0x3d
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.GET_TEMPLATE_NAMES', msgNumber 62/0x3e
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.UNLOAD_OBJECT', msgNumber 63/0x3f
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.UNLOAD_SUBOBJECT', msgNumber 64/0x40
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.DELETE_OBJECT', msgNumber 65/0x41
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.DELETE_SUBOBJECT', msgNumber 66/0x42
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.FIX_WNODE_REQ', msgNumber 67/0x43
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.GET_NAMED_OBJECT', msgNumber 68/0x44
+DEBUG [2020-03-26 04:19:14,934] main                 Adding msg type 'mv.GET_OBJECT_STATUS', msgNumber 69/0x45
+DEBUG [2020-03-26 04:19:14,936] main                 Adding msg type 'mv.ADD_ITEM', msgNumber 70/0x46
+DEBUG [2020-03-26 04:19:14,936] main                 Adding msg type 'mv.CREATE_INV', msgNumber 71/0x47
+DEBUG [2020-03-26 04:19:14,937] main                 Adding msg type 'mv.INV_UPDATE', msgNumber 72/0x48
+DEBUG [2020-03-26 04:19:14,937] main                 Adding msg type 'mv.ACTIVATE', msgNumber 73/0x49
+DEBUG [2020-03-26 04:19:14,937] main                 Adding msg type 'mv.LOOTALL', msgNumber 74/0x4a
+DEBUG [2020-03-26 04:19:14,954] main                 Adding msg type 'mv.INV_FIND', msgNumber 75/0x4b
+DEBUG [2020-03-26 04:19:14,955] main                 Adding msg type 'mv.INV_REMOVE', msgNumber 76/0x4c
+DEBUG [2020-03-26 04:19:14,955] main                 Adding msg type 'mv.DESTROY_ITEM', msgNumber 77/0x4d
+DEBUG [2020-03-26 04:19:14,960] main                 Adding msg type 'mv.NOTIFY_REACTION_RADIUS', msgNumber 78/0x4e
+DEBUG [2020-03-26 04:19:14,967] main                 Adding msg type 'mv.DUMP_ALL_THREAD_STACKS', msgNumber 79/0x4f
+DEBUG [2020-03-26 04:19:14,968] main                 Adding msg type 'mv.GET_PROPERTY', msgNumber 80/0x50
+DEBUG [2020-03-26 04:19:14,968] main                 Adding msg type 'mv.PLUGIN_STATE', msgNumber 81/0x51
+DEBUG [2020-03-26 04:19:14,968] main                 Adding msg type 'mv.SET_PROPERTY', msgNumber 82/0x52
+DEBUG [2020-03-26 04:19:14,968] main                 Adding msg type 'mv.SET_PROPERTY_NONBLOCK', msgNumber 83/0x53
+DEBUG [2020-03-26 04:19:14,968] main                 Adding msg type 'mv.TRANSFER_OBJECT', msgNumber 84/0x54
+DEBUG [2020-03-26 04:19:14,970] main                 Adding msg type 'mv.COMMAND', msgNumber 85/0x55
+DEBUG [2020-03-26 04:19:14,970] main                 Adding msg type 'mv.EVENT', msgNumber 86/0x56
+DEBUG [2020-03-26 04:19:14,972] main                 Adding msg type 'mv.REQ_QUEST_INFO', msgNumber 87/0x57
+DEBUG [2020-03-26 04:19:14,972] main                 Adding msg type 'mv.REQ_CONCLUDE_QUEST', msgNumber 88/0x58
+DEBUG [2020-03-26 04:19:14,973] main                 Adding msg type 'mv.QUEST_INFO', msgNumber 89/0x59
+DEBUG [2020-03-26 04:19:14,973] main                 Adding msg type 'mv.GET_QUEST_STATUS', msgNumber 90/0x5a
+DEBUG [2020-03-26 04:19:14,973] main                 Adding msg type 'mv.QUEST_RESP', msgNumber 91/0x5b
+DEBUG [2020-03-26 04:19:14,973] main                 Adding msg type 'mv.NEW_QUESTSTATE', msgNumber 92/0x5c
+DEBUG [2020-03-26 04:19:14,973] main                 Adding msg type 'mv.CONCLUDE_QUEST', msgNumber 93/0x5d
+DEBUG [2020-03-26 04:19:14,973] main                 Adding msg type 'mv.QUEST_STATE_STATUS_CHANGE', msgNumber 94/0x5e
+DEBUG [2020-03-26 04:19:14,973] main                 Adding msg type 'mv.QUEST_LOG_INFO', msgNumber 95/0x5f
+DEBUG [2020-03-26 04:19:14,974] main                 Adding msg type 'mv.QUEST_STATE_INFO', msgNumber 96/0x60
+DEBUG [2020-03-26 04:19:14,974] main                 Adding msg type 'mv.REMOVE_QUEST_RESP', msgNumber 97/0x61
+DEBUG [2020-03-26 04:19:14,974] main                 Adding msg type 'mv.REQ_RESET_QUESTS', msgNumber 98/0x62
+DEBUG [2020-03-26 04:19:15,005] main                 Adding msg type 'mv.MARS_INV_FIND', msgNumber 99/0x63
+DEBUG [2020-03-26 04:19:15,006] main                 Adding msg type 'mv.TRADE_START_REQ', msgNumber 100/0x64
+DEBUG [2020-03-26 04:19:15,006] main                 Adding msg type 'mv.TRADE_START', msgNumber 101/0x65
+DEBUG [2020-03-26 04:19:15,006] main                 Adding msg type 'mv.TRADE_COMPLETE', msgNumber 102/0x66
+DEBUG [2020-03-26 04:19:15,006] main                 Adding msg type 'mv.TRADE_OFFER_REQ', msgNumber 103/0x67
+DEBUG [2020-03-26 04:19:15,007] main                 Adding msg type 'mv.TRADE_OFFER_UPDATE', msgNumber 104/0x68
+DEBUG [2020-03-26 04:19:15,007] main                 Adding msg type 'mv.SWAP_ITEM', msgNumber 105/0x69
+DEBUG [2020-03-26 04:19:15,008] main                 Adding msg type 'mv.AUTO_ATTACK', msgNumber 106/0x6a
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.START_ABILITY', msgNumber 107/0x6b
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.COOLDOWN', msgNumber 108/0x6c
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.ABILITY_PROGRESS', msgNumber 109/0x6d
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.DAMAGE', msgNumber 110/0x6e
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.RELEASE_OBJECT', msgNumber 111/0x6f
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.ABILITY_UPDATE', msgNumber 112/0x70
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.ADD_SKILL', msgNumber 113/0x71
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.TRAINING_FAILED', msgNumber 114/0x72
+DEBUG [2020-03-26 04:19:15,009] main                 Adding msg type 'mv.COMBAT_ABILITY_MISSED', msgNumber 115/0x73
+DEBUG [2020-03-26 04:19:15,010] main                 Adding msg type 'mv.SKILL_UPDATE', msgNumber 116/0x74
+DEBUG [2020-03-26 04:19:15,011] main                 Adding msg type 'mv.INVOKE_EFFECT', msgNumber 117/0x75
+DEBUG [2020-03-26 04:19:15,013] main                 Adding msg type 'mv.REGISTER_INSTANCE_TEMPLATE', msgNumber 118/0x76
+DEBUG [2020-03-26 04:19:15,013] main                 Adding msg type 'mv.CREATE_INSTANCE', msgNumber 119/0x77
+DEBUG [2020-03-26 04:19:15,013] main                 Adding msg type 'mv.GET_INSTANCE_INFO', msgNumber 120/0x78
+DEBUG [2020-03-26 04:19:15,014] main                 Adding msg type 'mv.INSTANCE_ENTRY_REQ', msgNumber 121/0x79
+DEBUG [2020-03-26 04:19:15,014] main                 Adding msg type 'mv.GET_MARKER', msgNumber 122/0x7a
+DEBUG [2020-03-26 04:19:15,014] main                 Adding msg type 'mv.GET_REGION', msgNumber 123/0x7b
+DEBUG [2020-03-26 04:19:15,014] main                 Adding msg type 'mv.LOAD_INSTANCE', msgNumber 124/0x7c
+DEBUG [2020-03-26 04:19:15,014] main                 Adding msg type 'mv.UNLOAD_INSTANCE', msgNumber 125/0x7d
+DEBUG [2020-03-26 04:19:15,014] main                 Adding msg type 'mv.DELETE_INSTANCE', msgNumber 126/0x7e
+DEBUG [2020-03-26 04:19:15,030] main                 Adding msg type 'mv.LOAD_INSTANCE_CONTENT', msgNumber 127/0x7f
+DEBUG [2020-03-26 04:19:15,030] main                 Adding msg type 'mv.INSTANCE_UNLOADED', msgNumber 128/0x80
+DEBUG [2020-03-26 04:19:15,030] main                 Adding msg type 'mv.INSTANCE_DELETED', msgNumber 129/0x81
+DEBUG [2020-03-26 04:19:15,031] main                 Adding msg type 'mv.CREATE_SPAWN_GEN', msgNumber 130/0x82
+DEBUG [2020-03-26 04:19:15,063] main                 Adding msg type 'mv.VOICE_PARMS', msgNumber 131/0x83
+DEBUG [2020-03-26 04:19:15,063] main                 Adding msg type 'mv.PLAYER_PATH_REQ', msgNumber 132/0x84
+DEBUG [2020-03-26 04:19:15,063] main                 Adding msg type 'mv.UPDATE_PLAYER_IGNORE_LIST', msgNumber 133/0x85
+DEBUG [2020-03-26 04:19:15,064] main                 Adding msg type 'mv.RELAY_UPDATE_PLAYER_IGNORE_LIST', msgNumber 134/0x86
+DEBUG [2020-03-26 04:19:15,064] main                 Adding msg type 'mv.GET_MATCHING_PLAYERS', msgNumber 135/0x87
+DEBUG [2020-03-26 04:19:15,064] main                 Adding msg type 'mv.PLAYER_IGNORE_LIST', msgNumber 136/0x88
+DEBUG [2020-03-26 04:19:15,064] main                 Adding msg type 'mv.PLAYER_IGNORE_LIST_REQ', msgNumber 137/0x89
+DEBUG [2020-03-26 04:19:15,064] main                 Adding msg type 'mv.GET_PLAYER_LOGIN_STATUS', msgNumber 138/0x8a
+DEBUG [2020-03-26 04:19:15,065] main                 Adding msg type 'mv.SEARCH', msgNumber 139/0x8b
+DEBUG [2020-03-26 04:19:15,066] main                 Adding msg type 'mv.REQ_TRAINER_INFO', msgNumber 140/0x8c
+DEBUG [2020-03-26 04:19:15,066] main                 Adding msg type 'mv.REQ_SKILL_TRAINING', msgNumber 141/0x8d
+DEBUG [2020-03-26 04:19:15,066] main                 Adding msg type 'mv.TRAINING_INFO', msgNumber 142/0x8e
+DEBUG [2020-03-26 04:19:15,067] main                 Adding msg type 'mv.STAT_XP_UPDATE', msgNumber 143/0x8f
+DEBUG [2020-03-26 04:19:15,067] main                 Adding msg type 'mv.HANDLE_EXP', msgNumber 144/0x90
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.GROUP_INVITE', msgNumber 145/0x91
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.GROUP_INVITE_RESPONSE', msgNumber 146/0x92
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.GROUP_REMOVE_MEMBER', msgNumber 147/0x93
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.GROUP_CHAT', msgNumber 148/0x94
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.REQUEST_GROUP_INFO', msgNumber 149/0x95
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.GROUP_INFO_RESPONSE', msgNumber 150/0x96
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.GROUP_SET_ALLOWED_SPEAKER', msgNumber 151/0x97
+DEBUG [2020-03-26 04:19:15,070] main                 Adding msg type 'mv.GROUP_MUTE_VOICE_CHAT', msgNumber 152/0x98
+DEBUG [2020-03-26 04:19:15,071] main                 Adding msg type 'mv.GROUP_VOICE_CHAT_STATUS', msgNumber 153/0x99
+DEBUG [2020-03-26 04:19:15,083] main                 Adding msg type 'mv.VOICECLIENT', msgNumber 154/0x9a
+DEBUG [2020-03-26 04:19:15,083] main                 Adding msg type 'mv.VOICE_MEMBER_ADDED', msgNumber 155/0x9b
+DEBUG [2020-03-26 04:19:15,083] main                 Adding msg type 'mv.VOICE_MEMBER_REMOVED', msgNumber 156/0x9c
+DEBUG [2020-03-26 04:19:15,084] main                 Adding msg type 'mv.GET_PLUGIN_STATUS', msgNumber 157/0x9d
+DEBUG [2020-03-26 04:19:15,084] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:15,084] main                 Engine, Engine: reading in script: /usr/multiverse/config/mv_fantasy/worldmessages.py
+WARN  [2020-03-26 04:19:15,084] main                 didnt find local script file, skipping: /usr/multiverse/config/mv_fantasy/worldmessages.py
+DEBUG [2020-03-26 04:19:15,090] main                 Initializing Database with driver com.mysql.jdbc.Driver
+DEBUG [2020-03-26 04:19:15,090] main                 classpath = /usr/multiverse/other/rhino1_5R5/js.jar:/usr/share/java/mysql-connector-java.jar:/usr/multiverse/dist/lib/injected.jar:/usr/multiverse/dist/lib/multiverse.jar:/usr/multiverse/dist/lib/mars.jar:/usr/multiverse/dist/lib/.jar:/usr/multiverse/other/java-getopt-1.0.11.jar:/usr/multiverse/other/jython.jar:/usr/multiverse/other/log4j-1.2.14.jar:/usr/multiverse/other/bcel-5.2.jar:.
+DEBUG [2020-03-26 04:19:15,100] main                 com.mysql.jdbc.Driver driver loaded
+DEBUG [2020-03-26 04:19:15,100] main                 Database: starting keepalive
+DEBUG [2020-03-26 04:19:15,110] main                 Engine, connecting to localhostuser = multiverse passwd=multiverse
+DEBUG [2020-03-26 04:19:15,118] main                 *** url = jdbc:mysql://localhost/multiverse username = multiverse password = multiverse
+INFO  [2020-03-26 04:19:16,143] main                 connected to database
+DEBUG [2020-03-26 04:19:16,143] main                 Reading namespaces from the database
+DEBUG [2020-03-26 04:19:16,166] main                 Read 15 namespaces from the database
+INFO  [2020-03-26 04:19:16,166] main                 encached the mapping of namespace strings to ints
+DEBUG [2020-03-26 04:19:16,223] main                 Adding msg type 'msgsys.AGENT_HELLO', msgNumber 5000/0x1388
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.HELLO_RESPONSE', msgNumber 5001/0x1389
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.ALLOC_NAME', msgNumber 5002/0x138a
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.NEW_AGENT', msgNumber 5003/0x138b
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.AGENT_STATE', msgNumber 5004/0x138c
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.ADVERTISE', msgNumber 5005/0x138d
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.SUBSCRIBE', msgNumber 5006/0x138e
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.UNSUBSCRIBE', msgNumber 5007/0x138f
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.FILTER_UPDATE', msgNumber 5008/0x1390
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.AWAIT_PLUGIN_DEPENDENTS', msgNumber 5009/0x1391
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.PLUGIN_AVAILABLE', msgNumber 5010/0x1392
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.RESPONSE', msgNumber 5011/0x1393
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.BOOLEAN_RESPONSE', msgNumber 5012/0x1394
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.LONG_RESPONSE', msgNumber 5013/0x1395
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.INT_RESPONSE', msgNumber 5014/0x1396
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.STRING_RESPONSE', msgNumber 5015/0x1397
+DEBUG [2020-03-26 04:19:16,224] main                 Adding msg type 'msgsys.ALLOC_NAME_RESPONSE', msgNumber 5016/0x1398
+DEBUG [2020-03-26 04:19:16,277] main                 Sending msgsys.ADVERTISE id=1 to voiceserver
+DEBUG [2020-03-26 04:19:16,278] SelfMessage          SelfMessageHandler.handle pos=50
+DEBUG [2020-03-26 04:19:16,279] SelfMessage          handleSelfMessage id=1 type=msgsys.ADVERTISE class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:16,279] SelfMessage          [voiceserver,1] handleAdvertise: Adding 6 and removing 0
+DEBUG [2020-03-26 04:19:16,280] SelfMessage          sendResponse to voiceserver,1 type=msgsys.RESPONSE id=2 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:16,281] SelfMessage          SelfMessageHandler.handle pos=28
+DEBUG [2020-03-26 04:19:16,281] SelfMessage          handleSelfMessage id=2 responseTo=1 type=msgsys.RESPONSE class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:16,295] main                 TcpServer, bound to port: 45484
+DEBUG [2020-03-26 04:19:16,299] main                 MessageAgent: connected to domain server java.nio.channels.SocketChannel[connected local=/127.0.0.1:47368 remote=localhost/127.0.0.1:20374]
+INFO  [2020-03-26 04:19:16,317] main                 My agent-id: 6
+DEBUG [2020-03-26 04:19:16,324] main                 SecureTokenManager.initDomain: reading domain key. keyId=0xde144850edfd6cfe algorithm=HmacSHA1
+DEBUG [2020-03-26 04:19:16,448] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=59 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,492] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=54 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,524] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=52 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,524] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=52 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,595] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=52 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,685] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=53 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,725] AgentConnection-2    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:46432 remote=/127.0.0.1:37340]
+DEBUG [2020-03-26 04:19:16,728] AgentConnection-5    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:44510 remote=/127.0.0.1:37562]
+DEBUG [2020-03-26 04:19:16,729] AgentConnection-4    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:38428 remote=/127.0.0.1:43247]
+DEBUG [2020-03-26 04:19:16,731] AgentConnection-3    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:44898 remote=/127.0.0.1:33658]
+DEBUG [2020-03-26 04:19:16,732] AgentConnection-1    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:49194 remote=/127.0.0.1:44029]
+DEBUG [2020-03-26 04:19:16,782] AgentConnection-1    connect: Accepted connection from login_manager
+DEBUG [2020-03-26 04:19:16,785] AgentConnection-4    connect: Accepted connection from combat
+DEBUG [2020-03-26 04:19:16,786] AgentConnection-3    connect: Accepted connection from objmgr
+DEBUG [2020-03-26 04:19:16,804] AgentConnection-2    connect: Accepted connection from instance
+DEBUG [2020-03-26 04:19:16,807] AgentConnection-6    received connect: Accepting connection from wmgr_1
+DEBUG [2020-03-26 04:19:16,854] MessageIO            handleMessageData from combat,7 type=msgsys.ADVERTISE len=138 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:16,873] MessageIO            [combat,7] handleAdvertise: Adding 29 and removing 0
+DEBUG [2020-03-26 04:19:16,883] MessageIO            handleMessageData from objmgr,7 type=msgsys.ADVERTISE len=158 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:16,883] MessageIO            [objmgr,7] handleAdvertise: Adding 34 and removing 0
+DEBUG [2020-03-26 04:19:16,883] MessageIO            handleMessageData from login_manager,7 type=msgsys.ADVERTISE len=46 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:16,884] MessageIO            [login_manager,7] handleAdvertise: Adding 6 and removing 0
+DEBUG [2020-03-26 04:19:16,884] MessageIO            handleMessageData from instance,7 type=msgsys.ADVERTISE len=70 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:16,885] MessageIO            [instance,7] handleAdvertise: Adding 12 and removing 0
+DEBUG [2020-03-26 04:19:16,894] MessageIO            handleMessageData from wmgr_1,7 type=msgsys.ADVERTISE len=138 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:16,894] MessageIO            [wmgr_1,7] handleAdvertise: Adding 29 and removing 0
+DEBUG [2020-03-26 04:19:16,960] MessageIO            handleMessageData from DomainServer,0 type=msgsys.NEW_AGENT len=55 class=multiverse.msgsys.NewAgentMessage
+DEBUG [2020-03-26 04:19:16,966] AgentConnection-2    MessageAgent: connected to agent java.nio.channels.SocketChannel[connected local=/127.0.0.1:39268 remote=/127.0.0.1:40011]
+DEBUG [2020-03-26 04:19:17,042] AgentConnection-5    connect: Accepted connection from proxy_1
+DEBUG [2020-03-26 04:19:17,047] MessageIO            handleMessageData from proxy_1,7 type=msgsys.ADVERTISE len=318 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:17,047] MessageIO            [proxy_1,7] handleAdvertise: Adding 74 and removing 0
+DEBUG [2020-03-26 04:19:17,344] AgentConnection-2    connect: Accepted connection from mobserver
+DEBUG [2020-03-26 04:19:17,350] MessageIO            handleMessageData from mobserver,6 type=msgsys.ADVERTISE len=170 class=multiverse.msgsys.AdvertiseMessage
+DEBUG [2020-03-26 04:19:17,351] MessageIO            [mobserver,6] handleAdvertise: Adding 37 and removing 0
+WARN  [2020-03-26 04:19:17,353] main                 engine: world geometry is not set
+DEBUG [2020-03-26 04:19:17,356] main                 Engine, Executing script file: /usr/multiverse/config/common/voice.py
+DEBUG [2020-03-26 04:19:17,356] main                 runPYFile: file=/usr/multiverse/config/common/voice.py
+INFO  [2020-03-26 04:19:17,444] main                 VoicePlugin (server version 1.5 0) starting up
+DEBUG [2020-03-26 04:19:17,623] main                 Engine, Engine.registerPlugin: registering Voice
+DEBUG [2020-03-26 04:19:17,624] main                 EnginePlugin.activate: plugin=Voice
+DEBUG [2020-03-26 04:19:17,624] main                 subscribe [MessageTypeFilter types=mv.DUMP_ALL_THREAD_STACKS,] matching agents 1
+DEBUG [2020-03-26 04:19:17,625] main                 Sending msgsys.SUBSCRIBE id=10 to proxy_1
+DEBUG [2020-03-26 04:19:17,658] MessageIO            handleMessageData from proxy_1,11 responseTo=10 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:17,659] main                 EnginePlugin.activate: plugin=Voice, created createSubscription for dumpAllStacks
+DEBUG [2020-03-26 04:19:17,660] main                 EnginePlugin.activate: registered DumpAllStacksMessageHook
+DEBUG [2020-03-26 04:19:17,660] main                 Sending msgsys.AWAIT_PLUGIN_DEPENDENTS id=11 to DomainServer
+DEBUG [2020-03-26 04:19:18,157] MessageIO            handleMessageData from wmgr_1,19 type=msgsys.SUBSCRIBE len=62 class=multiverse.msgsys.SubscribeMessage
+DEBUG [2020-03-26 04:19:18,158] MessageIO            [wmgr_1,19] Got subscription subId=8 filter [PerceptionFilter types=mv.DC_REQ,mv.DESPAWN_REQ,mv.SPAWN_REQ,mv.SETWNODE_REQ,mv.GETWNODE_REQ,mv.OBJINFO_REQ, subjectCount=0 targets=]
+DEBUG [2020-03-26 04:19:18,159] MessageIO            sendResponse to wmgr_1,19 type=msgsys.RESPONSE id=12 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:19,245] MessageIO            handleMessageData from combat,39 type=msgsys.SUBSCRIBE len=70 class=multiverse.msgsys.SubscribeMessage
+DEBUG [2020-03-26 04:19:19,245] MessageIO            [combat,39] Got subscription subId=10 filter [MessageTypeFilter types=mv.VOICE_MEMBER_ADDED,mv.GROUP_CHAT,mv.GROUP_INVITE_RESPONSE,mv.PROPERTY,mv.GROUP_VOICE_CHAT_STATUS,mv.GROUP_MUTE_VOICE_CHAT,mv.GROUP_SET_ALLOWED_SPEAKER,mv.GROUP_INVITE,mv.GROUP_REMOVE_MEMBER,]
+DEBUG [2020-03-26 04:19:19,245] MessageIO            sendResponse to combat,39 type=msgsys.RESPONSE id=13 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:19,537] MessageIO            handleMessageData from instance,17 type=msgsys.SUBSCRIBE len=58 class=multiverse.msgsys.SubscribeMessage
+DEBUG [2020-03-26 04:19:19,537] MessageIO            [instance,17] Got subscription subId=2 filter [MessageTypeFilter types=mv.GET_MARKER,mv.GET_REGION,mv.REGISTER_INSTANCE_TEMPLATE,mv.CREATE_INSTANCE,mv.LOAD_INSTANCE,mv.GET_INSTANCE_INFO,]
+DEBUG [2020-03-26 04:19:19,537] MessageIO            sendResponse to instance,17 type=msgsys.RESPONSE id=14 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,436] MessageIO            handleMessageData from wmgr_1,38 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,436] MessageIO            [wmgr_1,38] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,436] MessageIO            ADD SUBJECT 1902
+DEBUG [2020-03-26 04:19:20,437] MessageIO            sendResponse to wmgr_1,38 type=msgsys.RESPONSE id=15 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,535] MessageIO            handleMessageData from wmgr_1,44 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,535] MessageIO            [wmgr_1,44] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,535] MessageIO            ADD SUBJECT 1903
+DEBUG [2020-03-26 04:19:20,535] MessageIO            sendResponse to wmgr_1,44 type=msgsys.RESPONSE id=16 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,591] MessageIO            handleMessageData from wmgr_1,50 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,591] MessageIO            [wmgr_1,50] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,591] MessageIO            ADD SUBJECT 1904
+DEBUG [2020-03-26 04:19:20,591] MessageIO            sendResponse to wmgr_1,50 type=msgsys.RESPONSE id=17 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,667] MessageIO            handleMessageData from wmgr_1,56 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,667] MessageIO            [wmgr_1,56] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,667] MessageIO            ADD SUBJECT 1905
+DEBUG [2020-03-26 04:19:20,667] MessageIO            sendResponse to wmgr_1,56 type=msgsys.RESPONSE id=18 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,745] MessageIO            handleMessageData from wmgr_1,62 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,745] MessageIO            [wmgr_1,62] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,745] MessageIO            ADD SUBJECT 1906
+DEBUG [2020-03-26 04:19:20,745] MessageIO            sendResponse to wmgr_1,62 type=msgsys.RESPONSE id=19 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,814] MessageIO            handleMessageData from wmgr_1,68 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,815] MessageIO            [wmgr_1,68] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,815] MessageIO            ADD SUBJECT 1907
+DEBUG [2020-03-26 04:19:20,815] MessageIO            sendResponse to wmgr_1,68 type=msgsys.RESPONSE id=20 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,846] MessageIO            handleMessageData from wmgr_1,74 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,847] MessageIO            [wmgr_1,74] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,847] MessageIO            ADD SUBJECT 1908
+DEBUG [2020-03-26 04:19:20,847] MessageIO            sendResponse to wmgr_1,74 type=msgsys.RESPONSE id=21 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,895] MessageIO            handleMessageData from wmgr_1,80 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,895] MessageIO            [wmgr_1,80] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,895] MessageIO            ADD SUBJECT 1909
+DEBUG [2020-03-26 04:19:20,895] MessageIO            sendResponse to wmgr_1,80 type=msgsys.RESPONSE id=22 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,942] MessageIO            handleMessageData from wmgr_1,86 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,942] MessageIO            [wmgr_1,86] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,943] MessageIO            ADD SUBJECT 1910
+DEBUG [2020-03-26 04:19:20,943] MessageIO            sendResponse to wmgr_1,86 type=msgsys.RESPONSE id=23 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:20,979] MessageIO            handleMessageData from wmgr_1,92 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:20,979] MessageIO            [wmgr_1,92] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:20,979] MessageIO            ADD SUBJECT 1911
+DEBUG [2020-03-26 04:19:20,979] MessageIO            sendResponse to wmgr_1,92 type=msgsys.RESPONSE id=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,007] MessageIO            handleMessageData from wmgr_1,98 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,007] MessageIO            [wmgr_1,98] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,007] MessageIO            ADD SUBJECT 1912
+DEBUG [2020-03-26 04:19:21,007] MessageIO            sendResponse to wmgr_1,98 type=msgsys.RESPONSE id=25 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,035] MessageIO            handleMessageData from wmgr_1,104 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,035] MessageIO            [wmgr_1,104] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,035] MessageIO            ADD SUBJECT 1913
+DEBUG [2020-03-26 04:19:21,035] MessageIO            sendResponse to wmgr_1,104 type=msgsys.RESPONSE id=26 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,082] MessageIO            handleMessageData from wmgr_1,110 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,082] MessageIO            [wmgr_1,110] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,082] MessageIO            ADD SUBJECT 1914
+DEBUG [2020-03-26 04:19:21,082] MessageIO            sendResponse to wmgr_1,110 type=msgsys.RESPONSE id=27 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,115] MessageIO            handleMessageData from wmgr_1,116 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,116] MessageIO            [wmgr_1,116] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,116] MessageIO            ADD SUBJECT 1915
+DEBUG [2020-03-26 04:19:21,116] MessageIO            sendResponse to wmgr_1,116 type=msgsys.RESPONSE id=28 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,163] MessageIO            handleMessageData from wmgr_1,122 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,163] MessageIO            [wmgr_1,122] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,163] MessageIO            ADD SUBJECT 1916
+DEBUG [2020-03-26 04:19:21,164] MessageIO            sendResponse to wmgr_1,122 type=msgsys.RESPONSE id=29 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,196] MessageIO            handleMessageData from wmgr_1,128 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,196] MessageIO            [wmgr_1,128] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,196] MessageIO            ADD SUBJECT 1917
+DEBUG [2020-03-26 04:19:21,196] MessageIO            sendResponse to wmgr_1,128 type=msgsys.RESPONSE id=30 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,251] MessageIO            handleMessageData from wmgr_1,134 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,252] MessageIO            [wmgr_1,134] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,252] MessageIO            ADD SUBJECT 1918
+DEBUG [2020-03-26 04:19:21,252] MessageIO            sendResponse to wmgr_1,134 type=msgsys.RESPONSE id=31 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,284] MessageIO            handleMessageData from wmgr_1,140 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,285] MessageIO            [wmgr_1,140] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,285] MessageIO            ADD SUBJECT 1919
+DEBUG [2020-03-26 04:19:21,285] MessageIO            sendResponse to wmgr_1,140 type=msgsys.RESPONSE id=32 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,310] MessageIO            handleMessageData from wmgr_1,146 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,311] MessageIO            [wmgr_1,146] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,311] MessageIO            ADD SUBJECT 1920
+DEBUG [2020-03-26 04:19:21,311] MessageIO            sendResponse to wmgr_1,146 type=msgsys.RESPONSE id=33 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,369] MessageIO            handleMessageData from wmgr_1,152 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,369] MessageIO            [wmgr_1,152] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,369] MessageIO            ADD SUBJECT 1921
+DEBUG [2020-03-26 04:19:21,369] MessageIO            sendResponse to wmgr_1,152 type=msgsys.RESPONSE id=34 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,403] MessageIO            handleMessageData from wmgr_1,158 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,403] MessageIO            [wmgr_1,158] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,403] MessageIO            ADD SUBJECT 1922
+DEBUG [2020-03-26 04:19:21,403] MessageIO            sendResponse to wmgr_1,158 type=msgsys.RESPONSE id=35 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,462] MessageIO            handleMessageData from wmgr_1,164 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,462] MessageIO            [wmgr_1,164] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,462] MessageIO            ADD SUBJECT 1923
+DEBUG [2020-03-26 04:19:21,462] MessageIO            sendResponse to wmgr_1,164 type=msgsys.RESPONSE id=36 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,489] MessageIO            handleMessageData from wmgr_1,170 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,490] MessageIO            [wmgr_1,170] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,490] MessageIO            ADD SUBJECT 1924
+DEBUG [2020-03-26 04:19:21,490] MessageIO            sendResponse to wmgr_1,170 type=msgsys.RESPONSE id=37 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,530] MessageIO            handleMessageData from wmgr_1,176 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,530] MessageIO            [wmgr_1,176] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,530] MessageIO            ADD SUBJECT 1925
+DEBUG [2020-03-26 04:19:21,530] MessageIO            sendResponse to wmgr_1,176 type=msgsys.RESPONSE id=38 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,562] MessageIO            handleMessageData from wmgr_1,182 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,562] MessageIO            [wmgr_1,182] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,562] MessageIO            ADD SUBJECT 1926
+DEBUG [2020-03-26 04:19:21,562] MessageIO            sendResponse to wmgr_1,182 type=msgsys.RESPONSE id=39 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,585] MessageIO            handleMessageData from wmgr_1,188 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,585] MessageIO            [wmgr_1,188] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,585] MessageIO            ADD SUBJECT 1927
+DEBUG [2020-03-26 04:19:21,585] MessageIO            sendResponse to wmgr_1,188 type=msgsys.RESPONSE id=40 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,612] MessageIO            handleMessageData from wmgr_1,194 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,612] MessageIO            [wmgr_1,194] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,612] MessageIO            ADD SUBJECT 1928
+DEBUG [2020-03-26 04:19:21,612] MessageIO            sendResponse to wmgr_1,194 type=msgsys.RESPONSE id=41 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,641] MessageIO            handleMessageData from wmgr_1,200 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,641] MessageIO            [wmgr_1,200] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,641] MessageIO            ADD SUBJECT 1929
+DEBUG [2020-03-26 04:19:21,641] MessageIO            sendResponse to wmgr_1,200 type=msgsys.RESPONSE id=42 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,668] MessageIO            handleMessageData from wmgr_1,206 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,668] MessageIO            [wmgr_1,206] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,668] MessageIO            ADD SUBJECT 1930
+DEBUG [2020-03-26 04:19:21,668] MessageIO            sendResponse to wmgr_1,206 type=msgsys.RESPONSE id=43 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,705] MessageIO            handleMessageData from wmgr_1,212 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,705] MessageIO            [wmgr_1,212] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,705] MessageIO            ADD SUBJECT 1931
+DEBUG [2020-03-26 04:19:21,705] MessageIO            sendResponse to wmgr_1,212 type=msgsys.RESPONSE id=44 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,732] MessageIO            handleMessageData from wmgr_1,218 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,732] MessageIO            [wmgr_1,218] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,732] MessageIO            ADD SUBJECT 1932
+DEBUG [2020-03-26 04:19:21,732] MessageIO            sendResponse to wmgr_1,218 type=msgsys.RESPONSE id=45 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,782] MessageIO            handleMessageData from wmgr_1,224 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,782] MessageIO            [wmgr_1,224] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,782] MessageIO            ADD SUBJECT 1933
+DEBUG [2020-03-26 04:19:21,782] MessageIO            sendResponse to wmgr_1,224 type=msgsys.RESPONSE id=46 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,817] MessageIO            handleMessageData from wmgr_1,230 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,817] MessageIO            [wmgr_1,230] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,817] MessageIO            ADD SUBJECT 1934
+DEBUG [2020-03-26 04:19:21,817] MessageIO            sendResponse to wmgr_1,230 type=msgsys.RESPONSE id=47 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,890] MessageIO            handleMessageData from wmgr_1,236 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,890] MessageIO            [wmgr_1,236] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,891] MessageIO            ADD SUBJECT 1935
+DEBUG [2020-03-26 04:19:21,891] MessageIO            sendResponse to wmgr_1,236 type=msgsys.RESPONSE id=48 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,928] MessageIO            handleMessageData from wmgr_1,242 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,928] MessageIO            [wmgr_1,242] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,928] MessageIO            ADD SUBJECT 1936
+DEBUG [2020-03-26 04:19:21,928] MessageIO            sendResponse to wmgr_1,242 type=msgsys.RESPONSE id=49 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:21,989] MessageIO            handleMessageData from wmgr_1,248 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:21,990] MessageIO            [wmgr_1,248] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:21,990] MessageIO            ADD SUBJECT 1937
+DEBUG [2020-03-26 04:19:21,990] MessageIO            sendResponse to wmgr_1,248 type=msgsys.RESPONSE id=50 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,024] MessageIO            handleMessageData from wmgr_1,254 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,024] MessageIO            [wmgr_1,254] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,024] MessageIO            ADD SUBJECT 1938
+DEBUG [2020-03-26 04:19:22,025] MessageIO            sendResponse to wmgr_1,254 type=msgsys.RESPONSE id=51 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,049] MessageIO            handleMessageData from wmgr_1,260 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,050] MessageIO            [wmgr_1,260] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,050] MessageIO            ADD SUBJECT 1939
+DEBUG [2020-03-26 04:19:22,050] MessageIO            sendResponse to wmgr_1,260 type=msgsys.RESPONSE id=52 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,085] MessageIO            handleMessageData from wmgr_1,266 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,085] MessageIO            [wmgr_1,266] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,085] MessageIO            ADD SUBJECT 1940
+DEBUG [2020-03-26 04:19:22,085] MessageIO            sendResponse to wmgr_1,266 type=msgsys.RESPONSE id=53 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,125] MessageIO            handleMessageData from wmgr_1,272 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,125] MessageIO            [wmgr_1,272] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,125] MessageIO            ADD SUBJECT 1941
+DEBUG [2020-03-26 04:19:22,126] MessageIO            sendResponse to wmgr_1,272 type=msgsys.RESPONSE id=54 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,160] MessageIO            handleMessageData from wmgr_1,278 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,161] MessageIO            [wmgr_1,278] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,161] MessageIO            ADD SUBJECT 1942
+DEBUG [2020-03-26 04:19:22,161] MessageIO            sendResponse to wmgr_1,278 type=msgsys.RESPONSE id=55 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,229] MessageIO            handleMessageData from wmgr_1,284 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,229] MessageIO            [wmgr_1,284] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,229] MessageIO            ADD SUBJECT 1943
+DEBUG [2020-03-26 04:19:22,230] MessageIO            sendResponse to wmgr_1,284 type=msgsys.RESPONSE id=56 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,256] MessageIO            handleMessageData from wmgr_1,290 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,256] MessageIO            [wmgr_1,290] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,256] MessageIO            ADD SUBJECT 1944
+DEBUG [2020-03-26 04:19:22,256] MessageIO            sendResponse to wmgr_1,290 type=msgsys.RESPONSE id=57 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,298] MessageIO            handleMessageData from wmgr_1,296 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,298] MessageIO            [wmgr_1,296] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,298] MessageIO            ADD SUBJECT 1945
+DEBUG [2020-03-26 04:19:22,298] MessageIO            sendResponse to wmgr_1,296 type=msgsys.RESPONSE id=58 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,344] MessageIO            handleMessageData from wmgr_1,302 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,344] MessageIO            [wmgr_1,302] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,344] MessageIO            ADD SUBJECT 1946
+DEBUG [2020-03-26 04:19:22,344] MessageIO            sendResponse to wmgr_1,302 type=msgsys.RESPONSE id=59 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,373] MessageIO            handleMessageData from wmgr_1,308 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,373] MessageIO            [wmgr_1,308] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,373] MessageIO            ADD SUBJECT 1947
+DEBUG [2020-03-26 04:19:22,373] MessageIO            sendResponse to wmgr_1,308 type=msgsys.RESPONSE id=60 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,414] MessageIO            handleMessageData from wmgr_1,314 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,414] MessageIO            [wmgr_1,314] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,414] MessageIO            ADD SUBJECT 1948
+DEBUG [2020-03-26 04:19:22,414] MessageIO            sendResponse to wmgr_1,314 type=msgsys.RESPONSE id=61 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,442] MessageIO            handleMessageData from wmgr_1,320 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,442] MessageIO            [wmgr_1,320] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,442] MessageIO            ADD SUBJECT 1949
+DEBUG [2020-03-26 04:19:22,442] MessageIO            sendResponse to wmgr_1,320 type=msgsys.RESPONSE id=62 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,482] MessageIO            handleMessageData from wmgr_1,326 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,482] MessageIO            [wmgr_1,326] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,482] MessageIO            ADD SUBJECT 1950
+DEBUG [2020-03-26 04:19:22,482] MessageIO            sendResponse to wmgr_1,326 type=msgsys.RESPONSE id=63 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,646] MessageIO            handleMessageData from wmgr_1,332 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,647] MessageIO            [wmgr_1,332] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,647] MessageIO            ADD SUBJECT 1951
+DEBUG [2020-03-26 04:19:22,647] MessageIO            sendResponse to wmgr_1,332 type=msgsys.RESPONSE id=64 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,784] MessageIO            handleMessageData from wmgr_1,344 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,784] MessageIO            [wmgr_1,344] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,784] MessageIO            ADD SUBJECT 1952
+DEBUG [2020-03-26 04:19:22,784] MessageIO            sendResponse to wmgr_1,344 type=msgsys.RESPONSE id=65 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:22,974] MessageIO            handleMessageData from wmgr_1,355 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:22,974] MessageIO            [wmgr_1,355] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:22,974] MessageIO            ADD SUBJECT 1953
+DEBUG [2020-03-26 04:19:22,974] MessageIO            sendResponse to wmgr_1,355 type=msgsys.RESPONSE id=66 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,107] MessageIO            handleMessageData from wmgr_1,373 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,107] MessageIO            [wmgr_1,373] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,107] MessageIO            ADD SUBJECT 1960
+DEBUG [2020-03-26 04:19:23,107] MessageIO            sendResponse to wmgr_1,373 type=msgsys.RESPONSE id=67 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,241] MessageIO            handleMessageData from wmgr_1,393 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,242] MessageIO            [wmgr_1,393] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,242] MessageIO            ADD SUBJECT 1967
+DEBUG [2020-03-26 04:19:23,242] MessageIO            sendResponse to wmgr_1,393 type=msgsys.RESPONSE id=68 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,365] MessageIO            handleMessageData from wmgr_1,415 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,365] MessageIO            [wmgr_1,415] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,365] MessageIO            ADD SUBJECT 1974
+DEBUG [2020-03-26 04:19:23,365] MessageIO            sendResponse to wmgr_1,415 type=msgsys.RESPONSE id=69 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,480] MessageIO            handleMessageData from wmgr_1,439 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,480] MessageIO            [wmgr_1,439] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,480] MessageIO            ADD SUBJECT 1981
+DEBUG [2020-03-26 04:19:23,481] MessageIO            sendResponse to wmgr_1,439 type=msgsys.RESPONSE id=70 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,578] MessageIO            handleMessageData from wmgr_1,465 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,579] MessageIO            [wmgr_1,465] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,579] MessageIO            ADD SUBJECT 1988
+DEBUG [2020-03-26 04:19:23,579] MessageIO            sendResponse to wmgr_1,465 type=msgsys.RESPONSE id=71 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,684] MessageIO            handleMessageData from wmgr_1,493 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,684] MessageIO            [wmgr_1,493] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,684] MessageIO            ADD SUBJECT 1995
+DEBUG [2020-03-26 04:19:23,684] MessageIO            sendResponse to wmgr_1,493 type=msgsys.RESPONSE id=72 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,856] MessageIO            handleMessageData from wmgr_1,523 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,857] MessageIO            [wmgr_1,523] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,857] MessageIO            ADD SUBJECT 2202
+DEBUG [2020-03-26 04:19:23,857] MessageIO            sendResponse to wmgr_1,523 type=msgsys.RESPONSE id=73 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:23,974] MessageIO            handleMessageData from wmgr_1,549 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:23,974] MessageIO            [wmgr_1,549] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:23,974] MessageIO            ADD SUBJECT 2209
+DEBUG [2020-03-26 04:19:23,974] MessageIO            sendResponse to wmgr_1,549 type=msgsys.RESPONSE id=74 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,057] MessageIO            handleMessageData from wmgr_1,577 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,057] MessageIO            [wmgr_1,577] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,057] MessageIO            ADD SUBJECT 2216
+DEBUG [2020-03-26 04:19:24,057] MessageIO            sendResponse to wmgr_1,577 type=msgsys.RESPONSE id=75 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,171] MessageIO            handleMessageData from wmgr_1,613 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,171] MessageIO            [wmgr_1,613] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,171] MessageIO            ADD SUBJECT 2223
+DEBUG [2020-03-26 04:19:24,171] MessageIO            sendResponse to wmgr_1,613 type=msgsys.RESPONSE id=76 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,286] MessageIO            handleMessageData from wmgr_1,651 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,286] MessageIO            [wmgr_1,651] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,286] MessageIO            ADD SUBJECT 2230
+DEBUG [2020-03-26 04:19:24,286] MessageIO            sendResponse to wmgr_1,651 type=msgsys.RESPONSE id=77 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,360] MessageIO            handleMessageData from wmgr_1,667 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,360] MessageIO            [wmgr_1,667] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,360] MessageIO            ADD SUBJECT 2231
+DEBUG [2020-03-26 04:19:24,360] MessageIO            sendResponse to wmgr_1,667 type=msgsys.RESPONSE id=78 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,441] MessageIO            handleMessageData from wmgr_1,685 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,441] MessageIO            [wmgr_1,685] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,441] MessageIO            ADD SUBJECT 2232
+DEBUG [2020-03-26 04:19:24,441] MessageIO            sendResponse to wmgr_1,685 type=msgsys.RESPONSE id=79 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,651] MessageIO            handleMessageData from wmgr_1,705 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,651] MessageIO            [wmgr_1,705] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,651] MessageIO            ADD SUBJECT 2233
+DEBUG [2020-03-26 04:19:24,651] MessageIO            sendResponse to wmgr_1,705 type=msgsys.RESPONSE id=80 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,721] MessageIO            handleMessageData from wmgr_1,727 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,722] MessageIO            [wmgr_1,727] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,722] MessageIO            ADD SUBJECT 2234
+DEBUG [2020-03-26 04:19:24,722] MessageIO            sendResponse to wmgr_1,727 type=msgsys.RESPONSE id=81 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,789] MessageIO            handleMessageData from wmgr_1,751 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,789] MessageIO            [wmgr_1,751] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,789] MessageIO            ADD SUBJECT 2235
+DEBUG [2020-03-26 04:19:24,789] MessageIO            sendResponse to wmgr_1,751 type=msgsys.RESPONSE id=82 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,859] MessageIO            handleMessageData from wmgr_1,778 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,860] MessageIO            [wmgr_1,778] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,860] MessageIO            ADD SUBJECT 2236
+DEBUG [2020-03-26 04:19:24,860] MessageIO            sendResponse to wmgr_1,778 type=msgsys.RESPONSE id=83 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:24,938] MessageIO            handleMessageData from wmgr_1,806 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:24,938] MessageIO            [wmgr_1,806] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:24,938] MessageIO            ADD SUBJECT 2237
+DEBUG [2020-03-26 04:19:24,938] MessageIO            sendResponse to wmgr_1,806 type=msgsys.RESPONSE id=84 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,000] MessageIO            handleMessageData from wmgr_1,836 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:25,001] MessageIO            [wmgr_1,836] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:25,001] MessageIO            ADD SUBJECT 2238
+DEBUG [2020-03-26 04:19:25,001] MessageIO            sendResponse to wmgr_1,836 type=msgsys.RESPONSE id=85 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,070] MessageIO            handleMessageData from wmgr_1,868 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:25,070] MessageIO            [wmgr_1,868] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:25,070] MessageIO            ADD SUBJECT 2239
+DEBUG [2020-03-26 04:19:25,070] MessageIO            sendResponse to wmgr_1,868 type=msgsys.RESPONSE id=86 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,137] MessageIO            handleMessageData from wmgr_1,902 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:25,138] MessageIO            [wmgr_1,902] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:25,138] MessageIO            ADD SUBJECT 2240
+DEBUG [2020-03-26 04:19:25,138] MessageIO            sendResponse to wmgr_1,902 type=msgsys.RESPONSE id=87 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,239] MessageIO            handleMessageData from wmgr_1,964 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:25,240] MessageIO            [wmgr_1,964] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:25,240] MessageIO            ADD SUBJECT 2250
+DEBUG [2020-03-26 04:19:25,240] MessageIO            sendResponse to wmgr_1,964 type=msgsys.RESPONSE id=88 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,295] MessageIO            handleMessageData from wmgr_1,1023 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:19:25,295] MessageIO            [wmgr_1,1023] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:19:25,295] MessageIO            ADD SUBJECT 2251
+DEBUG [2020-03-26 04:19:25,295] MessageIO            sendResponse to wmgr_1,1023 type=msgsys.RESPONSE id=89 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,360] MessageIO            handleMessageData from DomainServer,0 responseTo=11 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,369] main                 subscribe [MessageTypeFilter types=mv.VOICECLIENT,mv.INSTANCE_UNLOADED,mv.INSTANCE_DELETED,mv.GET_PLUGIN_STATUS,] matching agents 2
+DEBUG [2020-03-26 04:19:25,370] main                 Sending msgsys.SUBSCRIBE id=90 to combat
+DEBUG [2020-03-26 04:19:25,373] main                 Sending msgsys.SUBSCRIBE id=90 to objmgr
+DEBUG [2020-03-26 04:19:25,386] MessageIO            handleMessageData from combat,402 responseTo=90 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,386] MessageIO            handleMessageData from objmgr,804 responseTo=90 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,389] main                 TcpServer, bound to port: 5051
+DEBUG [2020-03-26 04:19:25,393] main                 Engine.registerStatusReportingPlugin: Registering plugin Voice of type Voice
+DEBUG [2020-03-26 04:19:25,398] main                 subscribe [PerceptionFilter types=mv.UPDATEWNODE,mv.RELAY_UPDATE_PLAYER_IGNORE_LIST,mv.PERCEPTION, subjectCount=0 targets=] matching agents 2
+DEBUG [2020-03-26 04:19:25,398] main                 Sending msgsys.SUBSCRIBE id=91 to wmgr_1
+DEBUG [2020-03-26 04:19:25,399] main                 Sending msgsys.SUBSCRIBE id=91 to proxy_1
+DEBUG [2020-03-26 04:19:25,402] MessageIO            handleMessageData from proxy_1,361 responseTo=91 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,402] MessageIO            handleMessageData from wmgr_1,1083 responseTo=91 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,406] main                 subscribe [PopulationFilter type=[PLAYER,3] types=mv.SPAWNED,mv.DESPAWNED,] matching agents 1
+DEBUG [2020-03-26 04:19:25,406] main                 Sending msgsys.SUBSCRIBE id=92 to wmgr_1
+DEBUG [2020-03-26 04:19:25,408] MessageIO            handleMessageData from wmgr_1,1084 responseTo=92 type=msgsys.RESPONSE len=24 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:25,413] main                 EnginePlugin.activate: plugin=Voice, onActivate complete, calling activateHooks
+DEBUG [2020-03-26 04:19:25,413] main                 EnginePlugin.activate: plugin=Voice, activate hooks called
+DEBUG [2020-03-26 04:19:25,413] main                 Sending msgsys.PLUGIN_AVAILABLE id=93 to DomainServer
+DEBUG [2020-03-26 04:19:25,414] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:25,414] main                 Engine, Executing script file: /usr/multiverse/config/mv_fantasy/voice.py
+DEBUG [2020-03-26 04:19:25,414] main                 runPYFile: file=/usr/multiverse/config/mv_fantasy/voice.py
+WARN  [2020-03-26 04:19:25,414] main                 ScriptManager.runPYFile: file not found: /usr/multiverse/config/mv_fantasy/voice.py
+DEBUG [2020-03-26 04:19:25,414] main                 Engine, script completed
+DEBUG [2020-03-26 04:19:25,519] MessageIO            handleMessageData from proxy_1,366 type=msgsys.SUBSCRIBE len=49 class=multiverse.msgsys.SubscribeMessage
+DEBUG [2020-03-26 04:19:25,519] MessageIO            [proxy_1,366] Got subscription subId=4 filter [PerceptionFilter types=mv.INSTANCE_ENTRY_REQ,mv.PLAYER_IGNORE_LIST_REQ,mv.GET_PLAYER_LOGIN_STATUS, subjectCount=0 targets=]
+DEBUG [2020-03-26 04:19:25,519] MessageIO            sendResponse to proxy_1,366 type=msgsys.RESPONSE id=94 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:19:30,396] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:19:30,396] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:19:35,401] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:19:35,402] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:19:40,408] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:19:40,409] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:19:45,410] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:19:45,411] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:19:50,412] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:19:50,412] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:19:55,416] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:19:55,416] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:00,418] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:00,419] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:05,420] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:05,420] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:10,422] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:10,422] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:15,123] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:20:15,424] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:15,424] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:20,431] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:20,431] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:24,822] MessageIO            handleMessageData from wmgr_1,1359 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:20:24,822] MessageIO            [wmgr_1,1359] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:20:24,822] MessageIO            ADD SUBJECT 1852
+DEBUG [2020-03-26 04:20:24,822] MessageIO            sendResponse to wmgr_1,1359 type=msgsys.RESPONSE id=95 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:20:25,178] MessageIO            handleMessageData from proxy_1,384 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:20:25,179] MessageIO            [proxy_1,384] Got filter update subId=4 rpc=false
+DEBUG [2020-03-26 04:20:25,179] MessageIO            ADD TARGET 1852
+DEBUG [2020-03-26 04:20:25,229] MessageIO            handleMessageData from wmgr_1,1421 type=mv.SPAWNED len=36 class=multiverse.server.plugins.WorldManagerClient$SpawnedMessage
+DEBUG [2020-03-26 04:20:25,231] MessageIO            deliverMessage to multiverse.server.plugins.VoicePlugin@71e2c6d8
+DEBUG [2020-03-26 04:20:25,333] Voice-1              EnginePlugin.handleMessage: got msg id 1421, matching 1 hooks for msgtype MessageType['mv.SPAWNED', 36]
+DEBUG [2020-03-26 04:20:25,333] Voice-1              SpawnedHook.processMessage: playerOid 1852 spawn ignored, instanceOid 1901
+DEBUG [2020-03-26 04:20:25,333] Voice-1              EnginePlugin.handleMessage: processed msg 1421, type=MessageType['mv.SPAWNED', 36], time in ms=0
+INFO  [2020-03-26 04:20:25,333] Voice-1              MVMeter: meter=EnginePluginOnMessageMeter, avgTime=0, totalTime=0, entries=1, elapsedMS=67934
+DEBUG [2020-03-26 04:20:25,443] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:25,443] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:30,455] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:30,455] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:35,458] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:35,458] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:40,462] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:40,463] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:45,465] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:45,465] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:50,466] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:50,467] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:20:55,469] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:20:55,469] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:00,470] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:00,470] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:05,472] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:05,472] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:10,474] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:10,474] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:15,124] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:21:15,476] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:15,476] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:20,483] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:20,483] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:25,485] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:25,485] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:30,487] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:30,487] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:35,495] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:35,496] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:40,501] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:40,501] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:45,505] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:45,505] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:50,506] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:50,506] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:21:55,508] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:21:55,508] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:00,510] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:00,510] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:05,513] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:05,513] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:10,514] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:10,515] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:15,126] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:22:15,516] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:15,516] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:20,519] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:20,519] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:25,521] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:25,521] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:30,546] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:30,546] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:35,548] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:35,548] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:40,550] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:40,550] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:45,552] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:45,552] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:50,553] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:50,553] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:22:54,418] MessageIO            handleMessageData from wmgr_1,2750 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:22:54,419] MessageIO            [wmgr_1,2750] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:22:54,419] MessageIO            REMOVE SUBJECT 1960
+DEBUG [2020-03-26 04:22:54,419] MessageIO            sendResponse to wmgr_1,2750 type=msgsys.RESPONSE id=96 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:22:55,555] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:22:55,555] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:00,564] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:00,564] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:05,566] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:05,566] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:10,572] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:10,572] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:15,128] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:23:15,574] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:15,574] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:20,575] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:20,575] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:24,442] MessageIO            handleMessageData from wmgr_1,2909 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:23:24,442] MessageIO            [wmgr_1,2909] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:23:24,442] MessageIO            ADD SUBJECT 2252
+DEBUG [2020-03-26 04:23:24,442] MessageIO            sendResponse to wmgr_1,2909 type=msgsys.RESPONSE id=97 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:23:25,599] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:25,599] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:30,600] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:30,601] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:35,603] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:35,603] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:40,604] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:40,604] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:45,607] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:45,607] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:50,165] MessageIO            handleMessageData from wmgr_1,3208 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:23:50,166] MessageIO            [wmgr_1,3208] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:23:50,166] MessageIO            REMOVE SUBJECT 1967
+DEBUG [2020-03-26 04:23:50,166] MessageIO            sendResponse to wmgr_1,3208 type=msgsys.RESPONSE id=98 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:23:50,609] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:50,609] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:23:55,621] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:23:55,621] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:00,623] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:00,624] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:05,634] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:05,635] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:10,636] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:10,637] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:15,130] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:24:15,638] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:15,638] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:20,176] MessageIO            handleMessageData from wmgr_1,3415 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:24:20,176] MessageIO            [wmgr_1,3415] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:24:20,176] MessageIO            ADD SUBJECT 2259
+DEBUG [2020-03-26 04:24:20,176] MessageIO            sendResponse to wmgr_1,3415 type=msgsys.RESPONSE id=99 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:24:20,641] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:20,641] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:25,657] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:25,657] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:30,659] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:30,659] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:35,661] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:35,661] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:40,663] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:40,663] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:45,664] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:45,664] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:50,666] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:50,666] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:24:55,668] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:24:55,668] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:00,671] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:00,671] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:05,673] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:05,673] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:10,674] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:10,675] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:15,132] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:25:15,684] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:15,684] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:20,686] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:20,686] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:25,688] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:25,688] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:30,689] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:30,689] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:35,690] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:35,691] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:40,692] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:40,692] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:45,694] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:45,694] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:50,695] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:50,695] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:25:55,697] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:25:55,697] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:00,699] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:00,699] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:05,701] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:05,701] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:10,714] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:10,715] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:15,134] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:26:15,721] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:15,721] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:20,723] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:20,723] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:25,725] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:25,725] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:28,190] MessageIO            handleMessageData from wmgr_1,4318 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:26:28,190] MessageIO            [wmgr_1,4318] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:26:28,190] MessageIO            REMOVE SUBJECT 2202
+DEBUG [2020-03-26 04:26:28,190] MessageIO            sendResponse to wmgr_1,4318 type=msgsys.RESPONSE id=100 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:26:30,737] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:30,737] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:35,756] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:35,756] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:40,758] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:40,758] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:45,761] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:45,761] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:50,767] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:50,767] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:55,779] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:26:55,779] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:26:58,202] MessageIO            handleMessageData from wmgr_1,4621 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:26:58,202] MessageIO            [wmgr_1,4621] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:26:58,202] MessageIO            ADD SUBJECT 2267
+DEBUG [2020-03-26 04:26:58,202] MessageIO            sendResponse to wmgr_1,4621 type=msgsys.RESPONSE id=101 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:27:00,782] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:00,782] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:05,784] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:05,784] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:10,786] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:10,786] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:15,136] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:27:15,790] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:15,790] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:20,800] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:20,801] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:25,803] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:25,804] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:30,805] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:30,806] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:35,807] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:35,808] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:40,810] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:40,810] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:45,812] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:45,812] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:50,813] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:50,813] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:27:55,815] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:27:55,815] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:00,817] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:00,817] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:05,818] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:05,819] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:10,821] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:10,821] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:15,138] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:28:15,829] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:15,829] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:20,830] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:20,830] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:25,837] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:25,837] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:27,856] MessageIO            handleMessageData from wmgr_1,5535 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:28:27,856] MessageIO            [wmgr_1,5535] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:28:27,856] MessageIO            REMOVE SUBJECT 2223
+DEBUG [2020-03-26 04:28:27,856] MessageIO            sendResponse to wmgr_1,5535 type=msgsys.RESPONSE id=102 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:28:30,838] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:30,838] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:35,840] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:35,841] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:40,842] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:40,842] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:45,844] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:45,844] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:50,846] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:50,846] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:55,848] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:28:55,848] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:28:57,871] MessageIO            handleMessageData from wmgr_1,5682 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:28:57,871] MessageIO            [wmgr_1,5682] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:28:57,871] MessageIO            ADD SUBJECT 2274
+DEBUG [2020-03-26 04:28:57,871] MessageIO            sendResponse to wmgr_1,5682 type=msgsys.RESPONSE id=103 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:29:00,849] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:00,849] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:05,852] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:05,852] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:10,857] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:10,857] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:15,139] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:29:15,858] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:15,858] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:20,859] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:20,860] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:25,866] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:25,866] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:30,872] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:30,872] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:35,874] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:35,874] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:40,875] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:40,875] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:45,877] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:45,877] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:50,879] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:50,880] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:55,885] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:29:55,886] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:29:57,726] MessageIO            handleMessageData from wmgr_1,6376 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:29:57,726] MessageIO            [wmgr_1,6376] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:29:57,726] MessageIO            REMOVE SUBJECT 2274
+DEBUG [2020-03-26 04:29:57,726] MessageIO            sendResponse to wmgr_1,6376 type=msgsys.RESPONSE id=104 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:29:58,699] MessageIO            handleMessageData from wmgr_1,6440 type=mv.DESPAWNED len=36 class=multiverse.server.plugins.WorldManagerClient$DespawnedMessage
+DEBUG [2020-03-26 04:29:58,699] MessageIO            deliverMessage to multiverse.server.plugins.VoicePlugin@71e2c6d8
+DEBUG [2020-03-26 04:29:58,705] MessageIO            handleMessageData from proxy_1,1943 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:29:58,705] MessageIO            [proxy_1,1943] Got filter update subId=4 rpc=false
+DEBUG [2020-03-26 04:29:58,705] MessageIO            REMOVE TARGET 1852
+DEBUG [2020-03-26 04:29:58,706] Voice-2              EnginePlugin.handleMessage: got msg id 6440, matching 1 hooks for msgtype MessageType['mv.DESPAWNED', 8]
+DEBUG [2020-03-26 04:29:58,706] Voice-2              DespawnedHook.processMessage: Ignored despawn for player 1852 because member.wnode wasn't null
+DEBUG [2020-03-26 04:29:58,706] Voice-2              EnginePlugin.handleMessage: processed msg 6440, type=MessageType['mv.DESPAWNED', 8], time in ms=0
+INFO  [2020-03-26 04:29:58,707] Voice-2              MVMeter: meter=EnginePluginOnMessageMeter, avgTime=0, totalTime=0, entries=1, elapsedMS=573373
+DEBUG [2020-03-26 04:29:58,715] MessageIO            handleMessageData from wmgr_1,6443 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:29:58,715] MessageIO            [wmgr_1,6443] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:29:58,715] MessageIO            REMOVE SUBJECT 1852
+DEBUG [2020-03-26 04:29:58,716] MessageIO            sendResponse to wmgr_1,6443 type=msgsys.RESPONSE id=105 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:30:00,887] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:00,887] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:05,892] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:05,892] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:10,894] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:10,894] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:15,141] DBKeepalive          Database: ping
+DEBUG [2020-03-26 04:30:15,898] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:15,898] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:20,901] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:20,901] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:25,902] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:25,902] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:27,734] MessageIO            handleMessageData from wmgr_1,6482 type=msgsys.FILTER_UPDATE len=51 class=multiverse.msgsys.FilterUpdateMessage
+DEBUG [2020-03-26 04:30:27,734] MessageIO            [wmgr_1,6482] Got filter update subId=8 rpc=true
+DEBUG [2020-03-26 04:30:27,735] MessageIO            ADD SUBJECT 2281
+DEBUG [2020-03-26 04:30:27,735] MessageIO            sendResponse to wmgr_1,6482 type=msgsys.RESPONSE id=106 class=multiverse.msgsys.ResponseMessage
+DEBUG [2020-03-26 04:30:30,904] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:30,904] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:35,906] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:35,906] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:40,911] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:40,911] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU
+DEBUG [2020-03-26 04:30:45,913] StatusReporting      Engine.StatusReportingThread.run: count of status reporting plugins is 1
+DEBUG [2020-03-26 04:30:45,913] StatusReporting      Engine.StatusReportingThread: 1 plugins, 0% CPU

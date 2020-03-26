@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Imageset Name="ComboFrame" Imagefile="ComboFrame.tga" NativeHorzRes="512" NativeVertRes="32" AutoScaled="false">
+    <Image Name="ComboFrameBackground" XPos="0" YPos="0" Width="256" Height="32" />
+    <Image Name="ComboPoint" XPos="256" YPos="0" Width="32" Height="16" />
+</Imageset>

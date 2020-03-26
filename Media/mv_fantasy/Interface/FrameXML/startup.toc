@@ -1,0 +1,16 @@
+## Title: Basic UI Elements
+## DefaultState: enabled
+## Author: Robin McCollum
+## eMail: robin@multiverse.net
+## URL: http://www.multiverse.net/
+## Interface: 0
+## Version: 0.81
+## Notes: This is the prototype UI
+## RequiredDeps:
+## OptionalDeps:
+## SavedVariables:
+MvFonts.xml
+MvFrame.xml
+MvDialog.xml
+# MvChat.xml
+MvCharCreation.xml

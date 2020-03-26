@@ -1,0 +1,16 @@
+material orcsword.FACE
+{
+	technique
+	{
+		pass
+		{
+			shading gouraud
+			texture_unit
+			{
+				texture faceUV_DI_RED_1024.dds
+				tex_coord_set 0
+			}
+
+		}
+	}
+}

@@ -1,0 +1,567 @@
+material human_house_stilt_a.lambert2
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_roof.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.lambert3
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder_Scene_Material4
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder20_Scene_Material26
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder21_Scene_Material27
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder22_Scene_Material28
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder1_Scene_Material5
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder4_Scene_Material6
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder5_Scene_Material8
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder3_Scene_Material9
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder2_Scene_Material10
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder19_Scene_Material25
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder18_Scene_Material24
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder12_Scene_Material11
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder6_Scene_Material7
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder10_Scene_Material12
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder11_Scene_Material13
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder7_Scene_Material14
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder8_Scene_Material16
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder9_Scene_Material15
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder16_Scene_Material20
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder17_Scene_Material21
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder15_Scene_Material22
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder14_Scene_Material23
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder13_Scene_Material19
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder24_Scene_Material18
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material human_house_stilt_a.cylinder23_Scene_Material17
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture human_house_stilt_a_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

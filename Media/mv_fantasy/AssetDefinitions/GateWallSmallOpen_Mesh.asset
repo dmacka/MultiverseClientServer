@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>GateWallSmallOpen_Mesh</Name>
+  <Description>Gate and Wall, Small Door Open</Description>
+  <Type>Mesh</Type>
+  <Category>Walls and Fences</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\GateWallSmallOpen.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\GateWallSmallOpen_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

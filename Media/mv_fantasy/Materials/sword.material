@@ -1,0 +1,4 @@
+material sword.Material__45____Standard__  : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex sword_005.dds
+}

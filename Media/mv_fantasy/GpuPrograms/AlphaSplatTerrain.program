@@ -1,0 +1,41 @@
+vertex_program AlphaSplatTerrain/VP cg
+{
+	source AlphaSplatTerrain.cg
+	entry_point TerrainVP
+	profiles vs_2_0
+}
+
+fragment_program AlphaSplatTerrain/FP hlsl
+{
+	source AlphaSplatTerrain.cg
+	entry_point TerrainFP
+	target ps_2_0
+}
+
+fragment_program AlphaSplatTerrainColorizedHighlight/FP hlsl
+{
+	source AlphaSplatTerrain.cg
+	entry_point TerrainColorizedHighlightFP
+	target ps_2_0
+}
+
+fragment_program AlphaSplatTerrainEdgeBlendHighlight/FP hlsl
+{
+	source AlphaSplatTerrain.cg
+	entry_point TerrainEdgeBlendHighlightFP
+	target ps_2_0
+}
+
+fragment_program AlphaSplatTerrainEdgeSharpHighlight/FP hlsl
+{
+	source AlphaSplatTerrain.cg
+	entry_point TerrainEdgeSharpHighlightFP
+	target ps_2_0
+}
+
+fragment_program AlphaSplatTerrainEdgeSharpBlendHighlight/FP hlsl
+{
+	source AlphaSplatTerrain.cg
+	entry_point TerrainEdgeSharpBlendHighlightFP
+	target ps_2_0
+}

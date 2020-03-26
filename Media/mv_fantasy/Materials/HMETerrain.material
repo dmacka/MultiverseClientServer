@@ -1,0 +1,156 @@
+
+vertex_program HMETerrain/VP cg
+{
+	source HMETerrain.cg
+	entry_point TerrainVP
+	profiles vs_2_0 arbvp1
+}
+
+fragment_program HMETerrain/FP cg
+{
+	source HMETerrain.cg
+	entry_point TerrainFP
+	profiles ps_2_0
+}
+
+fragment_program HMEBrush/FP cg
+{
+	source HMETerrain.cg
+	entry_point TerrainBrushFP
+	profiles ps_2_0
+}
+
+material HMETerrain
+{
+    technique
+	{
+		pass
+		{
+			vertex_program_ref HMETerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+                param_named_auto lightDirection light_position 0
+                param_named_auto lightDiffuse light_diffuse_colour 0
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 1.0 1.0 1.0 1.0
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	param_named splatConfig float4 50000.0 250000.0 450000.0 0.0
+			}
+
+
+			fragment_program_ref HMETerrain/FP
+			{
+			}
+			
+			// tex0
+			texture_unit
+			{
+				texture splatting_sand.dds
+				tex_address_mode wrap
+			}
+			
+			// tex1
+			texture_unit
+			{
+				texture splatting_grass.dds
+				tex_address_mode wrap
+			}
+			
+			// tex2
+			texture_unit
+			{
+				texture splatting_rock.dds
+				tex_address_mode wrap
+			}
+			
+			// tex3
+			texture_unit
+			{
+				texture splatting_snow.dds
+				tex_address_mode wrap
+			}
+			
+		}
+		
+		pass
+		{
+			scene_blend alpha_blend
+			depth_func always_pass
+			
+			vertex_program_ref HMETerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+                param_named_auto lightDirection light_position 0
+                param_named_auto lightDiffuse light_diffuse_colour 0
+				param_named_auto lightAmbient ambient_light_colour
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 1.0 1.0 1.0 1.0
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+				param_named_auto fogSettings fog_params
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	param_named splatConfig float4 50000.0 250000.0 450000.0 0.0
+			}
+
+			fragment_program_ref HMEBrush/FP
+			{
+				param_named_auto brushOffset custom 0
+				param_named brushSize float4 32 0 0 0
+			}
+			
+			// tex0
+			texture_unit
+			{	
+				// brush block
+				texture hed-yellow-square.png
+				tex_address_mode wrap
+				filtering anisotropic
+			}
+			
+			// tex 1 - brush shape
+			texture_unit
+			{
+				tex_address_mode clamp
+				//texture round-brush-11.png
+				//filtering none
+			}
+			
+			// tex 2 - grid
+			texture_unit
+			{	
+				// grid
+				texture red-outline.png
+				tex_address_mode mirror
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>AxiomIcon_Icon</Name>
+  <Type>Icon</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Icons\AxiomIcon.ico</TargetFile>
+      <FileType>Icon</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

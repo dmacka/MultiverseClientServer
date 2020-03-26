@@ -1,0 +1,213 @@
+<Ui>
+
+  <Script file="MvContextMenu.py"/>
+
+  <Texture name="MenuButtonTexture_Template" file="Interface/MvBasicTextures/Patch6x6W10A10" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent">
+	<Offset>
+	  <AbsDimension x="0" y="0"/>
+	</Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parent">
+	<Offset>
+	  <AbsDimension x="0" y="0"/>
+	</Offset>
+      </Anchor>
+    </Anchors>
+  </Texture>
+
+  <Button name="MenuButton_Template" id="-1" virtual="true">
+    <Size>
+      <AbsDimension x="100" y="20"/>
+    </Size>
+    <NormalText name="$parent_fsNormal" inherits="MvDefaultFont" justifyH="LEFT" justifyV="MIDDLE">
+      <Color r="0.0" g="0.0" b="0.0"/>
+    </NormalText>
+    <HighlightText name="$parent_fsHighlight" inherits="MvDefaultFont" justifyH="LEFT" justifyV="MIDDLE">
+      <Color r="0.0" g="0.0" b="0.0"/>
+    </HighlightText>
+    <PushedText name="$parent_fsPushed" inherits="MvDefaultFont" justifyH="LEFT" justifyV="MIDDLE">
+      <Color r="0.0" g="0.0" b="0.0"/>
+    </PushedText>
+    <NormalTexture name="$parent_tNormal" inherits="MenuButtonTexture_Template">
+      <Color r="1.0" g="1.0" b="1.0"/>
+    </NormalTexture>
+    <HighlightTexture name="$parent_tHighlight" inherits="MenuButtonTexture_Template">
+      <Color r="0.0" g="1.0" b="0.0"/>
+    </HighlightTexture>
+    <PushedTexture name="$parent_tPushed" inherits="MenuButtonTexture_Template">
+      <Color r="0.0" g="0.0" b="1.0"/>
+    </PushedTexture>
+    <Scripts language="python">
+      <OnEnter>this.LockHighlight()</OnEnter>
+      <OnLeave>this.UnlockHighlight()</OnLeave>
+      <OnMouseDown>this.UnlockHighlight()</OnMouseDown>
+      <OnMouseUp>this.LockHighlight()</OnMouseUp>
+      <OnClick>MvContextMenu_OnClick(this, args)</OnClick>
+    </Scripts>
+  </Button>
+
+  <Frame name="MvContextMenu_fMain" inherits="MvThinFrameTemplate" frameStrata="TOOLTIP" hidden="true">
+    <Size>
+      <AbsDimension x="100" y="200"/>
+    </Size>
+    <Frames>
+      <Button name="MvContextMenu_fMain_bButton0" inherits="MenuButton_Template" text="click me" id="0" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="MvContextMenu_fMain">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="MvContextMenu_fMain">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton1" inherits="MenuButton_Template" text="click me" id="1" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton0">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton0">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton2" inherits="MenuButton_Template" text="click me" id="2" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton1">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton1">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton3" inherits="MenuButton_Template" text="click me" id="3" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton2">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton2">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton4" inherits="MenuButton_Template" text="click me" id="4" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton3">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton3">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton5" inherits="MenuButton_Template" text="click me" id="5" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton4">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton4">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton6" inherits="MenuButton_Template" text="click me" id="6" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton5">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton5">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton7" inherits="MenuButton_Template" text="click me" id="7" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton6">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton6">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton8" inherits="MenuButton_Template" text="click me" id="8" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton7">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton7">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton9" inherits="MenuButton_Template" text="click me" id="9" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton8">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton8">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+      <Button name="MvContextMenu_fMain_bButton10" inherits="MenuButton_Template" text="click me" id="10" hidden="true">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvContextMenu_fMain_bButton9">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvContextMenu_fMain_bButton9">
+	    <Offset>
+	      <AbsDimension x="0" y="0"/>
+	    </Offset>
+	  </Anchor>
+	</Anchors>
+      </Button>
+    </Frames>
+  </Frame>
+
+</Ui>

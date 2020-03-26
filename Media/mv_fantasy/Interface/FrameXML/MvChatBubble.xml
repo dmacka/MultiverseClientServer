@@ -1,0 +1,98 @@
+<Ui>
+  <Script file="MvChatBubble.py"/>
+
+  <FontString name="BubbleFont" font="Fonts\MUFN____.TTF" justifyH="CENTER" justifyV="TOP" virtual="true">
+    <FontHeight>
+      <AbsValue val="12"/>
+    </FontHeight>
+    <Color r="0.1" g="0.1" b="0.1"/>
+  </FontString>
+  <FontString name="NameFont" font="Fonts\ARIALN.TTF" justifyH="CENTER" justifyV="TOP" virtual="true">
+    <FontHeight>
+      <AbsValue val="14"/>
+    </FontHeight>
+    <Color r="1.0" g="1.0" b="1.0"/>
+  </FontString>
+
+  <Frame name="MvChatBubble" toplevel="true" movable="true" resizable="true" frameStrata="BACKGROUND" parent="UIParent" enableMouse="false" enableKeyboard="false" alpha="1.0" hidden="true" virtual="true">
+    <Size><AbsDimension x="100" y="60"/></Size>
+    <Anchors>
+      <Anchor point="TOPLEFT"> <Offset><AbsDimension x="100" y="-100"/></Offset> </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\MvChatBubble\background" edgeFile="Interface\MvChatBubble\edge" tile="true">
+      <EdgeSize>
+        <AbsValue val="6"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="6"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="6" right="6" top="6" bottom="6"/>
+      </BackgroundInsets>
+    </Backdrop>
+    <Layers>
+      <Layer>
+        <Texture name="$parentTailTexture" file="Interface\MvChatBubble\tail">
+          <Size><AbsDimension x="7" y="12"/> </Size>
+          <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM">
+              <Offset><AbsDimension x="0" y="5"/></Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+      <Layer>
+        <FontString name="$parentText" text="" inherits="BubbleFont" hidden="false">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+              <Offset><AbsDimension x="6" y="-6"/></Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts language="python">
+      <OnUpdate>
+        MvChatBubble_Update(this)
+      </OnUpdate>
+    </Scripts>
+  </Frame>
+
+  <Frame name="MvFloatyName" toplevel="true" movable="true" resizable="true" frameStrata="BACKGROUND" parent="UIParent" enableMouse="false" enableKeyboard="false" alpha="1.0" hidden="true" virtual="true">
+    <Size><AbsDimension x="0" y="30"/></Size>
+    <Anchors>
+      <Anchor point="TOPLEFT"> <Offset><AbsDimension x="100" y="-100"/></Offset> </Anchor>
+    </Anchors>
+    <Layers>
+      <Layer>
+	<Texture name="$parent_tSpeakerIndicator" file="Interface/VoiceIcons/big_speaker" hidden="true">
+	  <Size><AbsDimension x="32" y="32"/></Size>
+	  <Anchors>
+	    <Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPLEFT">
+	      <Offset><AbsDimension x="0" y="0"/></Offset>
+	    </Anchor>
+	  </Anchors>
+	</Texture>
+        <FontString name="$parentText" text="" inherits="NameFont" hidden="false">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+              <Offset><AbsDimension x="6" y="-6"/></Offset>
+            </Anchor>
+          </Anchors>
+    	  <Color r="1.0" g="1.0" b="1.0"/>
+	  <Shadow>
+	    <Offset>
+	      <AbsDimension x="1" y="-1"/>
+  	    </Offset>
+  	    <Color r="0" g="0" b="0"/>
+	  </Shadow>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts language="python">
+      <OnUpdate>
+        MvFloatyName_Update(this)
+      </OnUpdate>
+    </Scripts>
+  </Frame>
+</Ui>

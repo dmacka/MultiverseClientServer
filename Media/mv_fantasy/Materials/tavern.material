@@ -1,0 +1,154 @@
+material tavern.TopWood
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture tavern_wood.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material tavern.Roof
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture tavern_roof.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material tavern.insideWood
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture tavern_darkwood.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material tavern.wood2
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture tavern_wood2.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material tavern.pillar
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture tavern_pillar.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material tavern.House
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture tavern_house.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material tavern.bell
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 0.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+            cull_hardware none
+
+            texture_unit
+            {
+                texture tavern_bells.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

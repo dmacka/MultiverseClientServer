@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>rock_group_01_Mesh</Name>
+  <Description>Rock Group 1</Description>
+  <Type>Mesh</Type>
+  <Category>Props</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\rock_group_01.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\rock_group_01_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

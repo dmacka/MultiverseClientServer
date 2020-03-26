@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Imageset Name="WorldMap" Imagefile="WorldMap.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+    <Image Name="UI-WorldMap-Bottom1" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Bottom2" XPos="256" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Bottom3" XPos="512" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Bottom4" XPos="768" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Middle1" XPos="0" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Middle2" XPos="256" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Middle3" XPos="512" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Middle4" XPos="768" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Top1" XPos="0" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Top2" XPos="256" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Top3" XPos="512" YPos="512" Width="256" Height="256" />
+    <Image Name="UI-WorldMap-Top4" XPos="768" YPos="512" Width="256" Height="256" />
+    <Image Name="WorldMap-Icon" XPos="0" YPos="768" Width="64" Height="64" />
+    <Image Name="WorldMap-MagnifyingGlass" XPos="64" YPos="768" Width="32" Height="32" />
+    <Image Name="WorldMapPlayerIcon" XPos="96" YPos="768" Width="16" Height="16" />
+</Imageset>

@@ -1,0 +1,35 @@
+material fireball
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+                        scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture fireball.dds
+			}
+		}
+	}
+}
+
+material fireball-tail
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+                        scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture fireball_tail.dds
+			}
+		}
+	}
+}

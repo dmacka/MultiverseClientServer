@@ -1,0 +1,1 @@
+Copy this directory to C:\<Your Documents>\Multiverse World Browser and edit them for your server IP

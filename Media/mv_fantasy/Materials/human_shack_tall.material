@@ -1,0 +1,8 @@
+material human_shack_tall.human_shack_tall_texture : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex human_shack_tall_texture.dds
+}
+
+material human_shack_tall.collision_volume_lambert : MVSimpleLighting
+{
+}

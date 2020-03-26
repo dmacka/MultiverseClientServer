@@ -1,0 +1,12 @@
+<physics_model>
+  <rigid_body sid="long_block-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0 0.03499451 0.02347998</translate>
+        <box>
+          <half_extents>0.5375651 0.3252975 1.88261</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

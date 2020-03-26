@@ -1,0 +1,376 @@
+vertex_program TreeBranchVP cg
+{
+	source Trees.cg
+	entry_point BranchVS
+	profiles vs_1_1
+}
+
+vertex_program TreeBranchShadowCasterVP cg
+{
+	source Trees.cg
+	entry_point BranchShadowCasterVS
+	profiles vs_1_1
+}
+
+fragment_program TreeBranchFP cg
+{
+	source Trees.cg
+	entry_point BranchPS
+	profiles ps_2_0
+}
+
+vertex_program TreeFrondVP cg
+{
+	source Trees.cg
+	entry_point FrondVS
+	profiles vs_1_1
+}
+
+vertex_program TreeFrondShadowCasterVP cg
+{
+	source Trees.cg
+	entry_point FrondShadowCasterVS
+	profiles vs_1_1
+}
+
+fragment_program TreeFrondFP cg
+{
+	source Trees.cg
+	entry_point FrondPS
+	profiles ps_1_1
+}
+
+fragment_program TreeFrondShadowCasterFP cg
+{
+	source Trees.cg
+	entry_point FrondShadowCasterPS
+	profiles ps_2_0
+}
+
+vertex_program TreeLeafVP cg
+{
+	source Trees.cg
+	entry_point LeafVS
+	profiles vs_1_1
+}
+
+fragment_program TreeLeafFP cg
+{
+	source Trees.cg
+	entry_point LeafPS
+	profiles ps_1_1
+}
+
+vertex_program TreeLeafShadowCasterVP cg
+{
+	source Trees.cg
+	entry_point LeafShadowCasterVS
+	profiles vs_1_1
+}
+
+fragment_program TreeLeafShadowCasterFP cg
+{
+	source Trees.cg
+	entry_point LeafShadowCasterPS
+	profiles ps_2_0
+}
+
+vertex_program TreeBillboardVP cg
+{
+	source Trees.cg
+	entry_point BillboardVS
+	profiles vs_1_1
+}
+
+fragment_program TreeBillboardFP cg
+{
+	source Trees.cg
+	entry_point BillboardPS
+	profiles ps_1_1
+}
+
+material SpeedTree/Branch
+{
+	technique
+	{
+		pass
+		{
+		
+			vertex_program_ref TreeBranchVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+                param_named_auto g_vLightPosition light_position_object_space 0
+				//param_named_auto g_vLightDiffuse light_diffuse_colour 0
+				//param_named_auto g_vLightAmbient ambient_light_colour
+                param_named_auto g_fogSettings fog_params
+
+                // Fog colour
+                //param_named g_fogColour float4 0.93 0.86 0.76 1.0
+				
+				// param_named_auto g_vTreePosition custom 0
+				
+				// the following parameters are set by the scene manager tree code
+				// float4x4	g_amWindMatrices[4];
+				// float4		g_vMaterialDiffuse;
+				// float4		g_vMaterialAmbient;
+                
+			}
+
+			shadow_caster_vertex_program_ref TreeBranchShadowCasterVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+				param_named_auto g_vLightAmbient ambient_light_colour
+                param_named_auto g_fogSettings fog_params
+				
+				// param_named_auto g_vTreePosition custom 0
+				
+				// the following parameters are set by the scene manager tree code
+				// float4x4	g_amWindMatrices[4];
+			}
+
+			fragment_program_ref TreeBranchFP
+			{
+				param_named g_fGlobalSaturation float 1.6
+				param_named g_fGlobalAmbient float 0.25
+			}
+		
+			// bark texture
+			texture_unit
+			{
+				alpha_rejection greater 0
+			}
+			
+			// self shadow texture
+			texture_unit
+			{
+				alpha_rejection greater 0
+			}
+			
+			// normal map texture
+			texture_unit
+			{
+				alpha_rejection greater 0
+			}
+		}
+	}
+	
+	// use frond technique as fallback if we dont have pixel shader 2.0
+	technique
+	{
+		pass
+		{
+			vertex_program_ref TreeFrondVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+                param_named_auto g_vLightPosition light_position_object_space 0
+				param_named_auto g_vLightDiffuse light_diffuse_colour 0
+				param_named_auto g_vLightAmbient ambient_light_colour
+				
+				param_named_auto g_vTreePosition custom 0
+                param_named_auto g_fogSettings fog_params
+
+                // Fog colour
+                //param_named g_fogColour float4 0.93 0.86 0.76 1.0
+                				
+				// the following parameters are set by the scene manager tree code
+				// float4x4	g_amWindMatrices[4]; - per frame
+				// float4		g_vMaterialDiffuse; - once
+				// float4		g_vMaterialAmbient; - once
+				// float4		g_vCameraDir; - per frame
+                
+			}
+
+			shadow_caster_vertex_program_ref TreeFrondShadowCasterVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+				param_named_auto g_vLightAmbient ambient_light_colour
+				
+				param_named_auto g_vTreePosition custom 0
+
+				// the following parameters are set by the scene manager tree code
+				// float4x4	g_amWindMatrices[4]; - per frame
+			}
+			
+			fragment_program_ref TreeFrondFP
+			{
+			}
+			
+			cull_hardware none
+			
+			// frond (composite) texture
+			texture_unit
+			{
+				alpha_rejection greater 0
+			}
+			
+			// self shadow texture
+			texture_unit
+			{
+				alpha_rejection greater 0
+			}
+		}
+	}
+}
+
+material SpeedTree/Frond
+{
+	technique
+	{
+		pass
+		{
+			vertex_program_ref TreeFrondVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+                param_named_auto g_vLightPosition light_position_object_space 0
+				param_named_auto g_vLightDiffuse light_diffuse_colour 0
+				param_named_auto g_vLightAmbient ambient_light_colour
+				
+				param_named_auto g_vTreePosition custom 0
+                param_named_auto g_fogSettings fog_params
+
+                // Fog colour
+                //param_named g_fogColour float4 0.93 0.86 0.76 1.0
+                				
+				// the following parameters are set by the scene manager tree code
+				// float4x4	g_amWindMatrices[4]; - per frame
+				// float4		g_vMaterialDiffuse; - once
+				// float4		g_vMaterialAmbient; - once
+				// float4		g_vCameraDir; - per frame
+                
+			}
+
+			shadow_caster_vertex_program_ref TreeFrondShadowCasterVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+				param_named_auto g_vLightAmbient ambient_light_colour
+				
+				param_named_auto g_vTreePosition custom 0
+				
+				param_named_auto ShadowTechnique mv_shadow_technique
+				
+				param_named DepthOffset float 0.001
+
+				// the following parameters are set by the scene manager tree code
+				// float4x4	g_amWindMatrices[4]; - per frame
+			}
+			
+			fragment_program_ref TreeFrondFP
+			{
+			}
+
+			shadow_caster_fragment_program_ref TreeFrondShadowCasterFP
+			{
+			}
+						
+			cull_hardware none
+			
+			// frond (composite) texture
+			texture_unit
+			{
+				alpha_rejection greater 0
+			}
+			
+			// self shadow texture
+			texture_unit
+			{
+				alpha_rejection greater 0
+			}
+		}
+	}
+}
+
+material SpeedTree/Leaf
+{
+	technique
+	{
+		pass
+		{
+			vertex_program_ref TreeLeafVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+                param_named_auto g_vLightPosition light_position_object_space 0
+				param_named_auto g_vLightDiffuse light_diffuse_colour 0
+				param_named_auto g_vLightAmbient ambient_light_colour
+				
+				param_named_auto g_vTreePosition custom 0
+                param_named_auto g_fogSettings fog_params
+
+                // Fog colour
+                //param_named g_fogColour float4 0.93 0.86 0.76 1.0
+                
+				// the following parameters are set by the scene manager tree code
+				// float4		g_avLeafClusters[48]; - per frame
+				// float4x4	g_amWindMatrices[4]; - per frame
+				// float4x4	g_amLeafAngleMatrices[4]; - per frame
+				// float4		g_vMaterialDiffuse; - once
+				// float4		g_vMaterialAmbient; - once
+				// float4		g_vCameraDir; - per frame
+                
+			}
+
+			shadow_caster_vertex_program_ref TreeLeafShadowCasterVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+				param_named_auto g_vLightAmbient ambient_light_colour
+				
+				param_named_auto g_vTreePosition custom 0
+                
+                param_named_auto ShadowTechnique mv_shadow_technique
+				
+				param_named DepthOffset float 0.001
+
+              
+				// the following parameters are set by the scene manager tree code
+				// float4		g_avLeafClusters[48]; - per frame
+				// float4x4	g_amWindMatrices[4]; - per frame
+				// float4x4	g_amLeafAngleMatrices[4]; - per frame
+			}
+			
+			shadow_caster_fragment_program_ref TreeLeafShadowCasterFP
+			{
+			}
+			
+			fragment_program_ref TreeLeafFP
+			{
+			}
+			
+			cull_hardware none
+			texture_unit
+			{
+				alpha_rejection greater 0
+				texture EnglishOak_Composite.dds
+			}
+
+		}
+	}
+}
+
+material SpeedTree/Billboard
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			vertex_program_ref TreeBillboardVP
+			{
+                param_named_auto g_mWorldViewProjection worldviewproj_matrix
+                param_named_auto g_fogSettings fog_params
+
+                // Fog colour
+                //param_named g_fogColour float4 0.93 0.86 0.76 1.0
+                
+			}
+			fragment_program_ref TreeBillboardFP
+			{
+			}
+			cull_hardware none
+			texture_unit
+			{
+				alpha_rejection greater 0
+				texture EnglishOak_Composite.dds
+			}
+		}
+	}
+}

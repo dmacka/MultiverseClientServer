@@ -1,0 +1,75 @@
+material orc_house.___Defaulasdt : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                alpha_rejection greater_equal 128
+                texture weap_rack.dds
+            }
+        }
+    }
+}
+material orc_house.sad : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                alpha_rejection greater_equal 128
+                texture skull.dds
+            }
+        }
+    }
+}
+
+material orc_house.___Default : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                alpha_rejection greater_equal 128
+                texture lezhanka.dds
+            }
+        }
+    }
+}
+
+
+material orc_house.sadasd : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                alpha_rejection greater_equal 128
+                texture ramp.dds
+            }
+        }
+    }
+}
+
+
+material orc_house.sadt : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                alpha_rejection greater_equal 128
+                texture orc_house_007.dds
+            }
+        }
+    }
+}

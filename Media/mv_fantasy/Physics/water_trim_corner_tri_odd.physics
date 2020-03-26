@@ -1,0 +1,31 @@
+<physics_model>
+  <rigid_body sid="corner_tri_odd-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.03567847 -0.05619451 -0.505572</translate>
+        <box>
+          <half_extents>0.4863665 0.2283915 0.04731302</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.2501081 0.03539401 -0.2590847</translate>
+        <box>
+          <half_extents>0.1860339 0.321303 0.1846184</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -0.9999999 0 44.4445</rotate>
+        <translate>-0.04852252 -0.05619451 -0.04939501</translate>
+        <box>
+          <half_extents>0.04731299 0.2283915 0.6626941</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.5072085 -0.05619451 -0.05099903</translate>
+        <box>
+          <half_extents>0.0473125 0.2283915 0.487591</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

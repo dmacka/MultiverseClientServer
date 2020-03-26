@@ -1,0 +1,115 @@
+<Ui>
+    <Script file="MvContainer.py"/>
+
+    <Button name="ContainerItemButton" inherits="ItemButton" hidden="true" virtual="true">
+	<Anchors>
+	    <Anchor point="BOTTOMRIGHT">
+		<Offset>
+		    <AbsDimension x="0" y="0"/>
+		</Offset>
+	    </Anchor>
+	</Anchors>
+	<Scripts language="python">
+	    <OnClick>
+    ContainerItemButton_OnClick(this, args)
+	    </OnClick>
+	    <OnEnter>
+    ContainerItemButton_OnEnter(this)
+	    </OnEnter>
+	    <OnLeave>
+    ContainerItemButton_OnLeave(this)
+	    </OnLeave>
+	</Scripts>
+    </Button>
+
+    <Frame name="Container" frameStrata="MEDIUM" toplevel="true" movable="true" enableMouse="true" hidden="true" virtual="true">
+	<Size>
+	    <AbsDimension x="256" y="256"/>
+	</Size>
+	<Layers>
+	    <Layer level="ARTWORK">
+		<Texture name="$parentBackgroundTexture" file="Interface\ContainerFrame\UI-BackpackBackground">
+		    <Size>
+			<AbsDimension x="256" y="256"/>
+		    </Size>
+		    <Anchors>
+			<Anchor point="TOPRIGHT" relativeTo="$parent">
+			    <Offset>
+				<AbsDimension x="0" y="0"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</Texture>
+		<FontString name="$parentName" inherits="FrameNameFont" text="Backpack">
+		    <Size>
+			<AbsDimension x="112" y="12"/>
+		    </Size>
+		    <Anchors>
+			<Anchor point="TOPLEFT">
+			    <Offset>
+				<AbsDimension x="47" y="-12"/>
+			    </Offset>
+			</Anchor>
+		    </Anchors>
+		</FontString>
+	    </Layer>
+	</Layers>
+	<Frames>
+	    <Button name="$parentItem1" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem2" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem3" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem4" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem5" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem6" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem7" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem8" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem9" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem10" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem11" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem12" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem13" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem14" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem15" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem16" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem17" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem18" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem19" inherits="ContainerItemButton"/>
+	    <Button name="$parentItem20" inherits="ContainerItemButton"/>
+	    <Button name="$parentPortraitButton">
+		<Size>
+		    <AbsDimension x="40" y="40"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOPLEFT">
+			<Offset>
+			    <AbsDimension x="7" y="-5"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	    <Button name="$parentCloseButton" inherits="CloseButton">
+		<Anchors>
+		    <Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
+			<Offset>
+			    <AbsDimension x="0" y="0"/>
+			</Offset>
+		    </Anchor>
+		</Anchors>
+	    </Button>
+	</Frames>
+	<Scripts language="python">
+	    <OnLoad>
+    Container_OnLoad(this)
+	    </OnLoad>
+	    <OnShow>
+    Container_OnShow(this)
+	    </OnShow>
+	    <OnEvent>
+    Container_OnEvent(this, args)
+	    </OnEvent>
+	</Scripts>
+    </Frame>
+
+    <Frame name="Backpack" inherits="Container" parent="UIParent" id="0" hidden="true"/>
+
+</Ui>

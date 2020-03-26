@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>FantasyWorldIcons</Name>
+  <Type>Other</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>ImageFiles\FantasyWorldIcons.tga</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface\Imagesets\FantasyWorldIcons.xml</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

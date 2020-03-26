@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>fire_ring_decal_Texture</Name>
+  <Type>Texture</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Textures\fire_ring_decal.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="TerrainDecal" value="true" />
+  </Properties>
+</AssetDefinition>

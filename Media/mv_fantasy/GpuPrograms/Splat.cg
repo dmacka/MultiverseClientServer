@@ -1,0 +1,482 @@
+
+// Vertex program for automatic terrain texture generation
+void main_vp
+(
+    float4             iPosition           : POSITION,
+	float3             iNormal             : NORMAL,
+	float2             iTexcoord           : TEXCOORD0,
+
+	out float4         oPosition           : POSITION,
+	out float4			oColor				: COLOR0,
+	out float4         oTexcoord           : TEXCOORD0,
+	out float4         oCoverage           : TEXCOORD1,
+	out float4         oScaled             : TEXCOORD2,
+	out float4         oFog                : FOG,
+
+	uniform float4x4   worldViewProj,
+
+	uniform float4     configSettings,
+	uniform float4     fogSettings,
+	uniform float4     fogColour,
+	uniform float4		lightPosition,
+	uniform float4		lightDiffuse,
+	uniform float4		lightAmbient,
+	uniform float4		materialDiffuse,
+	uniform float4		materialAmbient
+)
+{
+
+    float no_rock_factor = clamp (iNormal.y, 0.0, 1.0);
+
+    // SAND  < configSettings[0]
+	oCoverage.x = (iPosition.y < configSettings[0])?
+                    clamp ((1.0 - (iPosition.y / configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                :
+                    0.0;
+
+    //  configSettings[0] < GRASS < configSettings[0]
+	oCoverage.y = (iPosition.y < configSettings[0])?
+                        clamp ((iPosition.y / configSettings[0])  * no_rock_factor, 0.0, 1.0)
+                    :
+                       ((iPosition.y < configSettings[1])?
+                            clamp ((1.0 - (iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            0.0);
+
+
+    //  configSettings[0] < ROCK < configSettings[0]
+	oCoverage.z = (iPosition.y > configSettings[0])?
+                        ((iPosition.y < configSettings[1])?
+                            clamp (((iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            clamp ((1.0 - (iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0))
+                    :
+                        0.0;
+
+
+    //  configSettings[1] < SNOW <
+	oCoverage.w = (iPosition.y > configSettings[1])?
+                        clamp (((iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0)
+                    :
+                        0.0;
+
+    float rock_factor = 1.0 - no_rock_factor;
+    oCoverage.z = clamp (oCoverage.z + rock_factor, 0.0, 1.0);
+
+    //float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    //oColor0 = (1.0 - fog) * (color * (1.0 - rock_factor));
+    //oColor1 = (1.0 - fog) * (color * rock_factor);
+    //oFog = fogColour * fog;
+
+    // Calculate the output position and texture coordinates
+	oPosition  = mul(worldViewProj,iPosition);
+	oTexcoord = float4(iTexcoord.x, iTexcoord.y, 0.0, 0.0);
+    oScaled = oTexcoord * 20.0f;
+    oColor = dot(iNormal, lightPosition) *							// diffuse lighting
+					lightDiffuse * materialDiffuse +						// diffuse color
+					lightAmbient * materialAmbient;						// ambient color
+					
+	float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    oFog = 1.0 - fog;
+}
+
+// Fragment program for automatic terrain texture generation
+void main_fp
+(
+	float4				iColor		: COLOR0,
+    float4              iTexcoord	: TEXCOORD0,
+    float4              iCoverage	: TEXCOORD1,
+    float4              iScaled	    : TEXCOORD2,
+
+	out float4          oColor		: COLOR,
+
+    uniform sampler2D   textureUnit0,
+    uniform sampler2D   textureUnit1,
+    uniform sampler2D   textureUnit2,
+    uniform sampler2D   textureUnit3
+)
+{
+	oColor = (tex2D(textureUnit0, iScaled.xy) * iCoverage.x) + (tex2D(textureUnit1, iScaled.xy) * iCoverage.y) + (tex2D(textureUnit2, iScaled.xy) *  iCoverage.z) + (tex2D(textureUnit3, iScaled.xy) *  iCoverage.w);
+	oColor *= iColor;
+}
+
+
+// Vertex program for automatic terrain texture generation
+void hilightColorized_vp
+(
+    float4             iPosition           : POSITION,
+	float3             iNormal             : NORMAL,
+	float2             iTexcoord           : TEXCOORD0,
+
+	out float4         oPosition           : POSITION,
+	out float4			oColor				: COLOR0,
+	out float4         oTexcoord           : TEXCOORD0,
+	out float4         oCoverage           : TEXCOORD1,
+	out float4         oScaled             : TEXCOORD2,
+	out float2			oHilightCoord		: TEXCOORD3,
+	out float2			oHilightMaskCoord	: TEXCOORD4,
+	out float4         oFog              : FOG,
+
+	uniform float4x4   worldViewProj,
+
+	uniform float4     configSettings,
+	uniform float4     fogSettings,
+	uniform float4     fogColour,
+	uniform float4		lightPosition,
+	uniform float4		lightDiffuse,
+	uniform float4		lightAmbient,
+	uniform float4		materialDiffuse,
+	uniform float4		materialAmbient,
+	uniform float		pageSize,
+	uniform float4x4	worldMat
+)
+{
+
+    float no_rock_factor = clamp (iNormal.y, 0.0, 1.0);
+
+    // SAND  < configSettings[0]
+	oCoverage.x = (iPosition.y < configSettings[0])?
+                    clamp ((1.0 - (iPosition.y / configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                :
+                    0.0;
+
+    //  configSettings[0] < GRASS < configSettings[0]
+	oCoverage.y = (iPosition.y < configSettings[0])?
+                        clamp ((iPosition.y / configSettings[0])  * no_rock_factor, 0.0, 1.0)
+                    :
+                       ((iPosition.y < configSettings[1])?
+                            clamp ((1.0 - (iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            0.0);
+
+
+    //  configSettings[0] < ROCK < configSettings[0]
+	oCoverage.z = (iPosition.y > configSettings[0])?
+                        ((iPosition.y < configSettings[1])?
+                            clamp (((iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            clamp ((1.0 - (iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0))
+                    :
+                        0.0;
+
+
+    //  configSettings[1] < SNOW <
+	oCoverage.w = (iPosition.y > configSettings[1])?
+                        clamp (((iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0)
+                    :
+                        0.0;
+
+    float rock_factor = 1.0 - no_rock_factor;
+    oCoverage.z = clamp (oCoverage.z + rock_factor, 0.0, 1.0);
+
+    //float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    //oColor0 = (1.0 - fog) * (color * (1.0 - rock_factor));
+    //oColor1 = (1.0 - fog) * (color * rock_factor);
+    //oFog = fogColour * fog;
+
+
+    // Calculate the output position and texture coordinates
+	oPosition  = mul(worldViewProj,iPosition);
+	oTexcoord = float4(iTexcoord.x, iTexcoord.y, 0.0, 0.0);
+    oScaled = oTexcoord * 20.0f;
+    oColor = dot(iNormal, lightPosition) *							// diffuse lighting
+					lightDiffuse * materialDiffuse +						// diffuse color
+					lightAmbient * materialAmbient;						// ambient color
+	oHilightCoord = float2(iPosition.x, iPosition.z)/8000;
+	oHilightMaskCoord = fmod( float2(worldMat._m03, worldMat._m23), float2(pageSize, pageSize) );
+	if ( oHilightMaskCoord.x < 0 ) {
+		oHilightMaskCoord.x += pageSize;
+	}
+	if ( oHilightMaskCoord.y < 0 ) {
+		oHilightMaskCoord.y += pageSize;
+	}	
+	oHilightMaskCoord = ( oHilightMaskCoord + float2(iPosition.x, iPosition.z) ) / pageSize;
+
+	float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    oFog = 1.0 - fog;
+}
+
+// Fragment program for automatic terrain texture generation
+void hilightColorized_fp
+(
+	float4				iColor		: COLOR0,
+    float4              iTexcoord	: TEXCOORD0,
+    float4              iCoverage	: TEXCOORD1,
+    float4              iScaled	    : TEXCOORD2,
+    float2				iHilightCoord : TEXCOORD3,
+    float2				iHilightMaskCoord : TEXCOORD4,
+
+	out float4          oColor		: COLOR,
+
+	uniform float4 hilightColor,
+    uniform sampler2D   textureUnit0,
+    uniform sampler2D   textureUnit1,
+    uniform sampler2D   textureUnit2,
+    uniform sampler2D   textureUnit3,
+    uniform sampler2D	textureUnit4,
+    uniform sampler2D   textureUnit5
+)
+{
+	float4 terrainColor = (tex2D(textureUnit0, iScaled.xy) * iCoverage.x) + (tex2D(textureUnit1, iScaled.xy) * iCoverage.y) + (tex2D(textureUnit2, iScaled.xy) *  iCoverage.z) + (tex2D(textureUnit3, iScaled.xy) *  iCoverage.w);
+	terrainColor *= iColor;
+	
+	float weight = tex2D(textureUnit4, iHilightCoord).r * tex2D(textureUnit5, iHilightMaskCoord).a;
+	
+	oColor = hilightColor * weight + terrainColor * ( 1 - weight);
+}
+
+
+
+// Vertex program for automatic terrain texture generation
+void hilightEdgeBlend_vp
+(
+    float4             iPosition           : POSITION,
+	float3             iNormal             : NORMAL,
+	float2             iTexcoord           : TEXCOORD0,
+
+	out float4         oPosition           : POSITION,
+	out float4			oColor				: COLOR0,
+	out float4         oTexcoord           : TEXCOORD0,
+	out float4         oCoverage           : TEXCOORD1,
+	out float4         oScaled             : TEXCOORD2,
+	out float2			oHilightCoord		: TEXCOORD3,
+	out float2			oHilightMaskCoord	: TEXCOORD4,
+	out float4         oFog              : FOG,
+
+	uniform float4x4   worldViewProj,
+
+	uniform float4     configSettings,
+	uniform float4     fogSettings,
+	uniform float4     fogColour,
+	uniform float4		lightPosition,
+	uniform float4		lightDiffuse,
+	uniform float4		lightAmbient,
+	uniform float4		materialDiffuse,
+	uniform float4		materialAmbient,
+	uniform float		pageSize,
+	uniform float4x4	worldMat
+)
+{
+
+    float no_rock_factor = clamp (iNormal.y, 0.0, 1.0);
+
+    // SAND  < configSettings[0]
+	oCoverage.x = (iPosition.y < configSettings[0])?
+                    clamp ((1.0 - (iPosition.y / configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                :
+                    0.0;
+
+    //  configSettings[0] < GRASS < configSettings[0]
+	oCoverage.y = (iPosition.y < configSettings[0])?
+                        clamp ((iPosition.y / configSettings[0])  * no_rock_factor, 0.0, 1.0)
+                    :
+                       ((iPosition.y < configSettings[1])?
+                            clamp ((1.0 - (iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            0.0);
+
+
+    //  configSettings[0] < ROCK < configSettings[0]
+	oCoverage.z = (iPosition.y > configSettings[0])?
+                        ((iPosition.y < configSettings[1])?
+                            clamp (((iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            clamp ((1.0 - (iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0))
+                    :
+                        0.0;
+
+
+    //  configSettings[1] < SNOW <
+	oCoverage.w = (iPosition.y > configSettings[1])?
+                        clamp (((iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0)
+                    :
+                        0.0;
+
+    float rock_factor = 1.0 - no_rock_factor;
+    oCoverage.z = clamp (oCoverage.z + rock_factor, 0.0, 1.0);
+
+    //float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    //oColor0 = (1.0 - fog) * (color * (1.0 - rock_factor));
+    //oColor1 = (1.0 - fog) * (color * rock_factor);
+    //oFog = fogColour * fog;
+
+
+    // Calculate the output position and texture coordinates
+	oPosition  = mul(worldViewProj,iPosition);
+	oTexcoord = float4(iTexcoord.x, iTexcoord.y, 0.0, 0.0);
+    oScaled = oTexcoord * 20.0f;
+    oColor = dot(iNormal, lightPosition) *							// diffuse lighting
+					lightDiffuse * materialDiffuse +						// diffuse color
+					lightAmbient * materialAmbient;						// ambient color
+	oHilightCoord = float2(iPosition.x, iPosition.z)/1000;
+	oHilightMaskCoord = fmod( float2(worldMat._m03, worldMat._m23), float2(pageSize, pageSize) );
+	if ( oHilightMaskCoord.x < 0 ) {
+		oHilightMaskCoord.x += pageSize;
+	}
+	if ( oHilightMaskCoord.y < 0 ) {
+		oHilightMaskCoord.y += pageSize;
+	}	
+	oHilightMaskCoord = ( oHilightMaskCoord + float2(iPosition.x, iPosition.z) ) / pageSize;
+
+	float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    oFog = 1.0 - fog;
+}
+
+// Fragment program for automatic terrain texture generation
+void hilightEdgeBlend_fp
+(
+	float4				iColor		: COLOR0,
+    float4              iTexcoord	: TEXCOORD0,
+    float4              iCoverage	: TEXCOORD1,
+    float4              iScaled	    : TEXCOORD2,
+    float2				iHilightCoord : TEXCOORD3,
+    float2				iHilightMaskCoord : TEXCOORD4,
+
+	out float4          oColor		: COLOR,
+
+	uniform float4 hilightColor,
+    uniform sampler2D   textureUnit0,
+    uniform sampler2D   textureUnit1,
+    uniform sampler2D   textureUnit2,
+    uniform sampler2D   textureUnit3,
+    uniform sampler2D	textureUnit4,
+    uniform sampler2D   textureUnit5
+)
+{
+	float4 terrainColor = (tex2D(textureUnit0, iScaled.xy) * iCoverage.x) + (tex2D(textureUnit1, iScaled.xy) * iCoverage.y) + (tex2D(textureUnit2, iScaled.xy) *  iCoverage.z) + (tex2D(textureUnit3, iScaled.xy) *  iCoverage.w);
+	terrainColor *= iColor;
+	
+	float weight = tex2D(textureUnit5, iHilightMaskCoord).a;
+	float4 roadHilightColor = tex2D(textureUnit4, iHilightCoord);
+	
+	oColor = roadHilightColor * weight + terrainColor * ( 1 - weight);
+}
+
+// Vertex program for automatic terrain texture generation
+void hilightEdgeSharp_vp
+(
+    float4             iPosition           : POSITION,
+	float3             iNormal             : NORMAL,
+	float2             iTexcoord           : TEXCOORD0,
+
+	out float4         oPosition           : POSITION,
+	out float4			oColor				: COLOR0,
+	out float4         oTexcoord           : TEXCOORD0,
+	out float4         oCoverage           : TEXCOORD1,
+	out float4         oScaled             : TEXCOORD2,
+	out float2			oHilightCoord		: TEXCOORD3,
+	out float2			oHilightMaskCoord	: TEXCOORD4,
+	out float4         oFog              : FOG,
+
+	uniform float4x4   worldViewProj,
+
+	uniform float4     configSettings,
+	uniform float4     fogSettings,
+	uniform float4     fogColour,
+	uniform float4		lightPosition,
+	uniform float4		lightDiffuse,
+	uniform float4		lightAmbient,
+	uniform float4		materialDiffuse,
+	uniform float4		materialAmbient,
+	uniform float		pageSize,
+	uniform float4x4	worldMat
+)
+{
+
+    float no_rock_factor = clamp (iNormal.y, 0.0, 1.0);
+
+    // SAND  < configSettings[0]
+	oCoverage.x = (iPosition.y < configSettings[0])?
+                    clamp ((1.0 - (iPosition.y / configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                :
+                    0.0;
+
+    //  configSettings[0] < GRASS < configSettings[0]
+	oCoverage.y = (iPosition.y < configSettings[0])?
+                        clamp ((iPosition.y / configSettings[0])  * no_rock_factor, 0.0, 1.0)
+                    :
+                       ((iPosition.y < configSettings[1])?
+                            clamp ((1.0 - (iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            0.0);
+
+
+    //  configSettings[0] < ROCK < configSettings[0]
+	oCoverage.z = (iPosition.y > configSettings[0])?
+                        ((iPosition.y < configSettings[1])?
+                            clamp (((iPosition.y - configSettings[0]) / (configSettings[1] - configSettings[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            clamp ((1.0 - (iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0))
+                    :
+                        0.0;
+
+
+    //  configSettings[1] < SNOW <
+	oCoverage.w = (iPosition.y > configSettings[1])?
+                        clamp (((iPosition.y - configSettings[1]) / (configSettings[2] - configSettings[1])) * no_rock_factor, 0.0, 1.0)
+                    :
+                        0.0;
+
+    float rock_factor = 1.0 - no_rock_factor;
+    oCoverage.z = clamp (oCoverage.z + rock_factor, 0.0, 1.0);
+
+    //float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    //oColor0 = (1.0 - fog) * (color * (1.0 - rock_factor));
+    //oColor1 = (1.0 - fog) * (color * rock_factor);
+    //oFog = fogColour * fog;
+
+
+    // Calculate the output position and texture coordinates
+	oPosition  = mul(worldViewProj,iPosition);
+	oTexcoord = float4(iTexcoord.x, iTexcoord.y, 0.0, 0.0);
+    oScaled = oTexcoord * 20.0f;
+    oColor = dot(iNormal, lightPosition) *							// diffuse lighting
+					lightDiffuse * materialDiffuse +						// diffuse color
+					lightAmbient * materialAmbient;						// ambient color
+	oHilightCoord = float2(iPosition.x, iPosition.z)/1000;
+	oHilightMaskCoord = fmod( float2(worldMat._m03, worldMat._m23), float2(pageSize, pageSize) );
+	if ( oHilightMaskCoord.x < 0 ) {
+		oHilightMaskCoord.x += pageSize;
+	}
+	if ( oHilightMaskCoord.y < 0 ) {
+		oHilightMaskCoord.y += pageSize;
+	}	
+	oHilightMaskCoord = ( oHilightMaskCoord + float2(iPosition.x, iPosition.z) ) / pageSize;
+
+	float fog = clamp(( oPosition.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    oFog = 1.0 - fog;
+}
+
+// Fragment program for automatic terrain texture generation
+void hilightEdgeSharp_fp
+(
+	float4				iColor		: COLOR0,
+    float4              iTexcoord	: TEXCOORD0,
+    float4              iCoverage	: TEXCOORD1,
+    float4              iScaled	    : TEXCOORD2,
+    float2				iHilightCoord : TEXCOORD3,
+    float2				iHilightMaskCoord : TEXCOORD4,
+
+	out float4          oColor		: COLOR,
+
+	uniform float4 hilightColor,
+    uniform sampler2D   textureUnit0,
+    uniform sampler2D   textureUnit1,
+    uniform sampler2D   textureUnit2,
+    uniform sampler2D   textureUnit3,
+    uniform sampler2D	textureUnit4,
+    uniform sampler2D   textureUnit5
+)
+{
+	float4 terrainColor = (tex2D(textureUnit0, iScaled.xy) * iCoverage.x) + (tex2D(textureUnit1, iScaled.xy) * iCoverage.y) + (tex2D(textureUnit2, iScaled.xy) *  iCoverage.z) + (tex2D(textureUnit3, iScaled.xy) *  iCoverage.w);
+	terrainColor *= iColor;
+	
+	float weight = tex2D(textureUnit5, iHilightMaskCoord).a;
+	float4 roadHilightColor = tex2D(textureUnit4, iHilightCoord);
+
+	if ( weight > 0.5 ) {
+		oColor = roadHilightColor;
+	} else {
+		oColor = terrainColor;
+	}
+}

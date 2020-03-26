@@ -1,0 +1,239 @@
+<Ui>
+  <Script file="MvDisplayList.py"/>
+
+  <FontString name="MvDisplayList_Font" font="Fonts\MUFN____.TTF" justifyH="LEFT" justifyV="MIDDLE" virtual="true">
+    <FontHeight> <AbsValue val="12"/> </FontHeight>
+    <Color r="0.0" g="0.0" b="0.0"/>
+  </FontString>
+
+  <Texture name="MvDisplayList_Texture" file="Interface/MvBasicTextures/Patch6x6W10A10" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT">
+	<Offset> <AbsDimension x="0" y="0"/> </Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT">
+	<Offset> <AbsDimension x="0" y="0"/> </Offset>
+      </Anchor>
+    </Anchors>
+  </Texture>
+
+  <Texture name="MvDisplayList_Up_Texture" file="Interface/MvBasicTextures/SBUpWMedium" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT">
+	<Offset> <AbsDimension x="0" y="0"/> </Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT">
+	<Offset> <AbsDimension x="0" y="0"/> </Offset>
+      </Anchor>
+    </Anchors>
+  </Texture>
+
+  <Texture name="MvDisplayList_Dn_Texture" file="Interface/MvBasicTextures/SBDnWMedium" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT">
+	<Offset> <AbsDimension x="0" y="0"/> </Offset>
+      </Anchor>
+      <Anchor point="BOTTOMRIGHT">
+	<Offset> <AbsDimension x="0" y="0"/> </Offset>
+      </Anchor>
+    </Anchors>
+  </Texture>
+
+  <Button name="MvDisplayList_bEntry_Template" id="-1" hidden="false" virtual="true">
+    <Size> <AbsDimension x="200" y="20"/> </Size>
+    <NormalText       name="$parent_fsNormal"    inherits="MvDisplayList_Font"/>
+    <HighlightText    name="$parent_fsHighlight" inherits="MvDisplayList_Font"/>
+    <PushedText       name="$parent_fsPushed"    inherits="MvDisplayList_Font"/>
+    <NormalTexture    name="$parent_txNormal"    inherits="MvDisplayList_Texture">
+      <Color r="1.0" g="1.0" b="1.0"/>
+    </NormalTexture>
+    <HighlightTexture name="$parent_txHighlight" inherits="MvDisplayList_Texture">
+      <Color r="0.0" g="1.0" b="0.0"/>
+    </HighlightTexture>
+    <PushedTexture    name="$parent_txPushed"    inherits="MvDisplayList_Texture">
+      <Color r="0.0" g="0.0" b="1.0"/>
+    </PushedTexture>
+    <Scripts language="python">
+      <OnEnter>this.LockHighlight()</OnEnter>
+      <OnLeave>this.UnlockHighlight()</OnLeave>
+      <OnMouseDown>this.UnlockHighlight()</OnMouseDown>
+      <OnMouseUp>this.LockHighlight()</OnMouseUp>
+      <OnClick>MvDisplayList_bEntry_OnClick(this, args)</OnClick>
+    </Scripts>
+  </Button>
+
+  <Button name="MvDisplayList_bDirection_Template" id="-1" hidden="false" virtual="true">
+    <Size> <AbsDimension x="20" y="20"/> </Size>
+    <Scripts language="python">
+      <OnEnter>this.LockHighlight()</OnEnter>
+      <OnLeave>this.UnlockHighlight()</OnLeave>
+      <OnMouseDown>this.UnlockHighlight()</OnMouseDown>
+      <OnMouseUp>this.LockHighlight()</OnMouseUp>
+      <OnClick>MvDisplayList_bDirection_OnClick(this, args)</OnClick>
+    </Scripts>
+  </Button>
+
+
+
+  <Frame name="MvDisplayList_fMain" toplevel="true" movable="true" resizable="true" frameStrata="HIGH" parent="UIParent" enableMouse="false" enableKeyboard="false" hidden="true">
+    <Size> <AbsDimension x="200" y="220"/> </Size>
+    <Anchors>
+      <Anchor point="CENTER" relativePoint="CENTER">
+	<Offset> <AbsDimension x="0" y="0"/> </Offset>
+      </Anchor>
+    </Anchors>
+
+    <Layers>
+      <Layer level="BACKGROUND">
+	<Texture name="MvDisplayList_fMain_txBackground" inherits="MvDisplayList_Texture">
+	  <Color r="0.0" g="1.0" b="0.0"/>
+	</Texture>
+      </Layer>
+    </Layers>
+
+    <Frames>
+
+      <Frame name="MvDisplayList_fMain_fTitle" hidden="false">
+	<Size> <AbsDimension x="200" y="20"/> </Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="MvDisplayList_fMain">
+	    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="MvDisplayList_fMain">
+	    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+	  </Anchor>
+	</Anchors>
+	<Layers>
+	  <Layer level="BACKGROUND">
+	    <FontString name="MvDisplayList_fMain_fTitle_fsTitle" inherits="MvDisplayList_Font" justifyH="CENTER" text="list">
+	      <Color r="1.0" g="1.0" b="1.0"/>
+	    </FontString>
+	    <Texture name="MvDisplayList_fMain_fTitle_txBackground" inherits="MvDisplayList_Texture">
+	      <Color r="0.0" g="0.0" b="0.0"/>
+	    </Texture>
+	  </Layer>
+	</Layers>
+      </Frame>
+
+      <ScrollFrame name="MvDisplayList_fMain_sfBody">
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvDisplayList_fMain_fTitle">
+	    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvDisplayList_fMain_fTitle">
+	    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+	  </Anchor>
+	  <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" relativeTo="MvDisplayList_fMain">
+	    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+	  </Anchor>
+	  <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvDisplayList_fMain">
+	    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+	  </Anchor>
+	</Anchors>
+
+	<Frames>
+	  <Button name="MvDisplayList_fMain_sfBody_bUp" id="0" inherits="MvDisplayList_bDirection_Template">
+	    <Anchors>
+	      <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="MvDisplayList_fMain_sfBody">
+		<Offset> <AbsDimension x="0" y="0"/> </Offset>
+	      </Anchor>
+	    </Anchors>
+	    <NormalTexture    name="$parent_txNormal"    inherits="MvDisplayList_Up_Texture">
+	      <Color r="0.0" g="0.8" b="0.8"/>
+	    </NormalTexture>
+	    <HighlightTexture name="$parent_txHighlight" inherits="MvDisplayList_Up_Texture">
+	      <Color r="0.8" g="0.8" b="0.0"/>
+	    </HighlightTexture>
+	    <PushedTexture    name="$parent_txPushed"    inherits="MvDisplayList_Up_Texture">
+	      <Color r="0.8" g="0.0" b="0.8"/>
+	    </PushedTexture>
+	  </Button>
+	  <Button name="MvDisplayList_fMain_sfBody_bDown" id="1" inherits="MvDisplayList_bDirection_Template">
+	    <Anchors>
+	      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvDisplayList_fMain_sfBody">
+		<Offset> <AbsDimension x="0" y="0"/> </Offset>
+	      </Anchor>
+	    </Anchors>
+	    <NormalTexture    name="$parent_txNormal"    inherits="MvDisplayList_Dn_Texture">
+	      <Color r="0.0" g="0.8" b="0.8"/>
+	    </NormalTexture>
+	    <HighlightTexture name="$parent_txHighlight" inherits="MvDisplayList_Dn_Texture">
+	      <Color r="0.8" g="0.8" b="0.0"/>
+	    </HighlightTexture>
+	    <PushedTexture    name="$parent_txPushed"    inherits="MvDisplayList_Dn_Texture">
+	      <Color r="0.8" g="0.0" b="0.8"/>
+	    </PushedTexture>
+	  </Button>
+	  <Slider name="MvDisplayList_fMain_sfBody_slBar" orientation="VERTICAL" hidden="false">
+	    <Backdrop
+	       bgFile="Interface/MvBasicTextures/Patch6x6C02A10"
+	       edgeFile="Interface/MvBasicTextures/Edge8x8Cb"
+	       tile="true">
+	      <EdgeSize> <AbsValue val="8"/> </EdgeSize>
+	    </Backdrop>
+	    <Size> <AbsDimension x="20" y="160"/> </Size>
+	    <Anchors>
+	      <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="MvDisplayList_fMain_sfBody_bUp">
+		<Offset> <AbsDimension x="0" y="0"/> </Offset>
+	      </Anchor>
+	      <Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" relativeTo="MvDisplayList_fMain_sfBody_bDown">
+		<Offset> <AbsDimension x="0" y="0"/> </Offset>
+	      </Anchor>
+	    </Anchors>
+	    <ThumbTexture name="MvDisplayList_fMain_sfBody_slBar_txThumb" file="Interface/MvBasicTextures/SBCircleThumbW">
+	      <Size> <AbsDimension x="19" y="19"/> </Size>
+	      <Color r="0.0" g="0.8" b="0.8"/>
+	    </ThumbTexture>
+	    <Scripts language="python">
+	      <OnValueChanged>MvDisplayList_fMain_sfBody_slBar_OnValueChanged(this, args)</OnValueChanged>
+	    </Scripts>
+	  </Slider>
+	</Frames>
+
+	<ScrollChild>
+	  <Frame name="MvDisplayList_fMain_sfBody_scList" hidden="false">
+	    <Size> <AbsDimension x="200" y="20"/> </Size>
+	    <Anchors>
+	      <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="MvDisplayList_fMain_sfBody">
+		<Offset> <AbsDimension x="0" y="0"/> </Offset>
+	      </Anchor>
+	      <Anchor point="TOPRIGHT" relativePoint="TOPLEFT" relativeTo="MvDisplayList_fMain_sfBody_bUp">
+		<Offset> <AbsDimension x="0" y="0"/> </Offset>
+	      </Anchor>
+	    </Anchors>
+
+	    <Layers>
+	      <Layer level="BACKGROUND">
+		<Texture name="MvDisplayList_fMain_sfBody_scList_txBackground" inherits="MvDisplayList_Texture">
+		  <Color r="1.0" g="0.0" b="0.0"/>
+		</Texture>
+	      </Layer>
+	    </Layers>
+	    <Frames>
+	      <Button name="MvDisplayList_fMain_sfBody_scList_bEntry0" inherits="MvDisplayList_bEntry_Template" id="0" hidden="true">
+		<Anchors>
+		  <Anchor point="BOTTOMLEFT" relativePoint="TOPLEFT" relativeTo="MvDisplayList_fMain_sfBody_scList">
+		    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+		  </Anchor>
+		  <Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" relativeTo="MvDisplayList_fMain_sfBody_scList">
+		    <Offset> <AbsDimension x="0" y="0"/> </Offset>
+		  </Anchor>
+		</Anchors>
+	      </Button>
+	    </Frames>
+	  </Frame>
+	</ScrollChild>
+
+	<Scripts language="python">
+	  <OnLoad>MvDisplayList_fMain_sfBody_OnLoad(this)</OnLoad>
+	  <OnShow>MvDisplayList_fMain_sfBody_OnShow(this)</OnShow>
+	  <OnScrollRangeChanged>MvDisplayList_fMain_sfBody_OnScrollRangeChanged(this, args)</OnScrollRangeChanged>
+	  <OnVerticalScroll>MvDisplayList_fMain_sfBody_OnVerticalScroll(this, args)</OnVerticalScroll>
+	  <OnMouseWheel>MvDisplayList_fMain_sfBody_OnMouseWheel(this, args)</OnMouseWheel>
+	</Scripts>
+
+      </ScrollFrame>
+    </Frames>
+  </Frame>
+
+</Ui>

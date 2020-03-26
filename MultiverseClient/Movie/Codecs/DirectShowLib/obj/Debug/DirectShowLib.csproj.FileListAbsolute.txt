@@ -1,0 +1,6 @@
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\bin\Debug\DirectShowWrapper.dll
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\bin\Debug\DirectShowWrapper.pdb
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\obj\Debug\DirectShowWrapper.dll
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\obj\Debug\DirectShowWrapper.pdb
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\obj\Debug\DirectShowLib.csprojResolveAssemblyReference.cache
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\obj\Debug\DirectShowLib.csproj.CoreCompileInputs.cache

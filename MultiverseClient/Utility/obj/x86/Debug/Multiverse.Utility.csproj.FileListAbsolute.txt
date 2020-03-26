@@ -1,0 +1,9 @@
+D:\Multiverse\src-v1\MultiverseClient\Utility\bin\x86\Debug\Multiverse.Utility.dll
+D:\Multiverse\src-v1\MultiverseClient\Utility\bin\x86\Debug\Multiverse.Utility.pdb
+D:\Multiverse\src-v1\MultiverseClient\Utility\bin\x86\Debug\log4net.dll
+D:\Multiverse\src-v1\MultiverseClient\Utility\bin\x86\Debug\System.Data.dll
+D:\Multiverse\src-v1\MultiverseClient\Utility\bin\x86\Debug\System.dll
+D:\Multiverse\src-v1\MultiverseClient\Utility\bin\x86\Debug\System.Xml.dll
+D:\Multiverse\src-v1\MultiverseClient\Utility\obj\x86\Debug\Multiverse.Utility.csprojResolveAssemblyReference.cache
+D:\Multiverse\src-v1\MultiverseClient\Utility\obj\x86\Debug\Multiverse.Utility.dll
+D:\Multiverse\src-v1\MultiverseClient\Utility\obj\x86\Debug\Multiverse.Utility.pdb

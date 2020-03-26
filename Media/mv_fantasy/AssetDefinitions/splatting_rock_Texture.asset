@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>splatting_rock_Texture</Name>
+  <Type>Texture</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Textures\splatting_rock.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="TerrainTexture" value="true" />
+  </Properties>
+</AssetDefinition>

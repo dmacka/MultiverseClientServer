@@ -1,0 +1,7 @@
+material stb_f_sword_lt.marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex marble_white_rev_darker.dds
+}
+material stb_f_sword_lt.lambert1 : MVSimpleLighting
+{
+}

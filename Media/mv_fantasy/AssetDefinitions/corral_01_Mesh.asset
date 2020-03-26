@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>corral_01_Mesh</Name>
+  <Description>Corral 1</Description>
+  <Type>Mesh</Type>
+  <Category>Walls and Fences</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\corral_01.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\corral_01_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

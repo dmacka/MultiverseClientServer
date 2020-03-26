@@ -1,0 +1,62 @@
+<physics_model>
+  <rigid_body sid="stb_m_throw_drk-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 1 0 22.50002</rotate>
+        <translate>0 0.0144366 0</translate>
+        <box>
+          <half_extents>0.5183902 0.0257104 0.2198269</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.50002</rotate>
+        <translate>0 0.0144366 0</translate>
+        <box>
+          <half_extents>0.5183902 0.0257104 0.2198269</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.50002</rotate>
+        <translate>0 0.0144366 0</translate>
+        <box>
+          <half_extents>0.2198269 0.0257104 0.5183902</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.50002</rotate>
+        <translate>0 0.0144366 0</translate>
+        <box>
+          <half_extents>0.2198269 0.0257104 0.5183902</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.49998</rotate>
+        <translate>0 0.103779 0</translate>
+        <box>
+          <half_extents>0.310566 0.04577205 0.1280268</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.49995</rotate>
+        <translate>0 0.1037789 0</translate>
+        <box>
+          <half_extents>0.310566 0.04644515 0.1280268</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.49995</rotate>
+        <translate>0 0.103779 0</translate>
+        <box>
+          <half_extents>0.1280268 0.04577205 0.310566</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.49995</rotate>
+        <translate>0 0.1037789 0</translate>
+        <box>
+          <half_extents>0.1280268 0.04644515 0.310566</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

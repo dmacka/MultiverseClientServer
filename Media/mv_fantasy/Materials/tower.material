@@ -1,0 +1,15 @@
+material tower.lambert1 : MVSimpleLighting
+{
+    technique Shader1
+    {
+        pass Single
+        {
+            texture_unit DiffuseTex
+            {
+                texture tower.dds
+                alpha_rejection greater 225
+            }
+        }
+    }
+}
+

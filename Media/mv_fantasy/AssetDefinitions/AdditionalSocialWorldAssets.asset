@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>AdditionalSocialWorldAssets</Name>
+  <Type>Other</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Interface\FrameXML\social.toc</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+	<AssetFile>
+      <TargetFile>Scripts\SocialCharacterCreation.py</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Imagefiles\loadscreen_social.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Imagefiles\MvSocialMap.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

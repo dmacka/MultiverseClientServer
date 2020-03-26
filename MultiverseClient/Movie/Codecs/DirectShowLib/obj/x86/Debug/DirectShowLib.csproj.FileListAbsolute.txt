@@ -1,0 +1,4 @@
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\bin\x86\Debug\DirectShowWrapper.dll
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\bin\x86\Debug\DirectShowWrapper.pdb
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\obj\x86\Debug\DirectShowWrapper.dll
+D:\Multiverse\src-v1\MultiverseClient\Movie\Codecs\DirectShowLib\obj\x86\Debug\DirectShowWrapper.pdb

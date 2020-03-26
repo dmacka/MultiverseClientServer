@@ -1,0 +1,32 @@
+<physics_model>
+  <rigid_body sid="octagon-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0 0.03782752 0</translate>
+        <box>
+          <half_extents>1.31093 0.3249415 0.5325831</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0 0.03782752 0</translate>
+        <box>
+          <half_extents>0.5325831 0.3249415 1.31093</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 225</rotate>
+        <translate>0 0.03782752 0</translate>
+        <box>
+          <half_extents>1.310932 0.3249415 0.5325802</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 135</rotate>
+        <translate>0 0.03782752 0</translate>
+        <box>
+          <half_extents>1.310932 0.3249415 0.5325802</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

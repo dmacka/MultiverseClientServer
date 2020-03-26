@@ -1,0 +1,109 @@
+<Ui>
+  <Script file="MvInfoBar.py"/>
+
+  <Button name="InfoBarButton" inherits="ActionButton" virtual="true">
+    <Scripts language="python">
+      <OnEnter>
+        InfoBarButton_OnEnter(this)
+      </OnEnter>
+      <OnLeave>
+        InfoBarButton_OnLeave(this)
+      </OnLeave>
+    </Scripts>
+  </Button>
+
+  <Frame name="InfoBar" inherits="MvBasicFrame" frameStrata="HIGH" toplevel="true" movable="true" enableMouse="true" hidden="false">
+    <Size>
+      <AbsDimension x="250" y="47"/>
+    </Size>
+    <Anchors>
+      <Anchor point="TOP" relativePoint="TOPRIGHT">
+        <Offset>
+          <AbsDimension x="-425" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="5" right="5" top="5" bottom="5"/>
+      </BackgroundInsets>
+    </Backdrop>
+    <Frames>
+      <Button name="MvStatsButton" inherits="InfoBarButton" text="Stats" hidden="false" id="0">
+        <Size>
+          <AbsDimension x="34" y="34"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="LEFT">
+            <Offset>
+              <AbsDimension x="7" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <NormalTexture file="Interface\Tooltips\UI-Tooltip-Background"/>
+        <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+          <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+        </NormalText>
+        <HitRectInsets>
+          <AbsInset left="-10" right="10" top="0" bottom="0"/>
+        </HitRectInsets>
+        <Scripts language="python">
+          <OnClick>MvStatsButton_OnClick( this )</OnClick>
+        </Scripts>
+      </Button>
+      <Button name="MvInventoryButton" inherits="InfoBarButton" text="INV" hidden="false" id="1">
+        <Size>
+          <AbsDimension x="34" y="34"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="MvStatsButton"  relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="7" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <NormalTexture file="Interface\Tooltips\UI-Tooltip-Background"/>
+        <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+          <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+        </NormalText>
+        <HitRectInsets>
+          <AbsInset left="-10" right="10" top="0" bottom="0"/>
+        </HitRectInsets>
+        <Scripts language="python">
+          <OnClick>MvInvButton_OnClick( this )</OnClick>
+        </Scripts>
+      </Button>
+      <Button name="MvGroupInfoButton" inherits="InfoBarButton" text="GRP" hidden="false" id="2">
+        <Size>
+          <AbsDimension x="34" y="34"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="MvInventoryButton"  relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="7" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <NormalTexture file="Interface\Tooltips\UI-Tooltip-Background"/>
+        <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+          <Color r="1.0" g="1.0" b="1.0" a="1.0"/>
+        </NormalText>
+        <HitRectInsets>
+          <AbsInset left="-10" right="10" top="0" bottom="0"/>
+        </HitRectInsets>
+        <Scripts language="python">
+          <OnClick>MvGroupInfoButton_OnClick( this )</OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+    <Scripts language="python">
+      <OnLoad>InfoBar_OnLoad( this )</OnLoad>
+    </Scripts>
+  </Frame>
+</Ui>

@@ -1,0 +1,5 @@
+
+material casual16_m_lowpoly.body : RocketboxBase
+{
+    set_texture_alias DiffuseMap casual16_m_35.dds
+}

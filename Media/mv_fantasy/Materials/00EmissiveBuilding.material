@@ -1,0 +1,248 @@
+//
+// This material supports vertex color, and requires vertices in the mesh
+//   to have a color component.  It defaults to Emissive being off, but
+//   it can be turned on and off dynamically via client scripting.
+//
+material EmissiveBuilding
+{
+
+    technique Fixed
+    {
+        scheme Fixed
+        pass Single
+        {
+            lighting off
+
+            texture_unit VertexColor
+            {
+                colour_op_ex source1 src_diffuse src_diffuse
+                //colour_op_ex source1 src_manual src_current 0 0 0
+                texture blank.dds
+                tex_coord_set 0
+            }
+            texture_unit EmissiveMap
+            {
+                //colour_op_ex source1 src_current src_current
+                colour_op_ex add src_current src_texture
+                tex_coord_set 0
+            }
+            texture_unit DiffuseMap
+            {
+                colour_op modulate
+                tex_coord_set 0
+                filtering anisotropic
+                max_anisotropy 8
+            }
+        }
+    }
+       
+    technique VertexLighting
+    {
+        scheme Default
+        pass Single
+        {
+            // Vertex program reference
+            vertex_program_ref EmissiveBuildingVP11_VertexLighting
+            {
+            }
+
+            fragment_program_ref EmissiveBuildingFP20_VertexLighting
+            {
+                param_named emissiveMult float4 1 1 1 1
+            }
+
+            texture_unit SpecularMap
+            {
+                texture blank_specular.dds
+            }
+            texture_unit DiffuseMap
+            {
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            texture_unit EmissiveMap
+            {
+                texture blank_emissive.dds
+            }
+        }
+    }
+    
+    technique Shader20
+    {
+        scheme Shader20
+        pass Single
+        {
+            // Vertex program reference
+            vertex_program_ref EmissiveBuildingVP11
+            {
+            }
+
+            fragment_program_ref EmissiveBuildingFP20
+            {
+                param_named emissiveMult float4 1 1 1 1
+            }
+
+            texture_unit NormalMap
+            {
+                texture blank_normal.dds
+            }
+            texture_unit SpecularMap
+            {
+                texture blank_specular.dds
+            }
+            texture_unit DiffuseMap
+            {
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            texture_unit EmissiveMap
+            {
+                texture blank_emissive.dds
+            }
+        }
+    }
+}
+
+//
+// This material supports vertex color, and requires vertices in the mesh
+//   to have a color component.  It defaults to Emissive being on, but
+//   it can be turned on and off dynamically via client scripting.
+//
+material EmissiveBuildingExterior : EmissiveBuilding
+{    
+    technique Fixed
+    {
+        pass Single
+        {
+            texture_unit EmissiveMap
+            {
+                colour_op_ex add src_current src_texture
+                tex_coord_set 0
+            }
+        }
+    }
+       
+    technique VertexLighting
+    {
+        pass Single
+        {
+            fragment_program_ref EmissiveBuildingFP20_VertexLighting
+            {
+                param_named emissiveMult float4 1 1 1 1
+            }
+        }
+    }
+    technique Shader20
+    {
+        pass Single
+        {
+            // Vertex program reference
+            vertex_program_ref EmissiveBuildingVP11
+            {
+            }
+
+            fragment_program_ref EmissiveBuildingFP20
+            {
+                param_named emissiveMult float4 1 1 1 1
+            }
+        }
+    }
+}
+
+//
+// This material does NOT support vertex color, and so it does not
+//   require vertices in the mesh to have a color component. 
+//   It defaults to Emissive being on, but
+//   it can be turned on and off dynamically via client scripting.
+//
+material EmissiveBuilding_NoColor : EmissiveBuilding
+{    
+    technique Fixed
+    {
+        pass Single
+        {
+            texture_unit VertexColor
+            {
+                colour_op_ex source1 src_current src_current
+            }
+            texture_unit EmissiveMap
+            {
+                colour_op_ex add src_current src_texture
+                tex_coord_set 0
+            }
+        }
+    }
+       
+    technique VertexLighting
+    {
+        pass Single
+        {
+            vertex_program_ref EmissiveBuildingVP11_VertexLighting_NoColor
+            {
+            }
+            fragment_program_ref EmissiveBuildingFP20_VertexLighting
+            {
+                param_named emissiveMult float4 1 1 1 1
+                // turn on ambient when not doing vertex color
+                param_named_auto LMa ambient_light_colour
+            }
+        }
+    }
+    technique Shader20
+    {
+        pass Single
+        {
+            // Vertex program reference
+            vertex_program_ref EmissiveBuildingVP11
+            {
+            }
+
+            fragment_program_ref EmissiveBuildingFP20
+            {
+                param_named emissiveMult float4 1 1 1 1
+                // turn on ambient when not doing vertex color
+                param_named_auto LMa ambient_light_colour
+            }
+        }
+    }
+}
+
+material EmissiveBuildingVertexAlpha
+{
+      
+    technique VertexLighting
+    {
+        scheme Default
+        pass Single
+        {
+	    scene_blend alpha_blend
+	    depth_write off
+	    cull_hardware none
+
+            // Vertex program reference
+            vertex_program_ref EmissiveBuildingVP11_VertexLighting
+            {
+            }
+
+            fragment_program_ref EmissiveBuildingFP20_VertexLightingAlpha
+            {
+                param_named emissiveMult float4 1 1 1 1
+            }
+
+            texture_unit SpecularMap
+            {
+                texture blank_specular.dds
+            }
+            texture_unit DiffuseMap
+            {
+                filtering anisotropic
+                max_anisotropy 8
+            }
+            texture_unit EmissiveMap
+            {
+                texture blank_emissive.dds
+            }
+        }
+    }
+}
+

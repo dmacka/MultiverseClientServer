@@ -1,0 +1,105 @@
+
+struct VSOutput
+{
+	// transformed vertex coordinate
+	float4	position				: POSITION;
+	
+	// lighting intensity color multiplier
+	float4	color					: COLOR0;
+	
+	// texture coordinate from vertex
+	float2	texCoord				: TEXCOORD0;
+	
+	// fog factor
+	float  fog						: FOG;
+};
+
+// Vertex program for simple lighting
+VSOutput vsSimpleLighting
+(
+	float4				iPosition			: POSITION,
+	float3				iNormal				: NORMAL,
+	float2				iTexcoord			: TEXCOORD0,
+
+	// the full World/View/Proj combined matrix
+	uniform float4x4	worldViewProj,
+	
+	// Fog settings
+	//	fogSettings[0] - fog near distance
+	//	fogSettings[1] - fog far distance
+	//	fogSettings[2] - fog scale
+	uniform float4		fogSettings,
+
+    uniform float4		LightPosition[2],
+    uniform float4		LightAttenuation[2],
+	
+	// Diffuse color of the light
+	uniform float4		LightDiffuse[2],
+
+	// Color of the ambient light
+	uniform float4		lightAmbient
+)
+{
+	VSOutput output;
+
+    // Calculate the output position and texture coordinates
+	output.position  = mul(worldViewProj,iPosition);
+	output.texCoord = iTexcoord;
+    
+    float3 lightDirection[2];
+    float lightAttenuation[2];
+
+	// get the light and eye direction in world space (not normalized)
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        // Account for whether the light is a point source.
+        lightDirection[lightIndex] = LightPosition[lightIndex].xyz - (iPosition * LightPosition[lightIndex].w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+
+        lightAttenuation[lightIndex] = (lightDistance >
+                                        LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y +
+                      LightAttenuation[lightIndex].z * lightDistance +
+                      LightAttenuation[lightIndex].w * lightDistanceSquared));
+    }
+    
+    // Do lighting calculations
+    output.color = saturate(
+					max(dot(iNormal, normalize(lightDirection[0])), 0) *							// diffuse lighting
+					LightDiffuse[0] * lightAttenuation[0] +	// diffuse color
+					max(dot(iNormal, normalize(lightDirection[1])), 0) *							// diffuse lighting
+					LightDiffuse[1] * lightAttenuation[1] +	// diffuse color
+					lightAmbient);								// ambient color
+
+	// compute fog
+	float fog = clamp(( output.position.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    output.fog = 1.0 - fog;
+    
+	output.color.a = 1.0;    
+    return output;
+}
+
+//
+//
+float4 psSimpleLighting(
+    // output of vertex shader
+	VSOutput In,
+
+    // diffuse texture
+    uniform sampler2D	diffuseSampler    
+        
+) : COLOR
+{
+	float4 outputColor;
+	
+	//return In.color;
+	
+	float4 diffuse = tex2D(diffuseSampler, In.texCoord);
+	
+	// scale output color by the color from the vertex shader, which is the
+	// output of the lighting calculations
+	outputColor = In.color * diffuse;
+	
+	return outputColor;
+}

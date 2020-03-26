@@ -1,0 +1,8 @@
+D:\Multiverse\src-v1\Lib\AssetRepository\bin\x86\Debug\Multiverse.AssetRepository.dll
+D:\Multiverse\src-v1\Lib\AssetRepository\bin\x86\Debug\Multiverse.AssetRepository.pdb
+D:\Multiverse\src-v1\Lib\AssetRepository\obj\x86\Debug\Multiverse.AssetRepository.csprojResolveAssemblyReference.cache
+D:\Multiverse\src-v1\Lib\AssetRepository\obj\x86\Debug\Multiverse.AssetRepository.DesignateRepositoriesDialog.resources
+D:\Multiverse\src-v1\Lib\AssetRepository\obj\x86\Debug\Multiverse.AssetRepository.assetPackagerForm.resources
+D:\Multiverse\src-v1\Lib\AssetRepository\obj\x86\Debug\Multiverse.AssetRepository.csproj.GenerateResource.Cache
+D:\Multiverse\src-v1\Lib\AssetRepository\obj\x86\Debug\Multiverse.AssetRepository.dll
+D:\Multiverse\src-v1\Lib\AssetRepository\obj\x86\Debug\Multiverse.AssetRepository.pdb

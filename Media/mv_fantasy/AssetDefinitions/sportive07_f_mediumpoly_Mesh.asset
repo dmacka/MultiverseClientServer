@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>sportive07_f_mediumpoly_Mesh</Name>
+  <Description>sportive07_f_mediumpoly</Description>
+  <Category>Characters</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\sportive07_f_mediumpoly.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\sportive07_f_mediumpoly_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\sportive07_f_mediumpoly.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>		
+    <AssetFile>
+      <TargetFile>Skeletons\sportive07_f_mediumpoly.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+
+  </Files>
+</AssetDefinition>

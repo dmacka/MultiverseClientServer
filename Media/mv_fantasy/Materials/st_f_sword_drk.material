@@ -1,0 +1,13 @@
+material st_f_sword_drk.female_marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex female_face_marble_blue_grey.dds
+}
+
+material st_f_sword_drk.marble : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex female_marble_blue_grey.dds
+}
+
+material st_f_sword_drk.lambert1 : MVSimpleLighting
+{
+}

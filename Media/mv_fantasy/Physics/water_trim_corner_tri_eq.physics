@@ -1,0 +1,46 @@
+<physics_model>
+  <rigid_body sid="corner_tri_eq-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.02772202 0.03539401 -0.286938</translate>
+        <box>
+          <half_extents>0.186034 0.321303 0.170167</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.03567847 -0.05619451 -0.505572</translate>
+        <box>
+          <half_extents>0.4863665 0.2283915 0.04731302</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 29.90001</rotate>
+        <translate>0.1953418 -0.05619451 -0.108033</translate>
+        <box>
+          <half_extents>0.04731303 0.2283915 0.4863664</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 29.78983</rotate>
+        <translate>-0.2620896 -0.05619451 -0.106796</translate>
+        <box>
+          <half_extents>0.04731278 0.2283915 0.4863662</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 31.45925</rotate>
+        <translate>0.0139192 0.03539401 -0.2243272</translate>
+        <box>
+          <half_extents>0.1860338 0.321303 0.1701669</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 30.0967</rotate>
+        <translate>-0.07845135 0.03539401 -0.2055714</translate>
+        <box>
+          <half_extents>0.170167 0.321303 0.1860334</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

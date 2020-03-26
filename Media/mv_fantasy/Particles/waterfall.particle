@@ -1,0 +1,94 @@
+waterfall
+{
+	quota	2000
+	material	lensflare
+	particle_width	200
+	particle_height	200
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	0
+		colour_range_start	0.8 0.8 0.8 1
+		colour_range_end	0 0.410959 1 1
+		direction	0 1 0
+		emission_rate	200
+		position	0 -200 0
+		velocity	0.1
+		time_to_live	5
+		duration	0
+		repeat_delay	0
+		width	608.7
+		height	590.9
+		depth	20
+		inner_width	0.9
+		inner_height	0.9
+	}
+
+	emitter Point
+	{
+		angle	4
+		colour	0.232877 0.534247 0.356164 1
+		direction	0 -1 0
+		emission_rate	80
+		position	0 200 0
+		velocity_min	100
+		velocity_max	200
+		time_to_live_min	1.5
+		time_to_live_max	2.5
+		duration	0
+		repeat_delay	0
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour_range_start	0.96 0.63 0.77 1
+		colour_range_end	0.39 0.39 0.84 1
+		direction	0.601661 0.798751 0
+		emission_rate	20
+		position	-300 -200 0
+		velocity	400
+		time_to_live	1.2
+		duration	4
+		repeat_delay	2
+	}
+
+	emitter Point
+	{
+		angle	0
+		colour_range_start	0.96 0.63 0.77 1
+		colour_range_end	0.39 0.39 0.84 1
+		direction	-0.6 0.8 0
+		emission_rate	20
+		position	300 -200 0
+		velocity	400
+		time_to_live	1.2
+		duration	4
+		repeat_delay	2
+	}
+
+	emitter Point
+	{
+		angle	10
+		colour	1 1 1 1
+		direction	0 1 0
+		emission_rate	10
+		position	0 200 0
+		velocity_min	400
+		velocity_max	500
+		time_to_live	5
+		duration_min	4
+		duration_max	6
+		repeat_delay_min	0.5
+		repeat_delay_max	1.5
+	}
+
+	affector LinearForce
+	{
+		force_vector	0 -500 0
+		force_application	add
+	}
+}

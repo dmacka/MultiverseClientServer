@@ -1,0 +1,62 @@
+<physics_model>
+  <rigid_body sid="stb_f_cdance_lt-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 1 0 22.49998</rotate>
+        <translate>0 0 0</translate>
+        <box>
+          <half_extents>0.7949932 0.0449139 0.3371221</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.49998</rotate>
+        <translate>0 0 0</translate>
+        <box>
+          <half_extents>0.7949932 0.0449139 0.3371221</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.50002</rotate>
+        <translate>0 0 0</translate>
+        <box>
+          <half_extents>0.3371221 0.0449139 0.7949932</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.50002</rotate>
+        <translate>0 0 0</translate>
+        <box>
+          <half_extents>0.3371221 0.0449139 0.7949932</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.50005</rotate>
+        <translate>0 0.1518651 0</translate>
+        <box>
+          <half_extents>0.4762774 0.07682189 0.1963391</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.50005</rotate>
+        <translate>0 0.1518651 0</translate>
+        <box>
+          <half_extents>0.4762774 0.07682189 0.1963391</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 22.50005</rotate>
+        <translate>0 0.1518651 0</translate>
+        <box>
+          <half_extents>0.1963391 0.07682189 0.4762774</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 22.50005</rotate>
+        <translate>0 0.1518651 0</translate>
+        <box>
+          <half_extents>0.1963391 0.07682189 0.4762774</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

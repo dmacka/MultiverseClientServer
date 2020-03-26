@@ -1,0 +1,56 @@
+material creation_gazebo.creation_gazebo
+{
+    technique
+    {
+        pass
+        {
+            fog_override true
+            
+             // Vertex program reference
+            vertex_program_ref Examples/CompoundVS
+            {
+            }
+
+            fragment_program_ref Examples/CompoundPS_20_NS
+            {
+                param_named shininess float 10
+            }
+
+	    // Normal map
+	    texture_unit
+	    {
+		texture BlankTexture512x512_normals.dds
+	    }
+	    // Specular map
+	    texture_unit
+	    {
+		texture BlankTexture512x512_specular.dds
+	    }
+	    // Diffuse map
+	    texture_unit
+	    {
+	        alpha_rejection greater 128
+		texture creation_gazebo.dds
+	    }
+        }
+   }
+   technique
+   {
+       pass
+       {
+           shading phong
+
+           ambient  0.58824 0.58824 0.58824 1.00000
+           diffuse  1.00000 1.00000 1.00000 1.00000
+           specular 0.00000 0.00000 0.00000 1.00000 1.00000
+           emissive 0.00000 0.00000 0.00000 1.00000
+
+           texture_unit
+           {
+               alpha_rejection greater 128
+               texture creation_gazebo.dds
+               tex_coord_set 0
+           }
+       }
+   } 
+}

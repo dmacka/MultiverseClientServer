@@ -1,0 +1,523 @@
+
+vertex_program MVSMTerrain/VP cg
+{
+	source Terrain.cg
+	entry_point TerrainVP
+	profiles vs_2_0 arbvp1
+}
+
+fragment_program MVSMTerrain/FP cg
+{
+	source Terrain.cg
+	entry_point TerrainFP
+	profiles ps_2_0 arbfp1
+}
+
+fragment_program MVSMTerrainColorizedHilight/FP hlsl
+{
+	source Terrain.cg
+	entry_point TerrainColorizedHilightFP
+	target ps_2_0
+}
+
+fragment_program MVSMTerrainEdgeBlendHilight/FP cg
+{
+	source Terrain.cg
+	entry_point TerrainEdgeBlendHilightFP
+	profiles ps_2_0 arbfp1
+}
+
+fragment_program MVSMTerrainEdgeSharpHilight/FP cg
+{
+	source Terrain.cg
+	entry_point TerrainEdgeSharpHilightFP
+	profiles ps_2_0 arbfp1
+}
+
+fragment_program MVSMTerrainEdgeSharpBlendHilight/FP cg
+{
+	source Terrain.cg
+	entry_point TerrainEdgeSharpBlendHilightFP
+	profiles ps_2_0 arbfp1
+}
+
+material MVSMTerrain
+{
+    technique
+	{
+		pass
+		{
+			vertex_program_ref MVSMTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+                
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+
+				param_named_auto lightAmbient ambient_light_colour
+				
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	param_named splatConfig float4 50000.0 250000.0 450000.0 0.0
+               	param_named textureTileSize float 5
+			}
+
+
+			fragment_program_ref MVSMTerrain/FP
+			{
+			}
+			texture_unit
+			{
+				texture splatting_sand.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_grass.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_rock.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_snow.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{	
+				// shade map
+				tex_address_mode mirror
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				scale 0.015625 0.015625
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material MVSMTerrainColorizedHilight
+{
+    technique
+	{
+
+		pass
+		{
+			//depth_bias 0
+			vertex_program_ref MVSMTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+                
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+
+				param_named_auto lightAmbient ambient_light_colour
+				
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	param_named splatConfig float4 50000.0 250000.0 450000.0 0.0
+               	param_named textureTileSize float 5
+			}
+
+
+			fragment_program_ref MVSMTerrainColorizedHilight/FP
+			{
+				param_named hilightColor float4 1.0 0.0 0.0 1.0
+			}
+			texture_unit
+			{
+				texture splatting_sand.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_grass.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_rock.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_snow.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// shade mask
+				tex_address_mode mirror
+			}
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture crosshatch-thin.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				scale 0.015625 0.015625
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material MVSMTerrainEdgeBlendHilight
+{
+    technique
+	{
+
+		pass
+		{
+			//depth_bias 0
+			vertex_program_ref MVSMTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+                
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+
+				param_named_auto lightAmbient ambient_light_colour
+				
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	param_named splatConfig float4 50000.0 250000.0 450000.0 0.0
+               	param_named textureTileSize float 5
+			}
+
+
+			fragment_program_ref MVSMTerrainEdgeBlendHilight/FP
+			{
+			}
+			texture_unit
+			{
+				texture splatting_sand.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_grass.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_rock.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_snow.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// shade mask
+				tex_address_mode mirror
+			}
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture sandy_path.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				scale 0.015625 0.015625
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material MVSMTerrainEdgeSharpHilight
+{
+    technique
+	{
+
+		pass
+		{
+			//depth_bias 0
+			vertex_program_ref MVSMTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+                
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+
+				param_named_auto lightAmbient ambient_light_colour
+				
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	param_named splatConfig float4 50000.0 250000.0 450000.0 0.0
+               	param_named textureTileSize float 5
+			}
+
+
+			fragment_program_ref MVSMTerrainEdgeSharpHilight/FP
+			{
+			}
+			texture_unit
+			{
+				texture splatting_sand.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_grass.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_rock.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_snow.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// shade mask
+				tex_address_mode mirror
+			}
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture sandy_path.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				scale 0.015625 0.015625
+				texture splatting_grass.dds
+			}
+		}
+	}
+}
+
+material MVSMTerrainEdgeSharpBlendHilight
+{
+    technique
+	{
+
+		pass
+		{
+			//depth_bias 0
+			vertex_program_ref MVSMTerrain/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+                
+                param_named_auto LightDiffuse[0] light_diffuse_colour 0
+                param_named_auto LightDiffuse[1] light_diffuse_colour 1
+                
+                param_named_auto LightPosition[0] light_position_object_space 0
+                param_named_auto LightPosition[1] light_position_object_space 1
+                
+                param_named_auto LightAttenuation[0] light_attenuation 0
+                param_named_auto LightAttenuation[1] light_attenuation 1
+
+				param_named_auto lightAmbient ambient_light_colour
+				
+				param_named materialDiffuse float4 1.0 1.0 1.0 1.0
+				param_named materialAmbient float4 0.6 0.6 0.6 1.0
+				
+				param_named pageSize float 256000
+				param_named_auto worldMat world_matrix
+                param_named_auto fogSettings fog_params
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	param_named splatConfig float4 50000.0 250000.0 450000.0 0.0
+               	param_named textureTileSize float 5
+			}
+
+
+			fragment_program_ref MVSMTerrainEdgeSharpBlendHilight/FP
+			{
+			}
+			texture_unit
+			{
+				texture splatting_sand.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_grass.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_rock.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{
+				texture splatting_snow.dds
+				tex_address_mode wrap
+			}
+			texture_unit
+			{ 
+				// shade mask
+				tex_address_mode mirror
+			}
+			texture_unit
+			{ 
+				// hilight mask
+				tex_address_mode wrap
+				filtering anisotropic
+				max_anisotropy 8
+			}
+			texture_unit
+			{ 
+				// hilight texture
+				texture sandy_path.dds
+				//texture RockyGround1.dds
+				tex_address_mode wrap
+			}
+		}
+	}
+	
+	// Fallback technique
+	technique
+	{
+		pass
+		{
+			shading gouraud
+
+			texture_unit
+			{
+				scale 0.015625 0.015625
+				texture splatting_grass.dds
+			}
+		}
+	}
+}

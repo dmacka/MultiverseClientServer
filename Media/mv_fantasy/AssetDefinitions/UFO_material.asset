@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>UFO_material</Name>
+  <Description>UFO</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\UFO.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\NMBumpsOut.png</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\ufo_GlowTest.jpg</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+	
+  </Files>
+</AssetDefinition>

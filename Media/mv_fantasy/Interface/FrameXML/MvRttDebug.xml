@@ -1,0 +1,178 @@
+<Ui>
+    <Script file="MvRttDebug.py"/>
+
+
+  <Button name="RttTextureButtonTemplate" virtual="true">
+    <Size><AbsDimension x="100" y="16" /></Size>
+    <Scripts language="python">
+      <OnClick>
+	RttTextureButton_OnClick(this)
+      </OnClick>
+    </Scripts>
+    <NormalText name="$parentNormalText" inherits="NormalFont" justifyH="LEFT" nonspacewrap="true">
+      <Size>
+	<AbsDimension x="80" y="10"/>
+      </Size>
+      <Anchors>
+	<Anchor point="LEFT">
+	  <Offset>
+	    <AbsDimension x="0" y="0"/>
+	  </Offset>
+	</Anchor>
+      </Anchors> 
+    </NormalText>
+    <HighlightText name="$parentHighlightText" inherits="NormalFont" justifyH="LEFT" nonspacewrap="true">
+      <Size>
+	<AbsDimension x="80" y="10"/>
+      </Size>
+      <Anchors>
+	<Anchor point="LEFT">
+	  <Offset>
+	    <AbsDimension x="0" y="0"/>
+	  </Offset>
+	</Anchor>
+      </Anchors>
+    </HighlightText>
+ <!--   <HighlightTexture file="Interface\QuestFrame\UI-QuestLogTitleHighlight" alphaMode="ADD"/> -->
+  </Button>
+
+    <Frame name="RttDebug" frameStrata="MEDIUM" hidden="true" enableMouse="true">
+    <Scripts language="python">
+      <OnLoad>
+	RttDebug_OnLoad(this)
+      </OnLoad>
+    </Scripts>
+	<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+	    <EdgeSize>
+		<AbsValue val="16"/>
+	    </EdgeSize>
+	    <TileSize>
+		<AbsValue val="16"/>
+	    </TileSize>
+	    <BackgroundInsets>
+		<AbsInset left="5" right="5" top="5" bottom="5"/>
+	    </BackgroundInsets>
+	</Backdrop>
+	<Size>
+	    <AbsDimension x="356" y="256"/>
+	</Size>
+	<Frames>
+<!--
+      <Frame name="RttHighlightFrame" hidden="true">
+	<Size>
+	  <AbsDimension x="73" y="16"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT"/>
+	</Anchors>
+	<Layers>
+	  <Layer level="ARTWORK">
+	    <Texture name="RttHighlight" file="Interface\QuestFrame\UI-QuestLogTitleHighlight" alphaMode="ADD"/>
+	  </Layer>
+	</Layers>
+      </Frame>
+-->
+            <Button name="RttTextureButton1" inherits="RttTextureButtonTemplate" id="1">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttDebug">
+	                <Offset>
+                            <AbsDimension x="20" y="-10"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton2" inherits="RttTextureButtonTemplate" id="2">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton1" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton3" inherits="RttTextureButtonTemplate" id="3">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton2" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton4" inherits="RttTextureButtonTemplate" id="4">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton3" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton5" inherits="RttTextureButtonTemplate" id="5">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton4" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton6" inherits="RttTextureButtonTemplate" id="6">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton5" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton7" inherits="RttTextureButtonTemplate" id="7">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton6" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton8" inherits="RttTextureButtonTemplate" id="8">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton7" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton9" inherits="RttTextureButtonTemplate" id="9">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton8" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTextureButton10" inherits="RttTextureButtonTemplate" id="10">
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton9" relativePoint="BOTTOMLEFT">
+	                <Offset>
+                            <AbsDimension x="0" y="1"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+            <Button name="RttTexture" hidden="true">
+	        <NormalTexture file="Interface\MvButtons\Mv-Write6x6"/>
+                <Size><AbsDimension x="384" y="256" /></Size>
+	        <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="RttTextureButton1" relativePoint="TOPRIGHT">
+	                <Offset>
+                            <AbsDimension x="-20" y="-10"/>
+	                </Offset>
+	            </Anchor>
+	        </Anchors>
+            </Button>
+        </Frames>
+    </Frame>
+</Ui>

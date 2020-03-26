@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>pampas_PlantType</Name>
+  <Description>Pampas Grass</Description>
+  <Type>Plant Type</Type>
+  <Properties>
+    <Property name="AssetName" value="pampas" />
+  </Properties>
+  <Files>
+    <AssetFile>
+      <TargetFile>Textures\DetailVeg.imageset</TargetFile>
+      <FileType>ImageSet</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\DetailVeg_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,62 @@
+material MVLines
+{
+	technique
+	{
+		pass
+		{
+			// Always draw our bones in the front
+			depth_check off
+			// Set to alpha blend to mark our pass as transparent, and draw last
+			scene_blend alpha_blend
+			vertex_program_ref ColorVS_Basic
+			{
+			}
+			fragment_program_ref ColorPS_Basic
+			{
+			}
+
+			fog_override true
+			lighting off
+		}
+	}
+}
+material MVGridLines
+{
+	technique
+	{
+		pass
+		{
+			vertex_program_ref ColorVS_Basic
+			{
+			}
+			fragment_program_ref ColorPS_Basic
+			{
+			}
+
+			fog_override true
+			lighting off
+		}
+	}
+}
+material MVSkinnedLines
+{
+	technique
+	{
+		pass
+		{
+			// Always draw our bones in the front
+			depth_check off
+			// Set to alpha blend to mark our pass as transparent, and draw last
+			scene_blend alpha_blend
+			vertex_program_ref ColorVS4_Basic_Skinned
+			{
+			}
+			fragment_program_ref ColorPS_Basic
+			{
+			}
+
+			fog_override true
+			lighting off
+		}
+	}
+}

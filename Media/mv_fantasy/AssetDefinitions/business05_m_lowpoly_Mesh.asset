@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>business05_m_lowpoly_Mesh</Name>
+  <Description>business05_m_lowpoly</Description>
+  <Type>Mesh</Type>
+  <Category>Rocketbox - Business</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\business05_m_lowpoly.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\business05_m_lowpoly_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\rocketbox_m_lowpoly.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

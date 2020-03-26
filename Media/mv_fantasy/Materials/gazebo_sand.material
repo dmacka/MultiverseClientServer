@@ -1,0 +1,11 @@
+material gazebo_sand.gazebo_a_texture : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex gazebo_a.dds
+}
+material gazebo_sand.gazebo_floor_texture : MVSimpleLighting
+{
+    set_texture_alias DiffuseTex gazebo_a_floor.dds
+}
+material gazebo_sand.lambert1 : MVSimpleLighting
+{
+}

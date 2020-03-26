@@ -1,0 +1,92 @@
+L3DT Mosaic master file
+#MosaicName:	volcano_alpha2
+#MosaicType:	DWORD
+#FileExt:	png
+#nPxlsX:	4096
+#nPxlsY:	5120
+#nMapsX:	8
+#nMapsY:	10
+#SubMapSize:	512
+#HorizScale:	2.000000
+#WrapFlag:	FALSE
+#TileState:	0	FREE
+#TileState:	1	FREE
+#TileState:	2	OK
+#TileState:	3	OK
+#TileState:	4	FREE
+#TileState:	5	FREE
+#TileState:	6	FREE
+#TileState:	7	FREE
+#TileState:	8	FREE
+#TileState:	9	OK
+#TileState:	10	OK
+#TileState:	11	OK
+#TileState:	12	FREE
+#TileState:	13	FREE
+#TileState:	14	FREE
+#TileState:	15	FREE
+#TileState:	16	OK
+#TileState:	17	FREE
+#TileState:	18	OK
+#TileState:	19	OK
+#TileState:	20	OK
+#TileState:	21	FREE
+#TileState:	22	FREE
+#TileState:	23	FREE
+#TileState:	24	OK
+#TileState:	25	OK
+#TileState:	26	OK
+#TileState:	27	OK
+#TileState:	28	OK
+#TileState:	29	OK
+#TileState:	30	FREE
+#TileState:	31	FREE
+#TileState:	32	FREE
+#TileState:	33	OK
+#TileState:	34	OK
+#TileState:	35	OK
+#TileState:	36	OK
+#TileState:	37	OK
+#TileState:	38	FREE
+#TileState:	39	FREE
+#TileState:	40	OK
+#TileState:	41	OK
+#TileState:	42	OK
+#TileState:	43	OK
+#TileState:	44	OK
+#TileState:	45	OK
+#TileState:	46	FREE
+#TileState:	47	FREE
+#TileState:	48	OK
+#TileState:	49	OK
+#TileState:	50	OK
+#TileState:	51	OK
+#TileState:	52	OK
+#TileState:	53	OK
+#TileState:	54	FREE
+#TileState:	55	FREE
+#TileState:	56	OK
+#TileState:	57	OK
+#TileState:	58	OK
+#TileState:	59	OK
+#TileState:	60	OK
+#TileState:	61	FREE
+#TileState:	62	FREE
+#TileState:	63	FREE
+#TileState:	64	OK
+#TileState:	65	OK
+#TileState:	66	OK
+#TileState:	67	OK
+#TileState:	68	OK
+#TileState:	69	FREE
+#TileState:	70	FREE
+#TileState:	71	FREE
+#TileState:	72	FREE
+#TileState:	73	OK
+#TileState:	74	OK
+#TileState:	75	OK
+#TileState:	76	FREE
+#TileState:	77	FREE
+#TileState:	78	FREE
+#TileState:	79	FREE
+#EOF

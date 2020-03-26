@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Imageset Name="RaidFrame" Imagefile="RaidFrame.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+    <Image Name="UI-RaidFrame-GroupBg" XPos="0" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-RaidFrame-GroupOutline" XPos="256" YPos="0" Width="256" Height="128" />
+    <Image Name="UI-RaidFrame-HealthBar" XPos="0" YPos="256" Width="64" Height="32" />
+</Imageset>

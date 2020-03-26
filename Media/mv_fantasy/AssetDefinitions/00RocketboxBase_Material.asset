@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>00RocketboxBase_Material</Name>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\00RocketboxBase.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

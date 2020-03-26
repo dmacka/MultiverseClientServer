@@ -1,0 +1,389 @@
+<Ui>
+  <Script file="MvPlayerInfo.py"/>
+
+  <Button name="MvValueDisplay" enableKeyboard="false" enableMouse="false" virtual="true">
+    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="5" right="5" top="5" bottom="5"/>
+      </BackgroundInsets>
+    </Backdrop>
+
+    <NormalText inherits="NormalFont" justifyH="CENTER" justifyV="MIDDLE">
+      <Color r="1.0" g="1.0" b="1.0"/>
+      <Size>
+        <AbsDimension x="100" y="32"/>
+      </Size>
+    </NormalText>
+  </Button>
+  
+  
+  <Frame name="MvPlayerInfoFrame" inherits="MvBasicFrame" frameStrata="HIGH" toplevel="true" hidden="true">
+    <Size>
+      <AbsDimension x="315" y="250"/>
+    </Size>    
+    <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="8"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="8"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="1" right="1" top="1" bottom="1"/>
+      </BackgroundInsets>
+    </Backdrop>
+    <Frames>
+      <Frame name="PlayerInfoSubFrame1">
+        <Size>
+          <AbsDimension x="315" y="32"/>
+        </Size>
+
+        <Anchors>
+          <Anchor point="TOP" relativePoint="TOP">
+            <Offset>
+              <AbsDimension x="5" y="-5"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        
+        <Frames>
+          <FontString name="MvPlayerName" text="Name:" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="35" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <Button name="MvPlayerNameValue" inherits="MvValueDisplay">
+            <Size>
+              <AbsDimension x="80" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerName" relativePoint="RIGHT"></Anchor>
+            </Anchors>
+          </Button>
+          <Button name="MvPlayerLevelValue" inherits="MvValueDisplay">
+            <Size>
+              <AbsDimension x="32" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="RIGHT" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="-10" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+          <FontString name="MvPlayerLevel" text="Level:"  inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="30" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="RIGHT" relativeTo="MvPlayerLevelValue"  relativePoint="LEFT">
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <Button name="MvPlayerProfessionValue" inherits="MvValueDisplay">
+            <Size>
+              <AbsDimension x="55" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="RIGHT" relativeTo="MvPlayerLevel" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="-5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </Button>
+          <FontString name="MvPlayerProfession" text="Profession:"  inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="60" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="RIGHT" relativeTo="MvPlayerProfessionValue"  relativePoint="LEFT">
+              </Anchor>
+            </Anchors>
+          </FontString>
+        </Frames>
+      </Frame>
+      <FontString name="AttributesTitle" text="Attributes"  inherits="NormalFont" hidden="false">
+        <Size>
+          <AbsDimension x="315" y="32"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="PlayerInfoSubFrame1" relativePoint="BOTTOM"/>
+        </Anchors>
+        <FontHeight>
+          <AbsValue val="15"/>
+        </FontHeight>
+        <Color r="1.0" g="1.0" b="1.0"/>
+      </FontString>
+      <Frame name="PlayerInfoSubFrame2">
+        <Size>
+          <AbsDimension x="315" y="32"/>
+        </Size>
+
+        <Anchors>
+          <Anchor point="TOP" relativeTo="AttributesTitle"  relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="5" y="-5"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+
+        <Frames>
+          <FontString name="MvPlayerStrength" text="STR:" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="35" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <Button name="MvPlayerStrengthValue" inherits="MvValueDisplay">
+            <Size>
+              <AbsDimension x="32" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerStrength" relativePoint="RIGHT"></Anchor>
+            </Anchors>
+          </Button>
+          <FontString name="MvPlayerDexterity" text="DEX:" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="35" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerStrengthValue"  relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <Button name="MvPlayerDexterityValue" inherits="MvValueDisplay">
+            <Size>
+              <AbsDimension x="32" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerDexterity" relativePoint="RIGHT"></Anchor>
+            </Anchors>
+          </Button>
+          <FontString name="MvPlayerWisdom" text="WIS:" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="35" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerDexterityValue"  relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <Button name="MvPlayerWisdomValue" inherits="MvValueDisplay">
+            <Size>
+              <AbsDimension x="32" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerWisdom" relativePoint="RIGHT"></Anchor>
+            </Anchors>            
+          </Button>
+          <FontString name="MvPlayerIntelligence" text="INT:" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="35" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerWisdomValue"  relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <Button name="MvPlayerIntelligenceValue" inherits="MvValueDisplay">
+            <Size>
+              <AbsDimension x="32" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="MvPlayerIntelligence" relativePoint="RIGHT"></Anchor>
+            </Anchors>
+          </Button>
+        </Frames>
+      </Frame>
+      <Frame name="SkillInfoFrame">
+        <Size>
+          <AbsDimension x="315" y="200"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="PlayerInfoSubFrame2"  relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="5" y="75"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Frames>
+          <FontString name="SkillsTitle" text="Skills" justifyH="LEFT" justifyV="MIDDLE" inherits="NormalFont" hidden="false">
+            <Size>
+              <AbsDimension x="200" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativePoint="LEFT"/>
+            </Anchors>
+            <FontHeight>
+              <AbsValue val="15"/>
+            </FontHeight>
+            <Color r="1.0" g="1.0" b="1.0"/>
+          </FontString>
+          <FontString name="SkillsTitle2" text="Level" justifyH="RIGHT" justifyV="MIDDLE" inherits="NormalFont" hidden="false">
+            <Size>
+              <AbsDimension x="115" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="SkillsTitle" relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="-40" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <FontHeight>
+              <AbsValue val="15"/>
+            </FontHeight>
+            <Color r="1.0" g="1.0" b="1.0"/>
+          </FontString>
+          <FontString name="Skill1" text="" justifyH="LEFT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="200" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="SkillsTitle"  relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="5" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <FontString name="SkillRank1" text="" justifyH="RIGHT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="115" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="Skill1"  relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="-40" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <FontString name="Skill2" text="" justifyH="LEFT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="200" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="Skill1"  relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <FontString name="SkillRank2" text="" justifyH="RIGHT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="115" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="Skill2"  relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="-40" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <FontString name="Skill3" text="" justifyH="LEFT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="200" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="Skill2"  relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <FontString name="SkillRank3" text="" justifyH="RIGHT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="115" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="Skill3"  relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="-40" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <FontString name="Skill4" text="" justifyH="LEFT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="200" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="Skill3"  relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+          <FontString name="SkillRank4" text="" justifyH="RIGHT" justifyV="MIDDLE" inherits="NormalFont">
+            <Color r="1.0" g="1.0" b="1.0"/>
+            <Size>
+              <AbsDimension x="115" y="20"/>
+            </Size>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="Skill4"  relativePoint="RIGHT">
+                <Offset>
+                  <AbsDimension x="-40" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+        </Frames>
+      </Frame>
+    </Frames>
+
+    <Scripts language="python">
+      <OnLoad>MvPlayerInfoFrame_OnLoad( this )</OnLoad>
+      <OnShow>LoadPlayerValues()</OnShow>
+      <OnEvent>MvPlayerInfoFrame_OnEvent(this, args)</OnEvent>
+    </Scripts>
+  </Frame>
+</Ui>

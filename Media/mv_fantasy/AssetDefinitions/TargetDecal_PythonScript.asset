@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>TargetDecal_PythonScript</Name>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts\TargetDecal.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\yellow-circle-gradient.png</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

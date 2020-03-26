@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Imageset Name="TattooImages" Imagefile="TattooImages.tga" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+	<Image Name="Back" XPos="0" YPos="1" Width="250" Height="333"/>
+	<Image Name="Tattoo1_Back" XPos="257" YPos="0" Width="250" Height="333"/>
+	<Image Name="Tattoo3_Back" XPos="520" YPos="1" Width="250" Height="333"/>
+	<Image Name="Shoulder" XPos="0" YPos="340" Width="250" Height="333"/>
+	<Image Name="Tattoo2_Shoulder" XPos="253" YPos="339" Width="250" Height="333"/>
+	<Image Name="Tattoo1_Shoulder" XPos="518" YPos="341" Width="250" Height="333"/>
+</Imageset>

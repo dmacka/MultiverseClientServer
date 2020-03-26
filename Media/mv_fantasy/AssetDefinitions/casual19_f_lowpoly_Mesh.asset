@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>casual19_f_lowpoly_Mesh</Name>
+  <Description>casual19_f_lowpoly</Description>
+  <Type>Mesh</Type>
+  <Category>Rocketbox - Casual</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\casual19_f_lowpoly.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\casual19_f_lowpoly_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Skeletons\rocketbox_f_lowpoly.skeleton</TargetFile>
+      <FileType>Skeleton</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

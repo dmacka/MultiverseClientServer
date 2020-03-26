@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Imageset Name="Spellbook" Imagefile="Spellbook.tga" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+    <Image Name="Spellbook-Icon" XPos="0" YPos="0" Width="64" Height="64" />
+    <Image Name="SpellBook-SkillLineTab" XPos="64" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-Spellbook-SpellBackground" XPos="128" YPos="0" Width="64" Height="64" />
+    <Image Name="UI-SpellBook-Tab-Unselected" XPos="192" YPos="0" Width="128" Height="64" />
+    <Image Name="UI-SpellBook-Tab1-Selected" XPos="320" YPos="0" Width="128" Height="64" />
+    <Image Name="UI-SpellBook-Tab3-Selected" XPos="448" YPos="0" Width="128" Height="64" />
+    <Image Name="UI-SpellbookPanel-BotLeft" XPos="576" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-SpellbookPanel-BotRight" XPos="832" YPos="0" Width="128" Height="256" />
+    <Image Name="UI-SpellbookPanel-Tab-Highlight" XPos="0" YPos="256" Width="128" Height="64" />
+    <Image Name="UI-SpellbookPanel-TopLeft" XPos="128" YPos="256" Width="256" Height="256" />
+    <Image Name="UI-SpellbookPanel-TopRight" XPos="384" YPos="256" Width="128" Height="256" />
+</Imageset>

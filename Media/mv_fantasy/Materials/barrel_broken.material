@@ -1,0 +1,37 @@
+material barrel_broken.barrel
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.10000 0.10000 0.10000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture barrel.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material barrel_broken.ColorMaterial_1C95B100
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.10980 0.58431 0.69412 1.00000
+            diffuse  0.10980 0.58431 0.69412 1.00000
+            specular 1.00000 1.00000 1.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+        }
+    }
+}

@@ -1,0 +1,643 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvBasicTextures" Imagefile="MvBasicTextures.tga" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+
+    <Image Name="Edge16x16W" XPos="0" YPos="0"  Width="128" Height="16" />
+    <Image Name="Edge16x16R" XPos="0" YPos="16" Width="128" Height="16" />
+    <Image Name="Edge16x16G" XPos="0" YPos="32" Width="128" Height="16" />
+    <Image Name="Edge16x16B" XPos="0" YPos="48" Width="128" Height="16" />
+    <Image Name="Edge16x16C" XPos="0" YPos="64" Width="128" Height="16" />
+    <Image Name="Edge16x16M" XPos="0" YPos="80" Width="128" Height="16" />
+    <Image Name="Edge16x16Y" XPos="0" YPos="96" Width="128" Height="16" />
+
+    <Image Name="Frame126x14W" XPos="130" YPos="1"  Width="126" Height="14" />
+    <Image Name="Frame126x14R" XPos="130" YPos="17" Width="126" Height="14" />
+    <Image Name="Frame126x14G" XPos="130" YPos="33" Width="126" Height="14" />
+    <Image Name="Frame126x14B" XPos="130" YPos="49" Width="126" Height="14" />
+    <Image Name="Frame126x14C" XPos="130" YPos="65" Width="126" Height="14" />
+    <Image Name="Frame126x14M" XPos="130" YPos="81" Width="126" Height="14" />
+    <Image Name="Frame126x14Y" XPos="130" YPos="97" Width="126" Height="14" />
+
+    <Image Name="Frame254x14W" XPos="257" YPos="1"  Width="254" Height="14" />
+    <Image Name="Frame254x14R" XPos="257" YPos="17" Width="254" Height="14" />
+    <Image Name="Frame254x14G" XPos="257" YPos="33" Width="254" Height="14" />
+    <Image Name="Frame254x14B" XPos="257" YPos="49" Width="254" Height="14" />
+    <Image Name="Frame254x14C" XPos="257" YPos="65" Width="254" Height="14" />
+    <Image Name="Frame254x14M" XPos="257" YPos="81" Width="254" Height="14" />
+    <Image Name="Frame254x14Y" XPos="257" YPos="97" Width="254" Height="14" />
+
+    <Image Name="Patch6x6W10A10" XPos="2"   YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W08A10" XPos="10"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W05A10" XPos="18"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W02A10" XPos="26"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W00A10" XPos="34"  YPos="114" Width="6" Height="6" />
+
+    <Image Name="Patch6x6W10A08" XPos="42"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W08A08" XPos="50"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W05A08" XPos="58"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W02A08" XPos="66"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W00A08" XPos="74"  YPos="114" Width="6" Height="6" />
+
+    <Image Name="Patch6x6W10A05" XPos="82"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W08A05" XPos="90"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W05A05" XPos="98"  YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W02A05" XPos="106" YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W00A05" XPos="114" YPos="114" Width="6" Height="6" />
+
+    <Image Name="Patch6x6W10A02" XPos="122" YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W08A02" XPos="130" YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W05A02" XPos="138" YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W02A02" XPos="146" YPos="114" Width="6" Height="6" />
+    <Image Name="Patch6x6W00A02" XPos="154" YPos="114" Width="6" Height="6" />
+
+    <Image Name="Patch6x6R10A10" XPos="2"   YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R08A10" XPos="10"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R05A10" XPos="18"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R02A10" XPos="26"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R00A10" XPos="34"  YPos="139" Width="6" Height="6" />
+
+    <Image Name="Patch6x6R10A08" XPos="42"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R08A08" XPos="50"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R05A08" XPos="58"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R02A08" XPos="66"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R00A08" XPos="74"  YPos="139" Width="6" Height="6" />
+
+    <Image Name="Patch6x6R10A05" XPos="82"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R08A05" XPos="90"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R05A05" XPos="98"  YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R02A05" XPos="106" YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R00A05" XPos="114" YPos="139" Width="6" Height="6" />
+
+    <Image Name="Patch6x6R10A02" XPos="122" YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R08A02" XPos="130" YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R05A02" XPos="138" YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R02A02" XPos="146" YPos="139" Width="6" Height="6" />
+    <Image Name="Patch6x6R00A02" XPos="154" YPos="139" Width="6" Height="6" />
+
+    <Image Name="Patch6x6G10A10" XPos="2"   YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G08A10" XPos="10"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G05A10" XPos="18"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G02A10" XPos="26"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G00A10" XPos="34"  YPos="164" Width="6" Height="6" />
+
+    <Image Name="Patch6x6G10A08" XPos="42"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G08A08" XPos="50"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G05A08" XPos="58"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G02A08" XPos="66"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G00A08" XPos="74"  YPos="164" Width="6" Height="6" />
+
+    <Image Name="Patch6x6G10A05" XPos="82"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G08A05" XPos="90"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G05A05" XPos="98"  YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G02A05" XPos="106" YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G00A05" XPos="114" YPos="164" Width="6" Height="6" />
+
+    <Image Name="Patch6x6G10A02" XPos="122" YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G08A02" XPos="130" YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G05A02" XPos="138" YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G02A02" XPos="146" YPos="164" Width="6" Height="6" />
+    <Image Name="Patch6x6G00A02" XPos="154" YPos="164" Width="6" Height="6" />
+
+    <Image Name="Patch6x6B10A10" XPos="2"   YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B08A10" XPos="10"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B05A10" XPos="18"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B02A10" XPos="26"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B00A10" XPos="34"  YPos="189" Width="6" Height="6" />
+
+    <Image Name="Patch6x6B10A08" XPos="42"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B08A08" XPos="50"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B05A08" XPos="58"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B02A08" XPos="66"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B00A08" XPos="74"  YPos="189" Width="6" Height="6" />
+
+    <Image Name="Patch6x6B10A05" XPos="82"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B08A05" XPos="90"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B05A05" XPos="98"  YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B02A05" XPos="106" YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B00A05" XPos="114" YPos="189" Width="6" Height="6" />
+
+    <Image Name="Patch6x6B10A02" XPos="122" YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B08A02" XPos="130" YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B05A02" XPos="138" YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B02A02" XPos="146" YPos="189" Width="6" Height="6" />
+    <Image Name="Patch6x6B00A02" XPos="154" YPos="189" Width="6" Height="6" />
+
+    <Image Name="Patch6x6C10A10" XPos="2"   YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C08A10" XPos="10"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C05A10" XPos="18"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C02A10" XPos="26"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C00A10" XPos="34"  YPos="214" Width="6" Height="6" />
+
+    <Image Name="Patch6x6C10A08" XPos="42"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C08A08" XPos="50"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C05A08" XPos="58"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C02A08" XPos="66"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C00A08" XPos="74"  YPos="214" Width="6" Height="6" />
+
+    <Image Name="Patch6x6C10A05" XPos="82"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C08A05" XPos="90"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C05A05" XPos="98"  YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C02A05" XPos="106" YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C00A05" XPos="114" YPos="214" Width="6" Height="6" />
+
+    <Image Name="Patch6x6C10A02" XPos="122" YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C08A02" XPos="130" YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C05A02" XPos="138" YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C02A02" XPos="146" YPos="214" Width="6" Height="6" />
+    <Image Name="Patch6x6C00A02" XPos="154" YPos="214" Width="6" Height="6" />
+
+    <Image Name="Patch6x6M10A10" XPos="2"   YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M08A10" XPos="10"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M05A10" XPos="18"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M02A10" XPos="26"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M00A10" XPos="34"  YPos="239" Width="6" Height="6" />
+
+    <Image Name="Patch6x6M10A08" XPos="42"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M08A08" XPos="50"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M05A08" XPos="58"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M02A08" XPos="66"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M00A08" XPos="74"  YPos="239" Width="6" Height="6" />
+
+    <Image Name="Patch6x6M10A05" XPos="82"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M08A05" XPos="90"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M05A05" XPos="98"  YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M02A05" XPos="106" YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M00A05" XPos="114" YPos="239" Width="6" Height="6" />
+
+    <Image Name="Patch6x6M10A02" XPos="122" YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M08A02" XPos="130" YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M05A02" XPos="138" YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M02A02" XPos="146" YPos="239" Width="6" Height="6" />
+    <Image Name="Patch6x6M00A02" XPos="154" YPos="239" Width="6" Height="6" />
+
+    <Image Name="Patch6x6Y10A10" XPos="2"   YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y08A10" XPos="10"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y05A10" XPos="18"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y02A10" XPos="26"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y00A10" XPos="34"  YPos="264" Width="6" Height="6" />
+
+    <Image Name="Patch6x6Y10A08" XPos="42"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y08A08" XPos="50"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y05A08" XPos="58"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y02A08" XPos="66"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y00A08" XPos="74"  YPos="264" Width="6" Height="6" />
+
+    <Image Name="Patch6x6Y10A05" XPos="82"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y08A05" XPos="90"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y05A05" XPos="98"  YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y02A05" XPos="106" YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y00A05" XPos="114" YPos="264" Width="6" Height="6" />
+
+    <Image Name="Patch6x6Y10A02" XPos="122" YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y08A02" XPos="130" YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y05A02" XPos="138" YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y02A02" XPos="146" YPos="264" Width="6" Height="6" />
+    <Image Name="Patch6x6Y00A02" XPos="154" YPos="264" Width="6" Height="6" />
+
+    <Image Name="Edge8x8Wa"      XPos="162" YPos="113" Width="64"  Height="8" />
+    <Image Name="Edge8x8Wb"      XPos="226" YPos="113" Width="64"  Height="8" />
+    <Image Name="Edge16x16W"     XPos="290" YPos="113" Width="128" Height="16" />
+    <Image Name="TabW"           XPos="419" YPos="113" Width="56"  Height="21" />
+
+    <Image Name="Edge8x8Ra"      XPos="162" YPos="138" Width="64"  Height="8" />
+    <Image Name="Edge8x8Rb"      XPos="226" YPos="138" Width="64"  Height="8" />
+    <Image Name="Edge16x16R"     XPos="290" YPos="138" Width="128" Height="16" />
+    <Image Name="TabR"           XPos="419" YPos="138" Width="56"  Height="21" />
+
+    <Image Name="Edge8x8Ga"      XPos="162" YPos="163" Width="64"  Height="8" />
+    <Image Name="Edge8x8Gb"      XPos="226" YPos="163" Width="64"  Height="8" />
+    <Image Name="Edge16x16G"     XPos="290" YPos="163" Width="128" Height="16" />
+    <Image Name="TabG"           XPos="419" YPos="163" Width="56"  Height="21" />
+
+    <Image Name="Edge8x8Ba"      XPos="162" YPos="188" Width="64"  Height="8" />
+    <Image Name="Edge8x8Bb"      XPos="226" YPos="188" Width="64"  Height="8" />
+    <Image Name="Edge16x16B"     XPos="290" YPos="188" Width="128" Height="16" />
+    <Image Name="TabB"           XPos="419" YPos="188" Width="56"  Height="21" />
+
+    <Image Name="Edge8x8Ca"      XPos="162" YPos="213" Width="64"  Height="8" />
+    <Image Name="Edge8x8Cb"      XPos="226" YPos="213" Width="64"  Height="8" />
+    <Image Name="Edge16x16C"     XPos="290" YPos="213" Width="128" Height="16" />
+    <Image Name="TabC"           XPos="419" YPos="213" Width="56"  Height="21" />
+
+    <Image Name="Edge8x8Ma"      XPos="162" YPos="238" Width="64"  Height="8" />
+    <Image Name="Edge8x8Mb"      XPos="226" YPos="238" Width="64"  Height="8" />
+    <Image Name="Edge16x16M"     XPos="290" YPos="238" Width="128" Height="16" />
+    <Image Name="TabM"           XPos="419" YPos="238" Width="56"  Height="21" />
+
+    <Image Name="Edge8x8Ya"      XPos="162" YPos="263" Width="64"  Height="8" />
+    <Image Name="Edge8x8Yb"      XPos="226" YPos="263" Width="64"  Height="8" />
+    <Image Name="Edge16x16Y"     XPos="290" YPos="263" Width="128" Height="16" />
+    <Image Name="TabY"           XPos="419" YPos="263" Width="56"  Height="21" />
+
+    <Image Name="ButtonWLight"  XPos="96"   YPos="122" Width="72"  Height="15" />
+    <Image Name="ButtonWDark"   XPos="169"  YPos="122" Width="72"  Height="15" />
+
+    <Image Name="Edge2x2W10A10"  XPos="2"   YPos="122" Width="16"  Height="2" />
+    <Image Name="Edge2x2W08A10"  XPos="21"  YPos="122" Width="16"  Height="2" />
+    <Image Name="Edge2x2W05A10"  XPos="40"  YPos="122" Width="16"  Height="2" />
+    <Image Name="Edge2x2W02A10"  XPos="59"  YPos="122" Width="16"  Height="2" />
+    <Image Name="Edge2x2W00A10"  XPos="78"  YPos="122" Width="16"  Height="2" />
+
+    <Image Name="ButtonRLight"  XPos="96"   YPos="147" Width="72"  Height="15" />
+    <Image Name="ButtonRDark"   XPos="169"  YPos="147" Width="72"  Height="15" />
+
+    <Image Name="Edge2x2R10A10"  XPos="2"   YPos="147" Width="16"  Height="2" />
+    <Image Name="Edge2x2R08A10"  XPos="21"  YPos="147" Width="16"  Height="2" />
+    <Image Name="Edge2x2R05A10"  XPos="40"  YPos="147" Width="16"  Height="2" />
+    <Image Name="Edge2x2R02A10"  XPos="59"  YPos="147" Width="16"  Height="2" />
+    <Image Name="Edge2x2R00A10"  XPos="78"  YPos="147" Width="16"  Height="2" />
+
+    <Image Name="ButtonGLight"  XPos="96"   YPos="172" Width="72"  Height="15" />
+    <Image Name="ButtonGDark"   XPos="169"  YPos="172" Width="72"  Height="15" />
+
+    <Image Name="Edge2x2G10A10"  XPos="2"   YPos="172" Width="16"  Height="2" />
+    <Image Name="Edge2x2G08A10"  XPos="21"  YPos="172" Width="16"  Height="2" />
+    <Image Name="Edge2x2G05A10"  XPos="40"  YPos="172" Width="16"  Height="2" />
+    <Image Name="Edge2x2G02A10"  XPos="59"  YPos="172" Width="16"  Height="2" />
+    <Image Name="Edge2x2G00A10"  XPos="78"  YPos="172" Width="16"  Height="2" />
+
+    <Image Name="ButtonBLight"  XPos="96"   YPos="197" Width="72"  Height="15" />
+    <Image Name="ButtonBDark"   XPos="169"  YPos="197" Width="72"  Height="15" />
+
+    <Image Name="Edge2x2B10A10"  XPos="2"   YPos="197" Width="16"  Height="2" />
+    <Image Name="Edge2x2B08A10"  XPos="21"  YPos="197" Width="16"  Height="2" />
+    <Image Name="Edge2x2B05A10"  XPos="40"  YPos="197" Width="16"  Height="2" />
+    <Image Name="Edge2x2B02A10"  XPos="59"  YPos="197" Width="16"  Height="2" />
+    <Image Name="Edge2x2B00A10"  XPos="78"  YPos="197" Width="16"  Height="2" />
+
+    <Image Name="ButtonCLight"  XPos="96"   YPos="222" Width="72"  Height="15" />
+    <Image Name="ButtonCDark"   XPos="169"  YPos="222" Width="72"  Height="15" />
+
+    <Image Name="Edge2x2C10A10"  XPos="2"   YPos="222" Width="16"  Height="2" />
+    <Image Name="Edge2x2C08A10"  XPos="21"  YPos="222" Width="16"  Height="2" />
+    <Image Name="Edge2x2C05A10"  XPos="40"  YPos="222" Width="16"  Height="2" />
+    <Image Name="Edge2x2C02A10"  XPos="59"  YPos="222" Width="16"  Height="2" />
+    <Image Name="Edge2x2C00A10"  XPos="78"  YPos="222" Width="16"  Height="2" />
+
+    <Image Name="ButtonMLight"  XPos="96"   YPos="247" Width="72"  Height="15" />
+    <Image Name="ButtonMDark"   XPos="169"  YPos="247" Width="72"  Height="15" />
+
+    <Image Name="Edge2x2M10A10"  XPos="2"   YPos="247" Width="16"  Height="2" />
+    <Image Name="Edge2x2M08A10"  XPos="21"  YPos="247" Width="16"  Height="2" />
+    <Image Name="Edge2x2M05A10"  XPos="40"  YPos="247" Width="16"  Height="2" />
+    <Image Name="Edge2x2M02A10"  XPos="59"  YPos="247" Width="16"  Height="2" />
+    <Image Name="Edge2x2M00A10"  XPos="78"  YPos="247" Width="16"  Height="2" />
+
+    <Image Name="ButtonYLight"  XPos="96"   YPos="272" Width="72"  Height="15" />
+    <Image Name="ButtonYDark"   XPos="169"  YPos="272" Width="72"  Height="15" />
+
+    <Image Name="Edge2x2Y10A10"  XPos="2"   YPos="272" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y08A10"  XPos="21"  YPos="272" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y05A10"  XPos="40"  YPos="272" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y02A10"  XPos="59"  YPos="272" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y00A10"  XPos="78"  YPos="272" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2W10A08"  XPos="2"   YPos="126" Width="16"  Height="2" />
+    <Image Name="Edge2x2W08A08"  XPos="21"  YPos="126" Width="16"  Height="2" />
+    <Image Name="Edge2x2W05A08"  XPos="40"  YPos="126" Width="16"  Height="2" />
+    <Image Name="Edge2x2W02A08"  XPos="59"  YPos="126" Width="16"  Height="2" />
+    <Image Name="Edge2x2W00A08"  XPos="78"  YPos="126" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2R10A08"  XPos="2"   YPos="151" Width="16"  Height="2" />
+    <Image Name="Edge2x2R08A08"  XPos="21"  YPos="151" Width="16"  Height="2" />
+    <Image Name="Edge2x2R05A08"  XPos="40"  YPos="151" Width="16"  Height="2" />
+    <Image Name="Edge2x2R02A08"  XPos="59"  YPos="151" Width="16"  Height="2" />
+    <Image Name="Edge2x2R00A08"  XPos="78"  YPos="151" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2G10A08"  XPos="2"   YPos="176" Width="16"  Height="2" />
+    <Image Name="Edge2x2G08A08"  XPos="21"  YPos="176" Width="16"  Height="2" />
+    <Image Name="Edge2x2G05A08"  XPos="40"  YPos="176" Width="16"  Height="2" />
+    <Image Name="Edge2x2G02A08"  XPos="59"  YPos="176" Width="16"  Height="2" />
+    <Image Name="Edge2x2G00A08"  XPos="78"  YPos="176" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2B10A08"  XPos="2"   YPos="201" Width="16"  Height="2" />
+    <Image Name="Edge2x2B08A08"  XPos="21"  YPos="201" Width="16"  Height="2" />
+    <Image Name="Edge2x2B05A08"  XPos="40"  YPos="201" Width="16"  Height="2" />
+    <Image Name="Edge2x2B02A08"  XPos="59"  YPos="201" Width="16"  Height="2" />
+    <Image Name="Edge2x2B00A08"  XPos="78"  YPos="201" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2C10A08"  XPos="2"   YPos="226" Width="16"  Height="2" />
+    <Image Name="Edge2x2C08A08"  XPos="21"  YPos="226" Width="16"  Height="2" />
+    <Image Name="Edge2x2C05A08"  XPos="40"  YPos="226" Width="16"  Height="2" />
+    <Image Name="Edge2x2C02A08"  XPos="59"  YPos="226" Width="16"  Height="2" />
+    <Image Name="Edge2x2C00A08"  XPos="78"  YPos="226" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2M10A08"  XPos="2"   YPos="251" Width="16"  Height="2" />
+    <Image Name="Edge2x2M08A08"  XPos="21"  YPos="251" Width="16"  Height="2" />
+    <Image Name="Edge2x2M05A08"  XPos="40"  YPos="251" Width="16"  Height="2" />
+    <Image Name="Edge2x2M02A08"  XPos="59"  YPos="251" Width="16"  Height="2" />
+    <Image Name="Edge2x2M00A08"  XPos="78"  YPos="251" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2Y10A08"  XPos="2"   YPos="276" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y08A08"  XPos="21"  YPos="276" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y05A08"  XPos="40"  YPos="276" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y02A08"  XPos="59"  YPos="276" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y00A08"  XPos="78"  YPos="276" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2W10A05"  XPos="2"   YPos="130" Width="16"  Height="2" />
+    <Image Name="Edge2x2W08A05"  XPos="21"  YPos="130" Width="16"  Height="2" />
+    <Image Name="Edge2x2W05A05"  XPos="40"  YPos="130" Width="16"  Height="2" />
+    <Image Name="Edge2x2W02A05"  XPos="59"  YPos="130" Width="16"  Height="2" />
+    <Image Name="Edge2x2W00A05"  XPos="78"  YPos="130" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2R10A05"  XPos="2"   YPos="155" Width="16"  Height="2" />
+    <Image Name="Edge2x2R08A05"  XPos="21"  YPos="155" Width="16"  Height="2" />
+    <Image Name="Edge2x2R05A05"  XPos="40"  YPos="155" Width="16"  Height="2" />
+    <Image Name="Edge2x2R02A05"  XPos="59"  YPos="155" Width="16"  Height="2" />
+    <Image Name="Edge2x2R00A05"  XPos="78"  YPos="155" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2G10A05"  XPos="2"   YPos="180" Width="16"  Height="2" />
+    <Image Name="Edge2x2G08A05"  XPos="21"  YPos="180" Width="16"  Height="2" />
+    <Image Name="Edge2x2G05A05"  XPos="40"  YPos="180" Width="16"  Height="2" />
+    <Image Name="Edge2x2G02A05"  XPos="59"  YPos="180" Width="16"  Height="2" />
+    <Image Name="Edge2x2G00A05"  XPos="78"  YPos="180" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2B10A05"  XPos="2"   YPos="205" Width="16"  Height="2" />
+    <Image Name="Edge2x2B08A05"  XPos="21"  YPos="205" Width="16"  Height="2" />
+    <Image Name="Edge2x2B05A05"  XPos="40"  YPos="205" Width="16"  Height="2" />
+    <Image Name="Edge2x2B02A05"  XPos="59"  YPos="205" Width="16"  Height="2" />
+    <Image Name="Edge2x2B00A05"  XPos="78"  YPos="205" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2C10A05"  XPos="2"   YPos="230" Width="16"  Height="2" />
+    <Image Name="Edge2x2C08A05"  XPos="21"  YPos="230" Width="16"  Height="2" />
+    <Image Name="Edge2x2C05A05"  XPos="40"  YPos="230" Width="16"  Height="2" />
+    <Image Name="Edge2x2C02A05"  XPos="59"  YPos="230" Width="16"  Height="2" />
+    <Image Name="Edge2x2C00A05"  XPos="78"  YPos="230" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2M10A05"  XPos="2"   YPos="255" Width="16"  Height="2" />
+    <Image Name="Edge2x2M08A05"  XPos="21"  YPos="255" Width="16"  Height="2" />
+    <Image Name="Edge2x2M05A05"  XPos="40"  YPos="255" Width="16"  Height="2" />
+    <Image Name="Edge2x2M02A05"  XPos="59"  YPos="255" Width="16"  Height="2" />
+    <Image Name="Edge2x2M00A05"  XPos="78"  YPos="255" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2Y10A05"  XPos="2"   YPos="280" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y08A05"  XPos="21"  YPos="280" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y05A05"  XPos="40"  YPos="280" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y02A05"  XPos="59"  YPos="280" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y00A05"  XPos="78"  YPos="280" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2W10A02"  XPos="2"   YPos="134" Width="16"  Height="2" />
+    <Image Name="Edge2x2W08A02"  XPos="21"  YPos="134" Width="16"  Height="2" />
+    <Image Name="Edge2x2W05A02"  XPos="40"  YPos="134" Width="16"  Height="2" />
+    <Image Name="Edge2x2W02A02"  XPos="59"  YPos="134" Width="16"  Height="2" />
+    <Image Name="Edge2x2W00A02"  XPos="78"  YPos="134" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2R10A02"  XPos="2"   YPos="159" Width="16"  Height="2" />
+    <Image Name="Edge2x2R08A02"  XPos="21"  YPos="159" Width="16"  Height="2" />
+    <Image Name="Edge2x2R05A02"  XPos="40"  YPos="159" Width="16"  Height="2" />
+    <Image Name="Edge2x2R02A02"  XPos="59"  YPos="159" Width="16"  Height="2" />
+    <Image Name="Edge2x2R00A02"  XPos="78"  YPos="159" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2G10A02"  XPos="2"   YPos="184" Width="16"  Height="2" />
+    <Image Name="Edge2x2G08A02"  XPos="21"  YPos="184" Width="16"  Height="2" />
+    <Image Name="Edge2x2G05A02"  XPos="40"  YPos="184" Width="16"  Height="2" />
+    <Image Name="Edge2x2G02A02"  XPos="59"  YPos="184" Width="16"  Height="2" />
+    <Image Name="Edge2x2G00A02"  XPos="78"  YPos="184" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2B10A02"  XPos="2"   YPos="209" Width="16"  Height="2" />
+    <Image Name="Edge2x2B08A02"  XPos="21"  YPos="209" Width="16"  Height="2" />
+    <Image Name="Edge2x2B05A02"  XPos="40"  YPos="209" Width="16"  Height="2" />
+    <Image Name="Edge2x2B02A02"  XPos="59"  YPos="209" Width="16"  Height="2" />
+    <Image Name="Edge2x2B00A02"  XPos="78"  YPos="209" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2C10A02"  XPos="2"   YPos="234" Width="16"  Height="2" />
+    <Image Name="Edge2x2C08A02"  XPos="21"  YPos="234" Width="16"  Height="2" />
+    <Image Name="Edge2x2C05A02"  XPos="40"  YPos="234" Width="16"  Height="2" />
+    <Image Name="Edge2x2C02A02"  XPos="59"  YPos="234" Width="16"  Height="2" />
+    <Image Name="Edge2x2C00A02"  XPos="78"  YPos="234" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2M10A02"  XPos="2"   YPos="259" Width="16"  Height="2" />
+    <Image Name="Edge2x2M08A02"  XPos="21"  YPos="259" Width="16"  Height="2" />
+    <Image Name="Edge2x2M05A02"  XPos="40"  YPos="259" Width="16"  Height="2" />
+    <Image Name="Edge2x2M02A02"  XPos="59"  YPos="259" Width="16"  Height="2" />
+    <Image Name="Edge2x2M00A02"  XPos="78"  YPos="259" Width="16"  Height="2" />
+
+    <Image Name="Edge2x2Y10A02"  XPos="2"   YPos="284" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y08A02"  XPos="21"  YPos="284" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y05A02"  XPos="40"  YPos="284" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y02A02"  XPos="59"  YPos="284" Width="16"  Height="2" />
+    <Image Name="Edge2x2Y00A02"  XPos="78"  YPos="284" Width="16"  Height="2" />
+
+    <Image Name="SBUpWLight"    XPos="2"   YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpWDark"     XPos="23"  YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpWMedium"   XPos="44"  YPos="289" Width="19" Height="17" />
+
+    <Image Name="SBUpRLight"    XPos="65"  YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpRDark"     XPos="86"  YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpRMedium"   XPos="107" YPos="289" Width="19" Height="17" />
+
+    <Image Name="SBUpGLight"    XPos="128" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpGDark"     XPos="149" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpGMedium"   XPos="170" YPos="289" Width="19" Height="17" />
+
+    <Image Name="SBUpBLight"    XPos="191" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpBDark"     XPos="212" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpBMedium"   XPos="233" YPos="289" Width="19" Height="17" />
+
+    <Image Name="SBUpCLight"    XPos="254" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpCDark"     XPos="275" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpCMedium"   XPos="296" YPos="289" Width="19" Height="17" />
+
+    <Image Name="SBUpMLight"    XPos="317" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpMDark"     XPos="338" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpMMedium"   XPos="359" YPos="289" Width="19" Height="17" />
+
+    <Image Name="SBUpYLight"    XPos="380" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpYDark"     XPos="401" YPos="289" Width="19" Height="17" />
+    <Image Name="SBUpYMedium"   XPos="422" YPos="289" Width="19" Height="17" />
+
+    <Image Name="SBDnWLight"    XPos="2"   YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnWDark"     XPos="23"  YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnWMedium"   XPos="44"  YPos="308" Width="19" Height="17" />
+
+    <Image Name="SBDnRLight"    XPos="65"  YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnRDark"     XPos="86"  YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnRMedium"   XPos="107" YPos="308" Width="19" Height="17" />
+
+    <Image Name="SBDnGLight"    XPos="128" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnGDark"     XPos="149" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnGMedium"   XPos="170" YPos="308" Width="19" Height="17" />
+
+    <Image Name="SBDnBLight"    XPos="191" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnBDark"     XPos="212" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnBMedium"   XPos="233" YPos="308" Width="19" Height="17" />
+
+    <Image Name="SBDnCLight"    XPos="254" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnCDark"     XPos="275" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnCMedium"   XPos="296" YPos="308" Width="19" Height="17" />
+
+    <Image Name="SBDnMLight"    XPos="317" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnMDark"     XPos="338" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnMMedium"   XPos="359" YPos="308" Width="19" Height="17" />
+
+    <Image Name="SBDnYLight"    XPos="380" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnYDark"     XPos="401" YPos="308" Width="19" Height="17" />
+    <Image Name="SBDnYMedium"   XPos="422" YPos="308" Width="19" Height="17" />
+
+    <Image Name="SBBackgroundW"  XPos="1"  YPos="327" Width="27" Height="25" />
+    <Image Name="SBCircleThumbW" XPos="29" YPos="327" Width="26" Height="26" />
+
+    <Image Name="SBBackgroundR"  XPos="64" YPos="327" Width="27" Height="25" />
+    <Image Name="SBCircleThumbR" XPos="92" YPos="327" Width="26" Height="26" />
+
+    <Image Name="SBBackgroundG"  XPos="127" YPos="327" Width="27" Height="25" />
+    <Image Name="SBCircleThumbG" XPos="155" YPos="327" Width="26" Height="26" />
+
+    <Image Name="SBBackgroundB"  XPos="190" YPos="327" Width="27" Height="25" />
+    <Image Name="SBCircleThumbB" XPos="218" YPos="327" Width="26" Height="26" />
+
+    <Image Name="SBBackgroundC"  XPos="253" YPos="327" Width="27" Height="25" />
+    <Image Name="SBCircleThumbC" XPos="281" YPos="327" Width="26" Height="26" />
+
+    <Image Name="SBBackgroundM"  XPos="316" YPos="327" Width="27" Height="25" />
+    <Image Name="SBCircleThumbM" XPos="344" YPos="327" Width="26" Height="26" />
+
+    <Image Name="SBBackgroundY"  XPos="379" YPos="327" Width="27" Height="25" />
+    <Image Name="SBCircleThumbY" XPos="407" YPos="327" Width="26" Height="26" />
+
+    <Image Name="CloseWLight"  XPos="1"  YPos="354" Width="19" Height="19" />
+    <Image Name="CloseWDark"   XPos="21" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseWMedium" XPos="41" YPos="354" Width="19" Height="19" />
+
+    <Image Name="CloseRLight"  XPos="64"  YPos="354" Width="19" Height="19" />
+    <Image Name="CloseRDark"   XPos="84"  YPos="354" Width="19" Height="19" />
+    <Image Name="CloseRMedium" XPos="104" YPos="354" Width="19" Height="19" />
+
+    <Image Name="CloseGLight"  XPos="127" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseGDark"   XPos="147" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseGMedium" XPos="167" YPos="354" Width="19" Height="19" />
+
+    <Image Name="CloseBLight"  XPos="190" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseBDark"   XPos="210" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseBMedium" XPos="230" YPos="354" Width="19" Height="19" />
+
+    <Image Name="CloseCLight"  XPos="253" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseCDark"   XPos="273" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseCMedium" XPos="293" YPos="354" Width="19" Height="19" />
+
+    <Image Name="CloseMLight"  XPos="316" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseMDark"   XPos="336" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseMMedium" XPos="356" YPos="354" Width="19" Height="19" />
+
+    <Image Name="CloseYLight"  XPos="379" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseYDark"   XPos="399" YPos="354" Width="19" Height="19" />
+    <Image Name="CloseYMedium" XPos="419" YPos="354" Width="19" Height="19" />
+
+    <Image Name="ChatWLight"   XPos="1"   YPos="374" Width="24" Height="23" />
+    <Image Name="ChatWDark"    XPos="26"  YPos="374" Width="24" Height="23" />
+    <Image Name="ChatWMedium"  XPos="51"  YPos="374" Width="24" Height="23" />
+    <Image Name="ChatRLight"   XPos="76"  YPos="374" Width="24" Height="23" />
+    <Image Name="ChatRDark"    XPos="101" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatRMedium"  XPos="126" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatGLight"   XPos="151" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatGDark"    XPos="176" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatGMedium"  XPos="201" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatBLight"   XPos="226" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatBDark"    XPos="251" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatBMedium"  XPos="276" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatCLight"   XPos="301" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatCDark"    XPos="326" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatCMedium"  XPos="351" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatMLight"   XPos="376" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatMDark"    XPos="401" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatMMedium"  XPos="426" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatYLight"   XPos="462" YPos="284" Width="24" Height="23" />
+    <Image Name="ChatYDark"    XPos="462" YPos="374" Width="24" Height="23" />
+    <Image Name="ChatYMedium"  XPos="487" YPos="374" Width="24" Height="23" />
+
+    <Image Name="DownWLight"   XPos="1"   YPos="398" Width="24" Height="23" />
+    <Image Name="DownWDark"    XPos="26"  YPos="398" Width="24" Height="23" />
+    <Image Name="DownWMedium"  XPos="51"  YPos="398" Width="24" Height="23" />
+    <Image Name="DownRLight"   XPos="76"  YPos="398" Width="24" Height="23" />
+    <Image Name="DownRDark"    XPos="101" YPos="398" Width="24" Height="23" />
+    <Image Name="DownRMedium"  XPos="126" YPos="398" Width="24" Height="23" />
+    <Image Name="DownGLight"   XPos="151" YPos="398" Width="24" Height="23" />
+    <Image Name="DownGDark"    XPos="176" YPos="398" Width="24" Height="23" />
+    <Image Name="DownGMedium"  XPos="201" YPos="398" Width="24" Height="23" />
+    <Image Name="DownBLight"   XPos="226" YPos="398" Width="24" Height="23" />
+    <Image Name="DownBDark"    XPos="251" YPos="398" Width="24" Height="23" />
+    <Image Name="DownBMedium"  XPos="276" YPos="398" Width="24" Height="23" />
+    <Image Name="DownCLight"   XPos="301" YPos="398" Width="24" Height="23" />
+    <Image Name="DownCDark"    XPos="326" YPos="398" Width="24" Height="23" />
+    <Image Name="DownCMedium"  XPos="351" YPos="398" Width="24" Height="23" />
+    <Image Name="DownMLight"   XPos="376" YPos="398" Width="24" Height="23" />
+    <Image Name="DownMDark"    XPos="401" YPos="398" Width="24" Height="23" />
+    <Image Name="DownMMedium"  XPos="426" YPos="398" Width="24" Height="23" />
+    <Image Name="DownYLight"   XPos="487" YPos="278" Width="24" Height="23" />
+    <Image Name="DownYDark"    XPos="462" YPos="398" Width="24" Height="23" />
+    <Image Name="DownYMedium"  XPos="487" YPos="398" Width="24" Height="23" />
+
+    <Image Name="UpWLight"   XPos="1"   YPos="422" Width="24" Height="23" />
+    <Image Name="UpWDark"    XPos="26"  YPos="422" Width="24" Height="23" />
+    <Image Name="UpWMedium"  XPos="51"  YPos="422" Width="24" Height="23" />
+    <Image Name="UpRLight"   XPos="76"  YPos="422" Width="24" Height="23" />
+    <Image Name="UpRDark"    XPos="101" YPos="422" Width="24" Height="23" />
+    <Image Name="UpRMedium"  XPos="126" YPos="422" Width="24" Height="23" />
+    <Image Name="UpGLight"   XPos="151" YPos="422" Width="24" Height="23" />
+    <Image Name="UpGDark"    XPos="176" YPos="422" Width="24" Height="23" />
+    <Image Name="UpGMedium"  XPos="201" YPos="422" Width="24" Height="23" />
+    <Image Name="UpBLight"   XPos="226" YPos="422" Width="24" Height="23" />
+    <Image Name="UpBDark"    XPos="251" YPos="422" Width="24" Height="23" />
+    <Image Name="UpBMedium"  XPos="276" YPos="422" Width="24" Height="23" />
+    <Image Name="UpCLight"   XPos="301" YPos="422" Width="24" Height="23" />
+    <Image Name="UpCDark"    XPos="326" YPos="422" Width="24" Height="23" />
+    <Image Name="UpCMedium"  XPos="351" YPos="422" Width="24" Height="23" />
+    <Image Name="UpMLight"   XPos="376" YPos="422" Width="24" Height="23" />
+    <Image Name="UpMDark"    XPos="401" YPos="422" Width="24" Height="23" />
+    <Image Name="UpMMedium"  XPos="426" YPos="422" Width="24" Height="23" />
+    <Image Name="UpYLight"   XPos="487" YPos="302" Width="24" Height="23" />
+    <Image Name="UpYDark"    XPos="462" YPos="422" Width="24" Height="23" />
+    <Image Name="UpYMedium"  XPos="487" YPos="422" Width="24" Height="23" />
+
+    <Image Name="BarDownWLight"   XPos="1"   YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownWDark"    XPos="26"  YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownWMedium"  XPos="51"  YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownRLight"   XPos="76"  YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownRDark"    XPos="101" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownRMedium"  XPos="126" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownGLight"   XPos="151" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownGDark"    XPos="176" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownGMedium"  XPos="201" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownBLight"   XPos="226" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownBDark"    XPos="251" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownBMedium"  XPos="276" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownCLight"   XPos="301" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownCDark"    XPos="326" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownCMedium"  XPos="351" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownMLight"   XPos="376" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownMDark"    XPos="401" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownMMedium"  XPos="426" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownYLight"   XPos="487" YPos="326" Width="24" Height="23" />
+    <Image Name="BarDownYDark"    XPos="462" YPos="446" Width="24" Height="23" />
+    <Image Name="BarDownYMedium"  XPos="487" YPos="446" Width="24" Height="23" />
+
+    <Image Name="BarUpWLight"   XPos="1"   YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpWDark"    XPos="26"  YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpWMedium"  XPos="51"  YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpRLight"   XPos="76"  YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpRDark"    XPos="101" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpRMedium"  XPos="126" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpGLight"   XPos="151" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpGDark"    XPos="176" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpGMedium"  XPos="201" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpBLight"   XPos="226" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpBDark"    XPos="251" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpBMedium"  XPos="276" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpCLight"   XPos="301" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpCDark"    XPos="326" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpCMedium"  XPos="351" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpMLight"   XPos="376" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpMDark"    XPos="401" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpMMedium"  XPos="426" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpYLight"   XPos="487" YPos="350" Width="24" Height="23" />
+    <Image Name="BarUpYDark"    XPos="462" YPos="470" Width="24" Height="23" />
+    <Image Name="BarUpYMedium"  XPos="487" YPos="470" Width="24" Height="23" />
+
+    <Image Name="SquareThumbW" XPos="479" YPos="113" Width="32" Height="32" />
+    <Image Name="SquareThumbR" XPos="479" YPos="146" Width="32" Height="32" />
+    <Image Name="SquareThumbG" XPos="479" YPos="179" Width="32" Height="32" />
+    <Image Name="SquareThumbB" XPos="479" YPos="212" Width="32" Height="32" />
+    <Image Name="SquareThumbC" XPos="479" YPos="245" Width="32" Height="32" />
+    <Image Name="SquareThumbM" XPos="454" YPos="308" Width="32" Height="32" />
+    <Image Name="SquareThumbY" XPos="454" YPos="341" Width="32" Height="32" />
+
+</Imageset>

@@ -1,0 +1,136 @@
+<Ui>
+    <Frame name="HelpFrame" inherits="MvBasicFrame" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true" virtual="true">
+	<Size>
+	    <AbsDimension x="640" y="420"/>
+	</Size>
+	<Layers>
+	    <Layer level="BACKGROUND">
+        	<Texture name="$parentTitle" file="Interface\MvChat\Mv-ChatFrame-Interior">
+                    <Size> <AbsDimension x="500" y="24"/> </Size>
+		    <Anchors>
+			<Anchor point="TOPLEFT"> <Offset><AbsDimension x="4" y="-4"/></Offset></Anchor>
+			<Anchor point="TOPRIGHT"><Offset><AbsDimension x="-4" y="-4"/></Offset></Anchor>
+		    </Anchors>
+		</Texture>
+        	<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior">
+		    <Anchors>
+			<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentTitle">
+                            <Offset><AbsDimension x="0" y="0"/></Offset>
+                        </Anchor>
+			<Anchor point="BOTTOMRIGHT">
+                            <Offset><AbsDimension x="-4" y="4"/></Offset>
+                        </Anchor>
+		    </Anchors>
+		</Texture>
+	    </Layer>
+	</Layers>
+	<Frames>
+	    <FontString name="$parentName" inherits="FrameNameFont" text="Demo World Help">
+		<Size>
+		    <AbsDimension x="200" y="12"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOP"><Offset><AbsDimension x="0" y="-12"/></Offset></Anchor>
+		</Anchors>
+	    </FontString>
+	    <FontString name="$parentWelcome" inherits="HelpFont" text="Welcome to Demo World - a live demonstration of the Multiverse platform. This is an example of a simple 'social world' where you interact with other players.  (Although since this is a demo, there may not be anyone else logged in right now.  Even if no one else is logged in, you can interact with Barbie, who is a Non-Player Character.)">
+		<Size>
+		    <AbsDimension x="600" y="72"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOP" relativeTo="$parentName" relativePoint="BOTTOM">
+			<Offset><AbsDimension x="0" y="-6"/></Offset>
+		    </Anchor>
+		</Anchors>
+	    </FontString>
+	    <FontString name="$parentMovement" inherits="HelpFont" text="Move your character using the arrow keys or the 'w' 'a' 's' 'd' keys.">
+		<Size>
+		    <AbsDimension x="600" y="36"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOP" relativeTo="$parentWelcome" relativePoint="BOTTOM">
+			<Offset><AbsDimension x="0" y="-6"/></Offset>
+		    </Anchor>
+		</Anchors>
+	    </FontString>
+	    <FontString name="$parentCamera" inherits="HelpFont" text="Move the camera with the mouse.  Left button moves the camera without moving your character.  Right button moves both.  The mouse wheel zooms in and out.">
+		<Size>
+		    <AbsDimension x="600" y="56"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOP" relativeTo="$parentMovement" relativePoint="BOTTOM">
+			<Offset><AbsDimension x="0" y="-6"/></Offset>
+		    </Anchor>
+		</Anchors>
+	    </FontString>
+	    <FontString name="$parentActions" inherits="HelpFont" text="Select actions from the action bar on the bottom right.  You can also use the F keys.  Move the mouse over the buttons to see what they do.  The leftmost action button allows you to change your character.">
+		<Size>
+		    <AbsDimension x="600" y="56"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOP" relativeTo="$parentCamera" relativePoint="BOTTOM">
+			<Offset><AbsDimension x="0" y="-6"/></Offset>
+		    </Anchor>
+		</Anchors>
+	    </FontString>
+	    <FontString name="$parentChat" inherits="HelpFont" text="Use the chat window to chat with other players.  Press Enter to activate the edit box.  Press Enter again to send your chat message to others.">
+		<Size>
+		    <AbsDimension x="600" y="48"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOP" relativeTo="$parentActions" relativePoint="BOTTOM">
+			<Offset><AbsDimension x="0" y="-6"/></Offset>
+		    </Anchor>
+		</Anchors>
+	    </FontString>
+	    <FontString name="$parentHelp" inherits="HelpFont" text="Click the help button on the action bar or F11 to bring up this help screen again.">
+		<Size>
+		    <AbsDimension x="600" y="48"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="TOP" relativeTo="$parentChat" relativePoint="BOTTOM">
+			<Offset><AbsDimension x="0" y="-6"/></Offset>
+		    </Anchor>
+		</Anchors>
+	    </FontString>
+	    <Button name="$parentOKButton" inherits="FrameNameFont" text="OK">
+        	<Size>
+		    <AbsDimension x="80" y="20"/>
+		</Size>
+		<Anchors>
+		    <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+			<Offset><AbsDimension x="0" y="10"/></Offset>
+		    </Anchor>
+		</Anchors>
+		<NormalText inherits="FrameNameFont" justifyH="CENTER" justifyV="MIDDLE"/>
+		<Layers>
+		    <Layer>
+			<Texture name="$parentTexture" file="Interface\MvChat\Mv-ChatFrame-Interior"/>
+		    </Layer>
+		</Layers>
+		<Scripts language="python">
+		    <OnClick>
+    SocialHelp.Hide()
+		    </OnClick>
+		</Scripts>
+	    </Button>
+	</Frames>
+	<Scripts language="python">
+	    <OnLoad>
+    SocialHelp.Show()
+    SocialHelpTitle.SetVertexColor(0.1, 0.1, 0.1)
+    SocialHelpTitle.SetAlpha(0.9)
+    SocialHelpTexture.SetVertexColor(1.0, 1.0, 1.0)
+    SocialHelpTexture.SetAlpha(0.9)
+    SocialHelpOKButtonTexture.SetVertexColor(0.1, 0.1, 0.1)
+    SocialHelpOKButtonTexture.SetAlpha(0.6)
+	    </OnLoad>
+	</Scripts>
+    </Frame>
+
+    <Frame name="SocialHelp" inherits="HelpFrame" parent="UIParent" id="200" hidden="false">
+        <Anchors>
+          <Anchor point="TOP"> <Offset><AbsDimension x="0" y="-10"/></Offset> </Anchor>
+        </Anchors>
+    </Frame>
+</Ui>

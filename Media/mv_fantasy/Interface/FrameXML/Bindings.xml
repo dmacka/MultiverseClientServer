@@ -1,0 +1,222 @@
+<Bindings>
+        <!-- User interface action bindings -->
+        <Binding name="MOVEFORWARD" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.MoveForward(True)
+                else:
+                    ClientAPI.InputHandler.MoveForward(False)
+        </Binding>
+        <Binding name="MOVEBACKWARD" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.MoveBackward(True)
+                else:
+                    ClientAPI.InputHandler.MoveBackward(False)
+        </Binding>
+        <Binding name="MOVEUP" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.MoveUp(True)
+                else:
+                    ClientAPI.InputHandler.MoveUp(False)
+        </Binding>
+        <Binding name="MOVEDOWN" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.MoveDown(True)
+                else:
+                    ClientAPI.InputHandler.MoveDown(False)
+        </Binding>
+        <Binding name="TURNLEFT" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.TurnLeft(True)
+                else:
+                    ClientAPI.InputHandler.TurnLeft(False)
+        </Binding>
+        <Binding name="TURNRIGHT" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.TurnRight(True)
+                else:
+                    ClientAPI.InputHandler.TurnRight(False)
+        </Binding>
+        <Binding name="STRAFELEFT" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.StrafeLeft(True)
+                else:
+                    ClientAPI.InputHandler.StrafeLeft(False)
+        </Binding>
+        <Binding name="STRAFERIGHT" runOnUp="true" header="MOVEMENT">
+                if ( keystate == "down" ):
+                    ClientAPI.InputHandler.StrafeRight(True)
+                else:
+                    ClientAPI.InputHandler.StrafeRight(False)
+        </Binding>
+        <Binding name="JUMP">
+                ClientAPI.DebugWrite("Got JUMP")
+        </Binding>
+        <Binding name="TOGGLEAUTORUN">
+                ClientAPI.InputHandler.ToggleAutorun()
+        </Binding>
+        <Binding name="OPENCHAT">
+                MvChatFrameInputFrameEditBox.Show()
+                MvChatFrameInputFrameEditBox.SetFocus()
+        </Binding>
+        <Binding name="OPENCHATSLASH">
+                MvChatFrameInputFrameEditBox.Show()
+                MvChatFrameInputFrameEditBox.SetFocus()
+                MvChatFrameInputFrameEditBox.SetText("/")
+        </Binding>
+        <Binding name="TOGGLEUI">
+                ClientAPI.Interface.ToggleVisibility()
+        </Binding>
+        <Binding name="TOGGLEGAMEMENU">
+                # this should release input on all windows that may have it captured
+                # for now, I just handle the edit frame
+                MvChatFrameInputFrameEditBox.ClearFocus()
+                MvChatFrameInputFrameEditBox.Hide()
+        </Binding>
+        <Binding name="TOGGLEBACKPACK">
+                ToggleBackpack()
+        </Binding>
+        <Binding name="TOGGLESTATUS">
+                ToggleStatus()
+        </Binding>
+        <Binding name="TOGGLEACTIONBAR">
+                ToggleActionBar()
+        </Binding>
+        <Binding name="TOGGLEQUESTLOG">
+                ToggleQuestLog()
+        </Binding>
+        <Binding name="TOGGLEABILITIESFRAME">
+                ToggleAbilitiesFrame()
+        </Binding>
+        <Binding name="TOGGLECHARACTER">
+                ToggleCharacter()
+        </Binding>
+        <Binding name="TOGGLEMINIMAP">
+                ToggleMinimap()
+        </Binding>
+        <Binding name="ATTACK">
+                MarsTarget.AttackTarget()
+        </Binding>
+        <Binding name="SCREENSHOT">
+                ClientAPI.TakeScreenshot()
+        </Binding>
+
+        <!-- Display things for debugging -->
+        <Binding name="TOGGLERENDERMODE" header="DEBUGRENDER">
+                ClientAPI.ToggleRenderMode()
+        </Binding>
+        <Binding name="TOGGLETEXTURE" header="DEBUGRENDER">
+                ClientAPI.ToggleTexture()
+        </Binding>
+        <Binding name="TOGGLEBOUNDINGBOX" header="DEBUGRENDER">
+                ClientAPI.ToggleBoundingBoxes()
+        </Binding>
+        <Binding name="TOGGLERENDERCOLLISIONVOLUME" header="DEBUGRENDER">
+                ClientAPI.ToggleRenderCollisionVolumes()
+        </Binding>
+
+        <!-- Metering -->
+        <Binding name="TOGGLEMETERING" header="METERING">
+                ClientAPI.SystemStatus.ToggleMetering()
+                ClientAPI.Write("Toggled logging of metering data")
+        </Binding>
+        <Binding name="METERONEFRAME" header="METERING">
+                ClientAPI.SystemStatus.MeterOneFrame()
+                ClientAPI.Write("Logged metering data for one frame")
+        </Binding>
+        <Binding name="TOGGLEMETERINGLONGESTFRAME" header="METERING">
+                if (ClientAPI.SystemStatus.ToggleMeteringLongestFrame() == False):
+                    ClientAPI.Write("Toggled metering the longest frame")
+                else:
+                    ClientAPI.Write("Logged metering data for the longest frame")
+        </Binding>
+
+        <!-- Social World Actionbar Actions -->
+        <Binding name="CHARSELECT" header="ACTIONS">
+                ToggleCharacter()
+        </Binding>
+        <Binding name="DANCE" header="ACTIONS">
+                ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/dance")
+        </Binding>
+        <Binding name="WAVE" header="ACTIONS">
+                ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation wave")
+        </Binding>
+        <Binding name="LAUGH" header="ACTIONS">
+                ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation laugh")
+        </Binding>
+        <Binding name="CLAP" header="ACTIONS">
+                ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation claphands")
+        </Binding>
+        <Binding name="CHEER" header="ACTIONS">
+                ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation cheer")
+        </Binding>
+        <Binding name="CRY" header="ACTIONS">
+                ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation cry")
+        </Binding>
+        <Binding name="FIGHT" header="ACTIONS">
+                ClientAPI.Network.SendTargetedCommand(ClientAPI.GetPlayerObject().OID, "/playanimation fight")
+        </Binding>
+        <Binding name="HELP" header="ACTIONS">
+                SocialHelp.Show()
+        </Binding>
+        <Binding name="QUIT" header="ACTIONS">
+                ClientAPI.Exit()
+        </Binding>
+        <Binding name="COMPASS" header="ACTIONS">
+                PlayerCompass.ToggleCompass()
+        </Binding>
+        <Binding name="PROJECTILETEST" header="ACTIONS">
+                ClientAPI.InvokeEffect("TestProjectile", ClientAPI.GetLocalOID(), {'targetOID': MarsTarget.GetCurrentTarget().OID, 'sourceOID':ClientAPI.GetPlayerObject().OID})
+        </Binding>
+        <Binding name="TESTLOGEFFECT" header="ACTIONS">
+                ClientAPI.InvokeEffect("TestLogEffect", ClientAPI.GetLocalOID(), {'message': 'This is a test log message.'})
+        </Binding>
+        <Binding name="TESTCOMPOSITORS" header="ACTIONS">
+                ClientAPI.InvokeEffect("TestCompositorEffect", ClientAPI.GetLocalOID(), {})
+        </Binding>
+        <Binding name="TOGGLESHADOWS" header="ACTIONS">
+                ToggleShadows.ToggleShadows()
+        </Binding>
+
+        <Binding name="LEFTCLICK" runOnUp="true" header="CURSOR">
+                MarsCursor.OnLeftClick(keystate == "down")
+        </Binding>
+        <Binding name="RIGHTCLICK" runOnUp="true" header="CURSOR">
+                MarsCursor.OnRightClick(keystate == "down")
+        </Binding>
+        <Binding name="ACTIONBUTTON1">
+                MarsAction.UseAction(1, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON2">
+                MarsAction.UseAction(2, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON3">
+                MarsAction.UseAction(3, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON4">
+                MarsAction.UseAction(4, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON5">
+                MarsAction.UseAction(5, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON6">
+                MarsAction.UseAction(6, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON7">
+                MarsAction.UseAction(7, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON8">
+                MarsAction.UseAction(8, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON9">
+                MarsAction.UseAction(9, False, False)
+        </Binding>
+        <Binding name="ACTIONBUTTON0">
+                MarsAction.UseAction(0, False, False)
+        </Binding>
+        <Binding name="VOICECONFIG">
+                ToggleVoiceConfig()
+        </Binding>
+        <Binding name="PUSHTOTALK" runOnUp="true">
+                MarsVoice.PushToTalk(keystate == "down")
+        </Binding>
+</Bindings>

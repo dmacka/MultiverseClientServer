@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>shield_Mesh</Name>
+  <Description>Shield</Description>
+  <Type>Mesh</Type>
+  <Category>Props</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\shield.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\shield_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

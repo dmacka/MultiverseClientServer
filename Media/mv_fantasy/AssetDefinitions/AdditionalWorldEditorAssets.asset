@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>AdditionalWorldEditorAssets</Name>
+  <Type>Other</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>GpuPrograms\Compound_Basic_Skinned.cg</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\Multiverse.program</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

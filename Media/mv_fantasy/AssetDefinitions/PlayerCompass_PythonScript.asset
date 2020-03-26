@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>PlayerCompass_PythonScript</Name>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts\PlayerCompass.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\compass-rose.png</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

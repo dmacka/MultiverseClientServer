@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>TestProjectile_PythonScript</Name>
+  <Type>Python Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts\TestProjectile.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\fireball-projectile_ParticleScript.asset</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

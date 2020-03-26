@@ -1,0 +1,34 @@
+// CG Vertex shader definition
+vertex_program MVSimpleLighting_VS cg
+{
+    source MVSimpleLighting.cg
+    entry_point vsSimpleLighting	
+    profiles vs_1_1
+
+    default_params					
+    {
+        param_named_auto worldViewProj      worldviewproj_matrix
+
+        param_named_auto LightDiffuse[0] light_diffuse_colour 0
+        param_named_auto LightDiffuse[1] light_diffuse_colour 1
+        
+        param_named_auto LightPosition[0] light_position_object_space 0
+        param_named_auto LightPosition[1] light_position_object_space 1
+
+        param_named_auto LightAttenuation[0] light_attenuation 0
+        param_named_auto LightAttenuation[1] light_attenuation 1
+
+        param_named_auto lightAmbient ambient_light_colour
+		
+        param_named_auto fogSettings fog_params
+    }
+}
+
+// CG Pixel shader definition
+fragment_program MVSimpleLighting_PS cg			
+{
+    source MVSimpleLighting.cg
+    entry_point psSimpleLighting
+    profiles ps_1_1
+}
+

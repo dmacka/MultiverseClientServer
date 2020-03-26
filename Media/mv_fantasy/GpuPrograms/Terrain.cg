@@ -1,0 +1,482 @@
+struct TerrainVSOutput
+{
+	// transformed vertex coordinate
+	float4	position				: POSITION;
+	
+	// lighting intensity color multiplier
+	float4	color					: COLOR0;
+	
+	// texture coordinate from vertex
+	float2	texCoord				: TEXCOORD0;
+	
+	// coverage values used for splatting
+	float4	coverage				: TEXCOORD1;
+	
+	// texture coordinate from vertex that has been scaled
+	float2	scaledTexCoord			: TEXCOORD2;
+	
+	// world coordinates of the vertex (one unit per meter)
+	float2	worldTexCoord			: TEXCOORD3;
+	
+	// world coordinates of the vertex (one unit per page)
+	float2	worldPageTexCoord		: TEXCOORD4;
+	
+	// offset of the vertex within the current terrain page (one unit per page, so its limited to 0..1)
+	float2	pageTexCoord			: TEXCOORD5;
+	
+	// fog factor
+	float4  fog						: FOG;
+};
+
+// Vertex program for automatic terrain texture generation
+TerrainVSOutput TerrainVP
+(
+	float4				iPosition			: POSITION,
+	float3				iNormal				: NORMAL,
+	float2				iTexcoord			: TEXCOORD0,
+
+	// the full World/View/Proj combined matrix
+	uniform float4x4	worldViewProj,
+	
+	// Just the world matrix.  Used to find the world coordinates of the vertices for generating
+	// some texture coordinates
+	uniform float4x4	worldMat,
+	
+	// Terrain Splatting settings
+	//	splatConfig[0] - sand to grass cut over
+	//	splatConfig[1] - grass to rock cut over
+	//	splatConfig[2] - rock to snow cut over
+	uniform float4		splatConfig,
+	
+	// Fog settings
+	//	fogSettings[0] - fog near distance
+	//	fogSettings[1] - fog far distance
+	//	fogSettings[2] - fog scale
+	uniform float4		fogSettings,
+
+    uniform float4		LightPosition[2],
+    uniform float4		LightAttenuation[2],
+	
+	// Diffuse color of the light
+	uniform float4		LightDiffuse[2],
+	
+	// Color of the ambient light
+	uniform float4		lightAmbient,
+	
+	// Diffuse color of the terrain
+	uniform float4		materialDiffuse,
+	
+	// Ambient color of the terrain
+	uniform float4		materialAmbient,
+	
+	// Size of a terrain page
+	uniform float		pageSize,
+	
+	// How many meters is one tiling of the terrain textures
+	uniform float		textureTileSize
+)
+{
+
+	TerrainVSOutput output;
+	
+	//
+	// Compute contribution of each of the four terrain textures based on the altitude
+	// and surface normal of the vertex.
+	//	
+	
+	// add more rock for steep slopes
+    float no_rock_factor = clamp (iNormal.y, 0.0, 1.0);
+
+    // SAND  < splatConfig[0]
+	output.coverage.x = (iPosition.y < splatConfig[0])?
+                    clamp ((1.0 - (iPosition.y / splatConfig[0])) * no_rock_factor, 0.0, 1.0)
+                :
+                    0.0;
+
+    //  splatConfig[0] < GRASS < splatConfig[0]
+	output.coverage.y = (iPosition.y < splatConfig[0])?
+                        clamp ((iPosition.y / splatConfig[0])  * no_rock_factor, 0.0, 1.0)
+                    :
+                       ((iPosition.y < splatConfig[1])?
+                            clamp ((1.0 - (iPosition.y - splatConfig[0]) / (splatConfig[1] - splatConfig[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            0.0);
+
+
+    //  splatConfig[0] < ROCK < splatConfig[0]
+	output.coverage.z = (iPosition.y > splatConfig[0])?
+                        ((iPosition.y < splatConfig[1])?
+                            clamp (((iPosition.y - splatConfig[0]) / (splatConfig[1] - splatConfig[0])) * no_rock_factor, 0.0, 1.0)
+                        :
+                            clamp ((1.0 - (iPosition.y - splatConfig[1]) / (splatConfig[2] - splatConfig[1])) * no_rock_factor, 0.0, 1.0))
+                    :
+                        0.0;
+
+
+    //  splatConfig[1] < SNOW <
+	output.coverage.w = (iPosition.y > splatConfig[1])?
+                        clamp (((iPosition.y - splatConfig[1]) / (splatConfig[2] - splatConfig[1])) * no_rock_factor, 0.0, 1.0)
+                    :
+                        0.0;
+
+	// add more rock for steep slopes
+    float rock_factor = 1.0 - no_rock_factor;
+    output.coverage.z = clamp (output.coverage.z + rock_factor, 0.0, 1.0);
+
+    // Calculate the output position and texture coordinates
+	output.position  = mul(worldViewProj,iPosition);
+	output.texCoord = float2(iPosition.x, iPosition.z)/pageSize;
+    output.scaledTexCoord = output.texCoord * 256.0f / textureTileSize;        
+    
+    float3 lightDirection[2];
+    float lightAttenuation[2];
+      
+    // transform position to world space
+    float4 position = mul(worldMat, iPosition);
+    
+	// get the light and eye direction in world space (not normalized)
+    for (int lightIndex = 0; lightIndex < 2; ++lightIndex) {
+        float4 lightPosition = mul(worldMat, LightPosition[lightIndex]);
+
+        // Account for whether the light is a point source.
+        lightDirection[lightIndex] = lightPosition.xyz - (position * lightPosition.w).xyz;
+        // set up attenuation params
+        float lightDistance = length(lightDirection[lightIndex]);
+        float lightDistanceSquared = lightDistance * lightDistance;
+
+        //lightDistance = 1;
+        //LightAttenuation[1].x = 0;
+
+        lightAttenuation[lightIndex] = (lightDistance >
+                                        LightAttenuation[lightIndex].x) ?
+            0 : (1 / (LightAttenuation[lightIndex].y +
+                      LightAttenuation[lightIndex].z * lightDistance +
+                      LightAttenuation[lightIndex].w * lightDistanceSquared));
+    }
+    
+    // Do lighting calculations
+    output.color = saturate(
+					max(dot(iNormal, normalize(lightDirection[0])), 0) *							// diffuse lighting
+					LightDiffuse[0] * materialDiffuse * lightAttenuation[0] +	// diffuse color
+					max(dot(iNormal, normalize(lightDirection[1])), 0) *							// diffuse lighting
+					LightDiffuse[1] * materialDiffuse * lightAttenuation[1] +	// diffuse color
+					lightAmbient * materialAmbient);								// ambient color
+
+	// compute page relative offset of vertex, for use as a texture coord
+	output.pageTexCoord = fmod( float2(worldMat._m03, worldMat._m23), float2(pageSize, pageSize) );
+	if ( output.pageTexCoord.x < 0 ) {
+		output.pageTexCoord.x += pageSize;
+	}
+	if ( output.pageTexCoord.y < 0 ) {
+		output.pageTexCoord.y += pageSize;
+	}	
+	output.pageTexCoord = ( output.pageTexCoord + float2(iPosition.x, iPosition.z) ) / pageSize;
+	
+	// compute world world coordinates (just 2d) of vertex, for use as texture coord
+	output.worldTexCoord = ( float2(worldMat._m03, worldMat._m23) + float2(iPosition.x, iPosition.z) );
+	
+	// scale world coords to page size (one unit is one page)
+	output.worldPageTexCoord = output.worldTexCoord / pageSize;
+	
+	// scale world coords to be one unit per meter
+	output.worldTexCoord /= 1000;
+	
+	// compute fog
+	float fog = clamp(( output.position.z - fogSettings[0] ) / (fogSettings[1] - fogSettings[0]),0.0,1.0) * fogSettings[2];
+    output.fog = 1.0 - fog;
+    
+    return output;
+}
+
+//
+// Fragment program for automatic terrain texture generation
+// This fragment program splats 4 different terrain textures, and then applies a shade
+// mask to vary the intensity of the terrain
+//
+float4 TerrainFP(
+    // output of vertex shader
+	TerrainVSOutput In,
+	
+	// sand
+    uniform sampler2D   textureUnit0,
+    
+    // grass
+    uniform sampler2D   textureUnit1,
+    
+    // rock
+    uniform sampler2D   textureUnit2,
+    
+    // snow
+    uniform sampler2D   textureUnit3,
+    
+    // shade mask
+    uniform sampler2D	textureUnit4
+    
+) : COLOR
+{
+	float4 outputColor;
+	
+	// compute color of the texture splat
+	outputColor = (tex2D(textureUnit0, In.scaledTexCoord.xy) * In.coverage.x) + 
+					(tex2D(textureUnit1, In.scaledTexCoord.xy) * In.coverage.y) + 
+					(tex2D(textureUnit2, In.scaledTexCoord.xy) * In.coverage.z) + 
+					(tex2D(textureUnit3, In.scaledTexCoord.xy) * In.coverage.w);
+	
+	// scale output color by the color from the vertex shader, which is the
+	// output of the lighting calculations
+	outputColor *= In.color;
+	
+	// retrieve weight from the terrain shading texture
+	float weight = tex2D(textureUnit4, In.worldPageTexCoord).a;
+	
+	// multiply by 2 so that the range is centered on 1.0
+	weight = weight * 2;
+	
+	// scale color by the weight computed from the shading texture
+	outputColor = outputColor * weight;	
+	
+	return outputColor;
+}
+
+
+float4 TerrainColorizedHilightFP(
+	// output of vertex shader
+	TerrainVSOutput In,
+	
+	uniform float4		hilightColor,
+
+	// sand
+    uniform sampler2D   textureUnit0,
+    
+    // grass
+    uniform sampler2D   textureUnit1,
+    
+    // rock
+    uniform sampler2D   textureUnit2,
+    
+    // snow
+    uniform sampler2D   textureUnit3,
+    
+    // shade mask
+    uniform sampler2D	textureUnit4,
+    
+    // hilight mask
+    uniform sampler2D	textureUnit5,
+    
+    // hilight texture
+    uniform sampler2D	textureUnit6
+) : COLOR
+{
+	float4 outputColor;
+	
+	// compute color of the texture splat
+	outputColor = (tex2D(textureUnit0, In.scaledTexCoord.xy) * In.coverage.x) + 
+					(tex2D(textureUnit1, In.scaledTexCoord.xy) * In.coverage.y) + 
+					(tex2D(textureUnit2, In.scaledTexCoord.xy) * In.coverage.z) + 
+					(tex2D(textureUnit3, In.scaledTexCoord.xy) * In.coverage.w);
+	
+	// scale output color by the color from the vertex shader, which is the
+	// output of the lighting calculations
+	outputColor *= In.color;
+	
+	// retrieve weight from the terrain shading texture
+	float weight = tex2D(textureUnit4, In.worldPageTexCoord).a;
+	
+	// multiply by 2 so that the range is centered on 1.0
+	weight = weight * 2;
+	
+	// scale color by the weight computed from the shading texture
+	outputColor = outputColor * weight;	
+
+	// compute hilight weight by scaling hilight texture by the hilight mask texture
+	float hilightWeight = tex2D(textureUnit6, In.worldTexCoord).r * tex2D(textureUnit5, In.pageTexCoord).a;
+	
+	// output color is a blend of hilight color and previous pixel color
+	outputColor = hilightColor * hilightWeight + outputColor * ( 1 - hilightWeight);
+	
+	return outputColor;
+}
+
+float4 TerrainEdgeBlendHilightFP(
+	// output of vertex shader
+	TerrainVSOutput In,
+
+	// sand
+    uniform sampler2D   textureUnit0,
+    
+    // grass
+    uniform sampler2D   textureUnit1,
+    
+    // rock
+    uniform sampler2D   textureUnit2,
+    
+    // snow
+    uniform sampler2D   textureUnit3,
+    
+    // shade mask
+    uniform sampler2D	textureUnit4,
+    
+    // hilight mask
+    uniform sampler2D	textureUnit5,
+    
+    // hilight texture
+    uniform sampler2D	textureUnit6
+) : COLOR
+{
+	float4 outputColor;
+	
+	// compute color of the texture splat
+	outputColor = (tex2D(textureUnit0, In.scaledTexCoord.xy) * In.coverage.x) + 
+					(tex2D(textureUnit1, In.scaledTexCoord.xy) * In.coverage.y) + 
+					(tex2D(textureUnit2, In.scaledTexCoord.xy) * In.coverage.z) + 
+					(tex2D(textureUnit3, In.scaledTexCoord.xy) * In.coverage.w);
+	
+	// retrieve weight from the terrain shading texture
+	float weight = tex2D(textureUnit4, In.worldPageTexCoord).a;
+	
+	// multiply by 2 so that the range is centered on 1.0
+	weight = weight * 2;
+	
+	// compute hilight weight by scaling hilight texture by the hilight mask texture
+	float hilightWeight = tex2D(textureUnit5, In.pageTexCoord).a;
+	
+	// hilight color comes from hilight texture
+	float4 hilightColor = tex2D(textureUnit6, In.worldTexCoord);
+	
+	// output color is a blend of hilight color and previous pixel color
+	outputColor = hilightColor * hilightWeight + outputColor * ( 1 - hilightWeight);
+	
+	// scale color by the weight computed from the shading texture
+	outputColor = outputColor * weight;	
+	
+	// scale output color by the color from the vertex shader, which is the
+	// output of the lighting calculations
+	outputColor *= In.color;
+	
+	return outputColor;
+}
+
+
+float4 TerrainEdgeSharpHilightFP(
+	// output of vertex shader
+	TerrainVSOutput In,
+
+	// sand
+    uniform sampler2D   textureUnit0,
+    
+    // grass
+    uniform sampler2D   textureUnit1,
+    
+    // rock
+    uniform sampler2D   textureUnit2,
+    
+    // snow
+    uniform sampler2D   textureUnit3,
+    
+    // shade mask
+    uniform sampler2D	textureUnit4,
+    
+    // hilight mask
+    uniform sampler2D	textureUnit5,
+    
+    // hilight texture
+    uniform sampler2D	textureUnit6
+) : COLOR
+{
+	float4 outputColor;
+	
+	// compute color of the texture splat
+	outputColor = (tex2D(textureUnit0, In.scaledTexCoord.xy) * In.coverage.x) + 
+					(tex2D(textureUnit1, In.scaledTexCoord.xy) * In.coverage.y) + 
+					(tex2D(textureUnit2, In.scaledTexCoord.xy) * In.coverage.z) + 
+					(tex2D(textureUnit3, In.scaledTexCoord.xy) * In.coverage.w);
+	
+	// retrieve weight from the terrain shading texture
+	float weight = tex2D(textureUnit4, In.worldPageTexCoord).a;
+	
+	// multiply by 2 so that the range is centered on 1.0
+	weight = weight * 2;
+	
+	// compute hilight weight by scaling hilight texture by the hilight mask texture
+	float hilightWeight = tex2D(textureUnit5, In.pageTexCoord).a;
+	
+	// hilight color comes from hilight texture
+	float4 hilightColor = tex2D(textureUnit6, In.worldTexCoord);
+
+	// substitute the hilight color for the splatted terrain color
+	if ( hilightWeight > 0.5 ) {
+		outputColor = hilightColor;
+	}
+
+	// scale color by the weight computed from the shading texture
+	outputColor = outputColor * weight;	
+	
+	// scale output color by the color from the vertex shader, which is the
+	// output of the lighting calculations
+	outputColor *= In.color;
+		
+	return outputColor;
+}
+
+float4 TerrainEdgeSharpBlendHilightFP(
+	// output of vertex shader
+	TerrainVSOutput In,
+
+	// sand
+    uniform sampler2D   textureUnit0,
+    
+    // grass
+    uniform sampler2D   textureUnit1,
+    
+    // rock
+    uniform sampler2D   textureUnit2,
+    
+    // snow
+    uniform sampler2D   textureUnit3,
+    
+    // shade mask
+    uniform sampler2D	textureUnit4,
+    
+    // hilight mask
+    uniform sampler2D	textureUnit5,
+    
+    // hilight texture
+    uniform sampler2D	textureUnit6
+) : COLOR
+{
+	float4 outputColor;
+	
+	// compute color of the texture splat
+	outputColor = (tex2D(textureUnit0, In.scaledTexCoord.xy) * In.coverage.x) + 
+					(tex2D(textureUnit1, In.scaledTexCoord.xy) * In.coverage.y) + 
+					(tex2D(textureUnit2, In.scaledTexCoord.xy) * In.coverage.z) + 
+					(tex2D(textureUnit3, In.scaledTexCoord.xy) * In.coverage.w);
+	
+	// retrieve weight from the terrain shading texture
+	float weight = tex2D(textureUnit4, In.worldPageTexCoord).a;
+	
+	// multiply by 2 so that the range is centered on 1.0
+	weight = weight * 2;
+	
+	// compute hilight weight by scaling hilight texture by the hilight mask texture
+	float hilightWeight = tex2D(textureUnit5, In.pageTexCoord).a;
+	
+	// make a sharper cutoff for the blend effect
+	hilightWeight = clamp(hilightWeight * 2, 0, 1);
+	
+	// hilight color comes from hilight texture
+	float4 hilightColor = tex2D(textureUnit6, In.worldTexCoord);
+	
+	// output color is a blend of hilight color and previous pixel color
+	outputColor = hilightColor * hilightWeight + outputColor * ( 1 - hilightWeight);
+	
+	// scale color by the weight computed from the shading texture
+	outputColor = outputColor * weight;	
+	
+	// scale output color by the color from the vertex shader, which is the
+	// output of the lighting calculations
+	outputColor *= In.color;
+	
+	return outputColor;
+}
+

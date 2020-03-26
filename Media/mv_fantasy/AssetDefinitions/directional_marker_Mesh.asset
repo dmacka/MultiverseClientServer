@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>directional_marker_Mesh</Name>
+  <Description>directional_marker</Description>
+  <Type>Mesh</Type>
+  <Category>Misc</Category>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\directional_marker.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\directional_marker_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

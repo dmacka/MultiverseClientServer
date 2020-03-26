@@ -1,0 +1,12 @@
+<physics_model>
+  <rigid_body sid="corner_sq-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.002794495 0.03425251 0.02132398</translate>
+        <box>
+          <half_extents>0.5401095 0.3209855 0.5469201</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>
