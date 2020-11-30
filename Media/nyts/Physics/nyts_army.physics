@@ -1,0 +1,19 @@
+<physics_model>
+  <rigid_body sid="nyts_army_building-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0.01385425 3.223591 0.04661328</translate>
+        <box>
+          <half_extents>3.012249 3.524434 6.717111</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1 0 0 2.999965</rotate>
+        <translate>0.01385449 -0.3031569 -8.774344</translate>
+        <box>
+          <half_extents>2.789119 0.1762216 2.542385</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

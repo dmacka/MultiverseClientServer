@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_smoke_ParticleScript</Name>
+  <Description>nyts_smoke</Description>
+  <Type>Particle Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Particles\nyts_smoke.particle</TargetFile>
+      <FileType>ParticleScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\nyts_smoke_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="AssetName" value="nyts_smoke" />
+  </Properties>
+</AssetDefinition>

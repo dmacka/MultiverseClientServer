@@ -1,8 +1,0 @@
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\bin\x86\Debug\UserCommand.dll
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\bin\x86\Debug\UserCommand.pdb
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\bin\x86\Debug\log4net.dll
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\obj\x86\Debug\UserCommand.csprojResolveAssemblyReference.cache
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\obj\x86\Debug\Multiverse.ToolBox.UserCommandEditor.resources
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\obj\x86\Debug\UserCommand.csproj.GenerateResource.Cache
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\obj\x86\Debug\UserCommand.dll
-D:\Multiverse\src-v1\Lib\UserCommand\UserCommand\obj\x86\Debug\UserCommand.pdb

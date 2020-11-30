@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_police_Material</Name>
+  <Description>nyts_police</Description>
+  <Category>Buildings</Category>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nyts_police.material</TargetFile>
+      <NewFileName />
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\00EmissiveBuilding_Material.asset</TargetFile>
+      <NewFileName />
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_window.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_police_building_diff.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_police_building_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_police_building_specular.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_normal.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_specular.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

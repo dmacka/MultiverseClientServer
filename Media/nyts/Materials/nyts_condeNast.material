@@ -1,0 +1,148 @@
+material nyts_condeNast.ticker
+{
+    technique
+    {
+        pass
+        {
+	    lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.50000 0.50000 0.50000 1.00000
+
+            texture_unit
+            {
+                texture nyts_scrolling.dds
+                tex_coord_set 0
+                scroll_anim -0.25 0
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}
+
+material nyts_condeNast.building : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_condenast_building_diff.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap nyts_condenast_building_specular.dds
+    set_texture_alias EmissiveMap nyts_condenast_building_emissive.dds
+}
+
+material nyts_condeNast.windows
+{
+    technique
+    {
+        pass
+        {
+
+	    lighting off
+            fog_override false
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.50000 0.50000 0.50000 1.00000
+
+		alpha_rejection greater_equal 128
+
+            texture_unit
+            {
+                texture nyts_condenast_windows_diff.dds
+            }
+        }
+    }
+}
+material nyts_condeNast.billboards : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_condenast_billboards_diff.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap nyts_condenast_billboards_emissive.dds
+}
+
+material nyts_condeNast.video
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+               texture_source mvMovie
+               {
+                       name condeNast_Video
+                       codec DirectShow
+                       path MyntMinute5-clip.wmv
+                       looping true
+               }
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material nyts_condeNast.anim_billboard
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.50000 0.50000 0.50000 1.00000
+            texture_unit
+            {
+                anim_texture nyts_condenast_anim_billboards.dds 3 2.5
+                tex_coord_set 0
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}
+material nyts_condeNast.glass
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+                scene_blend alpha_blend
+            	depth_write off
+            	depth_check on
+     
+            texture_unit
+            {
+                texture nyts_window.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

@@ -41,9 +41,9 @@ namespace AssetImporter
     public partial class Importer : Form
     {
         private int genOffset = 0;
-        private string baseHelpURL = "http://update.multiverse.net/wiki/index.php/Using_Asset_Importer_Version_1.5";
-        private string baseReleaseNoteURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
-        private string feedbackURL = "http://update.multiverse.net/custportal/login.php";
+        private string baseHelpURL = "http://192.168.1.6/wiki/index.php/Using_Asset_Importer_Version_1.5";
+        private string baseReleaseNoteURL = "http://192.168.1.6/wiki/index.php/Tools_Version_1.5_Release_Notes";
+        private string feedbackURL = "http://192.168.1.6/custportal/login.php";
         
         public Importer()
         {

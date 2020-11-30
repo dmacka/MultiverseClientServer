@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.21022</ProductVersion>
@@ -27,21 +27,6 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -91,6 +76,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <FileAlignment>4096</FileAlignment>
     <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
@@ -101,6 +87,7 @@
     <Optimize>true</Optimize>
     <FileAlignment>4096</FileAlignment>
     <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
@@ -193,7 +180,7 @@
       <Name>Multiverse.Lib.LogUtil</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Lib\SpeexWrapper\SpeexWrapper.csproj">
-      <Project>{3D0CCD1B-DEA7-4AE6-85D3-E65C561C1005}</Project>
+      <Project>{3d0ccd1b-dea7-4ae6-85d3-e65c561c1005}</Project>
       <Name>SpeexWrapper</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Lib\TextureFetcher\Multiverse.Lib.TextureFetcher.csproj">
@@ -201,7 +188,7 @@
       <Name>Multiverse.Lib.TextureFetcher</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Lib\Voice\Multiverse.Voice.csproj">
-      <Project>{E05497AA-2C38-4716-880E-CF934BF2C47A}</Project>
+      <Project>{e05497aa-2c38-4716-880e-cf934bf2c47a}</Project>
       <Name>Multiverse.Voice</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\mvsm\Axiom.SceneManagers.Multiverse.csproj">
@@ -350,13 +337,6 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <PropertyGroup>

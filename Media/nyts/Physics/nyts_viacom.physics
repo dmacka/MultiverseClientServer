@@ -1,0 +1,71 @@
+<physics_model>
+  <rigid_body sid="nyts_viacom_building-lib.0">
+    <technique_common>
+      <shape>
+        <translate>30.14846 18.46136 -0.313666</translate>
+        <box>
+          <half_extents>22.21857 18.46136 25.72746</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>42.51336 17.48334 32.35312</translate>
+        <box>
+          <half_extents>0.4766914 3.266401 0.2717149</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>3.492174E-07 -1 -5.289761E-08 13.45366</rotate>
+        <translate>42.00147 18.46136 27.21403</translate>
+        <box>
+          <half_extents>2.852972 18.46136 3.352226</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>17.60894 5.814957 33.57964</translate>
+        <box>
+          <half_extents>20.57384 2.733413 2.525067</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.569987E-07 1 1.544624E-07 23.9306</rotate>
+        <translate>38.08576 5.814956 33.38522</translate>
+        <box>
+          <half_extents>1.014429 2.733413 2.525067</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.562269E-08 1 -2.417168E-08 43.33089</rotate>
+        <translate>39.0424 5.814957 32.74889</translate>
+        <box>
+          <half_extents>1.014429 2.733414 2.525067</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -0.9999999 0 23.6477</rotate>
+        <translate>39.60688 5.814957 31.94744</translate>
+        <box>
+          <half_extents>2.525067 2.733414 1.014427</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>20.8156 18.41401 31.68527</translate>
+        <box>
+          <half_extents>23.78049 18.5087 0.5472383</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>20.8156 18.41401 -32.31673</translate>
+        <box>
+          <half_extents>23.78049 18.5087 0.5472383</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.557414E-07 0.9999999 2.644877E-08 12.56095</rotate>
+        <translate>41.78581 18.46136 -28.76832</translate>
+        <box>
+          <half_extents>2.852969 18.46136 3.352227</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>LES_car_taxi_Material</Name>
+  <Description>LES_car_taxi</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\LES_car_taxi.material</TargetFile>
+      <NewFileName />
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\00EmissiveBuilding_Material.asset</TargetFile>
+      <NewFileName />
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\LES_car_taxi_diffuse.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_normal.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\LES_car_taxi_specular.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\LES_car_taxi_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

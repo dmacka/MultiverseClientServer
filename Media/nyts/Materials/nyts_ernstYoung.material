@@ -1,0 +1,42 @@
+material nyts_ernstYoung.building
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture nyts_ernstyoung_building.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material nyts_ernstYoung.billboard
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  0.58800 0.58800 0.58800 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.50000 0.50000 0.50000 1.00000
+
+            texture_unit
+            {
+                texture nyts_ernstyoung_billboard.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

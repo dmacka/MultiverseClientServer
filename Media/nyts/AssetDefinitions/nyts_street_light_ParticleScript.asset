@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_street_light_ParticleScript</Name>
+  <Description>nyts_street_light</Description>
+  <Type>Particle Script</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Particles\nyts_street_light.particle</TargetFile>
+      <FileType>ParticleScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\nyts_particle_street_light_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+  <Properties>
+    <Property name="AssetName" value="nyts_street_light" />
+  </Properties>
+</AssetDefinition>

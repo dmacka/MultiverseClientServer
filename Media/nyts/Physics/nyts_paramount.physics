@@ -1,0 +1,18 @@
+<physics_model>
+  <rigid_body sid="nyts_paramount_building-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.1528418 12.5 -0.003542969</translate>
+        <box>
+          <half_extents>26.4415 12.5 30.60444</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>28.89406 5.624411 19.35107</translate>
+        <box>
+          <half_extents>3.276772 2.75 6.532348</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

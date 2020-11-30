@@ -1,0 +1,1238 @@
+<physics_model>
+  <rigid_body sid="mvcv_obb_nyts_streets_01-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.9247969 -0.904916 0.6358438</translate>
+        <box>
+          <half_extents>193.299 0.9103106 191.7383</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_02-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-28.94156 0.08124486 -5.94387</translate>
+        <box>
+          <half_extents>5.349534 0.08125244 31.24306</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_03-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-30.64159 0.08124485 -5.845921</translate>
+        <box>
+          <half_extents>3.649498 0.08125245 34.54525</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_04-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-30.64159 0.08124486 74.74767</translate>
+        <box>
+          <half_extents>3.649498 0.08125244 36.14739</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_05-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-28.94156 0.08124486 74.74767</translate>
+        <box>
+          <half_extents>5.349534 0.08125244 32.74725</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_06-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-28.94156 0.08124486 -86.07347</translate>
+        <box>
+          <half_extents>5.349534 0.08125244 31.45256</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_07-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-30.64169 0.08124486 -86.07347</translate>
+        <box>
+          <half_extents>3.6494 0.08125244 34.8527</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_08-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-32.40997 0.08124486 -133.2894</translate>
+        <box>
+          <half_extents>2.572735 0.08125244 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_09-lib.0">
+    <technique_common>
+      <shape>
+        <translate>1.640053 0.03573519 -133.2894</translate>
+        <box>
+          <half_extents>2.572545 0.08125244 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_10-lib.0">
+    <technique_common>
+      <shape>
+        <translate>2.670494 0.03569227 -119.1271</translate>
+        <box>
+          <half_extents>2.119225 0.08125244 1.799078</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_11-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.71993E-07 1 -9.002833E-10 9.999891</rotate>
+        <translate>6.499822 0.03573519 -86.00022</translate>
+        <box>
+          <half_extents>3.790305 0.08125243 32.00563</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_12-lib.0">
+    <technique_common>
+      <shape>
+        <translate>15.01329 0.03573519 -53.08702</translate>
+        <box>
+          <half_extents>3.34684 0.08125244 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_13-lib.0">
+    <technique_common>
+      <shape>
+        <translate>16.2409 0.03573519 -38.59827</translate>
+        <box>
+          <half_extents>2.119224 0.08125244 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_14-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.720182E-07 1 4.980293E-09 9.999891</rotate>
+        <translate>19.97212 0.03573519 -6.270147</translate>
+        <box>
+          <half_extents>3.790304 0.08125245 32.06445</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_15-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.152152E-07 1 3.369808E-10 14.99993</rotate>
+        <translate>36.69595 0.03573519 75.26186</translate>
+        <box>
+          <half_extents>2.933571 0.08125244 34.85843</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_16-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.244181E-07 1 -1.169924E-11 13.87498</rotate>
+        <translate>13.68222 0.05858996 76.11378</translate>
+        <box>
+          <half_extents>2.933571 0.05859755 35.68952</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_17-lib.0">
+    <technique_common>
+      <shape>
+        <translate>1.080928 0.05858996 75.41209</translate>
+        <box>
+          <half_extents>6.876181 0.05859754 34.64635</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_18-lib.0">
+    <technique_common>
+      <shape>
+        <translate>1.080931 0.05858996 75.41286</translate>
+        <box>
+          <half_extents>4.508932 0.05859755 37.01282</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_19-lib.0">
+    <technique_common>
+      <shape>
+        <translate>11.547 0.05858996 107.8534</translate>
+        <box>
+          <half_extents>11.17445 0.05859755 4.57232</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_20-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.716929E-07 0.9999999 -2.694091E-10 9.99997</rotate>
+        <translate>8.340187 0.05858996 83.98105</translate>
+        <box>
+          <half_extents>6.319305 0.05859755 20.78195</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_21-lib.0">
+    <technique_common>
+      <shape>
+        <translate>55.82816 0.03573519 110.2044</translate>
+        <box>
+          <half_extents>9.59818 0.08125244 2.221172</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_22-lib.0">
+    <technique_common>
+      <shape>
+        <translate>59.54751 0.03573519 129.8392</translate>
+        <box>
+          <half_extents>5.220031 0.08125244 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_23-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-29.56493 0.08124486 129.8392</translate>
+        <box>
+          <half_extents>2.57283 0.08125244 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_24-lib.0">
+    <technique_common>
+      <shape>
+        <translate>15.61089 0.03573519 129.8392</translate>
+        <box>
+          <half_extents>16.04063 0.08125243 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_25-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-4.058503 0.06150012 -7.006848</translate>
+        <box>
+          <half_extents>3.421223 0.05703504 31.39071</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_26-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-4.058504 0.06150012 -7.006867</translate>
+        <box>
+          <half_extents>1.053974 0.05703504 33.75795</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_27-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.1332109 0.06150012 25.56748</translate>
+        <box>
+          <half_extents>4.979266 0.05703504 1.183604</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_28-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.397358E-07 1 -3.741115E-09 7.120039</rotate>
+        <translate>2.10936 0.06150011 -6.859635</translate>
+        <box>
+          <half_extents>1.183603 0.05703505 31.63517</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_29-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.402668E-07 1 7.381235E-10 7.11993</rotate>
+        <translate>-0.6493223 0.06150012 2.786299</translate>
+        <box>
+          <half_extents>3.025933 0.05703505 22.40556</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_30-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-6.8318 0.06071887 -66.53879</translate>
+        <box>
+          <half_extents>0.6059546 0.05625379 12.46609</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_31-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.0434E-07 1 -7.60685E-09 8.349995</rotate>
+        <translate>-5.005394 0.06071887 -66.5163</translate>
+        <box>
+          <half_extents>0.592986 0.05625379 12.66395</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_32-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.505853E-07 1 -5.436438E-09 6.798527</rotate>
+        <translate>-5.434766 0.06071887 -57.66351</translate>
+        <box>
+          <half_extents>1.32796 0.05625379 3.552296</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_33-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.346149E-07 -1 -1.559811E-08 7.500072</rotate>
+        <translate>-5.165866 0.06071886 -52.87886</translate>
+        <box>
+          <half_extents>0.3170551 0.05625379 1.204136</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_34-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>8.086545E-08 -1 -5.350022E-10 22.50002</rotate>
+        <translate>-5.4695 0.06071886 -52.96022</translate>
+        <box>
+          <half_extents>0.3170549 0.0562538 1.204136</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_35-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.901191E-08 -1 2.400953E-10 37.50002</rotate>
+        <translate>-5.74173 0.06071886 -53.11739</translate>
+        <box>
+          <half_extents>0.3170548 0.0562538 1.204136</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_36-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>5.036789E-08 1 7.081545E-10 37.50013</rotate>
+        <translate>-5.964005 0.06071886 -53.33967</translate>
+        <box>
+          <half_extents>1.204136 0.0562538 0.3170556</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_37-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>7.076595E-08 1 6.529377E-09 22.50002</rotate>
+        <translate>-6.121177 0.06071886 -53.6119</translate>
+        <box>
+          <half_extents>1.204137 0.0562538 0.3170545</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_38-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.773363E-07 1 -1.203183E-08 7.499968</rotate>
+        <translate>-6.202535 0.06071887 -53.91553</translate>
+        <box>
+          <half_extents>1.204137 0.05625379 0.3170563</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_39-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.34615E-07 1 1.559811E-08 7.500072</rotate>
+        <translate>-4.851523 0.06071886 -52.87886</translate>
+        <box>
+          <half_extents>0.3170551 0.05625379 1.204136</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_40-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>6.918189E-08 -1 -2.705384E-09 22.50009</rotate>
+        <translate>-3.896209 0.06071886 -53.6119</translate>
+        <box>
+          <half_extents>1.204137 0.0562538 0.3170563</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_41-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>5.036786E-08 -1 -7.084105E-10 37.49998</rotate>
+        <translate>-4.053382 0.06071886 -53.33967</translate>
+        <box>
+          <half_extents>1.204135 0.0562538 0.3170571</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_42-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.901231E-08 1 -2.399049E-10 37.49988</rotate>
+        <translate>-4.275658 0.06071886 -53.11739</translate>
+        <box>
+          <half_extents>0.3170543 0.05625379 1.204137</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_43-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>8.086553E-08 1 5.349517E-10 22.50002</rotate>
+        <translate>-4.547889 0.06071886 -52.96022</translate>
+        <box>
+          <half_extents>0.3170554 0.0562538 1.204136</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_44-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.789204E-07 -1 -2.242708E-13 7.499968</rotate>
+        <translate>-3.81485 0.06071887 -53.91553</translate>
+        <box>
+          <half_extents>1.204137 0.05625379 0.3170563</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_45-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.929632E-07 -1 2.539813E-08 7.499132</rotate>
+        <translate>-6.792594 0.06071886 -79.30266</translate>
+        <box>
+          <half_extents>0.07908521 0.0562538 0.3003586</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_46-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>6.132238E-08 -1 2.540126E-08 22.50019</rotate>
+        <translate>-6.716857 0.06071886 -79.28236</translate>
+        <box>
+          <half_extents>0.0790873 0.0562538 0.3003631</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_47-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>3.31032E-08 -0.9999999 2.540109E-08 37.50011</rotate>
+        <translate>-6.648952 0.06071886 -79.24316</translate>
+        <box>
+          <half_extents>0.07908841 0.0562538 0.3003601</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_48-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>5.048121E-08 1 7.09479E-10 37.50026</rotate>
+        <translate>-6.593508 0.06071886 -79.18772</translate>
+        <box>
+          <half_extents>0.3003562 0.0562538 0.07908823</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_49-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.228026E-07 0.9999999 -3.290534E-08 22.50033</rotate>
+        <translate>-6.554304 0.06071886 -79.11982</translate>
+        <box>
+          <half_extents>0.3003563 0.0562538 0.07908653</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_50-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.831837E-07 1 -2.411574E-08 7.500176</rotate>
+        <translate>-6.53401 0.06071887 -79.04408</translate>
+        <box>
+          <half_extents>0.300357 0.0562538 0.07907896</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_51-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.929656E-07 1 -2.539845E-08 7.499132</rotate>
+        <translate>-6.871003 0.06071886 -79.30266</translate>
+        <box>
+          <half_extents>0.07908569 0.0562538 0.3003587</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_52-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.291501E-07 -1 1.757271E-08 22.49981</rotate>
+        <translate>-7.109295 0.06071887 -79.11982</translate>
+        <box>
+          <half_extents>0.3003573 0.05625379 0.07908643</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_53-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>5.048119E-08 -1 -7.094788E-10 37.50026</rotate>
+        <translate>-7.07009 0.06071886 -79.18772</translate>
+        <box>
+          <half_extents>0.3003562 0.0562538 0.07908837</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_54-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>3.310323E-08 1 -2.540111E-08 37.50007</rotate>
+        <translate>-7.014647 0.06071886 -79.24316</translate>
+        <box>
+          <half_extents>0.07908823 0.0562538 0.3003601</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_55-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>6.132246E-08 1 -2.540129E-08 22.50019</rotate>
+        <translate>-6.946742 0.06071886 -79.28236</translate>
+        <box>
+          <half_extents>0.07908754 0.0562538 0.3003628</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_56-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>1.895406E-07 -1 -2.411659E-08 7.499863</rotate>
+        <translate>-7.129589 0.06071887 -79.04408</translate>
+        <box>
+          <half_extents>0.3003578 0.05625379 0.07908287</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_57-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.283995E-08 1 -1.58706E-09 44.9999</rotate>
+        <translate>-28.98718 0.08124486 -133.8395</translate>
+        <box>
+          <half_extents>2.404265 0.08125244 1.20209</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_58-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.442644E-08 -0.9999999 5.104005E-13 44.99997</rotate>
+        <translate>-1.782918 0.03573519 -133.8395</translate>
+        <box>
+          <half_extents>2.404254 0.08125243 1.202095</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_59-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.93752E-08 -1 -2.558243E-09 39.49998</rotate>
+        <translate>-0.2972422 0.03573519 -118.1914</translate>
+        <box>
+          <half_extents>1.077978 0.08125244 2.630941</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_60-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.44266E-08 1 5.614414E-13 44.99995</rotate>
+        <translate>-26.14204 0.08124486 -118.3761</translate>
+        <box>
+          <half_extents>1.2021 0.08125244 2.404257</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_61-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>6.569232E-10 1 1.774434E-08 225</rotate>
+        <translate>-26.14209 0.08124481 -53.7709</translate>
+        <box>
+          <half_extents>2.404259 0.08125244 1.202169</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_62-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.442527E-08 1 -6.890021E-13 44.99999</rotate>
+        <translate>-26.14208 0.08124486 -38.03689</translate>
+        <box>
+          <half_extents>1.202166 0.08125245 2.404258</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_63-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>6.569232E-10 1 1.774434E-08 225</rotate>
+        <translate>-26.14209 0.08124486 26.1492</translate>
+        <box>
+          <half_extents>2.404259 0.08125244 1.202169</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_64-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.442531E-08 0.9999999 -7.145214E-13 44.99997</rotate>
+        <translate>-26.14209 0.08124486 41.15041</translate>
+        <box>
+          <half_extents>1.202169 0.08125245 2.40426</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_65-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.283871E-08 -0.9999999 -1.585978E-09 44.99997</rotate>
+        <translate>-26.14209 0.08124486 108.3449</translate>
+        <box>
+          <half_extents>1.202166 0.08125244 2.404257</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_66-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.442524E-08 -1 -7.655572E-13 44.99999</rotate>
+        <translate>-26.14209 0.08124486 130.3893</translate>
+        <box>
+          <half_extents>2.404256 0.08125245 1.202166</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_67-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.283855E-08 -1 -1.585927E-09 44.99999</rotate>
+        <translate>-1.279704 0.03573519 130.3893</translate>
+        <box>
+          <half_extents>1.202169 0.08125244 2.40426</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_68-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.442524E-08 -1 -7.655572E-13 44.99999</rotate>
+        <translate>32.50148 0.03573519 130.3893</translate>
+        <box>
+          <half_extents>2.404256 0.08125245 1.202166</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_69-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.283856E-08 1 -1.585928E-09 44.99999</rotate>
+        <translate>53.47752 0.03573519 130.3893</translate>
+        <box>
+          <half_extents>2.404261 0.08125244 1.202168</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_70-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.101923E-08 -1 -1.421369E-12 44.99994</rotate>
+        <translate>-4.01978 0.05702746 110.6502</translate>
+        <box>
+          <half_extents>1.673904 0.05703504 0.8370072</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_71-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.215878E-08 1 1.140956E-09 44.9999</rotate>
+        <translate>23.31324 0.05702746 110.6502</translate>
+        <box>
+          <half_extents>1.673904 0.05703505 0.8370059</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_72-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.255589E-08 -1 -1.423203E-09 39.30162</rotate>
+        <translate>45.40192 0.03573656 110.03</translate>
+        <box>
+          <half_extents>2.146591 0.0812538 1.316235</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_73-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.215874E-08 -1 1.140815E-09 44.99997</rotate>
+        <translate>-4.019789 0.0570275 40.174</translate>
+        <box>
+          <half_extents>0.8370094 0.05703504 1.673903</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_74-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.101928E-08 1 -1.353686E-12 44.99995</rotate>
+        <translate>6.181647 0.05702746 40.17398</translate>
+        <box>
+          <half_extents>0.837006 0.05703504 1.673904</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_75-lib.0">
+    <technique_common>
+      <shape>
+        <translate>28.59551 0.03573519 26.69933</translate>
+        <box>
+          <half_extents>3.438106 0.08125244 2</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_76-lib.0">
+    <technique_common>
+      <shape>
+        <translate>30.27443 0.03573519 40.63634</translate>
+        <box>
+          <half_extents>1.929111 0.08125244 1.714125</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_77-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.101925E-08 -1 -1.421372E-12 44.9999</rotate>
+        <translate>-5.704225 0.06150008 24.97563</translate>
+        <box>
+          <half_extents>1.673903 0.05703504 0.8370087</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_78-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.215874E-08 -1 1.140815E-09 44.99997</rotate>
+        <translate>5.447758 0.06150009 24.97562</translate>
+        <box>
+          <half_extents>0.8370079 0.05703504 1.673904</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_79-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.101927E-08 1 -1.353685E-12 44.99997</rotate>
+        <translate>-2.412744 0.06150016 -38.98935</translate>
+        <box>
+          <half_extents>0.8370045 0.05703504 1.673904</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_80-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.215874E-08 -1 1.140815E-09 44.99997</rotate>
+        <translate>-5.704264 0.06150015 -38.98934</translate>
+        <box>
+          <half_extents>0.8370066 0.05703504 1.673905</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_81-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.753049E-08 -1 -7.108292E-10 39.34557</rotate>
+        <translate>10.82478 0.03569223 -53.46265</translate>
+        <box>
+          <half_extents>2.15703 0.08125243 1.325807</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_82-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.290833E-08 -1 -1.666322E-09 44.79513</rotate>
+        <translate>13.27163 0.03576936 -38.05424</translate>
+        <box>
+          <half_extents>1.206424 0.08125243 2.40425</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_83-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.634165E-08 -1 1.80341E-09 39.21985</rotate>
+        <translate>24.32408 0.03576925 26.30104</translate>
+        <box>
+          <half_extents>2.162033 0.08125244 1.302957</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_84-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.287895E-08 1 -1.473604E-09 44.89804</rotate>
+        <translate>27.49227 0.03758625 41.47234</translate>
+        <box>
+          <half_extents>2.40426 0.08125244 1.204271</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_85-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-27.63365 0.08124561 -5.94387</translate>
+        <box>
+          <half_extents>0.08125196 5.349532 31.24306</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_86-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-27.63365 0.08124561 -85.61806</translate>
+        <box>
+          <half_extents>0.08125196 5.349532 31.37705</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_87-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-27.63365 0.08124512 83.54076</translate>
+        <box>
+          <half_extents>0.08125196 5.349532 41.16126</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_88-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-33.49455 0.08124658 33.94527</translate>
+        <box>
+          <half_extents>0.08125 5.349532 10.56765</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_89-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 30.00014</rotate>
+        <translate>-31.8612 0.08124561 39.99126</translate>
+        <box>
+          <half_extents>4.927447 5.349532 0.0812522</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_90-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 1 0 30.0003</rotate>
+        <translate>-31.8617 0.08124512 27.68829</translate>
+        <box>
+          <half_extents>4.927448 5.349533 0.08125147</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_91-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 30.00014</rotate>
+        <translate>-31.8612 0.08124561 -39.54636</translate>
+        <box>
+          <half_extents>4.927447 5.349532 0.0812522</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_92-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>3.909775E-07 1 2.683696E-07 30.00016</rotate>
+        <translate>-31.8617 0.08124561 -51.84933</translate>
+        <box>
+          <half_extents>4.927448 5.349532 0.08125245</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_93-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-33.49455 0.08124658 -45.59235</translate>
+        <box>
+          <half_extents>0.08125 5.349532 10.56765</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_95-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-33.49455 0.08124658 -125.424</translate>
+        <box>
+          <half_extents>0.08125 5.349532 10.56764</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_96-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 -2.07005E-07 29.99985</rotate>
+        <translate>-31.86121 0.08124561 -119.378</translate>
+        <box>
+          <half_extents>4.927447 5.349532 0.08125342</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_97-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>-6.426368E-08 1 2.439134E-07 29.99982</rotate>
+        <translate>4.796281 0.0812461 -119.7586</translate>
+        <box>
+          <half_extents>4.927448 5.349532 0.08124927</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_98-lib.0">
+    <technique_common>
+      <shape>
+        <translate>6.429126 0.08124512 -126.0156</translate>
+        <box>
+          <half_extents>0.08125245 5.349532 10.56766</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_100-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-12.97477 0.0812461 -126.8741</translate>
+        <box>
+          <half_extents>23.39861 5.349531 0.08125781</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_101-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>3.31077E-06 1 -4.255369E-07 9.99997</rotate>
+        <translate>6.132148 1.613617 -85.87666</translate>
+        <box>
+          <half_extents>0.08125196 3.790305 32.00563</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_102-lib.0">
+    <technique_common>
+      <shape>
+        <translate>17.54059 0.08124512 -45.91502</translate>
+        <box>
+          <half_extents>0.08125196 5.349532 10.56765</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_103-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 -1.035072E-07 30.00032</rotate>
+        <translate>15.90725 0.08124561 -51.96102</translate>
+        <box>
+          <half_extents>4.927446 5.349532 0.08125318</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_104-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>-6.426368E-08 1 2.439134E-07 29.99982</rotate>
+        <translate>18.61682 0.0812461 -40.22358</translate>
+        <box>
+          <half_extents>4.927445 5.349532 0.08125245</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_105-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.771484E-06 1 -4.568475E-08 9.99997</rotate>
+        <translate>19.97212 1.613617 -6.270145</translate>
+        <box>
+          <half_extents>0.08125196 3.790305 32.06444</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_106-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.818853E-06 1 -5.29576E-07 14.99993</rotate>
+        <translate>39.52202 2.551575 83.77563</translate>
+        <box>
+          <half_extents>0.08125293 2.933571 43.47961</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_107-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 1.580952E-07 29.99982</rotate>
+        <translate>29.78788 0.08124561 27.68336</translate>
+        <box>
+          <half_extents>4.927445 5.349532 0.08125269</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_108-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 1 0 29.99982</rotate>
+        <translate>32.49746 0.0812461 39.4208</translate>
+        <box>
+          <half_extents>4.927446 5.349532 0.08125245</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_109-lib.0">
+    <technique_common>
+      <shape>
+        <translate>31.42122 0.08124463 33.72935</translate>
+        <box>
+          <half_extents>0.08125196 5.349532 10.56765</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_110-lib.0">
+    <technique_common>
+      <shape>
+        <translate>10.8177 0.08124463 121.6097</translate>
+        <box>
+          <half_extents>42.27111 5.349532 0.08125</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_111-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 44.99951</rotate>
+        <translate>45.16044 0.08124561 119.0421</translate>
+        <box>
+          <half_extents>0.08124683 5.349532 4.927447</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_112-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>4.054705E-07 0.9999999 3.685174E-07 42.00079</rotate>
+        <translate>-24.78988 0.08124561 118.7882</translate>
+        <box>
+          <half_extents>0.08125269 5.349532 4.927444</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_113-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>8.732493E-07 1 -2.742008E-08 1.798363</rotate>
+        <translate>-6.175738 0.3021641 -66.41531</translate>
+        <box>
+          <half_extents>0.6239383 0.3936952 5.564785</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_114-lib.0">
+    <technique_common>
+      <shape>
+        <rotate>2.073272E-07 1 -3.024076E-08 8.298518</rotate>
+        <translate>-5.531707 0.3021642 -66.33083</translate>
+        <box>
+          <half_extents>0.6239382 0.3936952 5.55045</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_115-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-6.35901 0.3021642 -66.3764</translate>
+        <box>
+          <half_extents>0.623938 0.3936952 5.550446</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_116-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-13.702 0.5806668 -103.0717</translate>
+        <box>
+          <half_extents>0.08738086 0.6721912 11.54756</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_117-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-13.69341 0.04286914 -102.7717</translate>
+        <box>
+          <half_extents>0.4697686 0.08738037 14.18727</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_nyts_streets_118-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-13.70171 0.04268262 -120.1239</translate>
+        <box>
+          <half_extents>0.4752383 0.08738037 0.7786172</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

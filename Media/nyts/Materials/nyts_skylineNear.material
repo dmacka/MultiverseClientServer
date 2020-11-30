@@ -1,0 +1,7 @@
+material nyts_skylineNear.building : EmissiveBuilding_NoColor
+{
+    set_texture_alias DiffuseMap nyts_skylineNear_diff.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap nyts_skylineNear_emissive.dds
+}

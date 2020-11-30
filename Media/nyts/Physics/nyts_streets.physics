@@ -1,0 +1,469 @@
+<physics_model>
+  <rigid_body sid="nyts_streets-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.3353281 -0.904916 2.717156</translate>
+        <box>
+          <half_extents>67.17069 0.9103106 136.2101</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-28.94156 0.05926381 -5.94387</translate>
+        <box>
+          <half_extents>5.349534 0.05927139 31.24306</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-30.64159 0.05850712 -5.943837</translate>
+        <box>
+          <half_extents>3.649498 0.0585147 34.64317</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-30.64159 0.05702747 74.74767</translate>
+        <box>
+          <half_extents>3.649498 0.05703506 36.14739</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-28.94156 0.05702733 74.74767</translate>
+        <box>
+          <half_extents>5.349534 0.05703491 32.74725</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-28.94156 0.05849003 -85.70712</translate>
+        <box>
+          <half_extents>5.349534 0.05849762 31.81892</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-30.64169 0.05850712 -85.70712</translate>
+        <box>
+          <half_extents>3.6494 0.0585147 35.21906</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>2.670494 0.03569227 -119.1271</translate>
+        <box>
+          <half_extents>2.119225 0.08125244 1.799078</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.717353E-07 1 -8.548161E-10 9.999891</rotate>
+        <translate>6.553482 0.03573519 -85.69589</translate>
+        <box>
+          <half_extents>3.790303 0.08125244 32.31466</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.720182E-07 1 4.980293E-09 9.999891</rotate>
+        <translate>19.97212 0.03573519 -6.270147</translate>
+        <box>
+          <half_extents>3.790304 0.08125245 32.06445</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.152152E-07 1 3.369808E-10 14.99993</rotate>
+        <translate>36.69595 0.03573519 75.26186</translate>
+        <box>
+          <half_extents>2.933571 0.08125244 34.85843</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.244181E-07 1 -1.169924E-11 13.87498</rotate>
+        <translate>13.68222 0.05858996 76.11378</translate>
+        <box>
+          <half_extents>2.933571 0.05859755 35.68952</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>1.080928 0.05858996 75.41209</translate>
+        <box>
+          <half_extents>6.876181 0.05859754 34.64635</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>1.080931 0.05858996 75.41286</translate>
+        <box>
+          <half_extents>4.508932 0.05859755 37.01282</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-4.058503 0.06150012 -7.006848</translate>
+        <box>
+          <half_extents>3.421223 0.05703504 31.39071</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-4.058504 0.06150012 -7.006867</translate>
+        <box>
+          <half_extents>1.053974 0.05703504 33.75795</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.1332109 0.06150012 25.56748</translate>
+        <box>
+          <half_extents>4.979266 0.05703504 1.183604</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.397358E-07 1 -3.741115E-09 7.120039</rotate>
+        <translate>2.10936 0.06150011 -6.859635</translate>
+        <box>
+          <half_extents>1.183603 0.05703505 31.63517</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.402668E-07 1 7.381235E-10 7.11993</rotate>
+        <translate>-0.6493223 0.06150012 2.786299</translate>
+        <box>
+          <half_extents>3.025933 0.05703505 22.40556</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-6.8318 0.06071887 -66.53879</translate>
+        <box>
+          <half_extents>0.6059546 0.05625379 12.46609</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.0434E-07 1 -7.60685E-09 8.349995</rotate>
+        <translate>-5.005394 0.06071887 -66.5163</translate>
+        <box>
+          <half_extents>0.592986 0.05625379 12.66395</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>3.576455E-07 1 4.436843E-09 4.798455</rotate>
+        <translate>-5.400461 0.06071887 -59.57267</translate>
+        <box>
+          <half_extents>1.32796 0.05625379 5.828021</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.346149E-07 -1 -1.559811E-08 7.500072</rotate>
+        <translate>-5.165866 0.06071886 -52.87886</translate>
+        <box>
+          <half_extents>0.3170551 0.05625379 1.204136</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>8.086545E-08 -1 -5.350022E-10 22.50002</rotate>
+        <translate>-5.4695 0.06071886 -52.96022</translate>
+        <box>
+          <half_extents>0.3170549 0.0562538 1.204136</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.901191E-08 -1 2.400953E-10 37.50002</rotate>
+        <translate>-5.74173 0.06071886 -53.11739</translate>
+        <box>
+          <half_extents>0.3170548 0.0562538 1.204136</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>5.036789E-08 1 7.081545E-10 37.50013</rotate>
+        <translate>-5.964005 0.06071886 -53.33967</translate>
+        <box>
+          <half_extents>1.204136 0.0562538 0.3170556</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>7.076595E-08 1 6.529377E-09 22.50002</rotate>
+        <translate>-6.121177 0.06071886 -53.6119</translate>
+        <box>
+          <half_extents>1.204137 0.0562538 0.3170545</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.773363E-07 1 -1.203183E-08 7.499968</rotate>
+        <translate>-6.202535 0.06071887 -53.91553</translate>
+        <box>
+          <half_extents>1.204137 0.05625379 0.3170563</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.34615E-07 1 1.559811E-08 7.500072</rotate>
+        <translate>-4.851523 0.06071886 -52.87886</translate>
+        <box>
+          <half_extents>0.3170551 0.05625379 1.204136</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>6.918189E-08 -1 -2.705384E-09 22.50009</rotate>
+        <translate>-3.896209 0.06071886 -53.6119</translate>
+        <box>
+          <half_extents>1.204137 0.0562538 0.3170563</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>5.036786E-08 -1 -7.084105E-10 37.49998</rotate>
+        <translate>-4.053382 0.06071886 -53.33967</translate>
+        <box>
+          <half_extents>1.204135 0.0562538 0.3170571</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.901231E-08 1 -2.399049E-10 37.49988</rotate>
+        <translate>-4.275658 0.06071886 -53.11739</translate>
+        <box>
+          <half_extents>0.3170543 0.05625379 1.204137</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>8.086553E-08 1 5.349517E-10 22.50002</rotate>
+        <translate>-4.547889 0.06071886 -52.96022</translate>
+        <box>
+          <half_extents>0.3170554 0.0562538 1.204136</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>2.789204E-07 -1 -2.242708E-13 7.499968</rotate>
+        <translate>-3.81485 0.06071887 -53.91553</translate>
+        <box>
+          <half_extents>1.204137 0.05625379 0.3170563</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.929632E-07 -1 2.539813E-08 7.499132</rotate>
+        <translate>-6.792594 0.06071886 -79.30266</translate>
+        <box>
+          <half_extents>0.07908521 0.0562538 0.3003586</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>6.132238E-08 -1 2.540126E-08 22.50019</rotate>
+        <translate>-6.716857 0.06071886 -79.28236</translate>
+        <box>
+          <half_extents>0.0790873 0.0562538 0.3003631</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>3.31032E-08 -0.9999999 2.540109E-08 37.50011</rotate>
+        <translate>-6.648952 0.06071886 -79.24316</translate>
+        <box>
+          <half_extents>0.07908841 0.0562538 0.3003601</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>5.048121E-08 1 7.09479E-10 37.50026</rotate>
+        <translate>-6.593508 0.06071886 -79.18772</translate>
+        <box>
+          <half_extents>0.3003562 0.0562538 0.07908823</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.228026E-07 0.9999999 -3.290534E-08 22.50033</rotate>
+        <translate>-6.554304 0.06071886 -79.11982</translate>
+        <box>
+          <half_extents>0.3003563 0.0562538 0.07908653</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.831837E-07 1 -2.411574E-08 7.500176</rotate>
+        <translate>-6.53401 0.06071887 -79.04408</translate>
+        <box>
+          <half_extents>0.300357 0.0562538 0.07907896</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.929656E-07 1 -2.539845E-08 7.499132</rotate>
+        <translate>-6.871003 0.06071886 -79.30266</translate>
+        <box>
+          <half_extents>0.07908569 0.0562538 0.3003587</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.291501E-07 -1 1.757271E-08 22.49981</rotate>
+        <translate>-7.109295 0.06071887 -79.11982</translate>
+        <box>
+          <half_extents>0.3003573 0.05625379 0.07908643</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>5.048119E-08 -1 -7.094788E-10 37.50026</rotate>
+        <translate>-7.07009 0.06071886 -79.18772</translate>
+        <box>
+          <half_extents>0.3003562 0.0562538 0.07908837</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>3.310323E-08 1 -2.540111E-08 37.50007</rotate>
+        <translate>-7.014647 0.06071886 -79.24316</translate>
+        <box>
+          <half_extents>0.07908823 0.0562538 0.3003601</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>6.132246E-08 1 -2.540129E-08 22.50019</rotate>
+        <translate>-6.946742 0.06071886 -79.28236</translate>
+        <box>
+          <half_extents>0.07908754 0.0562538 0.3003628</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.895406E-07 -1 -2.411659E-08 7.499863</rotate>
+        <translate>-7.129589 0.06071887 -79.04408</translate>
+        <box>
+          <half_extents>0.3003578 0.05625379 0.07908287</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.93752E-08 -1 -2.558243E-09 39.49998</rotate>
+        <translate>-0.2972442 0.03573519 -118.1914</translate>
+        <box>
+          <half_extents>1.077978 0.08125244 2.630941</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1.463571E-05 1 1.46734E-05 44.9999</rotate>
+        <translate>-26.14205 0.06512683 -118.3761</translate>
+        <box>
+          <half_extents>1.202101 0.06513441 2.404256</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>6.569232E-10 1 1.774434E-08 225</rotate>
+        <translate>-26.14209 0.05850712 -53.03818</translate>
+        <box>
+          <half_extents>2.404258 0.0585147 1.202168</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1.670504E-05 0.9999999 3.349371E-05 44.99997</rotate>
+        <translate>-26.14209 0.05926378 -38.03689</translate>
+        <box>
+          <half_extents>1.20217 0.05927137 2.404257</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>-1.314662E-09 1 1.708717E-08 225</rotate>
+        <translate>-26.14209 0.05849002 26.1492</translate>
+        <box>
+          <half_extents>2.404258 0.05849761 1.202169</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>5.023216E-05 -1 3.325032E-05 44.99997</rotate>
+        <translate>-26.14209 0.05858996 41.15042</translate>
+        <box>
+          <half_extents>2.404258 0.05859755 1.202168</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.215874E-08 -1 1.140815E-09 44.99997</rotate>
+        <translate>-4.019787 0.05702746 40.174</translate>
+        <box>
+          <half_extents>0.8370093 0.05703504 1.673903</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.101928E-08 1 -1.353686E-12 44.99995</rotate>
+        <translate>6.181643 0.05702746 40.174</translate>
+        <box>
+          <half_extents>0.8370087 0.05703504 1.673901</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.101927E-08 -1 -1.387531E-12 44.99994</rotate>
+        <translate>-5.704225 0.06150012 24.97563</translate>
+        <box>
+          <half_extents>1.673902 0.05703504 0.8370073</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.215874E-08 -1 1.140815E-09 44.99997</rotate>
+        <translate>5.447758 0.06150012 24.97562</translate>
+        <box>
+          <half_extents>0.837008 0.05703504 1.673904</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.101931E-08 1 -1.387529E-12 44.99995</rotate>
+        <translate>-2.412746 0.06150012 -38.98935</translate>
+        <box>
+          <half_extents>0.8370072 0.05703504 1.673903</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.215874E-08 -1 1.140815E-09 44.99997</rotate>
+        <translate>-5.704264 0.06150012 -38.98934</translate>
+        <box>
+          <half_extents>0.8370094 0.05703504 1.673903</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.753049E-08 -1 -7.108292E-10 39.34557</rotate>
+        <translate>10.84515 0.03569228 -52.85487</translate>
+        <box>
+          <half_extents>2.15703 0.08125243 1.325807</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.290833E-08 -1 -1.666322E-09 44.79513</rotate>
+        <translate>13.27163 0.03576931 -38.05424</translate>
+        <box>
+          <half_extents>1.206424 0.08125243 2.40425</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.768269E-08 -1 4.071266E-10 39.21987</rotate>
+        <translate>25.03838 0.0357693 25.84433</translate>
+        <box>
+          <half_extents>2.426635 0.08125244 2.108423</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>4.120659E-08 1 1.928279E-10 44.898</rotate>
+        <translate>27.69264 0.03758621 41.67343</translate>
+        <box>
+          <half_extents>2.404259 0.08125244 1.488149</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-13.69341 0.04286914 -102.7717</translate>
+        <box>
+          <half_extents>0.4697686 0.08738037 14.18727</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-13.70171 0.04268262 -120.1239</translate>
+        <box>
+          <half_extents>0.4752383 0.08738037 0.7786172</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>16.51867 0.03576931 -39.23248</translate>
+        <box>
+          <half_extents>2.404248 0.08125244 1.386504</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>14.06959 0.0357693 -52.52324</translate>
+        <box>
+          <half_extents>2.404248 0.08125244 2.052621</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>28.69661 0.03576931 26.83294</translate>
+        <box>
+          <half_extents>3.081676 0.08125244 2.181873</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>31.43308 0.0357693 40.61808</translate>
+        <box>
+          <half_extents>3.081676 0.08125243 1.706875</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>3.587557E-07 1 2.747536E-09 4.798455</rotate>
+        <translate>-5.965206 0.06071887 -68.23724</translate>
+        <box>
+          <half_extents>0.696215 0.05625379 3.254836</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

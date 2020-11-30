@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="MvMapImage" Imagefile="MvSocialMap.dds" NativeHorzRes="2048" NativeVertRes="1024" AutoScaled="false">
+  <Image Name="MinimapMapTexture" XPos="0" YPos="0" Width="2048" Height="1024" />
+</Imageset>

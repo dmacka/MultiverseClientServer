@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_stage_1timesSquare_Mesh</Name>
+  <Description>nyts_stage_1timesSquare</Description>
+  <Category>Buildings</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\nyts_stage_1timesSquare.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\nyts_stage_1timesSquare_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\nyts_stage_1timesSquare.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

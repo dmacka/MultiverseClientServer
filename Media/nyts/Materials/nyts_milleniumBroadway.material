@@ -1,0 +1,68 @@
+material nyts_milleniumBroadway.windows
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 1.00000 1.00000 1.00000 1.00000
+
+                scene_blend alpha_blend
+            	depth_write off
+            	depth_check on
+     
+            texture_unit
+            {
+                texture nyts_window.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material nyts_milleniumBroadway.billboards : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_millennium_billboards_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap nyts_millennium_billboards_emissive.dds
+}
+
+material nyts_milleniumBroadway.building : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_millennium_building_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap nyts_millennium_building_emissive.dds
+}
+
+material nyts_milleniumBroadway.video
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 1.00000 1.00000 1.00000 1.00000
+
+            texture_unit
+            {
+                anim_texture nyts_millennium_anim_billboard.dds 6 4
+                tex_coord_set 0
+        		filtering anisotropic
+		        max_anisotropy 8
+	        }
+	    }
+    }
+}

@@ -177,7 +177,7 @@ namespace Multiverse.Web
         /// extra HTML to not generate an IE error.  
         /// </summary>
         /// <param name="u">
-        /// The URL to open, for example, "http://192.168.1.6"
+        /// The URL to open, for example, "http://www.multiverse.net"
         /// </param>
         /// <returns>
         /// Whether or not the URL was loaded.  Does not wait for the document

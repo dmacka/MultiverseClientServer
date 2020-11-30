@@ -1,0 +1,158 @@
+<Ui>
+  <Script file="nyts_Help.py"/>
+
+  <FontString name="nyts_Help_fsNormal"  font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight> <AbsValue val="14"/> </FontHeight>
+    <Color r="0.0" g="0.0" b="0.0"/>
+  </FontString>
+
+  <Frame name="nyts_Browser_fMain" frameStrata="DIALOG" toplevel="true" enableKeyboard="false" enableMouse="false" hidden="true">
+    <Size>
+      <AbsDimension x="400" y="300"/>
+    </Size>
+    <Anchors>
+      <Anchor point="TOPRIGHT">
+	<Offset><AbsDimension x="0" y="0"/></Offset>
+      </Anchor>
+    </Anchors>
+    <Frames>
+      <Browser name="nyts_Browser_fMain_brMain" url="http://www.google.com" scrollbars="true" errors="true" hidden="false">
+	<Size>
+	  <AbsDimension x="400" y="300"/>
+	</Size>
+      </Browser>
+    </Frames>
+  </Frame>
+
+  <Frame name="nyts_Help_fMain" frameStrata="DIALOG" toplevel="true" movable="true" hidden="true">
+    <Size>
+      <AbsDimension x="500" y="420"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER">  <Offset><AbsDimension x="0" y="0"/></Offset> </Anchor>
+    </Anchors>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture name="$parent_txMain" file="Interface\MvBasicTextures\Patch6x6W08A10">
+	  <Anchors>
+	    <Anchor point="TOPLEFT">     <Offset> <AbsDimension x="0" y="0"/> </Offset> </Anchor>
+	    <Anchor point="BOTTOMRIGHT"> <Offset> <AbsDimension x="0" y="0"/> </Offset> </Anchor>
+	  </Anchors>
+	</Texture>
+      </Layer>
+    </Layers>
+    <Frames>
+      <FontString name="$parent_fsName" inherits="nyts_Help_fsNormal" justifyH="CENTER" justifyV="MIDDLE" text="New York Times Square Help">
+	<Size>
+	  <AbsDimension x="0" y="54"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT"><Offset><AbsDimension x="25" y="-18"/></Offset></Anchor>
+	  <Anchor point="TOPRIGHT"><Offset><AbsDimension x="-25" y="-18"/></Offset></Anchor>
+	</Anchors>
+      </FontString>
+      <FontString name="$parent_fsWelcome" inherits="nyts_Help_fsNormal" justifyH="LEFT" justifyV="TOP" text="Welcome to a virtual re-creation of Times Square.  This demonstration world shows off some high-end Multiverse features like next-generation graphical effects and streaming video.  This demo is under construction and currently has no gameplay elements, but we invite you to explore and enjoy the sights!">
+	<Size>
+	  <AbsDimension x="0" y="90"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="$parent_fsName" relativePoint="BOTTOMLEFT">
+	    <Offset><AbsDimension x="0" y="0"/></Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativeTo="$parent_fsName" relativePoint="BOTTOMRIGHT">
+	    <Offset><AbsDimension x="0" y="0"/></Offset>
+	  </Anchor>
+	</Anchors>
+      </FontString>
+      <FontString name="$parent_fsMovement" inherits="nyts_Help_fsNormal" justifyH="LEFT" justifyV="TOP" text="Move your character using the ARROW keys or the 'W' 'A' 'S' 'D' keys.  You can also turn your character by holding down the RIGHT MOUSE BUTTON and dragging.">
+	<Size>
+	  <AbsDimension x="0" y="36"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="$parent_fsWelcome" relativePoint="BOTTOMLEFT">
+	    <Offset><AbsDimension x="0" y="-20"/></Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativeTo="$parent_fsWelcome" relativePoint="BOTTOMRIGHT">
+	    <Offset><AbsDimension x="0" y="-20"/></Offset>
+	  </Anchor>
+	</Anchors>
+      </FontString>
+      <FontString name="$parent_fsCamera" inherits="nyts_Help_fsNormal" justifyH="LEFT" justifyV="TOP" text="Move your camera by holding down the LEFT MOUSE BUTTON and dragging.  You can zoom in and out using the MOUSE WHEEL.">
+	<Size>
+	  <AbsDimension x="0" y="36"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="$parent_fsMovement" relativePoint="BOTTOMLEFT">
+	    <Offset><AbsDimension x="0" y="-20"/></Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativeTo="$parent_fsMovement" relativePoint="BOTTOMRIGHT">
+	    <Offset><AbsDimension x="0" y="-20"/></Offset>
+	  </Anchor>
+	</Anchors>
+      </FontString>
+      <FontString name="$parent_fsActions" inherits="nyts_Help_fsNormal" justifyH="LEFT" justifyV="TOP" text=""> <!-- text="You can access a variety of commands through the ACTION BAR on the bottom right of your screen." -->
+	<Size>
+	  <AbsDimension x="0" y="1"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="$parent_fsCamera" relativePoint="BOTTOMLEFT">
+	    <Offset><AbsDimension x="0" y="0"/></Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativeTo="$parent_fsCamera" relativePoint="BOTTOMRIGHT">
+	    <Offset><AbsDimension x="0" y="0"/></Offset>
+	  </Anchor>
+	</Anchors>
+      </FontString>
+      <FontString name="$parent_fsChat" inherits="nyts_Help_fsNormal" justifyH="LEFT" justifyV="TOP" text="Chat with other players using the Chat window below.  Press ENTER to activate the text box, type your message, press ENTER again to send.">
+	<Size>
+	  <AbsDimension x="0" y="36"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="$parent_fsActions" relativePoint="BOTTOMLEFT">
+	    <Offset><AbsDimension x="0" y="-20"/></Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativeTo="$parent_fsActions" relativePoint="BOTTOMRIGHT">
+	    <Offset><AbsDimension x="0" y="-20"/></Offset>
+	  </Anchor>
+	</Anchors>
+      </FontString>
+      <FontString name="$parent_fsHelp" inherits="nyts_Help_fsNormal" justifyH="LEFT" justifyV="TOP" text=""> <!-- text="Press F11 to bring up this help screen again." -->
+	<Size>
+	  <AbsDimension x="0" y="1"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="$parent_fsChat" relativePoint="BOTTOMLEFT">
+	    <Offset><AbsDimension x="0" y="0"/></Offset>
+	  </Anchor>
+	  <Anchor point="TOPRIGHT" relativeTo="$parent_fsChat" relativePoint="BOTTOMRIGHT">
+	    <Offset><AbsDimension x="0" y="0"/></Offset>
+	  </Anchor>
+	</Anchors>
+      </FontString>
+      <Button name="$parent_bOK" inherits="nyts_Help_fsNormal" text="OK">
+        <Size>
+	  <AbsDimension x="80" y="32"/>
+	</Size>
+	<Anchors>
+	  <Anchor point="BOTTOM" relativeTo="$parent" relativePoint="BOTTOM">
+	    <Offset><AbsDimension x="0" y="10"/></Offset>
+	  </Anchor>
+	</Anchors>
+	<NormalText inherits="nyts_Help_fsNormal" justifyH="CENTER" justifyV="MIDDLE"/>
+	<Layers>
+	  <Layer>
+	    <Texture name="$parent_txButton" file="Interface\MvBasicTextures\ButtonWLight"/>
+	  </Layer>
+	</Layers>
+	<Scripts language="python">
+	  <OnClick>nyts_Help_fMain.Hide()</OnClick>
+	</Scripts>
+      </Button>
+    </Frames>
+    <Scripts language="python">
+      <OnLoad>nyts_Help_fMain_OnLoad(this)</OnLoad>
+      <OnShow>nyts_Help_fMain_OnShow(this)</OnShow>
+    </Scripts>
+  </Frame>
+
+</Ui>

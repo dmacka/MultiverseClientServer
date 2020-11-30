@@ -1,0 +1,7 @@
+material nyts_streets_4Lane.streets : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_streets_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap blank_emissive.dds
+}

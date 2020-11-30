@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_stage_reuters_Material</Name>
+  <Description>nyts_stage_reuters</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nyts_stage_reuters.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+	
+    <AssetFile>
+      <TargetFile>Textures\nyts_stage_reuters.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

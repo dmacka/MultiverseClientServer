@@ -1,0 +1,15 @@
+material nyts_props.streetprops : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_streetprops_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap blank_emissive.dds
+}
+
+material nyts_props.streetlights : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_streetlights_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap nyts_streetlights_specular.dds
+    set_texture_alias EmissiveMap nyts_streetlights_emissive.dds
+}

@@ -46,7 +46,10 @@ namespace Axiom.SceneManagers.Multiverse
                 }
 
                 m_modified = value;
-                TileModificationStateChanged?.Invoke(this, m_modified);
+                if (TileModificationStateChanged != null)
+                {
+                    TileModificationStateChanged(this, m_modified);
+                }
             }
         }
 
@@ -83,7 +86,10 @@ namespace Axiom.SceneManagers.Multiverse
 
         protected void FireTileChanged(int tileXSample, int tileZSample, int sizeXSamples, int sizeZSamples)
         {
-            TileChanged?.Invoke(this, tileXSample, tileZSample, sizeXSamples, sizeZSamples);
+            if (TileChanged != null)
+            {
+                TileChanged(this, tileXSample, tileZSample, sizeXSamples, sizeZSamples);
+            }
         }
     }
 }

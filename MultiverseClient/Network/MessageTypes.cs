@@ -85,21 +85,6 @@ namespace Multiverse.Network
                 receiveShadows = value;
             }
         }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 
     // Provides I/O of a hierarchy of common types and list, set and
@@ -138,18 +123,21 @@ namespace Multiverse.Network
         public EncodedObjectIO(IncomingMessage inMessage) {
             this.inMessage = inMessage;
             if (classToValueTypeMap == null)
-                InitializeClassToValueTypeMap();
+                initializeClassToValueTypeMap();
         }
         
         public EncodedObjectIO(OutgoingMessage outMessage) {
             this.outMessage = outMessage;
             if (classToValueTypeMap == null)
-                InitializeClassToValueTypeMap();
+                initializeClassToValueTypeMap();
         }
 
-        static EncodedObjectIO() => InitializeClassToValueTypeMap();
-
-        private static void InitializeClassToValueTypeMap() {
+        static EncodedObjectIO()
+        {
+            initializeClassToValueTypeMap();
+        }
+        
+        private static void initializeClassToValueTypeMap() {
             string v0 = "";
             long v1 = 3L;
             int v2 = 3;
@@ -273,67 +261,61 @@ namespace Multiverse.Network
             }
         }
 
-        public Object ReadEncodedObject
-        {
-            get
-            {
-                int count;
-                byte typecode = inMessage.ReadByte();
-                switch ((ValueType)typecode)
-                {
-                    case ValueType.Null:
-                        return null;
-                    case ValueType.String:
-                        return inMessage.ReadString();
-                    case ValueType.Byte:
-                        return inMessage.ReadByte();
-                    case ValueType.Short:
-                        return inMessage.ReadInt16();
-                    case ValueType.Long:
-                        return inMessage.ReadInt64();
-                    case ValueType.Integer:
-                        return inMessage.ReadInt32();
-                    case ValueType.BooleanFalse:
-                        return false;
-                    case ValueType.BooleanTrue:
-                        return true;
-                    case ValueType.Float:
-                        return inMessage.ReadSingle();
-                    case ValueType.Double:
-                        return inMessage.ReadDouble();
-                    case ValueType.Point:
-                        return inMessage.ReadIntVector();
-                    case ValueType.MVVector:
-                        return inMessage.ReadVector();
-                    case ValueType.Quaternion:
-                        return inMessage.ReadQuaternion();
-                    case ValueType.Color:
-                        return inMessage.ReadColor();
-                    case ValueType.LinkedList:
-                        count = inMessage.ReadInt32();
-                        LinkedList<object> list = new LinkedList<object>();
-                        for (int i = 0; i < count; i++)
-                            list.AddLast(ReadEncodedObject);
-                        return list;
-                    case ValueType.HashSet:
-                        count = inMessage.ReadInt32();
-                        Hashtable set = new Hashtable();
-                        for (int i = 0; i < count; i++)
-                        {
-                            object value = ReadEncodedObject;
-                            set.Add(value, null);
-                        }
-                        return set;
-                    case ValueType.HashMap:
-                        return ReadPropertyMap;
-                    case ValueType.ByteArray:
-                        return inMessage.ReadBytes();
-                    case ValueType.TreeMap:
-                        return ReadSortedPropertyMap();
-                    default:
-                        log.Error("EncodedObjectIO.ReadEncodedObject: Illegal value type code " + typecode);
-                        return null;
+        public Object ReadEncodedObject() {
+            int count;
+            byte typecode = inMessage.ReadByte();
+            switch ((ValueType)typecode) {
+            case ValueType.Null:
+                return null;
+            case ValueType.String:
+                return inMessage.ReadString();
+            case ValueType.Byte:
+                return inMessage.ReadByte();
+            case ValueType.Short:
+                return inMessage.ReadInt16();
+            case ValueType.Long:
+                return inMessage.ReadInt64();
+            case ValueType.Integer:
+                return inMessage.ReadInt32();
+            case ValueType.BooleanFalse:
+                return false;
+            case ValueType.BooleanTrue:
+                return true;
+            case ValueType.Float:
+                return inMessage.ReadSingle();
+            case ValueType.Double:
+                return inMessage.ReadDouble();
+            case ValueType.Point:
+                return inMessage.ReadIntVector();
+            case ValueType.MVVector:
+                return inMessage.ReadVector();
+            case ValueType.Quaternion:
+                return inMessage.ReadQuaternion();
+            case ValueType.Color:
+                return inMessage.ReadColor();
+            case ValueType.LinkedList:
+                count = inMessage.ReadInt32();
+                LinkedList<object> list = new LinkedList<object>();
+                for (int i=0; i<count; i++)
+                    list.AddLast(ReadEncodedObject());
+                return list;
+            case ValueType.HashSet:
+                count = inMessage.ReadInt32();
+                Hashtable set = new Hashtable();
+                for (int i = 0; i < count; i++) {
+                    object value = ReadEncodedObject();
+                    set.Add(value, null);
                 }
+                return set;
+            case ValueType.HashMap:
+                return ReadPropertyMap();
+            case ValueType.ByteArray:
+                return inMessage.ReadBytes();
+            case ValueType.TreeMap:
+                return ReadSortedPropertyMap();
+            default:
+                log.Error("EncodedObjectIO.ReadEncodedObject: Illegal value type code " + typecode);
+                return null;
             }
         }
 
@@ -431,20 +413,15 @@ namespace Multiverse.Network
             }
         }
 
-        public Dictionary<string, object> ReadPropertyMap
-        {
-            get
-            {
-                int count = inMessage.ReadInt32();
-                Dictionary<string, object> map = new Dictionary<string, object>();
-                for (int i = 0; i < count; i++)
-                {
-                    string key = inMessage.ReadString();
-                    object value = ReadEncodedObject;
-                    map[key] = value;
-                }
-                return map;
+        public Dictionary<string, object> ReadPropertyMap() {
+            int count = inMessage.ReadInt32();
+            Dictionary<string, object> map = new Dictionary<string, object>();
+            for (int i=0; i<count; i++) {
+                string key = inMessage.ReadString();
+                object value = ReadEncodedObject();
+                map[key] = value;
             }
+            return map;
         }
 
         public SortedDictionary<string, object> ReadSortedPropertyMap() {
@@ -452,26 +429,12 @@ namespace Multiverse.Network
             SortedDictionary<string, object> map = new SortedDictionary<string, object>();
             for (int i=0; i<count; i++) {
                 string key = inMessage.ReadString();
-                object value = ReadEncodedObject;
+                object value = ReadEncodedObject();
                 map[key] = value;
             }
             return map;
         }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
+        
     }
 
     public class PropertyMap {
@@ -597,7 +560,7 @@ namespace Multiverse.Network
         #region Serialization methods
         public void ParseMessage(IncomingMessage inMessage) {
             EncodedObjectIO io = new EncodedObjectIO(inMessage);
-            properties = io.ReadPropertyMap;
+            properties = io.ReadPropertyMap();
         }
 
         public void WriteMessage(OutgoingMessage outMessage) {
@@ -756,22 +719,7 @@ namespace Multiverse.Network
                 return value;
             throw new System.IO.InvalidDataException("GetObjectProperty property missing or type wrong");
         }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
+        
         #endregion
 
         public Dictionary<string, object> Properties {
@@ -782,16 +730,6 @@ namespace Multiverse.Network
     }
 
     public class OldMeshInfo : MeshInfo {
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
         public override void ParseMessage(IncomingMessage inMessage) {
             meshFile = inMessage.ReadString();
             int submeshCount = inMessage.ReadInt32();
@@ -807,11 +745,6 @@ namespace Multiverse.Network
                 submeshList.Add(submeshInfo);
                 log.InfoFormat("submesh name: {0}; material: {1}", submeshInfo.SubmeshName, submeshInfo.MaterialName);
             }
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
         }
     }
 	/// <summary>
@@ -849,21 +782,6 @@ namespace Multiverse.Network
                 outMessage.Write(submeshInfo.CastShadows);
                 outMessage.Write(submeshInfo.ReceiveShadows);
 			}
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
         }
 
         #region Properties
@@ -1923,8 +1841,7 @@ namespace Multiverse.Network
         #endregion
     }
 
-    public class MasterTcpLoginChallengeMessage : BaseMasterTcpMessage, IMasterTcpLoginChallengeMessage, IMasterTcpLoginChallengeMessage1
-    {
+    public class MasterTcpLoginChallengeMessage : BaseMasterTcpMessage {
         int version;
         byte[] challenge;
 
@@ -1936,31 +1853,6 @@ namespace Multiverse.Network
         protected override void ParseMessage(IncomingMessage inMessage) {
             version = inMessage.ReadInt32();
             challenge = inMessage.ReadBytes();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        protected override void WriteMessage(OutgoingMessage outMessage)
-        {
-            base.WriteMessage(outMessage);
-        }
-
-        public override OutgoingMessage CreateMessage()
-        {
-            return base.CreateMessage();
         }
         #endregion
 
@@ -1984,8 +1876,7 @@ namespace Multiverse.Network
         #endregion
     }
 
-    public class MasterTcpLoginAuthenticateMessage : BaseMasterTcpMessage, IMasterTcpLoginAuthenticateMessage
-    {
+    public class MasterTcpLoginAuthenticateMessage : BaseMasterTcpMessage {
         byte[] authenticator;
 
         public MasterTcpLoginAuthenticateMessage() {
@@ -2024,30 +1915,6 @@ namespace Multiverse.Network
             loginStatus = (LoginStatus)inMessage.ReadInt32();
             masterToken = inMessage.ReadBytes();
             oldToken = inMessage.ReadBytes();
-        }
-
-        public override bool Equals(object obj)
-        {
-            var message = obj as MasterTcpLoginResponseMessage;
-            return message != null &&
-                   loginStatus == message.loginStatus &&
-                   EqualityComparer<byte[]>.Default.Equals(masterToken, message.masterToken) &&
-                   EqualityComparer<byte[]>.Default.Equals(oldToken, message.oldToken) &&
-                   LoginStatus == message.LoginStatus &&
-                   EqualityComparer<byte[]>.Default.Equals(MasterToken, message.MasterToken) &&
-                   EqualityComparer<byte[]>.Default.Equals(OldToken, message.OldToken);
-        }
-
-        public override int GetHashCode()
-        {
-            var hashCode = 1143885254;
-            hashCode = hashCode * -1521134295 + loginStatus.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<byte[]>.Default.GetHashCode(masterToken);
-            hashCode = hashCode * -1521134295 + EqualityComparer<byte[]>.Default.GetHashCode(oldToken);
-            hashCode = hashCode * -1521134295 + LoginStatus.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<byte[]>.Default.GetHashCode(MasterToken);
-            hashCode = hashCode * -1521134295 + EqualityComparer<byte[]>.Default.GetHashCode(OldToken);
-            return hashCode;
         }
         #endregion
 

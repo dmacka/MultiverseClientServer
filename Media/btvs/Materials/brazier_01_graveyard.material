@@ -1,0 +1,21 @@
+material brazier_01_graveyard.brazier_01
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58800 0.58800 0.58800 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture brazier_01_graveyard.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

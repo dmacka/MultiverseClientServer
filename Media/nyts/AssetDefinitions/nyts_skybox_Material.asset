@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_skybox_Material</Name>
+  <Description>sky box for NYTS [nyts]</Description>
+  <Type>Material</Type>
+  <Category>Skybox</Category>
+  <Properties>
+    <Property name="AssetName" value="nyts_skybox" />
+  </Properties>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nyts_skybox.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_east.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_north.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_south.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_top.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_west.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

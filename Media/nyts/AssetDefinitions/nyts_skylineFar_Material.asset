@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_skylineFar_Material</Name>
+  <Description>nyts_skylineFar</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nyts_skylineFar.material</TargetFile>
+      <NewFileName />
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\00EmissiveBuilding_Material.asset</TargetFile>
+      <NewFileName />
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_skylineFar_diff.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_skylineFar_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_normal.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_specular.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

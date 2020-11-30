@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_milleniumBroadway_Material</Name>
+  <Description>nyts_millennium</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nyts_milleniumBroadway.material</TargetFile>
+      <NewFileName />
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\00EmissiveBuilding_Material.asset</TargetFile>
+      <NewFileName />
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_anim_billboard_0.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_anim_billboard_1.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_anim_billboard_2.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_anim_billboard_3.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_anim_billboard_4.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_anim_billboard_5.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_billboards_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_building_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_billboards_diffuse.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_millennium_building_diffuse.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_window.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

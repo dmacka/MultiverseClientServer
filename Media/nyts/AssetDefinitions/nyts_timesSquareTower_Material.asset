@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_timesSquareTower_Material</Name>
+  <Description>nyts_timesSquareTower</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nyts_timesSquareTower.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+	
+  </Files>
+</AssetDefinition>

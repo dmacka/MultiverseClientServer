@@ -1,0 +1,27 @@
+material nyts_stage_main.stage_main
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.10000 0.10000 0.10000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+		cull_hardware none
+		cull_software none
+
+            texture_unit
+            {
+
+		alpha_rejection greater 128
+
+                texture nyts_stage_main.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

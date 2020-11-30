@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>hdr</Name>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\Examples.compositor</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Materials\hdr.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\StdQuad_vp.program</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\StdQuad_vp.cg</TargetFile>
+      <FileType>Shader</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>GpuPrograms\hdr.hlsl</TargetFile>
+      <FileType>Other</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

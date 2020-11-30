@@ -73,19 +73,21 @@ namespace Axiom.SceneManagers.Multiverse
         /// <returns></returns>
         public float GetSampleHeightMM(int sampleX, int sampleZ)
         {
+            int tileX;
+            int tileZ;
 
-            SampleToTileCoords(sampleX, sampleZ, out int tileX, out int tileZ, out int xOff, out int zOff);
+            int xOff;
+            int zOff;
+
+            SampleToTileCoords(sampleX, sampleZ, out tileX, out tileZ, out xOff, out zOff);
 
             if ((tileX < 0) || (tileX >= sizeXTiles) || (tileZ < 0) || (tileZ >= sizeZTiles))
             {
-                //shift the array right and move the last element to the first x in all columns
                 return defaultHeightMM;
             }
 
-            //            HeightfieldTile tile = tiles[tileX, tileZ] as HeightfieldTile;
-            //            if (tile == null)
-
-            if (!(tiles[tileX, tileZ] is HeightfieldTile tile))
+            HeightfieldTile tile = tiles[tileX, tileZ] as HeightfieldTile;
+            if (tile == null)
             {
                 return defaultHeightMM;
             }
@@ -102,20 +104,26 @@ namespace Axiom.SceneManagers.Multiverse
         /// <returns></returns>
         public void SetSampleHeightMM(int sampleX, int sampleZ, float height)
         {
+            int tileX;
+            int tileZ;
 
+            int xOff;
+            int zOff;
 
-            SampleToTileCoords(sampleX, sampleZ, out int tileX, out int tileZ, out int xOff, out int zOff);
+            SampleToTileCoords(sampleX, sampleZ, out tileX, out tileZ, out xOff, out zOff);
 
             if ((tileX < 0) || (tileX >= sizeXTiles) || (tileZ < 0) || (tileZ >= sizeZTiles))
             {
-                //It's possible to go off the end of the terrain, so just ignore it if it happens.
+                //throw new IndexOutOfRangeException();
+                // It's possible to go off the end of the terrain, so just ignore it if it happens.
                 return;
             }
 
-            if (!(tiles[tileX, tileZ] is HeightfieldTile tile))
+            HeightfieldTile tile = tiles[tileX, tileZ] as HeightfieldTile;
+            if (tile == null)
             {
                 // This shouldn't happen
-                throw new Exception("Tile [" + tileX + "," + tileZ + "] not found for coord [" + sampleX + "," + sampleZ + "] while attempting to set height to: " + height);
+                throw new Exception("Tile [" + tileX + "," + tileZ + "] not found for coord [" + sampleX + "," + sampleZ + "] while attempting to set height to: " + height);                
             }
 
             tile.SetHeightMM(xOff, zOff, height);
@@ -142,7 +150,13 @@ namespace Axiom.SceneManagers.Multiverse
         {
             float ret;
 
-            WorldToSampleCoords(worldXMeters, worldZMeters, out int sampleX, out int sampleZ, out float sampleXfrac, out float sampleZfrac);
+            int sampleX;
+            int sampleZ;
+
+            float sampleXfrac;
+            float sampleZfrac;
+
+            WorldToSampleCoords(worldXMeters, worldZMeters, out sampleX, out sampleZ, out sampleXfrac, out sampleZfrac);
 
             if ((sampleXfrac == 0) && (sampleZfrac == 0))
             {
@@ -165,9 +179,13 @@ namespace Axiom.SceneManagers.Multiverse
 
         public void AdjustWorldHeightMM(int worldXMeters, int worldZMeters, float heightDifference)
         {
+            int sampleX;
+            int sampleZ;
 
+            float sampleXfrac;
+            float sampleZfrac;
 
-            WorldToSampleCoords(worldXMeters, worldZMeters, out int sampleX, out int sampleZ, out float sampleXfrac, out float sampleZfrac);
+            WorldToSampleCoords(worldXMeters, worldZMeters, out sampleX, out sampleZ, out sampleXfrac, out sampleZfrac);
             if ((sampleXfrac == 0) && (sampleZfrac == 0))
             {
                 SetSampleHeightMM(sampleX, sampleZ, GetSampleHeightMM(sampleX, sampleZ) + heightDifference);
@@ -188,9 +206,13 @@ namespace Axiom.SceneManagers.Multiverse
 
         public void AdjustWorldSamplesMM(int worldXMeters, int worldZMeters, int metersPerSample, float[,] heightsMM)
         {
+            int sampleX;
+            int sampleZ;
 
+            float sampleXfrac;
+            float sampleZfrac;
 
-            WorldToSampleCoords(worldXMeters, worldZMeters, out int sampleX, out int sampleZ, out float sampleXfrac, out float sampleZfrac);
+            WorldToSampleCoords(worldXMeters, worldZMeters, out sampleX, out sampleZ, out sampleXfrac, out sampleZfrac);
             if ((sampleXfrac == 0) && (sampleZfrac == 0) && (metersPerSample == MosaicDesc.MetersPerSample))
             {
                 for (int z = 0; z < heightsMM.GetLength(1); z++)
@@ -289,11 +311,15 @@ namespace Axiom.SceneManagers.Multiverse
         /// <returns></returns>
         public void SetWorldHeightMM(int worldXMeters, int worldZMeters, float heightMM)
         {
+            int sampleX;
+            int sampleZ;
 
+            float sampleXfrac;
+            float sampleZfrac;
 
             float existing;
 
-            WorldToSampleCoords(worldXMeters, worldZMeters, out int sampleX, out int sampleZ, out float sampleXfrac, out float sampleZfrac);
+            WorldToSampleCoords(worldXMeters, worldZMeters, out sampleX, out sampleZ, out sampleXfrac, out sampleZfrac);
 
             if ((sampleXfrac == 0) && (sampleZfrac == 0))
             {

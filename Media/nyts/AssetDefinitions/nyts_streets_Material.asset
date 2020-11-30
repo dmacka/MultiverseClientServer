@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_streets_Material</Name>
+  <Description>nyts_streets</Description>
+  <Type>Material</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\nyts_streets.material</TargetFile>
+      <NewFileName />
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\00EmissiveBuilding_Material.asset</TargetFile>
+      <NewFileName />
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_streets_diffuse.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_streets_specular.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_asphalt_diff.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\nyts_asphalt_spec.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_normal.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_emissive.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\blank_specular.dds</TargetFile>
+      <NewFileName />
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,25 @@
+<physics_model>
+  <rigid_body sid="nyts_reuters_building-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-0.581791 14.16463 -20.69737</translate>
+        <box>
+          <half_extents>20.5526 14.16463 7.05454</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>17.76997 14.16463 -2.343461</translate>
+        <box>
+          <half_extents>7.054542 14.16463 20.5526</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>7.661875E-08 -1 -3.447187E-08 44.99999</rotate>
+        <translate>7.87026 14.16463 -10.79125</translate>
+        <box>
+          <half_extents>3.417033 14.16463 20.5526</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

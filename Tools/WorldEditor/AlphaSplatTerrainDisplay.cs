@@ -51,10 +51,7 @@ namespace Multiverse.Tools.WorldEditor
 
         protected string alpha0MosaicName;
         protected string alpha1MosaicName;
-//        protected string alpha2MosaicName;
-//        protected string alpha3MosaicName;
 
-        // textures
         protected string l1TextureName = "";
         protected string l2TextureName = "";
         protected string l3TextureName = "";
@@ -63,8 +60,6 @@ namespace Multiverse.Tools.WorldEditor
         protected string l6TextureName = "";
         protected string l7TextureName = "";
         protected string l8TextureName = "";
-
-        //detail
         protected string detailTextureName = "";
 
         protected bool inScene = false;
@@ -156,7 +151,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-        // texture
         [EditorAttribute(typeof(TextureSelectorTypeEditor), typeof(System.Drawing.Design.UITypeEditor)), DescriptionAttribute("Name of the texture file in the asset repository to use for layer 1. This texture corresponds with the red channel of Alpha map 0."), CategoryAttribute("Display Parameters")]
         public string Layer1TextureName
         {
@@ -293,8 +287,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
-        //detail texture
         [EditorAttribute(typeof(TextureSelectorTypeEditor), typeof(System.Drawing.Design.UITypeEditor)), DescriptionAttribute("Name of the texture file in the asset repository to use as a detail map."), CategoryAttribute("Display Parameters")]
         public string DetailTextureName
         {
@@ -368,11 +360,8 @@ namespace Multiverse.Tools.WorldEditor
                 string objString = String.Format("Name:{0}\r\n", ObjectType);
                 objString +=  String.Format("\tUseParams={0}\r\n",UseParams);
                 objString +=  String.Format("\tTextureTileSize:{0}\r\n",TextureTileSize);
-
-
-                objString += String.Format("\tAlpha0MosaicName:{0}\r\n", Alpha0MosaicName);
-                objString += String.Format("\tAlpha1MosaicName:{0}\r\n", Alpha1MosaicName);
-
+                objString +=  String.Format("\tAlpha0MosaicName:{0}\r\n",Alpha0MosaicName);
+                objString +=  String.Format("\tAlpha1MosaicName:{0}\r\n",Alpha1MosaicName);
                 objString +=  String.Format("\tLayer1TextureName:{0}\r\n",Layer1TextureName);
                 objString +=  String.Format("\tLayer2TextureName:{0}\r\n",Layer2TextureName);
                 objString +=  String.Format("\tLayer3TextureName:{0}\r\n",Layer3TextureName);
@@ -381,7 +370,6 @@ namespace Multiverse.Tools.WorldEditor
                 objString +=  String.Format("\tLayer6TextureName:{0}\r\n",Layer6TextureName);
                 objString +=  String.Format("\tLayer7TextureName:{0}\r\n",Layer7TextureName);
                 objString +=  String.Format("\tLayer8TextureName:{0}\r\n",Layer8TextureName);
-
                 objString +=  String.Format("\tDetailTextureName:{0}\r\n",DetailTextureName);
                 objString +=  "\r\n";
                 return objString;
@@ -421,12 +409,8 @@ namespace Multiverse.Tools.WorldEditor
 
             terrainConfig.UseParams = useParams;
             terrainConfig.TextureTileSize = textureTileSize;
-
-            //mosaics
             terrainConfig.SetAlphaMapName(0, alpha0MosaicName);
             terrainConfig.SetAlphaMapName(1, alpha1MosaicName);
-
-            //textures
             terrainConfig.SetLayerTextureName(0, l1TextureName);
             terrainConfig.SetLayerTextureName(1, l2TextureName);
             terrainConfig.SetLayerTextureName(2, l3TextureName);
@@ -435,7 +419,6 @@ namespace Multiverse.Tools.WorldEditor
             terrainConfig.SetLayerTextureName(5, l6TextureName);
             terrainConfig.SetLayerTextureName(6, l7TextureName);
             terrainConfig.SetLayerTextureName(7, l8TextureName);
-
             terrainConfig.DetailTextureName = detailTextureName;
 
             TerrainManager.Instance.TerrainMaterialConfig = terrainConfig;
@@ -477,7 +460,6 @@ namespace Multiverse.Tools.WorldEditor
 
         public void CheckAssets()
         {
-            // mosaic
             if ((alpha0MosaicName != null) && (alpha0MosaicName != ""))
             {
                 CheckAsset(string.Format("{0}.mmf", alpha0MosaicName));
@@ -486,8 +468,6 @@ namespace Multiverse.Tools.WorldEditor
             {
                 CheckAsset(string.Format("{0}.mmf", alpha1MosaicName));
             }
-
-            //textures
             CheckAsset(l1TextureName);
             CheckAsset(l2TextureName);
             CheckAsset(l3TextureName);
@@ -496,8 +476,6 @@ namespace Multiverse.Tools.WorldEditor
             CheckAsset(l6TextureName);
             CheckAsset(l7TextureName);
             CheckAsset(l8TextureName);
-
-            //detail
             CheckAsset(detailTextureName);
         }
 
@@ -507,12 +485,8 @@ namespace Multiverse.Tools.WorldEditor
             w.WriteAttributeString("Type", "AlphaSplat");
             w.WriteAttributeString("UseParams", useParams.ToString());
             w.WriteAttributeString("TextureTileSize", textureTileSize.ToString());
-
-            //mosaic
             w.WriteAttributeString("Alpha0MosaicName", alpha0MosaicName);
             w.WriteAttributeString("Alpha1MosaicName", alpha1MosaicName);
-
-            // texture
             w.WriteAttributeString("Layer1TextureName", l1TextureName);
             w.WriteAttributeString("Layer2TextureName", l2TextureName);
             w.WriteAttributeString("Layer3TextureName", l3TextureName);
@@ -521,8 +495,6 @@ namespace Multiverse.Tools.WorldEditor
             w.WriteAttributeString("Layer6TextureName", l6TextureName);
             w.WriteAttributeString("Layer7TextureName", l7TextureName);
             w.WriteAttributeString("Layer8TextureName", l8TextureName);
-
-            //detail
             w.WriteAttributeString("DetailTextureName", detailTextureName);
 
             w.WriteEndElement();
@@ -543,16 +515,12 @@ namespace Multiverse.Tools.WorldEditor
                     case "TextureTileSize":
                         textureTileSize = float.Parse(r.Value);
                         break;
-
-                        // mosaic
                     case "Alpha0MosaicName":
                         alpha0MosaicName = r.Value;
                         break;
                     case "Alpha1MosaicName":
                         alpha1MosaicName = r.Value;
                         break;
-
-                        //texture
                     case "Layer1TextureName":
                         l1TextureName = r.Value;
                         break;
@@ -577,8 +545,6 @@ namespace Multiverse.Tools.WorldEditor
                     case "Layer8TextureName":
                         l8TextureName = r.Value;
                         break;
-
-                        //detail
                     case "DetailTextureName":
                         detailTextureName = r.Value;
                         break;
@@ -622,7 +588,6 @@ namespace Multiverse.Tools.WorldEditor
         {
             w.WriteLine("Mosaic:{0}", alpha0MosaicName);
             w.WriteLine("Mosaic:{0}", alpha1MosaicName);
-
             w.WriteLine("Texture:{0}", Layer1TextureName);
             w.WriteLine("Texture:{0}", Layer2TextureName);
             w.WriteLine("Texture:{0}", Layer3TextureName);
@@ -631,7 +596,6 @@ namespace Multiverse.Tools.WorldEditor
             w.WriteLine("Texture:{0}", Layer6TextureName);
             w.WriteLine("Texture:{0}", Layer7TextureName);
             w.WriteLine("Texture:{0}", Layer8TextureName);
-
             w.WriteLine("Texture:{0}", DetailTextureName);
         }
 

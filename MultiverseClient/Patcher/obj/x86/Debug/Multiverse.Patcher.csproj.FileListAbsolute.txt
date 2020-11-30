@@ -1,8 +1,0 @@
-D:\Multiverse\src-v1\MultiverseClient\Patcher\bin\x86\Debug\Multiverse.Patcher.dll
-D:\Multiverse\src-v1\MultiverseClient\Patcher\bin\x86\Debug\Multiverse.Patcher.pdb
-D:\Multiverse\src-v1\MultiverseClient\Patcher\obj\x86\Debug\Multiverse.Patcher.csprojResolveAssemblyReference.cache
-D:\Multiverse\src-v1\MultiverseClient\Patcher\obj\x86\Debug\Multiverse.Patcher.Dialog.resources
-D:\Multiverse\src-v1\MultiverseClient\Patcher\obj\x86\Debug\Multiverse.Patcher.UpdateForm.resources
-D:\Multiverse\src-v1\MultiverseClient\Patcher\obj\x86\Debug\Multiverse.Patcher.csproj.GenerateResource.Cache
-D:\Multiverse\src-v1\MultiverseClient\Patcher\obj\x86\Debug\Multiverse.Patcher.dll
-D:\Multiverse\src-v1\MultiverseClient\Patcher\obj\x86\Debug\Multiverse.Patcher.pdb

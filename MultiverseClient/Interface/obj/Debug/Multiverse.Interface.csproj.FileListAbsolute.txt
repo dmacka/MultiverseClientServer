@@ -1,0 +1,2 @@
+E:\MVsrc11.29.2020\MultiverseClient\Interface\obj\Debug\Multiverse.Interface.csprojAssemblyReference.cache
+E:\MVsrc11.29.2020\MultiverseClient\Interface\obj\Debug\Multiverse.Interface.csproj.CoreCompileInputs.cache

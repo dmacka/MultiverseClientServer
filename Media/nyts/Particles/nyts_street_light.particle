@@ -1,0 +1,25 @@
+// simulate a street light's glow
+nyts_street_light
+{
+    material        nyts_particle_street_light
+    particle_width  3000
+    particle_height 3000
+    cull_each       false
+    quota           10
+    billboard_type  point
+    depth_offset    500
+    local_space     true
+
+    // Area emitter
+    emitter Point
+    {
+        angle           0
+        emission_rate   0.001
+	emission_remainder 1
+        time_to_live    1000
+        position        0 0 0
+        direction       0 1 0
+        velocity  	0
+        colour          1 1 1 1
+    }
+}

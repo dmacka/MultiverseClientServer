@@ -1,0 +1,123 @@
+material nyts_bertelsmann.video
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.21177 0.19608 0.35294 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture nyts_videos.dds
+                tex_coord_set 0
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}
+material nyts_bertelsmann.billboards
+{
+    technique
+    {
+        pass
+        {
+	    lighting off
+            fog_override true
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  0.58824 0.58824 0.58824 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture nyts_bertelsmann_billboards_diff.dds
+                tex_coord_set 0
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}
+material nyts_bertelsmann.windows
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 1.00000 1.00000 1.00000 1.00000
+
+                scene_blend alpha_blend
+            	depth_write off
+            	depth_check on
+   
+            texture_unit
+            {
+                texture nyts_window_diff.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material nyts_bertelsmann.building
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  0.58824 0.58824 0.58824 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture nyts_bertelsmann_building_diff.dds
+                tex_coord_set 0
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}
+material nyts_bertelsmann.anim_billboards
+{
+    technique
+    {
+        pass
+        {
+	    lighting off
+            fog_override true
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  0.58824 0.58824 0.58824 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                anim_texture nyts_bertelsmann_anim_billboards.dds 6 1
+                tex_coord_set 0
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}

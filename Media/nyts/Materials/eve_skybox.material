@@ -1,0 +1,20 @@
+material eve_skybox
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			
+			fog_override true
+
+			texture_unit
+			{
+				cubic_texture eve_north.dds eve_south.dds eve_west.dds eve_east.dds eve_top.dds eve_top.dds separateUV
+				tex_address_mode clamp
+				filtering trilinear
+			}
+		}
+	}
+}

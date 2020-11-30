@@ -1,7 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
-MinimumVisualStudioVersion = 10.0.40219.1
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Platforms.Win32", "..\Axiom\Platforms\Win32\Axiom.Platforms.Win32.csproj", "{5E123EF9-47A1-49BA-BF0A-57B32156B2A1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE} = {85F3D412-09B1-4E0B-8685-F78DEF29C5CE}

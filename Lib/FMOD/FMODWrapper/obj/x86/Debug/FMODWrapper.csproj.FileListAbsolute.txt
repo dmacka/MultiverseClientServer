@@ -1,4 +1,0 @@
-D:\Multiverse\src-v1\Lib\FMOD\FMODWrapper\bin\x86\Debug\FMODWrapper.dll
-D:\Multiverse\src-v1\Lib\FMOD\FMODWrapper\bin\x86\Debug\FMODWrapper.pdb
-D:\Multiverse\src-v1\Lib\FMOD\FMODWrapper\obj\x86\Debug\FMODWrapper.dll
-D:\Multiverse\src-v1\Lib\FMOD\FMODWrapper\obj\x86\Debug\FMODWrapper.pdb

@@ -641,7 +641,7 @@ namespace Axiom.RenderSystems.DirectX9 {
             if (!Object.ReferenceEquals(cache.vertexDeclaration, decl)) {
                 cache.vertexDeclaration = decl;
                 D3DVertexDeclaration d3dVertDecl = (D3DVertexDeclaration)decl;
-                device.VertexDeclaration = d3dVertDecl.GetD3DVertexDecl();
+                device.VertexDeclaration = d3dVertDecl.D3DVertexDecl;
             }
 		}
 

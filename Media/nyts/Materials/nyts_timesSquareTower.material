@@ -1,0 +1,16 @@
+material nyts_timesSquareTower.timesSquareTower
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.44706 0.41961 0.41961 1.00000
+            diffuse  0.44706 0.41961 0.41961 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+        }
+    }
+}

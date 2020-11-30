@@ -1,0 +1,23 @@
+material FastScreenshot
+{
+    technique
+    {
+        pass
+        {
+            depth_check off
+            fog_override true
+            lighting off
+
+            texture_unit RT
+            {
+                tex_coord_set 0
+                tex_address_mode wrap
+                // scroll line below is used for debugging, to provide a visual cue that the
+                //  compositor is in effect
+                //scroll 0.5 0.5
+
+                filtering linear linear linear
+            }
+        }
+    }
+}

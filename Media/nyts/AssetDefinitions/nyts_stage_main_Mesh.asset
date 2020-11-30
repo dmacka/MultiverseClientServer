@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_stage_main_Mesh</Name>
+  <Description>nyts_stage_main</Description>
+  <Category>Buildings</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\nyts_stage_main.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\nyts_stage_main_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\nyts_stage_main.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

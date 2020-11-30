@@ -1,0 +1,44 @@
+material nyts_army.anim_billboards
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.50000 0.50000 0.50000 1.00000
+
+            texture_unit
+            {
+                // texture_source mvMovie
+                // {
+                //     name Presentation
+                //     codec Browser
+                //     alt nyts_army_anim_billboards_0.dds
+                // }
+                anim_texture nyts_army_anim_billboards.dds  4 10
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material nyts_army.windows : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_window.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap blank_emissive.dds
+}
+
+material nyts_army.building : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_army_building_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap nyts_army_building_emissive.dds
+}

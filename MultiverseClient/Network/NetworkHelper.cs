@@ -1209,9 +1209,7 @@ namespace Multiverse.Network
             // Connect to the world using tcp, and get the list of characters
             log_status.InfoFormat("Connecting to world login manager at {0}:{1}", entry.Hostname, entry.Port);
             NetworkHelperStatus status;
-
-            try
-            {
+            try {
                 status = TcpWorldConnect(entry.Hostname, entry.Port, clientVersion);
             }
             catch (EndOfStreamException) {
@@ -1279,6 +1277,7 @@ namespace Multiverse.Network
                     return NetworkHelperStatus.MasterTcpConnectFailure;
                 MasterTcpLoginRequestMessage loginMessage = new MasterTcpLoginRequestMessage();
                 loginMessage.Username = loginSettings.username;
+
                 OutgoingMessage outMessage = loginMessage.CreateMessage();
                 outMessage.Send(tcpClient);
 
@@ -1601,39 +1600,20 @@ namespace Multiverse.Network
 
 		private NetworkHelperStatus RdpWorldConnect(string hostname, int port) {
 			try {
-
-                /*
-                 *
-                 * This is the original code block and modified since there currently is no name
-                 * for the virtual OS
-                 *
-                 */
-
-                //                log_status.InfoFormat("Connecting to rdp world server at {0}:{1}", hostname, port);
-                //                IPAddress addr = NetworkHelper.GetIPv4Address(hostname);
-                //                if (addr == null) {
-                //                    log.WarnFormat("No valid IPv4 address for {0}", hostname);
-                //                    return NetworkHelperStatus.WorldConnectFailure;
-                //                }
-                //				IPEndPoint endpoint = new IPEndPoint(addr, port);
-
-                /*
-                 * 
-                       End original code */ 
-
-                /* Begine modified code */
-                IPEndPoint endpoint = new IPEndPoint(IPAddress.Parse("192.168.1.6"), port);
-
-                /* Begin original code */
-
+                log_status.InfoFormat("Connecting to rdp world server at {0}:{1}", hostname, port);
+                IPAddress addr = NetworkHelper.GetIPv4Address(hostname);
+                if (addr == null) {
+                    log.WarnFormat("No valid IPv4 address for {0}", hostname);
+                    return NetworkHelperStatus.WorldConnectFailure;
+                }
+				IPEndPoint endpoint = new IPEndPoint(addr, port);
                 MessageDispatcher dispatcher = new DefragmentingMessageDispatcher();
 				if (this.UseTCP)
                     messageHandlerWorld = new TcpWorldMessageHandler(endpoint, dispatcher);
                 else
                     messageHandlerWorld = new RdpWorldMessageHandler(endpoint, dispatcher);
 				messageHandlerWorld.BeginListen();
-
-                } catch (Exception e) {
+			} catch (Exception e) {
                 LogUtil.ExceptionLog.WarnFormat("Exception connecting to rdp world server {0}:{1} : {2}", hostname, port, e);
                 RdpWorldDisconnect();
                 log.ErrorFormat("Failed to connect to rdp world server at {0}:{1}", hostname, port);

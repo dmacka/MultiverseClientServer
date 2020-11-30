@@ -1,0 +1,114 @@
+<physics_model>
+  <rigid_body sid="mvcv_obb_stage_reuters_11-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>-1 0 0 45</rotate>
+        <translate>0.170244 1.777452 -8.544493</translate>
+        <box>
+          <half_extents>0.5795521 0.07831617 4.213572</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_12-mesh.0">
+    <technique_common>
+      <shape>
+        <rotate>1 0 0 225</rotate>
+        <translate>0.170244 1.756398 -2.582882</translate>
+        <box>
+          <half_extents>0.579552 0.07831592 4.213572</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_10-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>2.534255 3.19079 0.02549805</translate>
+        <box>
+          <half_extents>2.976005 0.751272 5.75799</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_06-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>2.71111 4.184111 5.594556</translate>
+        <box>
+          <half_extents>3.18426 0.5795518 0.07831592</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_08-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>-0.413208 4.184111 -0.0313208</translate>
+        <box>
+          <half_extents>0.07831601 0.5795518 5.366939</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_07-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>2.55688 4.184111 -5.581274</translate>
+        <box>
+          <half_extents>2.94057 0.5795518 0.07831592</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_09-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>5.431035 4.184111 0.02549805</translate>
+        <box>
+          <half_extents>0.07831592 0.5795518 5.45234</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_05-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>-0.224891 1.89273 5.44722</translate>
+        <box>
+          <half_extents>0.18304 2.94679 0.19552</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_02-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>-0.224891 1.88705 -5.445361</translate>
+        <box>
+          <half_extents>0.18304 2.94111 0.19552</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_04-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>5.272181 1.843205 5.44722</translate>
+        <box>
+          <half_extents>0.1830401 2.897265 0.19552</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="mvcv_obb_stage_reuters_03-mesh.0">
+    <technique_common>
+      <shape>
+        <translate>5.272181 1.85624 -5.445361</translate>
+        <box>
+          <half_extents>0.1830401 2.9103 0.19552</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

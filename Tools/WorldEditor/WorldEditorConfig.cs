@@ -57,7 +57,7 @@ namespace Multiverse.Tools.WorldEditor
 		protected int forestSeedDefault = 0;
 		protected float forestWindSpeedDefault = 0.3f;
 		protected Vector3 forestWindDirectionDefault = new Vector3(1, 0, 0);
-        protected string speedTreeLicenseLink = "http://update.multiverse.net/wiki/index.php/SpeedTree_Licensing";
+        protected string speedTreeLicenseLink = "http://192.168.1.6/wiki/index.php/SpeedTree_Licensing";
 
 		protected float treeScaleDefault = 10000f;
 		protected float treeScaleVarianceDefault = 1000f;
@@ -97,9 +97,9 @@ namespace Multiverse.Tools.WorldEditor
 
         protected int errorDisplayTimeDefault = 60000;
 
-        protected string helpBaseURL = "http://update.multiverse.net/wiki/index.php/Using_World_Editor_Version_1.5";
-        protected string feedbackBaseURL = "http://update.multiverse.net/custportal/login.php";
-        protected string relaseNotesURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
+        protected string helpBaseURL = "http://192.168.1.6/wiki/index.php/Using_World_Editor_Version_1.5";
+        protected string feedbackBaseURL = "http://192.168.1.6/custportal/login.php";
+        protected string relaseNotesURL = "http://192.168.1.6/wiki/index.php/Tools_Version_1.5_Release_Notes";
 
         protected int defaultErrorDisplayLength = 15000;
 

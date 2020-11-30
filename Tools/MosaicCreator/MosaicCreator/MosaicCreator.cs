@@ -164,19 +164,19 @@ namespace Multiverse.Tools.MosaicCreator
 
         private void launchOnlineHelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string target = "http://update.multiverse.net/wiki/index.php/Using_Mosaic_Creator_Version_1.0";
+            string target = "http://192.168.1.6/wiki/index.php/Using_Mosaic_Creator_Version_1.0";
             System.Diagnostics.Process.Start(target);
         }
 
         private void launchReleaseNotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string releaseNotesURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.0_Release_Notes";
+            string releaseNotesURL = "http://192.168.1.6/wiki/index.php/Tools_Version_1.0_Release_Notes";
             System.Diagnostics.Process.Start(releaseNotesURL); 
         }
 
         private void submitFeedbackOrABugToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string feedbackURL = "http://www.multiverse.net/developer/feedback.jsp?Tool=MosaicCreator";
+            string feedbackURL = "http://192.168.1.6/developer/feedback.jsp?Tool=MosaicCreator";
             System.Diagnostics.Process.Start(feedbackURL);
         }
 

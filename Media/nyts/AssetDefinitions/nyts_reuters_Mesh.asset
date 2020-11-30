@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_reuters_Mesh</Name>
+  <Description>nyts_reuters</Description>
+  <Category>Buildings</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\nyts_reuters.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\nyts_reuters_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\nyts_reuters.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,5 +1,0 @@
-D:\Multiverse\src-v1\MultiverseClient\Config\bin\x86\Debug\Multiverse.Config.dll
-D:\Multiverse\src-v1\MultiverseClient\Config\bin\x86\Debug\Multiverse.Config.pdb
-D:\Multiverse\src-v1\MultiverseClient\Config\obj\x86\Debug\Multiverse.Config.csprojResolveAssemblyReference.cache
-D:\Multiverse\src-v1\MultiverseClient\Config\obj\x86\Debug\Multiverse.Config.dll
-D:\Multiverse\src-v1\MultiverseClient\Config\obj\x86\Debug\Multiverse.Config.pdb

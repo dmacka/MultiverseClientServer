@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nytsAdditionalAssets</Name>
+  <Type>Other</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Scripts/nytsCharacterCreation.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Scripts/SampleCharacterCreation.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Scripts/mvVoice.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Interface/FrameXML/StringMap.py</TargetFile>
+      <FileType>PythonScript</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions/hdr.asset</TargetFile>
+      <NewFileName />
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

@@ -1,0 +1,18 @@
+material nyts_particle_street_light
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+            		fog_override true
+			scene_blend add
+			depth_write off
+
+			texture_unit
+			{
+				texture nyts_particle_street_light.dds
+			}
+		}
+	}
+}

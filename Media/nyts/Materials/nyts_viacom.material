@@ -1,0 +1,69 @@
+material nyts_viacom.billboards : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_viacom_billboards_diff.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap nyts_viacom_billboards_emissive.dds
+}
+
+material nyts_viacom.building : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_viacom_building_diff.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap blank_emissive.dds
+}
+
+material nyts_viacom.windows
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 1.00000 1.00000 1.00000 1.00000
+
+                scene_blend alpha_blend
+            	depth_write off
+            	depth_check on
+     
+            texture_unit
+            {
+                texture nyts_window.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+
+material nyts_viacom.anim_billboard
+{
+    technique
+    {
+        pass
+        {
+	    lighting off
+            fog_override true
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.50000 0.50000 0.50000 1.00000
+
+            texture_unit
+            {
+                texture nyts_viacom_anim_billboards_diff.dds
+                tex_coord_set 0
+                scroll_anim 0 -0.5
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}

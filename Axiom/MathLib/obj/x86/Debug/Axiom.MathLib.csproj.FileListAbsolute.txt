@@ -1,6 +1,0 @@
-D:\Multiverse\src-v1\Axiom\MathLib\bin\x86\Debug\Axiom.MathLib.dll
-D:\Multiverse\src-v1\Axiom\MathLib\bin\x86\Debug\Axiom.MathLib.pdb
-D:\Multiverse\src-v1\Axiom\MathLib\bin\x86\Debug\System.dll
-D:\Multiverse\src-v1\Axiom\MathLib\obj\x86\Debug\Axiom.MathLib.csprojResolveAssemblyReference.cache
-D:\Multiverse\src-v1\Axiom\MathLib\obj\x86\Debug\Axiom.MathLib.dll
-D:\Multiverse\src-v1\Axiom\MathLib\obj\x86\Debug\Axiom.MathLib.pdb

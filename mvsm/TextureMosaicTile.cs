@@ -50,8 +50,9 @@ namespace Axiom.SceneManagers.Multiverse
         protected bool dirtyImage;
         protected Rectangle dirtyArea;
         protected D3D.Surface dynamicSurface;
-        readonly int m_loadTileZ;
-        readonly int m_tileLocationX;
+
+        int m_loadTileZ;
+        int m_tileLocationX;
 
         public TextureMosaicTile(Mosaic parent, int tileSizeSamples, float metersPerSample, int tileLocationX, int tileLocationZ, Vector3 worldLocMM)
             : base(parent, tileSizeSamples, metersPerSample, tileLocationX, tileLocationZ, worldLocMM)
@@ -361,18 +362,17 @@ namespace Axiom.SceneManagers.Multiverse
                     // your row array position, as the pitch may or may not be your
                     // surface width in bytes.  (Some drivers store extra data on the
                     // ends of the rows, it seems.)
-                    Rectangle lockRect = new Rectangle
-                    {
-                        X = dirtyArea.X,
-                        Y = dirtyArea.Y,
-                        Width = dirtyArea.Width,
-                        Height = dirtyArea.Height
-                    };
+                    Rectangle lockRect = new Rectangle();
+                    lockRect.X = dirtyArea.X;
+                    lockRect.Y = dirtyArea.Y;
+                    lockRect.Width = dirtyArea.Width;
+                    lockRect.Height = dirtyArea.Height;
 
                     D3D.Texture t = (texture as D3DTexture).DXTexture as D3D.Texture;
+                    int pitch;
                     int bpp = PixelUtil.GetNumElemBytes(texture.Format);
                     D3D.Surface dst = t.GetSurfaceLevel(0);
-                    DX.GraphicsStream g = dynamicSurface.LockRectangle(lockRect, D3D.LockFlags.NoSystemLock, out int pitch);
+                    DX.GraphicsStream g = dynamicSurface.LockRectangle(lockRect, D3D.LockFlags.NoSystemLock, out pitch);
                     unsafe
                     {
                         uint *dstArray = (uint *) g.InternalDataPointer;

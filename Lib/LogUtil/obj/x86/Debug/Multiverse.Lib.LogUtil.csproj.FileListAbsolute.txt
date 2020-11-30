@@ -1,6 +1,0 @@
-D:\Multiverse\src-v1\Lib\LogUtil\bin\x86\Debug\LogUtil.dll
-D:\Multiverse\src-v1\Lib\LogUtil\bin\x86\Debug\LogUtil.pdb
-D:\Multiverse\src-v1\Lib\LogUtil\bin\x86\Debug\log4net.dll
-D:\Multiverse\src-v1\Lib\LogUtil\obj\x86\Debug\Multiverse.Lib.LogUtil.csprojResolveAssemblyReference.cache
-D:\Multiverse\src-v1\Lib\LogUtil\obj\x86\Debug\LogUtil.dll
-D:\Multiverse\src-v1\Lib\LogUtil\obj\x86\Debug\LogUtil.pdb

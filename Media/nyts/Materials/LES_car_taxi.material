@@ -1,0 +1,13 @@
+material LES_car_taxi.taxi : EmissiveBuilding_NoColor
+{
+    set_texture_alias DiffuseMap LES_car_taxi_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap LES_car_taxi_specular.dds
+    set_texture_alias EmissiveMap LES_car_taxi_emissive.dds
+}
+material LES_car_taxi_LOD1.taxi : LES_car_taxi.taxi
+{
+}
+material LES_car_taxi_LOD2.taxi : LES_car_taxi.taxi
+{
+}

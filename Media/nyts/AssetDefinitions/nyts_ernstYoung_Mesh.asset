@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>nyts_ernstYoung_Mesh</Name>
+  <Description>nyts_ernstYoung</Description>
+  <Category>Buildings</Category>
+  <Type>Mesh</Type>
+  <Files>
+    <AssetFile>
+      <TargetFile>Meshes\nyts_ernstYoung.mesh</TargetFile>
+      <FileType>Mesh</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>AssetDefinitions\nyts_ernstYoung_Material.asset</TargetFile>
+      <FileType>AssetDefinition</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Physics\nyts_ernstYoung.physics</TargetFile>
+      <FileType>Physics</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

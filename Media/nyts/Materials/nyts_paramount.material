@@ -1,0 +1,67 @@
+material nyts_paramount.building : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_paramount_building_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap nyts_paramount_building_specular.dds
+    set_texture_alias EmissiveMap nyts_paramount_building_emissive.dds
+}
+
+material nyts_paramount.anim_billboards
+{
+    technique
+    {
+        pass
+        {
+	    lighting off
+            fog_override true
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.25000 0.25000 0.25000 1.00000 1.00000
+            emissive 0.50000 0.50000 0.50000 1.00000
+
+            texture_unit
+            {
+                anim_texture nyts_paramount_anim_billboards.dds 4 2
+                tex_coord_set 0
+		filtering anisotropic
+		max_anisotropy 8
+            }
+        }
+    }
+}
+
+material nyts_paramount.windows
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 1.00000 1.00000 1.00000 1.00000
+
+                scene_blend alpha_blend
+            	depth_write off
+            	depth_check on
+     
+            texture_unit
+            {
+                texture nyts_window.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material nyts_paramount.billboards : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_paramount_billboards_diffuse.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap blank_specular.dds
+    set_texture_alias EmissiveMap nyts_paramount_billboards_emissive.dds
+}

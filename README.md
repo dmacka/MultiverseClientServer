@@ -7,7 +7,7 @@ READ all the readme files and this document completely before you start.
 
 A MMO consist of a wide range of programming tied together to make use of a number of different systems. It is not an easy task for one person and usually needs a team of engineers, programmers, artists and support staff. Making a MMO is a very difficult undertaking and not for the faint at heart. There is no pushbutton and instant game here. You will be tasked with a lot of work to get a fully functional MMO. I have put together the old Multiverse engine for those that want to make a MMO and get it running. The instructions you get here are aimed at making it easier to install and get your basic system fully functional without having a whole range of issues as with the original version. The documentation is lacking but is being reworked as best I can. I can always use some help with the tasks involved.
 
-I haven’t worked on this engine for a couple years. The client is being rewritten using Urho game engine. It is a lightweight engine with capability of today’s GPU’s. This version is still DirctX9 and using Axiom engine. I want to go ahead and release this version to see if there is any interest in releasing a newer version later or someone may want to use it as is. I want to state again, I am only working on a new client. In order to make more changes there would have to be others to work on the server. I would need a java programmer to update the server code to the newest version. I would need a database engineer and http needs work to build pages for users. I could do it but it would take a very long time to complete it. This version has been modified to work with the master server so you can connect to a remote server. You can connect to a VPS but that VPS needs to be setup. The master server can run on the same machine or be on a completely different server. The website can be on another. This is highly configurable.
+I haven’t worked on this engine for a couple years. This version is still DirctX9 and using Axiom engine. I want to go ahead and release this version to see if there is any interest in releasing a newer version later or someone may want to use it as is. I want to state again, I am only working on a new client. In order to make more changes there would have to be others to work on the server. I would need a java programmer to update the server code to the newest version. I would need a database engineer and http needs work to build pages for users. I could do it but it would take a very long time to complete it. This version has been modified to work with the master server so you can connect to a remote server. You can connect to a VPS but that VPS needs to be setup. The master server can run on the same machine or be on a completely different server. The website can be on another. This is highly configurable.
 
 There are SPECIFIC instructions in the configuration files to follow and are documented here. These instructions MUST be followed when compiling this engine to work with your system. If you try to compile it before making these changes the compiler will stop and error out. I built this into the code to alert you of where the changes have to happen. You simply edit the section and comment out the error code.
 
@@ -34,22 +34,18 @@ NOTE: The master will not work if activated is not set to 1 or suspended is not 
 Start terminal
 You should be in the home directory;
 Type the following in terminal -> cd multiverse;
+
 Type the following in terminal -> mysql -u root -p
+
 Enter password
 
-Type the following in terminal -> create database multiverse;
-Type the following in terminal -> use multiverse;
-Type the following in terminal -> create user ‘multiverse’ identified by ‘multiverse’;
-Type the following in terminal -> grant all on multiverse.* to multiverse identified by ‘multiverse’;
-Type the following in terminal -> create user ‘multiverse’@’localhost’ identified by ‘multiverse’;
-Type the following in terminal -> grant all on multiverse.* to multiverse@’localhost’ identified by ‘multiverse’;
-
-Type the following in terminal -> Source bin/master.sql;
 Type the following in terminal -> Source bin/install.sql;
 
-Your database is now setup for the master server.
+Type the following in terminal -> Source bin/master.sql;
 
-For you website. Copy the directorys in website to /etc/www/html. Do this as root and set the permissions to excute.
+Your database is now setup for the master server and your game server.
+
+For you website. (you need to be logged in a root) Copy the directorys in website to /etc/www/html. Do this as root and set the permissions to excute.
 
 This is fully functional server and has been tested from a blank install.
 
@@ -58,27 +54,31 @@ In /usr/multiverse/bin is a file called master_server.py. I created a key for us
 To run the server.
 
 from home ---> cd /usr/multiverse/bin
+
           ---> ./master.sh start
+
           ---> ./multiverse.sh start
 
 to stop the server.
           ---> ./master.sh stop
+
           ---> ./multiverse.sh stop
 
 to check the status.
           ---> ./master.sh status
+
           ---> ./multiverse.sh status
 
-Logging is set to DEBUG. Set the logging in master.properties and/or multiverse.properties to suit your taste.
+Logging is set to WARN. Set the logging in master.properties and/or multiverse.properties to suit your taste. Make sure to rename server name to your server name (demonz1)
 
 Client install is dirty and difficult.
 
 Run the installers in the install directory.
 
-Use Visual Studio 17 (may work with Visual Studio 19)
+Use Visual Studio 17 or 19 (built with both versions to test it)
 
-Open Multiverse.sln in the directory MultiverseClient and compile it. Copy all the exe files that were created over to the program directories. Usually C:\Program Files (x86)\Multiverse Software Foundation For the tools and C:\Program Files (x86)\Multiverse Software Foundation\Multiverse Client\bin For the client.
+Open Multiverse.sln in the directory MultiverseClient and compile it. Copy all the exe files that were created over to the program directories. Usually C:\Program Files (x86)\Multiverse Software Foundation For the tools and C:\Program Files (x86)\Multiverse Software Foundation\Multiverse Client\bin For the client. Make sure not to delete the dependencies.
 
-Current settings in VS are debug you may want to change them.
+Current settings in VS are debug you may want to change them but the code is such that you will have to comment out the logging since configuration only works in debug and logs everthing in release.
 
 Good luck and enjoy.

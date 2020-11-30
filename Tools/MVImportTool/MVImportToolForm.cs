@@ -503,9 +503,9 @@ namespace MVImportTool
             System.Diagnostics.Process.Start( releaseNotesURL );
         }
 
-        const string helpBaseURL = "http://update.multiverse.net/wiki/index.php/Using_the_Multiverse_COLLADA_Import_Tool";
-        const string feedbackBaseURL = "http://update.multiverse.net/custportal/login.php";
-        const string releaseNotesURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes"; 
+        const string helpBaseURL = "http://192.168.1.6/wiki/index.php/Using_the_Multiverse_COLLADA_Import_Tool";
+        const string feedbackBaseURL = "http://192.168.1.6/custportal/login.php";
+        const string releaseNotesURL = "http://192.168.1.6/wiki/index.php/Tools_Version_1.5_Release_Notes"; 
     }
     #endregion Help Menu support
 }

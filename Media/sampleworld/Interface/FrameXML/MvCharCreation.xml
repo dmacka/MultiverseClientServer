@@ -1,0 +1,1191 @@
+<Ui>
+  <Script file="MvCharCreation.py"/>
+
+
+  <Color name="BorderColor"     r="0.05098" g="0.25490" b="0.32156" a="1" virtual="true"/>
+  <Color name="BackgroundColor" r="0.33333" g="0.49411" b="0.60392" a="1" virtual="true"/>
+  <Color name="FontColor"       r="0.81568" g="0.93333" b="0.93725" a="1" virtual="true"/>
+
+
+  <FontString name="MvCharCreationTitleFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="24"/>
+    </FontHeight>
+    <Color r="0.81568" g="0.93333" b="0.93725"/>
+  </FontString>
+
+
+  <FontString name="MvCharCreationButtonFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="24"/>
+    </FontHeight>
+    <Color r="0.05098" g="0.25490" b="0.32156"/>
+  </FontString>
+
+
+  <FontString name="MvCharCreationHeaderDarkFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="20"/>
+    </FontHeight>
+    <Color r="0.05098" g="0.25490" b="0.32156"/>
+  </FontString>
+
+  <FontString name="MvCharCreationHeaderFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="20"/>
+    </FontHeight>
+    <Color r="0.81568" g="0.93333" b="0.93725"/>
+  </FontString>
+
+
+  <FontString name="MvCharCreationBodyFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="14"/>
+    </FontHeight>
+    <Color r="0.81568" g="0.93333" b="0.93725"/>
+  </FontString>
+
+
+  <FontString name="MvCharCreationDialogFont" font="Fonts\MUFN____.TTF" virtual="true">
+    <FontHeight>
+      <AbsValue val="18"/>
+    </FontHeight>
+    <Color r="0" g="0" b="0"/>
+  </FontString>
+
+
+  <Frame name="MvCharCreationWidgetFrameTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\MvCharCreation\basic_frame_edge" tile="true">
+      <EdgeSize>
+        <AbsValue val="4"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="4"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture name="$parentTextureBackground" file="Interface\MvButtons\Mv-White6x6">
+          <Anchors>
+            <Anchor point="TOPLEFT"     relativePoint="TOPLEFT">
+              <Offset>
+                <AbsDimension x="3" y="-3"/>
+              </Offset>
+            </Anchor>
+            <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+              <Offset>
+                <AbsDimension x="-3" y="3"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+          <Color r="0.33333" g="0.49411" b="0.60392" a="1"/>
+        </Texture>
+      </Layer>
+    </Layers>
+  </Frame>
+
+
+  <Frame name="MvRotationSelectionFrameTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="150" y="52"/>
+    </Size>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture name="$parentBackground" file="Interface\MvButtons\Mv-White6x6">
+          <Anchors>
+            <Anchor point="TOPLEFT"     relativePoint="TOPLEFT"/>
+            <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+          </Anchors>
+          <Color r="0.33333" g="0.49411" b="0.60392" a="1"/>
+        </Texture>
+      </Layer>
+    </Layers>
+
+    <Frames>
+
+      <Frame name="$parentFrameDisplay" hidden="false">
+        <Size>
+          <AbsDimension x="150" y="24"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="TOP">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="$parentFrameDisplayBackground" file="Interface\MvButtons\Mv-White6x6">
+              <Anchors>
+                <Anchor point="TOPLEFT"     relativePoint="TOPLEFT"/>
+                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+              </Anchors>
+              <Color r="0.05098" g="0.25490" b="0.32156" a="1"/>
+            </Texture>
+          </Layer>
+        </Layers>
+        <Frames>
+          <FontString name="$parentFrameDisplayFontStringTitle" inherits="MvCharCreationHeaderFont" justifyH="CENTER" text="model" hidden="false">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+              <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+        </Frames>
+      </Frame>
+
+      <Frame name="$parentFrameSelectors">
+        <Backdrop edgeFile="Interface\MvCharCreation\basic_frame_edge" tile="true">
+          <EdgeSize>
+            <AbsValue val="4"/>
+          </EdgeSize>
+          <TileSize>
+            <AbsValue val="4"/>
+          </TileSize>
+        </Backdrop>
+        <Size>
+          <AbsDimension x="150" y="24"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOM" relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Texture name="$parentBackground" file="Interface\MvButtons\Mv-White6x6">
+              <Anchors>
+                <Anchor point="TOPLEFT"     relativePoint="TOPLEFT"/>
+                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+              </Anchors>
+              <Color r="0.05098" g="0.25490" b="0.32156" a="1"/>
+            </Texture>
+          </Layer>
+        </Layers>
+        <Frames>
+          <Button name="$parentButtonNext" hidden="false">
+            <Size>
+              <AbsDimension x="24" y="16"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                <Offset>
+                  <AbsDimension x="-4" y="4"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <NormalTexture name="$parentButtonNextTexture" file="Interface\MvCharCreation\right_arrow"/>
+            <PushedTexture name="$parentButtonNextTextureDown" file="Interface\MvCharCreation\right_arrow_down"/>
+            <Scripts language="python">
+              <OnClick>MvRotationSelectionNext_OnClick(this)</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="$parentButtonPrevious" hidden="false">
+            <Size>
+              <AbsDimension x="24" y="16"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+                <Offset>
+                  <AbsDimension x="4" y="4"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <NormalTexture name="$parentButtonNextTexture" file="Interface\MvCharCreation\left_arrow"/>
+            <PushedTexture name="$parentButtonNextTextureDown" file="Interface\MvCharCreation\left_arrow_down"/>
+            <Scripts language="python">
+              <OnClick>MvRotationSelectionPrevious_OnClick(this)</OnClick>
+            </Scripts>
+          </Button>
+          <FontString name="$parentFontStringCurrent" inherits="MvCharCreationBodyFont" justifyH="CENTER" text="current" hidden="false">
+            <Size>
+              <AbsDimension x="150" y="16"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOM" relativePoint="BOTTOM">
+                <Offset>
+                  <AbsDimension x="0" y="4"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </FontString>
+        </Frames>
+      </Frame>
+
+    </Frames>
+
+  </Frame>
+
+
+  <Frame name="MvGenderSelectionFrameTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="150" y="51"/>
+    </Size>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture name="$parentBackground" file="Interface\MvButtons\Mv-White6x6">
+          <Color r="0.33333" g="0.49411" b="0.60392" a="1"/>
+        </Texture>
+        <Anchors>
+          <Anchor point="TOPLEFT"/>
+          <Anchor point="BOTTOMRIGHT"/>
+        </Anchors>
+      </Layer>
+    </Layers>
+
+    <Frames>
+      <Button name="$parentButtonMale" hidden="false">
+        <Size>
+          <AbsDimension x="52" y="51"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="LEFT">
+            <Offset>
+              <AbsDimension x="10" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <NormalTexture name="$parentButtonMaleDown" file="Interface\MvCharCreation\male_button"/>
+        <HighlightTexture name="$parentButtonMaleUp" file="Interface\MvCharCreation\male_button_selected"/>
+        <Scripts language="python">
+          <OnClick>MvGenderSelectionMale_OnClick(this)</OnClick>
+        </Scripts>
+      </Button>
+      <Button name="$parentButtonFemale" hidden="false">
+        <Size>
+          <AbsDimension x="52" y="51"/>
+        </Size>
+        <Anchors>
+          <Anchor point="RIGHT" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="-10" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <NormalTexture name="$parentButtonFemaleDown" file="Interface\MvCharCreation\female_button"/>
+        <HighlightTexture name="$parentButtonFemaleUp" file="Interface\MvCharCreation\female_button_selected"/>
+        <Scripts language="python">
+          <OnClick>MvGenderSelectionFemale_OnClick(this)</OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+  </Frame>
+  
+  <Frame name="MvClassSelectionFrameTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="150" y="51"/>
+    </Size>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture name="$parentBackground" file="Interface\MvButtons\Mv-White6x6">
+          <Color r="0.33333" g="0.49411" b="0.60392" a="1"/>
+        </Texture>
+        <Anchors>
+          <Anchor point="TOPLEFT"/>
+          <Anchor point="BOTTOMRIGHT"/>
+        </Anchors>
+      </Layer>
+    </Layers>
+
+    <Frames>
+      <Button name="$parentButtonSoldier" hidden="false">
+        <Size>
+          <AbsDimension x="52" y="51"/>
+        </Size>
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="LEFT">
+            <Offset>
+              <AbsDimension x="10" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <NormalTexture name="$parentButtonSoldierDown" file="Interface\FantasyWorldIcons\WEAPON_sword_A"/>
+        <HighlightTexture name="$parentButtonSoldierUp" file="Interface\FantasyWorldIcons\WEAPON_sword_A"/>
+        <Scripts language="python">
+          <OnClick>MvClassSelectionSoldier_OnClick(this)</OnClick>
+        </Scripts>
+      </Button>
+      
+    </Frames>
+  </Frame>
+
+
+  <Frame name="MvCharCreationNamedTextWidgetTemplate" virtual="true">
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+          <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+        </Anchors>
+        <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+          <Color r="0.33333" g="0.49411" b="0.60392" a="1"/>
+        </Texture>
+      </Layer>
+    </Layers>
+    <Frames>
+      <FontString name="$parentFontString" inherits="MvCharCreationHeaderFont" text="character name" hidden="false">
+        <Size>
+          <AbsDimension x="0" y="24"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT"  relativePoint="TOPLEFT"/>
+          <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT"/>
+        </Anchors>
+      </FontString>
+      <EditBox name="$parentEditBox">
+        <FontString name="$parentEditBoxFontString" inherits="MvCharCreationHeaderDarkFont"/>
+        <Size>
+          <AbsDimension x="0" y="24"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOMLEFT"  relativePoint="BOTTOMLEFT"/>
+          <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+        </Anchors>
+        <TextInsets>
+          <AbsInset left="4" right="4" top="0" bottom="0"/>
+        </TextInsets>
+        <Layers>
+          <Layer level="BACKGROUND">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+              <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+            </Anchors>
+            <Texture name="$parentEditBoxTexture" file="Interface\MvButtons\Mv-White6x6">
+              <Color r="0.68627" g="0.84705" b="0.85490" a="1"/>
+            </Texture>
+          </Layer>
+        </Layers>
+      </EditBox>
+    </Frames>
+  </Frame>
+
+
+  <Button name="MvCharCreationBorderedButtonTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\MvCharCreation\basic_frame_edge" tile="true">
+      <EdgeSize>
+        <AbsValue val="4"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="4"/>
+      </TileSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="BACKGROUND">
+        <Texture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+          <Color r="0.33333" g="0.49411" b="0.60392" a="1"/>
+        </Texture>
+      </Layer>
+    </Layers>
+    <NormalText inherits="MvCharCreationTitleFont" justifyH="CENTER" justifyV="MIDDLE"/>
+  </Button>
+
+
+  <Button name="MvCharSelectionCreateButtonTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="180" y="28"/>
+    </Size>
+    <NormalTexture name="$parentTexture" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.5351" g="0.6488" b="0.6562" a="1"/>
+    </NormalTexture>
+    <HighlightTexture name="$parentTextureHighlight" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.68627" g="0.84705" b="0.85490" a="1"/>
+    </HighlightTexture>
+    <NormalText inherits="MvCharCreationButtonFont" justifyH="LEFT" justifyV="MIDDLE" maxLines="1">
+      <Anchors>
+        <Anchor point="LEFT">
+          <Offset>
+            <AbsDimension x="10" y="0"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </NormalText>
+  </Button>
+  
+  <Frame name="MvCharCreationBorderFrameTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\MvCharCreation\screen_edge">
+      <EdgeSize>
+        <AbsValue val="80"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="80"/>
+      </TileSize>
+    </Backdrop>
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+    </Anchors>
+  </Frame>
+
+  <Button name="AttributeButtonTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="20" y="20"/>
+    </Size>
+    <NormalTexture name="$thisTexture" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.5351" g="0.6488" b="0.6562" a="1"/>
+    </NormalTexture>
+    <HighlightTexture name="$thisTextureHighlight" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.68627" g="0.84705" b="0.85490" a="1"/>
+    </HighlightTexture>
+    <PushedTexture name="$thisTexturePushed" file="Interface\MvButtons\Mv-White6x6">
+      <Color r="0.68627" g="0.84705" b="0.85490" a="1"/>
+    </PushedTexture>
+    <NormalText inherits="MvCharCreationButtonFont" justifyH="CENTER" justifyV="MIDDLE" maxLines="1">
+      <Anchors>
+        <Anchor point="LEFT">
+          <Offset>
+            <AbsDimension x="0" y="0"/>
+          </Offset>
+        </Anchor>
+      </Anchors>
+    </NormalText>
+  </Button>
+
+  <Frame name="MvCharCreationFrame" toplevel="true" movable="false" resizable="true" frameStrata="HIGH" parent="UIParent" enableMouse="true" enableKeyboard="false" alpha="1" hidden="false">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+      <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+    </Anchors>
+
+    <Frames>
+
+      <Frame name="MvCharCreationBorderFrame" inherits="MvCharCreationBorderFrameTemplate" hidden="false">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+          <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+        </Anchors>
+
+        <Frames>
+
+          <Frame name="MvCharCreationTitleFrame" hidden="false">
+            <Size>
+              <AbsDimension x="268" y="87"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativePoint="TOP">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="BACKGROUND">
+                <Anchors>
+                  <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+                  <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+                </Anchors>
+                <Texture name="MvCharCreationTitleFrameTexture" file="Interface\MvCharCreation\screen_edge_top"/>
+              </Layer>
+            </Layers>
+
+            <Frames>
+              <FontString name="MvCharCreationTitleFrameFontString" inherits="MvCharCreationTitleFont" justifyH="CENTER" text="CHARACTER CREATION" hidden="false">
+                <Size>
+                  <AbsDimension x="0" y="40"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="BOTTOMLEFT"  relativePoint="BOTTOMLEFT"/>
+                  <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+                </Anchors>
+              </FontString>
+            </Frames>
+          </Frame>
+
+          <Frame name="MvCharSelectionTitleFrame" hidden="false">
+            <Size>
+              <AbsDimension x="268" y="87"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOP" relativePoint="TOP">
+                <Offset>
+                  <AbsDimension x="0" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="BACKGROUND">
+                <Anchors>
+                  <Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+                  <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+                </Anchors>
+                <Texture name="MvCharSelectionTitleFrameTexture" file="Interface\MvCharCreation\screen_edge_top"/>
+              </Layer>
+            </Layers>
+
+            <Frames>
+              <FontString name="MvCharSelectionTitleFrameFontString" inherits="MvCharCreationTitleFont" justifyH="CENTER" text="CHARACTER SELECTION" hidden="false">
+                <Size>
+                  <AbsDimension x="0" y="40"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="BOTTOMLEFT"  relativePoint="BOTTOMLEFT"/>
+                  <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"/>
+                </Anchors>
+              </FontString>
+            </Frames>
+          </Frame>
+
+          <Frame name="MvCharCreationNameCreateFrame" inherits="MvCharCreationWidgetFrameTemplate" hidden="false">
+            <Size>
+              <AbsDimension x="200" y="60"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="80" y="-90"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+
+            <Frames>
+              <Frame name="MvCharCreationNameCreateFrameNamedTextWidget" inherits="MvCharCreationNamedTextWidgetTemplate" hidden="false">
+                <Size>
+                  <AbsDimension x="180" y="48"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativePoint="TOP">
+                    <Offset>
+                      <AbsDimension x="0" y="-4"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </Frame>
+
+            </Frames>
+
+          </Frame>
+
+          <Frame name="MvCharCreationOptionsFrame" inherits="MvCharCreationWidgetFrameTemplate" hidden="false">
+            <Size>
+              <AbsDimension x="200" y="170"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="80" y="-150"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Frames>
+              <Frame name="MvClassSelectionFrame" inherits="MvClassSelectionFrameTemplate" hidden="false">
+                <Anchors>
+                  <Anchor point="TOP" relativePoint="TOP">
+                    <Offset>
+                      <AbsDimension x="0" y="-9"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </Frame>
+              <Frame name="MvGenderSelectionFrame" inherits="MvGenderSelectionFrameTemplate" hidden="false">
+                <Anchors>
+                  <Anchor point="BOTTOM" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="52"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </Frame>
+              <Frame name="MvRotationSelectionFrame" inherits="MvRotationSelectionFrameTemplate" hidden="false">
+                <Anchors>
+                  <Anchor point="BOTTOM" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-6"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </Frame>
+            </Frames>
+          </Frame>
+
+          <Frame name="MvAttributesSelectionFrame" inherits="MvCharCreationWidgetFrameTemplate" hidden="false">
+            <Anchors>
+              <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+                <Offset>
+                  <AbsDimension x="-80" y="-90"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Size>
+              <AbsDimension x="225" y="192"/>
+            </Size>
+            <Frames>
+              <FontString name="MvAttributesSelectionFrameTitle" text="Attributes" inherits="MvCharCreationHeaderFont">
+                <Size>
+                  <AbsDimension x="225" y="32"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativePoint="TOP">
+                  </Anchor>
+                </Anchors>
+              </FontString>
+              <Frame name="StrengthAttributeFrame" hidden="false">
+                <Size>
+                  <AbsDimension x="225" y="25"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="MvAttributesSelectionFrameTitle"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="10" y="0"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Frames>
+                  <FontString name="StrengthAttributeText" text="Strength" inherits="MvCharCreationHeaderFont" justifyV="MIDDLE" justifyH="LEFT">
+                    <Size>
+                      <AbsDimension x="80" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativePoint="LEFT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="DecrementStrengthButton" inherits="AttributeButtonTemplate" text="-">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="StrengthAttributeText"  relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="30" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts language="python">
+                      <OnClick>DecrementStrengthButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>
+                  <FontString name="StrengthAttributeValue" text="60" inherits="MvCharCreationHeaderFont">
+                    <Size>
+                      <AbsDimension x="50" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="DecrementStrengthButton" relativePoint="RIGHT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="IncrementStrengthButton" inherits="AttributeButtonTemplate" text="+">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="StrengthAttributeValue" relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="0" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts language="python">
+                      <OnClick>IncrementStrengthButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>                  
+                </Frames>
+              </Frame>
+              <Frame name="DexterityAttributeFrame" hidden="false">
+                <Size>
+                  <AbsDimension x="225" y="25"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="StrengthAttributeFrame"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Frames>
+                  <FontString name="DexterityAttributeText" text="Dexterity" inherits="MvCharCreationHeaderFont" justifyV="MIDDLE" justifyH="LEFT">
+                    <Size>
+                      <AbsDimension x="80" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativePoint="LEFT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="DecrementDexterityButton" inherits="AttributeButtonTemplate" text="-">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="DexterityAttributeText"  relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="30" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts language="python">
+                      <OnClick>DecrementDexterityButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>
+                  <FontString name="DexterityAttributeValue" text="60" inherits="MvCharCreationHeaderFont">
+                    <Size>
+                      <AbsDimension x="50" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="DecrementDexterityButton" relativePoint="RIGHT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="IncrementDexterityButton" inherits="AttributeButtonTemplate" text="+">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="DexterityAttributeValue" relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="0" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                                        <Scripts language="python">
+                      <OnClick>IncrementDexterityButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>
+                </Frames>                
+              </Frame>
+              <Frame name="WisdomAttributeFrame" hidden="false">
+                <Size>
+                  <AbsDimension x="225" y="25"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="DexterityAttributeFrame"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Frames>
+                  <FontString name="WisdomAttributeText" text="Wisdom" inherits="MvCharCreationHeaderFont" justifyV="MIDDLE" justifyH="LEFT">
+                    <Size>
+                      <AbsDimension x="80" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativePoint="LEFT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="DecrementWisdomButton" inherits="AttributeButtonTemplate" text="-">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="WisdomAttributeText"  relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="30" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts language="python">
+                      <OnClick>DecrementWisdomButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>
+                  <FontString name="WisdomAttributeValue" text="60" inherits="MvCharCreationHeaderFont">
+                    <Size>
+                      <AbsDimension x="50" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="DecrementWisdomButton" relativePoint="RIGHT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="IncrementWisdomButton" inherits="AttributeButtonTemplate" text="+">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="WisdomAttributeValue" relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="0" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts language="python">
+                      <OnClick>IncrementWisdomButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>
+                </Frames>
+              </Frame>
+              <Frame name="IntelligenceAttributeFrame" hidden="false">
+                <Size>
+                  <AbsDimension x="225" y="25"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="WisdomAttributeFrame"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-5"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Frames>
+                  <FontString name="IntelligenceAttributeText" text="Intelligence" inherits="MvCharCreationHeaderFont" justifyV="MIDDLE" justifyH="LEFT">
+                    <Size>
+                      <AbsDimension x="105" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativePoint="LEFT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="DecrementIntelligenceButton" inherits="AttributeButtonTemplate" text="-">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="IntelligenceAttributeText"  relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="5" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts language="python">
+                      <OnClick>DecrementIntelligenceButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>
+                  <FontString name="IntelligenceAttributeValue" text="60" inherits="MvCharCreationHeaderFont">
+                    <Size>
+                      <AbsDimension x="50" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="DecrementIntelligenceButton" relativePoint="RIGHT">
+                      </Anchor>
+                    </Anchors>
+                  </FontString>
+                  <Button name="IncrementIntelligenceButton" inherits="AttributeButtonTemplate" text="+">
+                    <Size>
+                      <AbsDimension x="20" y="25"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativeTo="IntelligenceAttributeValue" relativePoint="RIGHT">
+                        <Offset>
+                          <AbsDimension x="0" y="0"/>
+                        </Offset>
+                      </Anchor>
+                    </Anchors>
+                    <Scripts language="python">
+                      <OnClick>IncrementIntelligenceButton_OnClick(this)</OnClick>
+                    </Scripts>
+                  </Button>
+                </Frames>
+              </Frame>
+              <Frame name="AttributesPointPool" hidden="false">
+                <Size>
+                  <AbsDimension x="225" y="32"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="IntelligenceAttributeFrame"  relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="0"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Frames>
+                  <FontString name="MvAttributesPointPoolValue" text="50" inherits="MvCharCreationHeaderFont" justifyV="MIDDLE" justifyH="RIGHT">
+                    <Size>
+                      <AbsDimension x="25" y="32"/>
+                    </Size>
+                    <Anchors>
+                      <Anchor point="LEFT" relativePoint="LEFT"/>
+                    </Anchors>
+                  </FontString>
+                  <FontString name="MvAttributesPointPoolText" text=" Remaining Points" inherits="MvCharCreationHeaderFont" justifyV="MIDDLE" justifyH="LEFT">
+                  <Size>
+                    <AbsDimension x="200" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="LEFT" relativeTo="MvAttributesPointPoolValue"  relativePoint="RIGHT"/>
+                  </Anchors>
+                </FontString>
+                </Frames>
+              </Frame>
+            </Frames>
+          </Frame>
+          <Button name="MvCharCreationNameCreateFrameBorderedButton" inherits="MvCharCreationBorderedButtonTemplate" text="create" hidden="false">
+            <Size>
+              <AbsDimension x="80" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                <Offset>
+                  <AbsDimension x="-130" y="105"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts language="python">
+              <OnClick>MvCharCreationCreate_OnClick(this)</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="MvCharCreationCancelBorderedButton" inherits="MvCharCreationBorderedButtonTemplate" text="cancel" hidden="false">
+            <Size>
+              <AbsDimension x="80" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                <Offset>
+                  <AbsDimension x="-130" y="70"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts language="python">
+              <OnClick>MvCharCreationCancel_OnClick(this)</OnClick>
+            </Scripts>
+          </Button>
+
+          <Frame name="MvCharSelectionFrame" inherits="MvCharCreationWidgetFrameTemplate" hidden="false">
+            <Size>
+              <AbsDimension x="200" y="230"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT">
+                <Offset>
+                  <AbsDimension x="-80" y="-70"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Frames>
+              <FontString name="MvCharSelectionFrameTitle" text="character name" inherits="MvCharCreationHeaderFont">
+                <Size>
+                  <AbsDimension x="200" y="32"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP" relativePoint="TOP">
+                  </Anchor>
+                </Anchors>
+              </FontString>
+
+              <Button name="MvCharSelectionFrameButtonCreate0" inherits="MvCharSelectionCreateButtonTemplate" text="create" id="0">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="MvCharSelectionFrameTitle" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="0"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionCreate_OnClick(this, 0)</OnClick>
+                </Scripts>
+              </Button>
+
+              <Button name="MvCharSelectionFrameButtonCreate1" inherits="MvCharSelectionCreateButtonTemplate" text="create" id="1">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="MvCharSelectionFrameButtonCreate0" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-4"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionCreate_OnClick(this, 1)</OnClick>
+                </Scripts>
+              </Button>
+
+              <Button name="MvCharSelectionFrameButtonCreate2" inherits="MvCharSelectionCreateButtonTemplate" text="create" id="2">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="MvCharSelectionFrameButtonCreate1" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-4"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionCreate_OnClick(this, 2)</OnClick>
+                </Scripts>
+              </Button>
+
+              <Button name="MvCharSelectionFrameButtonCreate3" inherits="MvCharSelectionCreateButtonTemplate" text="create" id="3">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="MvCharSelectionFrameButtonCreate2" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-4"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionCreate_OnClick(this, 3)</OnClick>
+                </Scripts>
+              </Button>
+
+
+              <Button name="MvCharSelectionFrameButtonCreate4" inherits="MvCharSelectionCreateButtonTemplate" text="create" id="4">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="MvCharSelectionFrameButtonCreate3" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-4"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionCreate_OnClick(this, 4)</OnClick>
+                </Scripts>
+              </Button>
+
+
+              <Button name="MvCharSelectionFrameButtonCreate5" inherits="MvCharSelectionCreateButtonTemplate" text="create" id="5">
+                <Anchors>
+                  <Anchor point="TOP" relativeTo="MvCharSelectionFrameButtonCreate4" relativePoint="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="-4"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionCreate_OnClick(this, 5)</OnClick>
+                </Scripts>
+              </Button>
+
+
+              <Button name="MvCharSelectionFrameBorderedButtonAccept" inherits="MvCharCreationBorderedButtonTemplate" text="accept" hidden="true">
+                <Size>
+                  <AbsDimension x="92" y="32"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT">
+                    <Offset>
+                      <AbsDimension x="6" y="6"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionAccept_OnClick(this)</OnClick>
+                </Scripts>
+              </Button>
+              <Button name="MvCharSelectionFrameBorderedButtonDelete" inherits="MvCharCreationBorderedButtonTemplate" text="delete" hidden="false">
+                <Size>
+                  <AbsDimension x="92" y="32"/>
+                </Size>
+                <Anchors>
+                  <Anchor relativeTo="MvCharSelectionPlayQuitFrame" point="BOTTOMRIGHT" relativePoint="TOPRIGHT">
+                    <Offset>
+                      <AbsDimension x="0" y="6"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionDelete_OnClick(this)</OnClick>
+                </Scripts>
+              </Button>
+            </Frames>
+          </Frame>
+
+          <Frame name="MvCharSelectionPlayQuitFrame">
+            <Size>
+              <AbsDimension x="180" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+                <Offset>
+                  <AbsDimension x="-80" y="70"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Frames>
+              <Button name="MvCharSelectionPlayQuitFrameBorderedButtonPlay" inherits="MvCharCreationBorderedButtonTemplate" text="play" hidden="false">
+                <Size>
+                  <AbsDimension x="80" y="32"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="RIGHT" relativePoint="RIGHT"/>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionPlay_OnClick(this)</OnClick>
+                </Scripts>
+              </Button>
+              <Button name="MvCharSelectionPlayQuitFrameBorderedButtonQuit" inherits="MvCharCreationBorderedButtonTemplate" text="quit" hidden="false">
+                <Size>
+                  <AbsDimension x="80" y="32"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="LEFT" relativePoint="LEFT"/>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharSelectionQuit_OnClick(this)</OnClick>
+                </Scripts>
+              </Button>
+            </Frames>
+          </Frame>
+
+          <Frame name="MvCharCreationDialogFrame" inherits="MvCharCreationWidgetFrameTemplate" hidden="false">
+            <Size>
+              <AbsDimension x="250" y="200"/>
+            </Size>
+            <Anchors>
+              <Anchor point="CENTER"/>
+            </Anchors>
+            <Frames>
+              <FontString name="MvCharCreationDialogFrameFontString" inherits="MvCharCreationDialogFont" text="scalable error message dialog box here.">
+                <Size>
+                  <AbsDimension x="230" y="150"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP">
+                    <Offset>
+                      <AbsDimension x="0" y="-10"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </FontString>
+              <Button name="MvCharCreationDialogFrameOkButton" inherits="MvCharCreationBorderedButtonTemplate" text="ok">
+                <Size>
+                  <AbsDimension x="40" y="30"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="BOTTOM">
+                    <Offset>
+                      <AbsDimension x="0" y="10"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts language="python">
+                  <OnClick>MvCharCreationDialogOk_OnClick(this)</OnClick>
+                </Scripts>
+              </Button>
+            </Frames>
+          </Frame>
+
+          <Frame name="MvCharCreationInfoFrame" inherits="MvCharCreationWidgetFrameTemplate" hidden="true">
+            <Size>
+              <AbsDimension x="250" y="100"/>
+            </Size>
+            <Anchors>
+              <Anchor point="CENTER"/>
+            </Anchors>
+            <Frames>
+              <FontString name="$parentFontString" inherits="MvCharCreationDialogFont" text="scalable error message dialog box here.">
+                <Size>
+                  <AbsDimension x="230" y="80"/>
+                </Size>
+                <Anchors>
+                  <Anchor point="TOP">
+                    <Offset>
+                      <AbsDimension x="0" y="-10"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+              </FontString>
+            </Frames>
+          </Frame>
+
+        </Frames>
+
+      </Frame>
+
+    </Frames>
+    
+    <Scripts language="python">
+      <OnLoad>
+        MvSelectInitialize(this)
+        MvCharSelection_Show()
+      </OnLoad>
+    </Scripts>
+
+  </Frame>
+
+</Ui>

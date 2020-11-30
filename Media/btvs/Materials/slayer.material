@@ -1,0 +1,61 @@
+material slayer.slayer_a
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58800 0.58800 0.58800 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture btvs_slayer_a.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material slayer.hair_01
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            cull_hardware none
+            cull_software none
+
+            ambient  0.58800 0.58800 0.58800 1.00000
+            diffuse  0.58800 0.58800 0.58800 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture slayer_hair_01.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material slayer.stake
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.24314 0.18039 0.05882 1.00000
+            diffuse  0.24314 0.18039 0.05882 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+        }
+    }
+}

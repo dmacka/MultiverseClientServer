@@ -1,0 +1,19 @@
+material nyts_skybox
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			
+			fog_override true
+
+			texture_unit
+			{
+				cubic_texture nyts_north.dds nyts_south.dds nyts_west.dds nyts_east.dds nyts_top.dds nyts_top.dds separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}

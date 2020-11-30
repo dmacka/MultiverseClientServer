@@ -1,0 +1,18 @@
+<physics_model>
+  <rigid_body sid="nyts_police_building-lib.0">
+    <technique_common>
+      <shape>
+        <translate>0.009234863 3.579612 -0.06061279</translate>
+        <box>
+          <half_extents>4.267407 0.2780257 6.958113</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.007101807 1.658358 -0.193501</translate>
+        <box>
+          <half_extents>3.710703 1.652935 6.420981</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

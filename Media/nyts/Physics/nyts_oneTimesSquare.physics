@@ -1,0 +1,25 @@
+<physics_model>
+  <rigid_body sid="oneTimesSquare_building-lib.0">
+    <technique_common>
+      <shape>
+        <translate>-4.894919 38.19062 2.06782</translate>
+        <box>
+          <half_extents>4.3137 38.19062 23.18954</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>1.912576E-07 1 2.557076E-08 16.5</rotate>
+        <translate>2.195694 38.19062 3.281395</translate>
+        <box>
+          <half_extents>4.313701 38.19062 24.13113</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-4.728555 5.739645 -21.92534</translate>
+        <box>
+          <half_extents>6.988194 1.14572 0.9275821</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

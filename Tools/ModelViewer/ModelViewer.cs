@@ -784,7 +784,7 @@ namespace Multiverse.Tools.ModelViewer
 
         private void LaunchDoc(string anchor)
         {
-            string WebDocsString = "http://update.multiverse.net/wiki/index.php/Using_Model_Viewer_Version_1.5";
+            string WebDocsString = "http://192.168.1.6/wiki/index.php/Using_Model_Viewer_Version_1.5";
 
             string target = String.Format("{0}#{1}", WebDocsString, anchor); 
             System.Diagnostics.Process.Start(target); 
@@ -2330,7 +2330,7 @@ namespace Multiverse.Tools.ModelViewer
 
         private void submitABugReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string BugReportURL = "http://www.multiverse.net/developer/feedback.jsp?Tool=ModelViewer";
+            string BugReportURL = "http://192.168.1.6/developer/feedback.jsp?Tool=ModelViewer";
 
             System.Diagnostics.Process.Start(BugReportURL); 
         }
@@ -2415,7 +2415,7 @@ namespace Multiverse.Tools.ModelViewer
 
         private void launchReleaseNotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string releaseNotesURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
+            string releaseNotesURL = "http://192.168.1.6/wiki/index.php/Tools_Version_1.5_Release_Notes";
 
             System.Diagnostics.Process.Start(releaseNotesURL);
         }

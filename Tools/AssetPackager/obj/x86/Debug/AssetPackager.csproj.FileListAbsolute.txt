@@ -1,9 +1,0 @@
-D:\Multiverse\src-v1\Tools\AssetPackager\bin\x86\Debug\AssetPackager.exe
-D:\Multiverse\src-v1\Tools\AssetPackager\bin\x86\Debug\AssetPackager.pdb
-D:\Multiverse\src-v1\Tools\AssetPackager\bin\x86\Debug\Multiverse.AssetRepository.dll
-D:\Multiverse\src-v1\Tools\AssetPackager\bin\x86\Debug\Multiverse.AssetRepository.pdb
-D:\Multiverse\src-v1\Tools\AssetPackager\obj\x86\Debug\AssetPackager.csprojResolveAssemblyReference.cache
-D:\Multiverse\src-v1\Tools\AssetPackager\obj\x86\Debug\AssetPackager.Properties.Resources.resources
-D:\Multiverse\src-v1\Tools\AssetPackager\obj\x86\Debug\AssetPackager.csproj.GenerateResource.Cache
-D:\Multiverse\src-v1\Tools\AssetPackager\obj\x86\Debug\AssetPackager.exe
-D:\Multiverse\src-v1\Tools\AssetPackager\obj\x86\Debug\AssetPackager.pdb

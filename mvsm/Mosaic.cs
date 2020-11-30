@@ -55,7 +55,10 @@ namespace Axiom.SceneManagers.Multiverse
                 }
 
                 m_modified = value;
-                MosaicModificationStateChanged?.Invoke(this, m_modified);
+                if (MosaicModificationStateChanged != null)
+                {
+                    MosaicModificationStateChanged(this, m_modified);
+                }
             }
         }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDefinition>
+  <Name>eve_skybox_Material</Name>
+  <Description>sky box for NYTS [eve]</Description>
+  <Type>Material</Type>
+  <Category>Skybox</Category>
+  <Properties>
+    <Property name="AssetName" value="eve_skybox" />
+  </Properties>
+  <Files>
+    <AssetFile>
+      <TargetFile>Materials\eve_skybox.material</TargetFile>
+      <FileType>Material</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\eve_east.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\eve_north.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\eve_south.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\eve_top.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+    <AssetFile>
+      <TargetFile>Textures\eve_west.dds</TargetFile>
+      <FileType>Texture</FileType>
+    </AssetFile>
+  </Files>
+</AssetDefinition>

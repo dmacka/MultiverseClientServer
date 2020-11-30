@@ -1,0 +1,35 @@
+material nyts_police.building : EmissiveBuilding
+{
+    set_texture_alias DiffuseMap nyts_police_building_diff.dds
+    set_texture_alias NormalMap blank_normal.dds
+    set_texture_alias SpecularMap nyts_police_building_specular.dds
+    set_texture_alias EmissiveMap nyts_police_building_emissive.dds
+}
+
+material nyts_police.windows
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            fog_override true
+            shading phong
+
+            ambient  1.00000 1.00000 1.00000 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00000 0.00000 0.00000 1.00000 1.00000
+            emissive 1.00000 1.00000 1.00000 1.00000
+
+                scene_blend alpha_blend
+            	depth_write off
+            	depth_check on
+     
+            texture_unit
+            {
+                texture nyts_window.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}

@@ -80,7 +80,8 @@ namespace Axiom.MathLib {
             return radians * DEGREES_PER_RADIAN;
         }
 
-        /// <summary>        ///		Returns the sine of the angle.
+        /// <summary>
+        ///		Returns the sine of the angle.
         /// </summary>
         /// <param name="angle"></param>
         /// <returns></returns>

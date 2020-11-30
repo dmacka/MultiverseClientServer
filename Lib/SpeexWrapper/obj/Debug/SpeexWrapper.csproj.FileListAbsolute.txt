@@ -1,0 +1,6 @@
+E:\MVsrc11.29.2020\Lib\SpeexWrapper\bin\Debug\SpeexWrapper.dll
+E:\MVsrc11.29.2020\Lib\SpeexWrapper\bin\Debug\SpeexWrapper.pdb
+E:\MVsrc11.29.2020\Lib\SpeexWrapper\obj\Debug\SpeexWrapper.csprojAssemblyReference.cache
+E:\MVsrc11.29.2020\Lib\SpeexWrapper\obj\Debug\SpeexWrapper.csproj.CoreCompileInputs.cache
+E:\MVsrc11.29.2020\Lib\SpeexWrapper\obj\Debug\SpeexWrapper.dll
+E:\MVsrc11.29.2020\Lib\SpeexWrapper\obj\Debug\SpeexWrapper.pdb

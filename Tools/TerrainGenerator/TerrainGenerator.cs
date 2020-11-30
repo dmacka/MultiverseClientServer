@@ -134,9 +134,9 @@ namespace Multiverse.Tools.TerrainGenerator
         protected float heightAdjustTimer = 0;
 
         protected string mapFilename;
-        protected string baseHelpURL = "http://update.multiverse.net/wiki/index.php/Using_Terrain_Generator_Version_1.5";
-        protected string baseReleaseNoteURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
-        protected string baseBugReportURL = "http://update.multiverse.net/custportal/login.php";
+        protected string baseHelpURL = "http://192.168.1.6/wiki/index.php/Using_Terrain_Generator_Version_1.5";
+        protected string baseReleaseNoteURL = "http://192.168.1.6/wiki/index.php/Tools_Version_1.5_Release_Notes";
+        protected string baseBugReportURL = "http://192.168.1.6/custportal/login.php";
 
         Form newHeightmapDialog;
 
